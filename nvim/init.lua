@@ -17,17 +17,20 @@ vim.cmd 'autocmd BufWritePost plugins.lua PackerCompile' -- Auto compile when th
 
 -- Install plugins
 require('plugins')
+require('config.colorscheme')  -- color scheme
 
 -- Key mappings
 require('keymappings')
-
--- Setup Lua language server using submodule
 require('lsp_lua')
-
--- Another option is to groups configuration in one folder
 require('config')
 
--- OR you can invoke them individually here
---require('config.colorscheme')  -- color scheme
---require('config.completion')   -- completion
---require('config.fugitive')     -- fugitive
+require('config.completion')
+require('config.fugitive')
+require('nvim-telescope')
+require('treesitter')
+require('conf-lualine')
+require('nvim-cmp')     -- cmp
+require('nvim-yabs')     -- yabs
+require('plugins/luasnip')     -- luasnip
+require('debug')     -- yabs
+require('dap-python').setup('~/.virtualenvs/debugpy/bin/python')

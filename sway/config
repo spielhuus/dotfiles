@@ -18,16 +18,36 @@ set $term foot
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
+#set $menu dmenu_path | dmenu | xargs swaymsg exec --
+#set $menu .config/rofi/launchers/misc/launcher.sh
+set $menu wofi -c ~/.config/wofi/config -I
+
+set $focused_bgcolor #5C5C5C
+set $focused_textcolor #223333C0
+set $focused_indicator #A0A0A0
+
+set $inactive_bgcolor #424242
+set $inactive_textcolor #f8f8f2c0
+set $inactive_indicator #232323
+
+set $unfocused_bgcolor #424242
+set $unfocused_textcolor #f8f8f2c0
+set $unfocused_indicator #f83333c0
+
+set $urgent_bgcolor #CC7000C0
+set $urgent_textcolor #f8f8f2c0
+set $urgent_indicator #f83333c0
+
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+#output * bg ~/Documents/Wallpapers/amnesiac.jpg fill
+output * bg ~/Documents/Wallpapers/amnesiac.jpg fill
 #
 # Example configuration:
 #
-#   output HDMI-A-1 resolution 1920x1080 position 1920,0
+output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
@@ -48,12 +68,12 @@ exec swayidle -w \
 #
 # Example configuration:
 #
-#   input "2:14:SynPS/2_Synaptics_TouchPad" {
-##       dwt enabled
-#       tap enabled
-#       natural_scroll enabled
+   input "2:14:SynPS/2_Synaptics_TouchPad" {
+#       dwt enabled
+       tap enabled
+       natural_scroll enabled
 #       middle_emulation enabled
-#   }
+   }
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
@@ -61,15 +81,28 @@ exec swayidle -w \
        xkb_layout ch
        xkb_options grp:rctrl_toggle
    }
+
+### Colors
+client.focused $focused_bgcolor $focused_bgcolor $focused_textcolor $focused_indicator $focused_bgcolor
+client.focused_inactive $inactive_bgcolor $inactive_bgcolor $inactive_textcolor $inactive_indicator $inactive_bgcolor
+client.unfocused $unfocused_bgcolor $unfocused_bgcolor $unfocused_textcolor $unfocused_indicator $unfocused_bgcolor
+client.urgent $urgent_bgcolor $urgent_bgcolor $urgent_textcolor $urgent_indicator $urgent_bgcolor
+
+default_border pixel 2
+default_floating_border normal
+smart_borders on
+smart_gaps on
+
 ### Key bindings
 #
 # Basics:
 #
     # Start a terminal
     bindsym $mod+Return exec /usr/bin/alacritty
-    bindsym $mod+i exec /usr/bin/firefox
-    bindsym $mod+m exec alacritty -e /usr/bin/pulsemixer
-    bindsym $mod+Shift+f exec nemo
+    bindsym $mod+m exec pamixer -t
+    bindsym $mod+greater exec pamixer -i
+    bindsym $mod+less exec pamixer -d
+    bindsym $mod+Shift+f exec /usr/bin/thunar
 
     # Kill focused window
     bindsym $mod+Shift+q kill
@@ -88,7 +121,8 @@ exec swayidle -w \
     bindsym $mod+Shift+c reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+    bindsym $mod+Shift+e exec ~/.config/sway/logout.sh
+    #bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 #
 # Moving around:
 #
@@ -207,17 +241,13 @@ bindsym $mod+r mode "resize"
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-    position top
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
-
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
+        swaybar_command waybar
 }
+
+for_window [app_id="mixer"] floating enable; resize set width 500px height 100ppt; move right 706
+
+exec swaymsg "workspace 1; exec brave;"
+exec swaymsg "workspace 2; exec alacritty;"
+exec swaymsg "workspace 3; exec thunderbird;"
 
 include /etc/sway/config.d/*
