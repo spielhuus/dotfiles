@@ -51,6 +51,10 @@ return require('packer').startup(function()
   use { "rafamadriz/friendly-snippets" }
   use { "L3MON4D3/LuaSnip" }
 
+-- doge code documentation
+  use { 'kkoomen/vim-doge' }
+
+  -- use { 'mgedmin/coverage-highlight.vim' }
   -- Lua development
   -- use { 'tjdevries/nlua.nvim' }
 
