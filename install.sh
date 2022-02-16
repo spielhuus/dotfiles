@@ -2,13 +2,9 @@
 
 MODE=$1
 TARGET=$2
-#list=('install' 'uninstall')
 
-#echo "start $MODE"
-#[[ $list =~ (^|[[:space:]])"$MODE"($|[[:space:]]) ]] || echo "mode is not set [install|uninstall]" exit 
 [[ -z $TARGET ]] && TARGET=$HOME/.config
 
-echo "start $MODE"
 case $MODE in
 
   install)
@@ -16,11 +12,11 @@ case $MODE in
     for f in *; do
         if [ -d "$f" ]; then
             if [ -e $TARGET/$f ]; then
-            echo "file $TARGET/$f exists, skip it"
-        else
-            ln -s `pwd`/$f $TARGET/$f
+                echo "file $TARGET/$f exists, skip it"
+            else
+                ln -s `pwd`/$f $TARGET/$f
+            fi
         fi
-    fi
     done
     ;;
 

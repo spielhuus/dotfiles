@@ -102,7 +102,7 @@ smart_gaps on
     bindsym $mod+m exec pamixer -t
     bindsym $mod+greater exec pamixer -i
     bindsym $mod+less exec pamixer -d
-    bindsym $mod+Shift+f exec /usr/bin/thunar
+    bindsym $mod+Shift+f exec /usr/bin/pcmanfm
 
     # Kill focused window
     bindsym $mod+Shift+q kill
@@ -240,14 +240,12 @@ bindsym $mod+r mode "resize"
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
-bar {
-        swaybar_command waybar
-}
+#bar {
+#
+#}
+exec waybar -c ~/.config/waybar/`hostnamectl hostname`/config
 
 for_window [app_id="mixer"] floating enable; resize set width 500px height 100ppt; move right 706
 
-exec swaymsg "workspace 1; exec brave;"
-exec swaymsg "workspace 2; exec alacritty;"
-exec swaymsg "workspace 3; exec thunderbird;"
-
+include "~/.config/sway/`hostnamectl hostname`/config"
 include /etc/sway/config.d/*
