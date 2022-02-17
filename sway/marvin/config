@@ -1,1 +1,0 @@
-exec waymsg "workspace 1; exec brave -ozone-platform=wayland;" 

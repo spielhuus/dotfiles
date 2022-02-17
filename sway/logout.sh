@@ -4,19 +4,20 @@ waylogout \
 	--font="Baloo 2" \
 	--effect-blur=7x5 \
 	--indicator-thickness=20 \
-	--ring-color=888888aa \
-	--inside-color=88888866 \
+	--ring-color=000000aa \
+	--inside-color=111111aa \
 	--text-color=eaeaeaaa \
 	--line-color=00000000 \
-	--ring-selection-color=33cc33aa \
-	--inside-selection-color=33cc3366 \
+	--ring-selection-color=FFFFFFaa \
+	--inside-selection-color=FFFFFFaa \
 	--text-selection-color=eaeaeaaa \
 	--line-selection-color=00000000 \
-	--lock-command="echo lock" \
-	--logout-command="echo logout" \
-	--suspend-command="echo suspend" \
-	--hibernate-command="echo hibernate" \
+	--suspend-command="systemctl suspend" \
+	--hibernate-command="systemctl hibernate" \
 	--poweroff-command="systemctl poweroff" \
 	--reboot-command="systemctl reboot" \
-	--switch-user-command="echo switch" \
-	--selection-label
+	--selection-label \
+    --fade-in=0.5 \
+    --indicator-separation=20 \
+    --indicator-radius=80 \
+    --indicator-thickness=2

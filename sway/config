@@ -99,9 +99,6 @@ smart_gaps on
 #
     # Start a terminal
     bindsym $mod+Return exec /usr/bin/alacritty
-    bindsym $mod+m exec pamixer -t
-    bindsym $mod+greater exec pamixer -i
-    bindsym $mod+less exec pamixer -d
     bindsym $mod+Shift+f exec /usr/bin/pcmanfm
 
     # Kill focused window
@@ -236,16 +233,27 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+
+bindsym XF86AudioRaiseVolume exec volumectl -u up
+bindsym XF86AudioLowerVolume exec volumectl -u down
+bindsym XF86AudioMute exec volumectl toggle-mute
+bindsym XF86AudioMicMute exec volumectl -m toggle-mute
+
+bindsym XF86MonBrightnessUp exec lightctl up
+bindsym XF86MonBrightnessDown exec lightctl down
+
+exec "avizo-service"
+
 #
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
-#bar {
-#
-#}
-exec waybar -c ~/.config/waybar/`hostnamectl hostname`/config
+bar {
+    swaybar_command waybar
+}
+#exec waybar -c ~/.config/waybar/`hostnamectl hostname`/config
 
 for_window [app_id="mixer"] floating enable; resize set width 500px height 100ppt; move right 706
 
-include "~/.config/sway/`hostnamectl hostname`/config"
+include "~/.config/sway/conf.d/`hostnamectl hostname`"
 include /etc/sway/config.d/*

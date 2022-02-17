@@ -8,6 +8,7 @@
     "modules-center": [],
     "modules-right": ["network", "pulseaudio", "battery", "clock", "tray"],
 
+    "include": ["~/.config/waybar/conf.d/$(hostnamectl hostname)"],
 
 	"sway/workspaces": {
         "disable-scroll": true,
@@ -83,17 +84,6 @@
         "format-full": "{icon}",
         "format-icons": ["", "", "", "", ""],
         "interval": 30
-},
-
-
-    "network": {
-        "interface": "wlp0s20f3", 
-        "format-wifi": "   {essid}",
-        "format-disconnected": "睊",
-        "format-ethernet": "{ipaddr}/{cidr}",
-        "format-disconnected": "", //An empty format will hide the module.
-
-        "interval": 60
 },
 
 

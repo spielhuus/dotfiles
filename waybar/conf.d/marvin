@@ -1,0 +1,11 @@
+{
+    "network": {
+        "interface": "eno1", 
+        "format-wifi": "   WiFi-On",
+        "format-disconnected": "睊   Disconnected",
+        "format-ethernet": "{ipaddr}/{cidr}",
+        "format-disconnected": "", //An empty format will hide the module.
+
+        "interval": 60
+},
+}
