@@ -1,3 +1,1 @@
-set $ws1 
-
 exec swaymsg "workspace 1:brave; exec brave -ozone-platform=wayland;" 
