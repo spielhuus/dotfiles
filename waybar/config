@@ -15,10 +15,10 @@
         "disable-markup": true,
         "format": "{index}: {icon}",
 	"format-icons": {
-          "1": "",
-          "2": "",
-          "3": "",
-          "4": "",
+          "brave": "",
+          "alacritty": "",
+          "thunderbird": "",
+          "newsflash": "",
           "urgent": "",
           "focused": "",
           "default": ""
@@ -79,7 +79,7 @@
               "critical": 20
 },
 
-        "format": "{icon}::  {capacity}%",
+        "format": "{icon} {capacity}%",
         "format-good": "{icon}", 
         "format-full": "{icon}",
         "format-icons": ["", "", "", "", ""],
@@ -106,7 +106,7 @@
     "pulseaudio": {
         "format": "{icon}  {volume}%  ",
         "format-bluetooth": "  {volume}%  ",
-        "format-muted":"婢  Mute  ",
+        "format-muted":" Mute",
         "interval": 60,
 
         "format-icons": {

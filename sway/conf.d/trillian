@@ -1,4 +1,5 @@
 exec swaymsg "workspace 1:brave; exec brave -ozone-platform=wayland;" 
 exec swaymsg "workspace 2:alacritty; exec alacritty;" 
 exec swaymsg "workspace 3:thunderbird; exec thunderbird;" 
+exec swaymsg "workspace 4:newsflash; exec newsflash;" 
 exec nm-applet  --indicator

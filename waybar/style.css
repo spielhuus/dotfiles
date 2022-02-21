@@ -1,12 +1,12 @@
 * {
-    font-family: "UbuntuMono Nerd Font";
+    font-family: "Nimbus Sans", "Font Awesome 6 Free";
     font-size: 16px;
 }
 
 
 window#waybar { 
-    background-color: #323232; 
-    color: #ffffff;    
+    background-color: #232323; 
+    color: #FFFFFF;    
 }
 
 
@@ -23,7 +23,7 @@ window#waybar {
 
 
 #custom-scratch {
-	background-color: #323232;
+	background-color: #000000;
 	color: #b8b8b8;
 	padding: 0px 9px 0px 9px;
 }
@@ -36,13 +36,13 @@ window#waybar {
 #workspaces button {
 	padding: 0px 11px 0px 11px; 
  	min-width: 1px;
-	color: #888888;
+	color: #444444;
 }
 
 
 #workspaces button.focused { 
 	padding: 0px 11px 0px 11px; 
-	background-color: #323232;
+	background-color: #232323;
 	color: #ffffff;
 }
 
@@ -57,7 +57,7 @@ window#waybar {
 
 #window {
 	 color: #ffffff;
-	 background-color: #323232;
+	 background-color: #232323;
      padding: 0px 10px 0px 10px;
 }
 

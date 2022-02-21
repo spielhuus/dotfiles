@@ -1,16 +1,13 @@
 require('yabs'):setup({
   languages = { -- List of languages in vim's `filetype` format
-     python = {
+    lua = {
       tasks = {
-        test = {
-          command = 'python3 -m unittest discover -s test',
-          output = 'quickfix',
-          type = 'shell',
-        },
-        test = {
-          command = 'python3 %',
-          output = 'quickfix',
-          type = 'shell',
+        run = {
+          command = 'luafile %', -- The command to run (% and other
+          -- wildcards will be automatically
+          -- expanded)
+          type = 'vim',  -- The type of command (can be `vim`, `lua`, or
+          -- `shell`, default `shell`)
         },
       },
     },
