@@ -16,7 +16,7 @@
         "format": "{index}: {icon}",
 	"format-icons": {
           "brave": "",
-          "alacritty": "",
+          "alacritty": "",
           "thunderbird": "",
           "newsflash": "",
           "urgent": "",
