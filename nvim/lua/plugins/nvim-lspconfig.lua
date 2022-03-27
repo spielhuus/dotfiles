@@ -1,6 +1,24 @@
 local lspconfig = require "lspconfig"
 local util = require "lspconfig.util"
 
+-- Add additional capabilities supported by nvim-cmp
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.documentationFormat = { 'markdown', 'plaintext' }
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+capabilities.textDocument.completion.completionItem.preselectSupport = true
+capabilities.textDocument.completion.completionItem.insertReplaceSupport = true
+capabilities.textDocument.completion.completionItem.labelDetailsSupport = true
+capabilities.textDocument.completion.completionItem.deprecatedSupport = true
+capabilities.textDocument.completion.completionItem.commitCharactersSupport = true
+capabilities.textDocument.completion.completionItem.tagSupport = { valueSet = { 1 } }
+capabilities.textDocument.completion.completionItem.resolveSupport = {
+  properties = {
+    'documentation',
+    'detail',
+    'additionalTextEdits',
+  },
+}
+
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 local opts = { noremap=true, silent=true }
@@ -35,7 +53,7 @@ end
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { 'pyright', 'rust_analyzer', 'tsserver' }
+local servers = { 'pyright', 'rust_analyzer', 'tsserver', 'html', 'dockerls', 'bashls', 'sumneko_lua' }
 for _, lsp in pairs(servers) do
   require('lspconfig')[lsp].setup {
     on_attach = on_attach,
@@ -87,11 +105,6 @@ local servers = {
   }
 }
 
-local client_capabilities = vim.lsp.protocol.make_client_capabilities()
-client_capabilities.textDocument.completion.completionItem.snippetSupport = true
-client_capabilities.textDocument.completion.completionItem.resolveSupport = {
-  properties = { 'documentation', 'detail', 'additionalTextEdits' },
-}
 -- for nvim_cmp
 -- client_capabilities = require('cmp_nvim_lsp').update_capabilities(client_capabilities)
 for server, config in pairs(servers) do
@@ -102,7 +115,7 @@ for server, config in pairs(servers) do
   config.capabilities = vim.tbl_deep_extend(
     'keep',
     config.capabilities or {},
-    client_capabilities
+    capabilities
   )
   lspconfig[server].setup(config)
 end
@@ -113,3 +126,15 @@ require("lsp-colors").setup({
   Information = "#0db9d7",
   Hint = "#10B981"
 })
+
+local signs = {
+    Error = "",
+    Warn = "",
+    Hint = "",
+    Info = ""
+}
+
+for type, icon in pairs(signs) do
+    local hl = "DiagnosticSign" .. type
+    vim.fn.sign_define(hl, {text = icon, texthl = hl, numhl = hl})
+end

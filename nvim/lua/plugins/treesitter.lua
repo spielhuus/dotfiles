@@ -1,6 +1,6 @@
 require'nvim-treesitter.configs'.setup {
   -- One of "all", "maintained" (parsers with maintainers), or a list of languages
-  ensure_installed = "python",
+  ensure_installed = {"python", "c", "cpp", "bash", "html", "javascript", "lua"},
 
   -- Install languages synchronously (only applied to `ensure_installed`)
   sync_install = true,
@@ -70,7 +70,7 @@ require'treesitter-context'.setup{
         -- Example for a specific filetype with Lua patterns
         -- Treat patterns.rust as a Lua pattern (i.e "^impl_item$" will
         -- exactly match "impl_item" only)
-        -- rust = true, 
+        -- rust = true,
     },
     autotag = {
         enable = true,

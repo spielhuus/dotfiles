@@ -6,9 +6,9 @@ local dap = require('dap')
         name = "Launch file";
         program = "${file}";
         pythonPath = function()
-        return '/usr/bin/python'
+        return 'python'
         end;
     },
 }
 require('dap.ui.widgets').hover()
-
+require("dapui").setup()

@@ -1,4 +1,4 @@
-# dotfiles
+# neovim configurations
 
 ## Plugins
 
@@ -34,4 +34,13 @@
   use { 'szw/vim-maximizer' }
   use { 'mfussenegger/nvim-dap-python' }
 
+## mappings
 
+The leader key is mapped to the space bar.
+
+| Key         | Command     | Description            |
+| ----------- | ----------- | ---------------------- |
+| jk          | <ESC>       | Switch to command mode |
+| <C>l, <C>h  | bn, bp      | Switch buffer          |
+| <C>p        | :Telescope projects     | Show Project browser         |
+| <leader> a  | :aerial     | Switch buffer          |

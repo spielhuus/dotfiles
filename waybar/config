@@ -1,5 +1,5 @@
 {
-	"layer": "top",	
+	"layer": "top",
 	"position": "top",
     "height": 27,
 
@@ -17,7 +17,7 @@
 	"format-icons": {
           "brave": "",
           "alacritty": "",
-          "thunderbird": "",
+          "thunderbird": "",
           "newsflash": "",
           "urgent": "",
           "focused": "",
@@ -35,7 +35,7 @@
 	"custom/scratch": {
    		"interval": 3,
    		"exec": "swaymsg -t get_tree | jq 'recurse(.nodes[]) | first(select(.name==\"__i3_scratch\")) | .floating_nodes | length | select(. >= 0)'",
-   		"format": "^{}", 
+   		"format": "^{}",
    		"on-click": "swaymsg 'scratchpad show'",
    		"on-click-right": "swaymsg 'move scratchpad'"
 },
@@ -68,7 +68,7 @@
         "deactivated": ""
     }
 },
-    
+
     "battery": {
         "bat": "BAT0",
         "states": {
@@ -80,7 +80,7 @@
 },
 
         "format": "{icon} {capacity}%",
-        "format-good": "{icon}", 
+        "format-good": "{icon}",
         "format-full": "{icon}",
         "format-icons": ["", "", "", "", ""],
         "interval": 30
@@ -112,8 +112,8 @@
         "format-icons": {
         "default": [""]
 },
-            
-       "on-click": "alacritty --class mixer -e pulsemixer"    
+
+       "on-click": "alacritty --class mixer -e pulsemixer"
 
 
 }
