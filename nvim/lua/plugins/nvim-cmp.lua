@@ -39,6 +39,10 @@
         -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
       end,
     },
+    completion = {
+        completeopt = "menu,menuone,noinsert",
+    },
+
     mapping = {
       ['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
       ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
@@ -49,6 +53,19 @@
         c = cmp.mapping.close(),
       }),
       ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+      ["<Tab>"] = function(fallback)
+            if cmp.visible() then
+                cmp.select_next_item()
+            else
+                local copilot_keys = vim.fn["copilot#Accept"]()
+                if copilot_keys ~= "" then
+                    vim.api.nvim_feedkeys(copilot_keys, "i", true)
+                else
+                    fallback()
+                end
+            end
+        end,
+
     },
     sources = cmp.config.sources({
       { name = 'nvim_lsp' },
@@ -58,7 +75,8 @@
       -- { name = 'snippy' }, -- For snippy users.
       { name = 'path' },
       { name = 'buffer' },
-      { name = 'nvim_lsp_signature_help' }
+      { name = 'nvim_lsp_signature_help' },
+      { name = 'copilot' }
     }),
     formatting = {
       format = function(_, vim_item)
@@ -86,4 +104,8 @@
       { name = 'cmdline' }
     })
   })
+
+vim.g.copilot_no_tab_map = true
+vim.g.copilot_assume_mapped = true
+vim.g.copilot_tab_fallback = ""
 

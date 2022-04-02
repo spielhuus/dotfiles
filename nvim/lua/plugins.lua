@@ -4,11 +4,7 @@ return require('packer').startup(function()
   use {'wbthomason/packer.nvim', opt = true}
 
   -- Color scheme
-  use { 'tomasiser/vim-code-dark' }
-  use { 'navarasu/onedark.nvim' }
-  use { 'adisen99/codeschool.nvim', requires = {'rktjmp/lush.nvim'}}
-  use { 'kyazdani42/nvim-web-devicons' }
-  use { 'simrat39/symbols-outline.nvim' }
+  use 'bluz71/vim-moonfly-colors'
 
   -- Fuzzy finder
   use {
@@ -45,6 +41,7 @@ return require('packer').startup(function()
   use { 'folke/trouble.nvim' }
   use { 'romgrk/barbar.nvim' } -- The neovim tabline plugin.
   use { 'folke/lsp-colors.nvim' }
+  use { 'github/copilot.vim' }
 
   -- Autocomplete
   use {
@@ -57,15 +54,14 @@ return require('packer').startup(function()
       'hrsh7th/cmp-buffer',
       'saadparwaiz1/cmp_luasnip',
       'hrsh7th/cmp-cmdline',
-      'hrsh7th/cmp-nvim-lsp-signature-help'
+      'hrsh7th/cmp-nvim-lsp-signature-help',
+      'hrsh7th/cmp-copilot'
     },
     run = ':TSUpdate'
   }
 
-  -- Snippet support
-  -- use { 'SirVer/ultisnips' }
-  -- use { "rafamadriz/friendly-snippets" }
-  -- use { "L3MON4D3/LuaSnip" }
+  -- Better quickfix window in Neovim, polish old quickfix window.
+  use {'kevinhwang91/nvim-bqf', ft = 'qf'}
 
   -- doge code documentation
   use { 'kkoomen/vim-doge' }
@@ -106,7 +102,7 @@ return require('packer').startup(function()
       require('lualine').setup {
         options = {
           icons_enabled = true,
-          theme = 'ayu_dark',
+          theme = 'moonfly',
           component_separators = { left = '', right = ''},
           section_separators = { left = '', right = ''},
           disabled_filetypes = {},

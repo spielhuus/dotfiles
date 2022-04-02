@@ -4,12 +4,6 @@ vim.g.mapleader = ' '
 local fn = vim.fn
 local execute = vim.api.nvim_command
 
--- Sensible defaults
-require('config/settings')
-require('config/colorscheme')
-require('config/mappings')
-require('config/fugitive')
-
 -- Auto install packer.nvim if not exists
 local install_path = fn.stdpath('data')..'/site/pack/packer/opt/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
@@ -20,6 +14,12 @@ vim.cmd 'autocmd BufWritePost plugins.lua PackerCompile' -- Auto compile when th
 
 -- Install plugins
 require('plugins')
+-- Sensible defaults
+require('config/settings')
+require('config/colorscheme')
+require('config/mappings')
+-- require('config/fugitive')
+
 
 -- configure plugins
 require('plugins/treesitter')
@@ -28,6 +28,6 @@ require('plugins/telescope')
 require('plugins/nvim-cmp')
 require('plugins/nvim-lspconfig')
 require('plugins/ultest')
-require('nvim-yabs')
+require('plugins/yabs')
 -- require('plugins/nvim-dap')
 require('dap-python').setup('~/.virtualenvs/debugpy/bin/python')
