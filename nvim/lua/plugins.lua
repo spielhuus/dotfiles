@@ -42,7 +42,19 @@ return require('packer').startup(function()
   use { 'romgrk/barbar.nvim' } -- The neovim tabline plugin.
   use { 'folke/lsp-colors.nvim' }
   use { 'github/copilot.vim' }
-
+  use {
+    "zbirenbaum/copilot.lua",
+    event = {"VimEnter"},
+    config = function()
+      vim.defer_fn(function()
+        require("copilot").setup()
+      end, 100)
+    end,
+  }
+  use {
+      "zbirenbaum/copilot-cmp",
+      after = {"copilot.lua", "nvim-cmp"},
+  }
   -- Autocomplete
   use {
     'hrsh7th/nvim-cmp',
@@ -55,7 +67,6 @@ return require('packer').startup(function()
       'saadparwaiz1/cmp_luasnip',
       'hrsh7th/cmp-cmdline',
       'hrsh7th/cmp-nvim-lsp-signature-help',
-      'hrsh7th/cmp-copilot'
     },
     run = ':TSUpdate'
   }

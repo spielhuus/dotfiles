@@ -4,14 +4,15 @@
 }
 
 
-window#waybar { 
-    background-color: #232323; 
-    color: #FFFFFF;    
+window#waybar {
+    background-color: #000000;
+    color: 	#FFFFFF;
 }
 
 
 .modules-left {
 	background-color: #000000;
+  color: #964B00;
 	padding: 0px 0px 0px 0px;
 }
 
@@ -34,30 +35,29 @@ window#waybar {
 
 
 #workspaces button {
-	padding: 0px 11px 0px 11px; 
+	padding: 0px 11px 0px 11px;
  	min-width: 1px;
-	color: #444444;
 }
 
 
-#workspaces button.focused { 
-	padding: 0px 11px 0px 11px; 
-	background-color: #232323;
+#workspaces button.focused {
+	padding: 0px 11px 0px 11px;
+	background-color: #000000;
 	color: #ffffff;
 }
 
 
-#mode { 
-	 background-color: #900000;
-	 color: #ffffff;
+#mode {
+	 background-color: #000000;
+	 color: #FE5A1D;
      padding: 0px 5px 0px 5px;
-     border: 1px solid #2f343a;
+     border: 0px solid #FFFFFF;
 }
 
 
 #window {
 	 color: #ffffff;
-	 background-color: #232323;
+	 background-color: #1A1A1A;
      padding: 0px 10px 0px 10px;
 }
 
@@ -76,7 +76,7 @@ window#waybar.empty {
 #network, #temperature, #backlight, #pulseudio, #battery {
     padding: 0px 15px 0px 15px;
 }
-    
+
 
 #clock {
 	margin: 0px 15px 0px 15px;

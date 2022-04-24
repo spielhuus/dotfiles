@@ -43,7 +43,7 @@ set $urgent_indicator #f83333c0
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 #output * bg ~/Documents/Wallpapers/amnesiac.jpg fill
-output * bg ~/Documents/Wallpapers/amnesiac.jpg fill
+output * bg ~/Documents/Wallpapers/desktop2002.jpg fill
 #
 # Example configuration:
 #
@@ -98,7 +98,8 @@ smart_gaps on
 # Basics:
 #
     # Start a terminal
-    bindsym $mod+Return exec /usr/bin/alacritty
+    #bindsym $mod+Return exec /usr/bin/alacritty
+    bindsym $mod+Return exec /usr/bin/kitty
     bindsym $mod+Shift+f exec /usr/bin/pcmanfm
 
     # Kill focused window
