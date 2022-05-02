@@ -5,6 +5,8 @@ return require('packer').startup(function()
 
   -- Color scheme
   use 'bluz71/vim-moonfly-colors'
+  use 'Mofiqul/dracula.nvim'
+  use 'tomasiser/vim-code-dark'
 
   -- Fuzzy finder
   use {
@@ -41,7 +43,7 @@ return require('packer').startup(function()
   use { 'folke/trouble.nvim' }
   use { 'romgrk/barbar.nvim' } -- The neovim tabline plugin.
   use { 'folke/lsp-colors.nvim' }
-  use { 'github/copilot.vim' }
+  -- use { 'github/copilot.vim' }
   use {
     "zbirenbaum/copilot.lua",
     event = {"VimEnter"},
