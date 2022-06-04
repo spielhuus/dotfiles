@@ -19,6 +19,7 @@ return require('packer').startup(function()
   }
 
   use { 'sudormrfbin/cheatsheet.nvim' }
+
   -- Debugger and Runner
   use {
     'pianocomposer321/yabs.nvim',
@@ -41,7 +42,7 @@ return require('packer').startup(function()
   -- LSP and completion
   use { 'neovim/nvim-lspconfig' }
   use { 'folke/trouble.nvim' }
-  use { 'romgrk/barbar.nvim' } -- The neovim tabline plugin.
+  --use { 'romgrk/barbar.nvim' } -- The neovim tabline plugin.
   use { 'folke/lsp-colors.nvim' }
   -- use { 'github/copilot.vim' }
   use {
@@ -53,6 +54,8 @@ return require('packer').startup(function()
       end, 100)
     end,
   }
+  use { 'simrat39/rust-tools.nvim' }
+
   use {
       "zbirenbaum/copilot-cmp",
       after = {"copilot.lua", "nvim-cmp"},
@@ -109,7 +112,7 @@ return require('packer').startup(function()
   }
   use {'stevearc/aerial.nvim'}
 
-   -- Status and tabline
+  -- Status and tabline
   use { 'nvim-lualine/lualine.nvim',
     config = function()
       require('lualine').setup {
@@ -179,7 +182,7 @@ use {
       -- in the form "LspDiagnosticsSignWarning"
 
       require("neo-tree").setup({
-        close_if_last_window = false, -- Close Neo-tree if it is the last window left in the tab
+        close_if_last_window = true, -- Close Neo-tree if it is the last window left in the tab
         popup_border_style = "rounded",
         enable_git_status = true,
         enable_diagnostics = true,
