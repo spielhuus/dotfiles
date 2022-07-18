@@ -98,7 +98,6 @@ smart_gaps on
 # Basics:
 #
     # Start a terminal
-    #bindsym $mod+Return exec /usr/bin/alacritty
     bindsym $mod+Return exec /usr/bin/kitty
     bindsym $mod+Shift+f exec /usr/bin/pcmanfm
 

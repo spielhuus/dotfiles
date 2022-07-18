@@ -1,3 +1,8 @@
+
+
+-- Map leader to space
+vim.g.mapleader = ' '
+
 local utils = require('utils')
 
 utils.opt('o', 'completeopt', 'menuone,noinsert,noselect')
@@ -9,8 +14,8 @@ vim.g.completion_matching_strategy_list = {'exact', 'substring', 'fuzzy'}
 utils.map('i', '<S-Tab>', 'pumvisible() ? "\\<C-p>" : "\\<Tab>"', {expr = true})
 utils.map('i', '<Tab>', 'pumvisible() ? "\\<C-n>" : "\\<Tab>"', {expr = true})
 
-utils.map('n', '<C-h>', '<cmd>bp<CR>') -- previous buffer
-utils.map('n', '<C-l>', '<cmd>bn<CR>') -- next buffer
+-- utils.map('n', '<C-h>', '<cmd>bp<CR>') -- previous buffer
+-- utils.map('n', '<C-l>', '<cmd>bn<CR>') -- next buffer
 utils.map('n', '<C-p>', '<cmd>Telescope projects<CR>') -- open projects
 utils.map('n', '<leader>t', '<cmd>Telescope yabs tasks<CR>') -- open run tasks
 

@@ -1,34 +1,25 @@
 -- Map leader to space
-vim.g.mapleader = ' '
+require('packer_init')
 
-local fn = vim.fn
-local execute = vim.api.nvim_command
-
--- Auto install packer.nvim if not exists
-local install_path = fn.stdpath('data')..'/site/pack/packer/opt/packer.nvim'
-if fn.empty(fn.glob(install_path)) > 0 then
-  execute('!git clone https://github.com/wbthomason/packer.nvim '..install_path)
-end
-vim.cmd [[packadd packer.nvim]]
-vim.cmd 'autocmd BufWritePost plugins.lua PackerCompile' -- Auto compile when there are changes in plugins.lua
-
--- Install plugins
-require('plugins')
 -- Sensible defaults
-require('config/settings')
-require('config/colorscheme')
+require('turbo')
+require('config/options')
+require('config/colors')
 require('config/mappings')
--- require('config/fugitive')
-
 
 -- configure plugins
 require('plugins/treesitter')
 require('plugins/luasnip')
 require('plugins/telescope')
-require('plugins/nvim-cmp')
 require('plugins/nvim-lspconfig')
-require('plugins/ultest')
-require('plugins/yabs')
-require('plugins/nvim-rust-tools')
+require('plugins/nvim-cmp')
+require('plugins/neotest')
 -- require('plugins/nvim-dap')
 require('dap-python').setup('~/.virtualenvs/debugpy/bin/python')
+require('kommentary.config').use_extended_mappings()
+require 'lspconfig'.gopls.setup {
+    on_attach = function(client)
+        -- [[ other on_attach code ]]
+        require 'illuminate'.on_attach(client)
+    end,
+}
