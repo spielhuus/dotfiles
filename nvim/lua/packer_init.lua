@@ -52,7 +52,14 @@ return packer.startup(function(use)
     -- use 'kyazdani42/nvim-tree.lua'
 
     -- Indent line
-    use 'lukas-reineke/indent-blankline.nvim'
+    -- use 'lukas-reineke/indent-blankline.nvim'
+
+    use({
+      "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+      config = function()
+        require("lsp_lines").register_lsp_virtual_lines()
+      end,
+    })
 
     -- kommentary
     use 'b3nj5m1n/kommentary'
