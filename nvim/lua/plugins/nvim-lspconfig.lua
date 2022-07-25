@@ -2,6 +2,9 @@ local lspconfig = require "lspconfig"
 local util = require "lspconfig.util"
 
 
+-- require("nvim-lsp-installer").setup {}
+require("mason").setup()
+
 -- Add additional capabilities supported by nvim-cmp
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.documentationFormat = { 'markdown', 'plaintext' }
@@ -330,3 +333,4 @@ require("lsp-colors").setup({
   Information = "#0db9d7",
   Hint = "#10B981"
 })
+

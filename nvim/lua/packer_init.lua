@@ -121,6 +121,8 @@ return packer.startup(function(use)
 
     -- LSP
     use 'neovim/nvim-lspconfig'
+    use { "williamboman/mason.nvim" }
+    --- use { "williamboman/nvim-lsp-installer", }
     use { 'simrat39/rust-tools.nvim' }
     use {
         'saecki/crates.nvim',
@@ -235,14 +237,14 @@ return packer.startup(function(use)
     }
 
     -- perfanno, show results from perf
-    use {
+    --[[ use {
        't-troebst/perfanno.nvim',
         config = function()
             require("perfanno").setup {
                -- configuration
             }
         end
-    }
+    } ]]
     
 
     -- File browser
