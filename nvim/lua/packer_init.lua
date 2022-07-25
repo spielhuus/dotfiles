@@ -57,7 +57,7 @@ return packer.startup(function(use)
     use({
       "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
       config = function()
-        require("lsp_lines").register_lsp_virtual_lines()
+        require("lsp_lines").setup()
       end,
     })
 
