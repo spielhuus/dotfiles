@@ -24,6 +24,12 @@ function M.setup()
     find_files = {
       theme = "ivy",
     },
+    lsp_document_symbols = {
+      theme = "ivy",
+    },
+    live_grep = {
+      theme = "ivy",
+    },
   },
   extensions = {
     project = {
@@ -37,7 +43,6 @@ function M.setup()
       case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
     }
   }
-
 }
   require('telescope').load_extension('project')
   require("telescope").load_extension("file_browser")

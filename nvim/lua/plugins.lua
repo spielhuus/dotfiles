@@ -31,9 +31,7 @@ return require('packer').startup({ function(use)
 
   use({
     "hood/popui.nvim",
-    config = function()
-      require("lsp_lines").setup()
-    end,
+    requires = { "RishabhRD/popfix" },
   })
 
   --notify
@@ -51,6 +49,7 @@ return require('packer').startup({ function(use)
 
   use({
     "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+    disable = true,
     requires = { "RishabhRD/popfix" },
   })
 
@@ -93,11 +92,9 @@ return require('packer').startup({ function(use)
   --autosave
   use({
     "Pocco81/auto-save.nvim",
+    disable = true,
     config = function()
-      require("auto-save").setup {
-        -- your config goes here
-        -- or just leave it empty :)
-      }
+      require("auto-save").setup {}
     end,
   })
 
@@ -445,10 +442,6 @@ return require('packer').startup({ function(use)
     requires = { { "nvim-lua/plenary.nvim" } },
     config = function()
       require("crates").setup {
-        --[[ null_ls = {
-            enabled = true,
-            name = "crates.nvim",
-          }, ]]
       }
     end,
   }
@@ -465,6 +458,11 @@ return require('packer').startup({ function(use)
   }
 
   use { 'michaelb/sniprun', run = 'bash ./install.sh'}
+
+  use {
+    'AckslD/nvim-FeMaco.lua',
+    config = 'require("femaco").setup()',
+  }
 
   if packer_bootstrap then
     require('packer').sync()
