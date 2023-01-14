@@ -3,7 +3,7 @@ local M = {}
 function M.setup()
 	require("mason").setup()
 	require("mason-lspconfig").setup({
-	    ensure_installed = { "sumneko_lua", "rust_analyzer", "bashls", "clangd", "cmake", "cssls", "dockerls", "eslint", "html", "tsserver", "texlab", "r_language_server" },
+	    ensure_installed = { "sumneko_lua", "rust_analyzer", "bashls", "clangd", "cmake", "cssls", "dockerls", "eslint", "html", "tsserver", "texlab" },
 	    automatic_installation = true,
 	})
   require'mason-tool-installer'.setup {

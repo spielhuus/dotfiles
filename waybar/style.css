@@ -74,14 +74,12 @@ window#waybar.empty {
 	background-color: #323232;
 }
 
-
-#network, #temperature, #backlight, #pulseudio, #battery {
-    padding: 0px 15px 0px 15px;
+#battery, #battery.good, #battery.full, #memory, #cpu, #disk, #temperature, #backlight, #network, #pulseudio {
+    padding: 0px 15px 0px 0px;
 }
 
-
 #clock {
-	margin: 0px 15px 0px 15px;
+	margin: 0px 10px 0px 0px;
 }
 
 
@@ -90,15 +88,10 @@ window#waybar.empty {
    margin: 0px 5px 0px 5px;
 }
 
-
 #battery.critical {
    color: #ff5555;
 }
 
-
 #network.disconnected {
     color: #ff5555;
 }
-
-
-

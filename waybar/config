@@ -6,7 +6,7 @@
 
     "modules-left": ["sway/workspaces", "custom/scratch", "sway/mode", "sway/window"],
     "modules-center": [],
-    "modules-right": ["network", "pulseaudio", "battery", "clock", "tray"],
+    "modules-right": ["temperature", "memory", "cpu", "disk", "network", "pulseaudio", "battery", "clock", "tray"],
 
     "include": ["~/.config/waybar/conf.d/$(hostnamectl hostname)"],
 
@@ -15,10 +15,10 @@
         "disable-markup": true,
         "format": "{index}: {icon}",
 	"format-icons": {
-          "brave": "",
-          "alacritty": "",
-          "thunderbird": "",
-          "newsflash": "",
+          "1": "",
+          "2": "",
+          "3": "",
+          "4": "",
           "urgent": "",
           "focused": "",
           "default": ""
@@ -26,41 +26,50 @@
 },
 
 
-	"sway/window": {
-    	"format": "{}",
-    	"max-length": 150
+"sway/window": {
+  "format": "{}",
+  "max-length": 150
 },
 
 
-	"custom/scratch": {
-   		"interval": 3,
-   		"exec": "swaymsg -t get_tree | jq 'recurse(.nodes[]) | first(select(.name==\"__i3_scratch\")) | .floating_nodes | length | select(. >= 0)'",
-   		"format": "^{}",
-   		"on-click": "swaymsg 'scratchpad show'",
-   		"on-click-right": "swaymsg 'move scratchpad'"
+"custom/scratch": {
+  "interval": 3,
+  "exec": "swaymsg -t get_tree | jq 'recurse(.nodes[]) | first(select(.name==\"__i3_scratch\")) | .floating_nodes | length | select(. >= 0)'",
+  "format": "^{}",
+  "on-click": "swaymsg 'scratchpad show'",
+  "on-click-right": "swaymsg 'move scratchpad'"
 },
 
 
-    "tray": {
-        "icon-size": 18,
-        "spacing": 15
+"tray": {
+  "icon-size": 18,
+  "spacing": 15
 },
 
 
-    "clock": {
-        "format": "{:%a %b %e  %R}",
-        "interval": 30
+"clock": {
+    "format": "{:%a %b %e  %R}",
+    "interval": 30
 },
+
 "cpu": {
     "interval": 10,
     "format": "{}% ",
     "max-length": 10
 },
+
 "disk": {
     "interval": 30,
     "format": "﫭{percentage_free}%  ",
     "path": "/"
 },
+
+"memory": {
+    "interval": 30,
+    "format": "{}%",
+    "max-length": 10
+},
+
 "idle_inhibitor": {
     "format": "{icon}",
     "format-icons": {
@@ -69,25 +78,23 @@
     }
 },
 
-    "battery": {
-        "bat": "BAT0",
-        "states": {
-              "full": 99,
-              "good": 98,
-              "normal": 98,
-              "warning": 20,
-              "critical": 20
+"battery": {
+      "bat": "BAT0",
+      "states": {
+        "full": 99,
+        "good": 98,
+        "normal": 98,
+        "warning": 20,
+        "critical": 20
+      },
+    "format": " {icon} {capacity}%",
+    "format-good": " {icon}",
+    "format-full": " {icon}",
+    "format-icons": ["", "", "", "", ""],
+    "interval": 30
 },
 
-        "format": "{icon} {capacity}%",
-        "format-good": "{icon}",
-        "format-full": "{icon}",
-        "format-icons": ["", "", "", "", ""],
-        "interval": 30
-},
-
-
-    "temperature": {
+"temperature": {
 	   	"thermal-zone": 0,
 		"format": "{icon} {temperatureC}°C",
 		"format-icons":[""],
@@ -95,27 +102,23 @@
 },
 
 
-	"backlight": {
+"backlight": {
     	"device": "intel_backlight",
     	"format": "{icon}  {percent}%  ",
     	"format-icons": ["","","",""],
     	"interval": 60
 },
 
+"pulseaudio": {
+      "format": "{icon}  {volume}%",
+      "format-bluetooth": "  {volume}%",
+      "format-muted":" Mute",
+      "interval": 60,
 
-    "pulseaudio": {
-        "format": "{icon}  {volume}%  ",
-        "format-bluetooth": "  {volume}%  ",
-        "format-muted":" Mute",
-        "interval": 60,
-
-        "format-icons": {
+      "format-icons": {
         "default": [""]
-},
-
-       "on-click": "alacritty --class mixer -e pulsemixer"
-
-
+      },
+      "on-click": "alacritty --class mixer -e pulsemixer"
 }
 
 }

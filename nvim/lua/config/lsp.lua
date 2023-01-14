@@ -42,8 +42,23 @@ function M.setup()
 
   -- Use an on_attach function to only map the following keys
   -- after the language server attaches to the current buffer
-
-  require('lspconfig')['r_language_server'].setup {
+  require'lspconfig'.esbonio.setup{
+    on_attach = on_attach,
+    flags = lsp_flags,
+  }
+  require'lspconfig'.ltex.setup{
+    on_attach = on_attach,
+    flags = lsp_flags,
+  }
+  require'lspconfig'.dockerls.setup{
+    on_attach = on_attach,
+    flags = lsp_flags,
+  }
+  require'lspconfig'.grammarly.setup{
+    on_attach = on_attach,
+    flags = lsp_flags,
+  }
+  require('lspconfig')['clangd'].setup {
     on_attach = on_attach,
     flags = lsp_flags,
   }
@@ -71,14 +86,6 @@ function M.setup()
       },
     },
   }
-  --[[ require('lspconfig')['rust_analyzer'].setup{
-    on_attach = on_attach,
-    flags = lsp_flags,
-    -- Server-specific settings...
-    settings = {
-      ["rust-analyzer"] = {}
-    }
-} ]]
   require 'lspconfig'.sumneko_lua.setup {
     on_attach = on_attach,
     flags = lsp_flags,

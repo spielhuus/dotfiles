@@ -119,7 +119,7 @@ smart_gaps on
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec ~/.config/sway/logout.sh
-    #bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+
 #
 # Moving around:
 #
@@ -256,4 +256,4 @@ bar {
 for_window [app_id="mixer"] floating enable; resize set width 500px height 100ppt; move right 706
 
 include "~/.config/sway/conf.d/`hostnamectl hostname`"
-include /etc/sway/config.d/*
+#include /etc/sway/config.d/*

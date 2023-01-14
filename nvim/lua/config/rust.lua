@@ -188,6 +188,8 @@ end
       settings = {
         -- https://github.com/rust-analyzer/rust-analyzer/blob/master/docs/user/generated_config.adoc
         ["rust-analyzer"] = {
+          -- workaround for bug in rust-tools: https://github.com/simrat39/rust-tools.nvim/issues/300
+          inlayHints = { locationLinks = false },
           assist = {
             importPrefix = "by_self",
           },
