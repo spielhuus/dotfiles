@@ -37,15 +37,22 @@ return require('packer').startup({ function(use)
   --notify
   use({
     "rcarriga/nvim-notify",
+    disable = true,
     config = function()
       require("config.notify").setup()
     end,
   })
 
-  use { "RRethy/vim-illuminate" }
+  use({ 
+    "RRethy/vim-illuminate",
+    disable = true,
+  })
 
   -- Indent line
-  use("lukas-reineke/indent-blankline.nvim")
+  use({
+    "lukas-reineke/indent-blankline.nvim",
+    disable = true,
+  })
 
   use({
     "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
@@ -56,6 +63,7 @@ return require('packer').startup({ function(use)
   -- NeoTree (Filebrowser)
   use({
     "nvim-neo-tree/neo-tree.nvim",
+    disable = true,
     branch = "v2.x",
     requires = {
       "nvim-lua/plenary.nvim",
@@ -101,6 +109,7 @@ return require('packer').startup({ function(use)
   -- trouble.nvim
   use({
     "folke/trouble.nvim",
+    disable = true,
     wants = "nvim-web-devicons",
     cmd = { "TroubleToggle", "Trouble" },
     config = function()
@@ -115,6 +124,7 @@ return require('packer').startup({ function(use)
 
   -- fold
   use { 'anuvyklack/pretty-fold.nvim',
+    disable = true,
     config = function()
       require('pretty-fold').setup()
     end
@@ -123,6 +133,7 @@ return require('packer').startup({ function(use)
   -- scrollbar
   use({
     "lewis6991/satellite.nvim",
+    disable = true,
     config = function()
       require("satellite").setup()
     end,
@@ -130,6 +141,7 @@ return require('packer').startup({ function(use)
 
   use {
     "karb94/neoscroll.nvim",
+    disable = true,
     config = function()
       require("config.neoscroll").setup()
     end
@@ -138,6 +150,7 @@ return require('packer').startup({ function(use)
   -- Buffer line
   use({
     "akinsho/nvim-bufferline.lua",
+    disable = true,
     wants = "nvim-web-devicons",
     config = function()
       require("bufferline").setup()
@@ -147,6 +160,7 @@ return require('packer').startup({ function(use)
   -- Statusline
   use({
     "nvim-lualine/lualine.nvim",
+    disable = true,
     config = function()
       require("config.lualine").setup()
     end,
@@ -155,6 +169,7 @@ return require('packer').startup({ function(use)
   -- User interface
   use({
     "stevearc/dressing.nvim",
+    disable = true,
     event = "BufReadPre",
     config = function()
       require("config.dressing").setup()
@@ -163,6 +178,7 @@ return require('packer').startup({ function(use)
 
   use({
     "ziontee113/icon-picker.nvim",
+    disable = true,
     config = function()
       require("icon-picker").setup({
         disable_legacy_commands = true
@@ -173,11 +189,41 @@ return require('packer').startup({ function(use)
   -- TODO manager
   use {
     "folke/todo-comments.nvim",
+    disable = true,
     requires = "nvim-lua/plenary.nvim",
     config = function()
       require("todo-comments").setup {}
     end
   }
+
+  -- Bookmark
+  use({ "crusj/bookmarks.nvim", 
+    disable = true,
+    branch = 'main',
+    requires = { "kyazdani42/nvim-web-devicons" },
+    config = function()
+      require("bookmarks").setup({
+        keymap = {
+            toggle = "<tab><tab>", -- Toggle bookmarks
+            add = "<S-tab>", -- Add bookmarks
+            jump = "<CR>", -- Jump from bookmarks
+            delete = "dd", -- Delete bookmarks
+            order = "<space><space>", -- Order bookmarks by frequency or updated_time
+            delete_on_virt = "\\dd", -- Delete bookmark at virt text line
+            show_desc = "\\sd", -- show bookmark desc
+        },
+        width = 0.8, -- Bookmarks window width:  (0, 1]
+        height = 0.6, -- Bookmarks window height: (0, 1]
+        preview_ratio = 0.4, -- Bookmarks preview window ratio (0, 1]
+        preview_ext_enable = false, -- If true, preview buf will add file ext, preview window may be highlighed(treesitter), but may be slower.
+        fix_enable = false, -- If true, when saving the current file, if the bookmark line number of the current file changes, try to fix it.
+        hl_cursorline = "guibg=Gray guifg=White", -- hl bookmarsk window cursorline.
+
+        virt_text = "🔖", -- Show virt text at the end of bookmarked lines
+        virt_pattern = { "*.go", "*.lua", "*.sh", "*.php", "*.rs" } -- Show virt text only on matched pattern
+      })
+    end,
+  })
 
   -- Terminal
   use({ "akinsho/toggleterm.nvim", config = function()
@@ -187,6 +233,7 @@ return require('packer').startup({ function(use)
   -- Code documentation
   use({
     "danymat/neogen",
+    disable = true,
     config = function()
       require("config.neogen").setup()
     end,
@@ -256,6 +303,7 @@ return require('packer').startup({ function(use)
   use({
     "windwp/nvim-autopairs",
     opt = true,
+    disable = true,
     event = "InsertEnter",
     wants = "nvim-treesitter",
     module = { "nvim-autopairs.completion.cmp", "nvim-autopairs" },
@@ -267,6 +315,7 @@ return require('packer').startup({ function(use)
   -- Auto tag
   use({
     "windwp/nvim-ts-autotag",
+    disable = true,
     opt = true,
     wants = "nvim-treesitter",
     event = "InsertEnter",
@@ -291,6 +340,7 @@ return require('packer').startup({ function(use)
   -- LSP
   use {
     'neovim/nvim-lspconfig',
+    disable = true,
     config = function()
       require("config.lsp").setup()
     end,
@@ -420,6 +470,7 @@ return require('packer').startup({ function(use)
   -- git labels
   use({
     "lewis6991/gitsigns.nvim",
+    disable = true,
     requires = { "nvim-lua/plenary.nvim" },
     config = function()
       require("gitsigns").setup()
@@ -452,15 +503,21 @@ return require('packer').startup({ function(use)
   -- parse codeblocks in markdown files
   use {
     "jubnzv/mdeval.nvim",
+    disable = true,
     config = function()
       require('config/mdeval').setup()
     end,
   }
 
-  use { 'michaelb/sniprun', run = 'bash ./install.sh'}
+  use({ 
+    'michaelb/sniprun', 
+    disable = true,
+    run = 'bash ./install.sh'
+  })
 
   use {
     'AckslD/nvim-FeMaco.lua',
+    disable = true,
     config = 'require("femaco").setup()',
   }
 
@@ -474,4 +531,10 @@ end,
         return require('packer.util').float({ border = 'single' })
       end
     }
-  } })
+  } },
+
+  use {
+    "chrisbra/unicode.vim",
+    disable = false,
+  }
+)
