@@ -41,6 +41,8 @@
 |------|---|------|
 |neotest|<leader>tn|Run the nearest test.|
 ||<leader>tf|Run the tests in the current file.|
+||<leader>td|Debug the current test.|
 ||<leader>ts|Show test summary.|
 ||<leader>tr|Show test reports.|
+||<leader>to|Output of the tests.|
 
