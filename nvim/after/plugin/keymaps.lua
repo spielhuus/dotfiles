@@ -62,4 +62,4 @@ keymap("x", "gx", "<Plug>(openbrowser-smart-search)", default_opts)
 -- Some plugin keymaps
 keymap("n", "<C-p>", ":Telescope project<CR>", default_opts)
 keymap("n", "<C-s>", ":Telescope lsp_document_symbols<CR>", default_opts)
-keymap("n", "<leader>g", ":Telescope live_grep<CR>", default_opts)
+keymap("n", "<leader>g", ":Telescope live_grep_args<CR>", default_opts)
