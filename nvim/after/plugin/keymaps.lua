@@ -63,3 +63,12 @@ keymap("x", "gx", "<Plug>(openbrowser-smart-search)", default_opts)
 keymap("n", "<C-p>", ":Telescope project<CR>", default_opts)
 keymap("n", "<C-s>", ":Telescope lsp_document_symbols<CR>", default_opts)
 keymap("n", "<leader>g", ":Telescope live_grep_args<CR>", default_opts)
+
+-- test runners
+keymap("n", "<leader>tn", ":lua require(\"neotest\").run.run()<CR>", default_opts)
+keymap("n", "<leader>tf", ":lua require(\"neotest\").run.run(vim.fn.expand(\"%\"))<CR>", default_opts)
+keymap("n", "<leader>td", ":lua require(\"neotest\").run.run({strategy = \"dap\"})<CR>", default_opts)
+keymap("n", "<leader>ts", ":Neotest summary<CR>", default_opts)
+keymap("n", "<leader>to", ":Neotest output<CR>", default_opts)
+keymap("n", "<leader>ta", ":lua require(\"neotest\").run.attach()<CR>", default_opts)
+

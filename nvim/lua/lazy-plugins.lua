@@ -1344,6 +1344,37 @@ return {
       })
     end,
   },
+
+  -- Neotest: A framework for interacting with tests within NeoVim.
+  -- https://github.com/nvim-neotest/neotest
+  {
+    "nvim-neotest/neotest",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "antoinemadec/FixCursorHold.nvim",
+      "rouge8/neotest-rust",
+    },
+    config = function()
+      require("neotest").setup({
+        adapters = {
+          require("neotest-rust") {
+              args = { "--no-capture" },
+          }
+        }
+      })
+
+    end,
+  },
+
+  -- Neogen: A better annotation generator. Supports multiple languages and annotation conventions.
+  {
+      "danymat/neogen", 
+      dependencies = "nvim-treesitter/nvim-treesitter",
+      config = true,
+      -- Uncomment next line if you want to follow only stable versions
+      -- version = "*" 
+  },
+
   -- fzf native
   {
     'nvim-telescope/telescope-fzf-native.nvim',

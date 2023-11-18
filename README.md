@@ -35,3 +35,11 @@
   use { 'mfussenegger/nvim-dap-python' }
 
 
+# Keypaps
+
+|plugin|key|method|
+|neotest|<leader>tn|Run the nearest test.|
+||<leader>tf|Run the tests in the current file.|
+||<leader>ts|Show test summary.|
+||<leader>tr|Show test reports.|
+
