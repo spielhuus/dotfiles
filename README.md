@@ -37,7 +37,8 @@
 
 # Keypaps
 
-|plugin|key|method|
+|plugin|mapping|method|
+|------|---|------|
 |neotest|<leader>tn|Run the nearest test.|
 ||<leader>tf|Run the tests in the current file.|
 ||<leader>ts|Show test summary.|
