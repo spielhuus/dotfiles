@@ -1382,12 +1382,16 @@ return {
   },
 
   -- Neogen: A better annotation generator. Supports multiple languages and annotation conventions.
+  -- https://github.com/danymat/neogen
   {
       "danymat/neogen", 
       dependencies = "nvim-treesitter/nvim-treesitter",
       config = true,
       -- Uncomment next line if you want to follow only stable versions
       -- version = "*" 
+    config = function()
+        keymap("n", "<leader>cc", ":Neogen<CR>", default_opts)
+    end,
   },
 
   -- fzf native

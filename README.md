@@ -40,6 +40,7 @@
 |plugin|mapping|method|
 |------|---|------|
 |[dap](https://github.com/mfussenegger/nvim-dap)              |&lt;C-b&gt;     |Toggle breakpoint.                  |
+|[neogen](https://github.com/danymat/neogen)                  |&lt;leader&gt;cc|Create code annotation.             |
 |[neotest](https://github.com/nvim-neotest/neotest)           |&lt;leader&gt;tr|Run the nearest test.               |
 |                                                             |&lt;leader&gt;tf|Run the tests in the current file.  |
 |                                                             |&lt;leader&gt;td|Debug the current test.             |
