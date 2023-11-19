@@ -39,10 +39,12 @@
 
 |plugin|mapping|method|
 |------|---|------|
-|neotest|<leader>tn|Run the nearest test.|
-||<leader>tf|Run the tests in the current file.|
-||<leader>td|Debug the current test.|
-||<leader>ts|Show test summary.|
-||<leader>tr|Show test reports.|
-||<leader>to|Output of the tests.|
+|[dap](https://github.com/mfussenegger/nvim-dap)   |<C-b>     |Toggle breakpoint.|
+|[neotest](https://github.com/nvim-neotest/neotest)|<leader>tr|Run the nearest test.|
+|                                                  |<leader>tf|Run the tests in the current file.|
+|                                                  |<leader>td|Debug the current test.|
+|                                                  |<leader>ts|Show test summary.|
+|                                                  |<leader>tr|Show test reports.|
+|                                                  |<leader>to|Output of the tests.|
+|                                                  |<leader>tw|Toggle watch tests.|
 

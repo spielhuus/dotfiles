@@ -1145,11 +1145,10 @@ return {
     enabled = true,
     dependencies = { "nvim-lua/plenary.nvim", "rust-lang/rust.vim" },
     config = function()
-      --[[ local extension_path = vim.env.HOME .. '.local/share/nvim/mason/packages/codelldb/extension/'
+      local extension_path = vim.env.HOME .. '.local/share/nvim/mason/packages/codelldb/extension/'
       local codelldb_path = extension_path .. 'adapter/codelldb'
-      local liblldb_path = extension_path .. 'lldb/lib/liblldb.so' ]]
-      local codelldb_path = '/usr/bin/lldb-vscode'
-      local liblldb_path = '/use/lib/liblldb.so'
+      local liblldb_path = extension_path .. 'lldb/lib/liblldb'
+
       local rt = require("rust-tools")
 
       local on_attach = function(_, bufnr)
@@ -1363,6 +1362,22 @@ return {
         }
       })
 
+      local function configure_keymaps()
+        vim.keymap.set('n', '<leader>tr', function()
+          require("notify")("run nearest test")
+          require('neotest').run.run()
+        end)
+        vim.keymap.set('n', '<leader>tf', function()
+          require("notify")("run tests in file")
+          require('neotest').run.run(vim.fn.expand("%"))
+        end)
+        vim.keymap.set('n', '<leader>td', function() require('neotest').run.run({strategy = "dap"}) end)
+        vim.keymap.set('n', '<leader>ts', function() require('neotest').summary.open() end)
+        vim.keymap.set('n', '<leader>to', function() require('neotest').output.open() end)
+        vim.keymap.set('n', '<leader>tw', function() require('neotest').watch.toggle() end)
+      end
+
+      configure_keymaps() -- Debugger
     end,
   },
 
