@@ -256,15 +256,6 @@ return {
   },
 
   {
-    "RRethy/vim-illuminate",
-  },
-
-  -- Indent line
-  {
-    "lukas-reineke/indent-blankline.nvim",
-  },
-
-  {
     "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
     dependencies = { "RishabhRD/popfix" },
   },
@@ -325,6 +316,14 @@ return {
   -- LuaSnip
   {
     "L3MON4D3/LuaSnip",
+    -- follow latest release.
+    version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+    -- install jsregexp (optional!).
+    build = "make install_jsregexp"
+  },
+
+  --[[ {
+    "L3MON4D3/LuaSnip",
     dependencies = {
       "friendly-snippets",
       "vim-snippets"
@@ -332,7 +331,7 @@ return {
     config = function()
       require("config.snip").setup()
     end,
-  },
+  }, ]]
 
   -- NeoTree (Filebrowser)
   {
@@ -758,31 +757,33 @@ return {
   },
 
   -- Mason
-  {
-    "williamboman/mason.nvim",
-    dependencies = {
-      "williamboman/mason-lspconfig.nvim",
-      "neovim/nvim-lspconfig",
-      "WhoIsSethDaniel/mason-tool-installer.nvim"
-    },
-    config = function()
-      require("mason").setup()
-      require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "rust_analyzer", "bashls", "clangd", "cmake", "cssls", "dockerls", "eslint",
-          "html", "tsserver", "texlab" },
-        automatic_installation = true,
-      })
-      require 'mason-tool-installer'.setup {
-        ensure_installed = {
-          'shellcheck',
-          'codelldb',
-        },
-        auto_update = true,
-        run_on_start = true,
-        start_delay = 3000 -- 3 second delay
-      }
-    end,
-  },
+--  {
+--    "williamboman/mason.nvim",
+--    enabled = false,
+--    dependencies = {
+--      "williamboman/mason-lspconfig.nvim",
+--      "neovim/nvim-lspconfig",
+--      "WhoIsSethDaniel/mason-tool-installer.nvim"
+--    },
+--    config = function()
+--      require("mason").setup()
+--      require("mason-lspconfig").setup({
+--        -- ensure_installed = { "lua_ls", "rust_analyzer", "bashls", "clangd", "cmake", "cssls", "dockerls", "eslint",
+--        ensure_installed = { "lua_ls", "bashls", "clangd", "cmake", "cssls", "dockerls", "eslint",
+--          "html", "tsserver", "texlab" },
+--        automatic_installation = true,
+--      })
+--      require 'mason-tool-installer'.setup {
+--        ensure_installed = {
+--          'shellcheck',
+--          'codelldb',
+--        },
+--        auto_update = true,
+--        run_on_start = true,
+--        start_delay = 3000 -- 3 second delay
+--      }
+--    end,
+--  },
 
   -- LSP
   {
@@ -802,7 +803,7 @@ return {
       -- "jose-elias-alvarez/null-ls.nvim",
       {
         "j-hui/fidget.nvim",
-        version = 'legacy',
+        -- version = 'legacy',
         config = function()
           require("fidget").setup({})
         end,
@@ -1176,7 +1177,7 @@ return {
       end
 
       local opts = {
-        tools = { -- rust-tools options
+          tools = { -- rust-tools options
 
           -- how to execute terminal commands
           -- options right now: termopen / quickfix
@@ -1280,7 +1281,8 @@ return {
         },
 
         server = {
-          on_attach = on_attach,
+          standalone = true,
+          --[[ on_attach = on_attach,
           settings = {
             -- https://github.com/rust-analyzer/rust-analyzer/blob/master/docs/user/generated_config.adoc
             ["rust-analyzer"] = {
@@ -1300,14 +1302,14 @@ return {
                 methodReferences = true,
               },
             },
-          },
+          }, ]]
         },
 
         -- debugging stuff
         dap = {
           adapter = require("rust-tools.dap").get_codelldb_adapter(codelldb_path, liblldb_path),
         },
-      }
+      } 
 
       require('rust-tools').setup(opts)
     end
@@ -1390,6 +1392,7 @@ return {
       -- Uncomment next line if you want to follow only stable versions
       -- version = "*" 
     config = function()
+        local keymap = vim.keymap.set
         keymap("n", "<leader>cc", ":Neogen<CR>", default_opts)
     end,
   },
@@ -1408,4 +1411,31 @@ return {
       require('elektron').setup()
     end,
   },
+
+  {
+    "dpayne/CodeGPT.nvim",
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      'MunifTanjim/nui.nvim',
+    },
+    config = function()
+        require("codegpt.config")
+    end
+  },
+
+  -- Lazy
+  {
+    "jackMort/ChatGPT.nvim",
+      event = "VeryLazy",
+      config = function()
+        require("chatgpt").setup({
+          api_key_cmd = os.getenv("OPENAI_API_KEY")
+        })
+      end,
+      dependencies = {
+        "MunifTanjim/nui.nvim",
+        "nvim-lua/plenary.nvim",
+        "nvim-telescope/telescope.nvim"
+      }
+  }
 }
