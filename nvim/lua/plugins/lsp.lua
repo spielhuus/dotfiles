@@ -1,19 +1,19 @@
-return   {
+return {
 	-- LSP Configuration & Plugins
 	'neovim/nvim-lspconfig',
 	dependencies = {
 		-- Automatically install LSPs to stdpath for neovim
 		{ 'williamboman/mason.nvim', config = true },
-		'williamboman/mason-lspconfig.nvim',
+	  	'williamboman/mason-lspconfig.nvim',
 
 		-- Useful status updates for LSP
 		-- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
-		{ 'j-hui/fidget.nvim', opts = {} },
+		{ 'j-hui/fidget.nvim',       opts = {} },
 
 		-- Additional lua configuration, makes nvim stuff amazing!
 		'folke/neodev.nvim',
 	},
-	config = function() 
+	config = function()
 		-- [[ Configure LSP ]]
 		--  This function gets run when an LSP connects to a particular buffer.
 		local on_attach = function(_, bufnr)
@@ -93,12 +93,12 @@ return   {
 		--  If you want to override the default filetypes that your language server will attach to you can
 		--  define the property 'filetypes' to the map in question.
 		local servers = {
-			-- clangd = {},
+			clangd = {},
 			-- gopls = {},
-			-- pyright = {},
-			-- rust_analyzer = {},
+			pyright = {},
+			rust_analyzer = {},
 			-- tsserver = {},
-			-- html = { filetypes = { 'html', 'twig', 'hbs'} },
+			html = { filetypes = { 'html', 'twig', 'hbs'} },
 
 			lua_ls = {
 				Lua = {
@@ -122,6 +122,7 @@ return   {
 
 		mason_lspconfig.setup {
 			ensure_installed = vim.tbl_keys(servers),
+			automatic_installation = false,
 		}
 
 		mason_lspconfig.setup_handlers {
@@ -132,8 +133,11 @@ return   {
 					settings = servers[server_name],
 					filetypes = (servers[server_name] or {}).filetypes,
 				}
+			end,
+
+			["rust_analyzer"] = function ()
+				-- require("rust-tools").setup {}
 			end
 		}
 	end
 }
-
