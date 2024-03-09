@@ -1,4 +1,5 @@
-return {
+return ({
+  {
     "Mofiqul/dracula.nvim",
     lazy = false,
     priority = 1000,
@@ -31,13 +32,13 @@ return {
           nontext = "#3B4048",
         },
         -- show the '~' characters after the end of buffers
-        show_end_of_buffer = true, -- default false
+        show_end_of_buffer = true,    -- default false
         -- use transparent background
-        transparent_bg = true, -- default false
+        transparent_bg = true,        -- default false
         -- set custom lualine background color
         lualine_bg_color = "#000000", -- "#44475a", -- default nil
         -- set italic comment
-        italic_comment = true, -- default false
+        italic_comment = true,        -- default false
         -- overrides the default highlights see `:h synIDattr`
         overrides = {
           -- Examples
@@ -49,15 +50,30 @@ return {
       vim.cmd [[colorscheme dracula]]
     end,
 
---  -- Theme inspired by Atom
---  'navarasu/onedark.nvim',
---  priority = 1000,
---  lazy = false,
---  config = function()
---    require('onedark').setup {
---      -- Set a style preset. 'dark' is default.
---      style = 'darker', -- dark, darker, cool, deep, warm, warmer, light
---    }
---    require('onedark').load()
---  end,
-}
+    --  -- Theme inspired by Atom
+    --  'navarasu/onedark.nvim',
+    --  priority = 1000,
+    --  lazy = false,
+    --  config = function()
+    --    require('onedark').setup {
+    --      -- Set a style preset. 'dark' is default.
+    --      style = 'darker', -- dark, darker, cool, deep, warm, warmer, light
+    --    }
+    --    require('onedark').load()
+    --  end,
+  },
+  {
+    "mcchrish/zenbones.nvim",
+    dependencies = {
+      "rktjmp/lush.nvim"
+    },
+    config = function()
+      vim.g.zenbones_solid_line_nr = true
+      vim.g.zenbones_darken_comments = 45
+      vim.g.zenbones_transparent_background = true
+
+      vim.cmd 'colorscheme zenbones'
+
+    end
+  },
+})

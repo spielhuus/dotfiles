@@ -17,7 +17,7 @@ return {
     'echasnovski/mini.nvim',
     version = false,
     config = function()
-      require('mini.trailspace').setup()
+      -- require('mini.trailspace').setup()
       require('mini.sessions').setup()
       require('mini.comment').setup()
     end

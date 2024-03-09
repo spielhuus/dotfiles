@@ -7,3 +7,6 @@ exec swaymsg "workspace 2; exec wezterm;"
 exec swaymsg "workspace 3; exec thunderbird;"
 exec swaymsg "workspace 4; exec newsflash;"
 exec nm-applet  --indicator
+
+#### Notification deamon
+exec keepassxc
