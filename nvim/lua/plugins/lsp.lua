@@ -1,4 +1,4 @@
-return {
+return({
 	-- LSP Configuration & Plugins
 	'neovim/nvim-lspconfig',
 	dependencies = {
@@ -59,6 +59,13 @@ return {
 			vim.api.nvim_buf_create_user_command(bufnr, 'Format', function(_)
 				vim.lsp.buf.format()
 			end, { desc = 'Format current buffer with LSP' })
+		end
+
+		-- setup the lsp icons
+		local signs = { Error = "", Warn = "", Hint = "󰋖", Info = " " }
+		for type, icon in pairs(signs) do
+			local hl = "DiagnosticsSign" .. type
+			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 		end
 
 		-- document existing key chains
@@ -140,4 +147,4 @@ return {
 			end
 		}
 	end
-}
+})

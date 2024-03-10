@@ -9,4 +9,7 @@ exec swaymsg "workspace 4; exec newsflash;"
 exec nm-applet  --indicator
 
 #### Notification deamon
+exec swaync
 exec keepassxc
+
+bindsym $mod+Shift+n exec swaync-client -t -sw
