@@ -7,8 +7,9 @@ return {
       'nvim-lua/plenary.nvim',
       'tsakirist/telescope-lazy.nvim',
       'cljoly/telescope-repo.nvim',
-      'nvim-telescope/telescope-file-browser.nvim',
       'lpoto/telescope-docker.nvim',
+      'nvim-telescope/telescope-symbols.nvim',
+
       -- Fuzzy Finder Algorithm which requires local dependencies to be built.
       -- Only load if `make` is available. Make sure you have the system
       -- requirements installed.
@@ -65,19 +66,6 @@ return {
             },
             -- Other telescope configuration options
           },
-          file_browser = {
-            theme = "ivy",
-            -- disables netrw and use telescope-file-browser in its place
-            hijack_netrw = true,
-            mappings = {
-              ["i"] = {
-                -- your custom insert mode mappings
-              },
-              ["n"] = {
-                -- your custom normal mode mappings
-              },
-            },
-          },
           docker = {
             -- These are the default values
             theme = "ivy",
@@ -98,9 +86,6 @@ return {
 
       -- Enable telescope repo, if installed
       pcall(require('telescope').load_extension, 'docker')
-
-      -- Enable telescope repo, if installed
-      pcall(require('telescope').load_extension, 'file_browser')
 
       -- Enable telescope repo, if installed
       pcall(require('telescope').load_extension, 'repo')
@@ -164,17 +149,6 @@ return {
           prompt_title = 'Live Grep in Open Files',
         }
       end
-      vim.keymap.set('n', '<leader>s/', telescope_live_grep_open_files, { desc = '[S]earch [/] in Open Files' })
-      vim.keymap.set('n', '<leader>ss', require('telescope.builtin').builtin, { desc = '[S]earch [S]elect Telescope' })
-      vim.keymap.set('n', '<leader>gf', require('telescope.builtin').git_files, { desc = 'Search [G]it [F]iles' })
-      vim.keymap.set('n', '<leader>sf', require('telescope.builtin').find_files, { desc = '[S]earch [F]iles' })
-      vim.keymap.set('n', '<leader>sh', require('telescope.builtin').help_tags, { desc = '[S]earch [H]elp' })
-      vim.keymap.set('n', '<leader>sw', require('telescope.builtin').grep_string, { desc = '[S]earch current [W]ord' })
-      vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep, { desc = '[S]earch by [G]rep' })
-      vim.keymap.set('n', '<leader>sG', ':LiveGrepGitRoot<cr>', { desc = '[S]earch by [G]rep on Git Root' })
-      vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
-      vim.keymap.set('n', '<leader>sr', require('telescope.builtin').resume, { desc = '[S]earch [R]esume' })
-      vim.keymap.set('n', '\\', ":Telescope file_browser path=%:p:h select_buffer=true<CR>")
     end
   },
 }

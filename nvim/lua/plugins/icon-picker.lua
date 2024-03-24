@@ -1,5 +1,6 @@
 return({
     "ziontee113/icon-picker.nvim",
+    enabled = false,
     dependencies = {
         "stevearc/dressing.nvim"
     },

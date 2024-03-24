@@ -20,7 +20,8 @@ set $term foot
 # on the original workspace that the command was run on.
 #set $menu dmenu_path | dmenu | xargs swaymsg exec --
 #set $menu .config/rofi/launchers/misc/launcher.sh
-set $menu wofi -c ~/.config/wofi/config -I
+# set $menu wofi -c ~/.config/wofi/config -I
+set $menu anyrun
 
 set $focused_bgcolor #5C5C5C
 set $focused_textcolor #223333C0

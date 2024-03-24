@@ -1,8 +1,8 @@
 {
     "network": {
         "interface": "wlp0s20f3", 
-        "format-wifi": " {essid}",
-        "format-disconnected": "睊Disconnected",
+        "format-wifi": "󰖩 {essid}",
+        "format-disconnected": "󰖪 Disconnected",
         "format-ethernet": "{ipaddr}/{cidr}",
         "format-disconnected": "", //An empty format will hide the module.
         "interval": 60

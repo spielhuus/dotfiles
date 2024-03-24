@@ -64,16 +64,23 @@ return ({
   },
   {
     "mcchrish/zenbones.nvim",
+    enabled = false,
     dependencies = {
       "rktjmp/lush.nvim"
     },
     config = function()
-      vim.g.zenbones_solid_line_nr = true
-      vim.g.zenbones_darken_comments = 45
-      vim.g.zenbones_transparent_background = true
+      vim.g.zenwritten_solid_line_nr = true
+      vim.g.zenwritten_darken_comments = 45
+      vim.g.zenwritten_transparent_background = true
+      vim.g.zenwritten_darkness = 'stark'
+      vim.g.zenwritten_solid_float_border = true
+      vim.g.zenwritten_darken_noncurrent_window = true
+      vim.g.zenwritten_darken_line_nr = 100
+      vim.cmd 'colorscheme zenwritten'
 
-      vim.cmd 'colorscheme zenbones'
-
+      require("lualine").setup {
+        options = { theme = "zenbones" }, -- or any other flavor
+      }
     end
   },
 })

@@ -1,5 +1,6 @@
 return ({
   "jinzhongjia/LspUI.nvim",
+  enable = false,
   branch = "legacy",
   config = function()
     require("LspUI").setup({
