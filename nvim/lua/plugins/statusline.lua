@@ -25,7 +25,7 @@ return ({
       },
       sections = {
         lualine_a = { 'mode' },
-        lualine_b = { 'branch', 'diff', 'diagnostics' },
+        lualine_b = { 'branch', 'diff', 'diagnostics', 'filename' },
         lualine_c = { 'lsp_progress' },
         lualine_x = { 'encoding', 'fileformat', 'filetype' },
         lualine_y = { 'progress' },
@@ -34,7 +34,7 @@ return ({
       inactive_sections = {
         lualine_a = {},
         lualine_b = {},
-        lualine_c = { 'filename' },
+        lualine_c = {},
         lualine_x = { 'location' },
         lualine_y = {},
         lualine_z = {}
