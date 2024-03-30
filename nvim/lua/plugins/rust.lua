@@ -37,6 +37,7 @@ vim.g.rustaceanvim = function()
         highlight = "Comment",
       },
     },
+
     -- other rustacean settings. --
     server = {
       on_attach = function(_, bufnr)
@@ -44,10 +45,26 @@ vim.g.rustaceanvim = function()
         vim.keymap.set("n", "rd", function() vim.cmd.RustLsp('renderDiagnostic') end, { buffer = bufnr })
         vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "LSP [g]o to [d]efinition.", buffer = bufnr })
         vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "LSP go to previous diagnostic.", buffer = bufnr })
+        vim.keymap.set("n", "[e",
+          function()
+            vim.diagnostic.goto_prev({
+              severity = vim.diagnostic.severity.ERROR,
+              wrap = true
+            })
+          end, { desc = "LSP go to previous error diagnostic.", buffer = bufnr })
         vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "LSP go to next diagnostic.", buffer = bufnr })
+        vim.keymap.set("n", "]e",
+          function()
+            vim.diagnostic.goto_next({
+              severity = vim.diagnostic.severity.ERROR,
+              wrap = true
+            })
+          end, { desc = "LSP go to previous error diagnostic.", buffer = bufnr })
         vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, { desc = "LSP signature help.", buffer = bufnr })
-        vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, { desc = "LSP [R]ena[m]e symbol under cusror.", buffer = bufnr })
-        vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, { desc = "LSP open diagnostic as floating window.", buffer = bufnr })
+        vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename,
+          { desc = "LSP [R]ena[m]e symbol under cusror.", buffer = bufnr })
+        vim.keymap.set('n', '<space>e', vim.diagnostic.open_float,
+          { desc = "LSP open diagnostic as floating window.", buffer = bufnr })
 
         -- other settings. --
         vim.lsp.inlay_hint.enable(bufnr, true)
@@ -93,12 +110,12 @@ end
 vim.diagnostic.config {
   virtual_lines = true,
   virtual_text = {
-    source = "always",
+    source = true,
     prefix = "■",
   },
   -- virtual_text = false,
   float = {
-    source = "always",
+    source = true,
     border = "rounded",
   },
   signs = true,
