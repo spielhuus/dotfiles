@@ -2,7 +2,7 @@ output * bg  ~/.dotfiles/wallpapers/BelaLugosi.jpg fill
 assign [app_id="brave-browser"] workspace 1
 assign [class="thunderbird"] workspace 3
 assign [app_id="com.gitlab.newsflash"] workspace 4
-exec swaymsg "workspace 1; exec brave -ozone-platform=wayland;"
+exec swaymsg "workspace 1; exec vivaldi;"
 exec swaymsg "workspace 2; exec kitty;"
 exec swaymsg "workspace 3; exec thunderbird;"
 exec swaymsg "workspace 4; exec newsflash;"
