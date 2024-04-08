@@ -22,7 +22,7 @@ return {
     'rafamadriz/friendly-snippets',
     'hrsh7th/cmp-cmdline',
     'rafamadriz/friendly-snippets',
-    {
+    --[[ {
       "Exafunction/codeium.nvim",
       dependencies = {
         "nvim-lua/plenary.nvim",
@@ -32,7 +32,7 @@ return {
         require("codeium").setup({
         })
       end
-    },
+    }, ]]
     'onsails/lspkind.nvim',
   },
 
