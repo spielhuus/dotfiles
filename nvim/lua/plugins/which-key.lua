@@ -31,6 +31,7 @@ return {
 
     wk.register({
       ["<C-g>"] = { "<cmd>Neogit<cr>", "Open Neogit buffer." },
+      ["\\"] = { "<cmd>Triptych<cr>", "File Browser." },
     })
   end
 }

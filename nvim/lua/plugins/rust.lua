@@ -1,41 +1,42 @@
 vim.g.rustaceanvim = function()
   return {
     tools = {
-      inlay_hints = {
-        -- automatically set inlay hints (type hints)
-        -- default: true
-        auto = true,
-
-        -- Only show inlay hints for the current line
-        only_current_line = false,
-
-        -- whether to show parameter hints with the inlay hints or not
-        -- default: true
-        show_parameter_hints = true,
-
-        -- prefix for parameter hints
-        -- default: "<-"
-        parameter_hints_prefix = "<- ",
-
-        -- prefix for all the other hints (type, chaining)
-        -- default: "=>"
-        other_hints_prefix = "=> ",
-
-        -- whether to align to the length of the longest line in the file
-        max_len_align = false,
-
-        -- padding from the left if max_len_align is true
-        max_len_align_padding = 1,
-
-        -- whether to align to the extreme right or not
-        right_align = false,
-
-        -- padding from the right if right_align is true
-        right_align_padding = 7,
-
-        -- The color of the hints
-        highlight = "Comment",
-      },
+      -- inlay_hints = {
+      --   enabled = true,
+      --   -- automatically set inlay hints (type hints)
+      --   -- default: true
+      --   auto = true,
+      --
+      --   -- Only show inlay hints for the current line
+      --   only_current_line = false,
+      --
+      --   -- whether to show parameter hints with the inlay hints or not
+      --   -- default: true
+      --   show_parameter_hints = true,
+      --
+      --   -- prefix for parameter hints
+      --   -- default: "<-"
+      --   parameter_hints_prefix = "<- ",
+      --
+      --   -- prefix for all the other hints (type, chaining)
+      --   -- default: "=>"
+      --   other_hints_prefix = "=> ",
+      --
+      --   -- whether to align to the length of the longest line in the file
+      --   max_len_align = false,
+      --
+      --   -- padding from the left if max_len_align is true
+      --   max_len_align_padding = 1,
+      --
+      --   -- whether to align to the extreme right or not
+      --   right_align = false,
+      --
+      --   -- padding from the right if right_align is true
+      --   right_align_padding = 7,
+      --
+      --   -- The color of the hints
+      --   highlight = "Comment",
+      -- },
     },
 
     -- other rustacean settings. --
@@ -44,6 +45,7 @@ vim.g.rustaceanvim = function()
         vim.keymap.set("n", "ca", function() vim.cmd.RustLsp('codeAction') end, { buffer = bufnr })
         vim.keymap.set("n", "rd", function() vim.cmd.RustLsp('renderDiagnostic') end, { buffer = bufnr })
         vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "LSP [g]o to [d]efinition.", buffer = bufnr })
+        vim.keymap.set("n", "gr", vim.lsp.buf.references, { desc = "LSP [g]o to [r]eferences.", buffer = bufnr })
         vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "LSP go to previous diagnostic.", buffer = bufnr })
         vim.keymap.set("n", "[e",
           function()
@@ -65,9 +67,6 @@ vim.g.rustaceanvim = function()
           { desc = "LSP [R]ena[m]e symbol under cusror.", buffer = bufnr })
         vim.keymap.set('n', '<space>e', vim.diagnostic.open_float,
           { desc = "LSP open diagnostic as floating window.", buffer = bufnr })
-
-        -- other settings. --
-        vim.lsp.inlay_hint.enable(bufnr, true)
       end,
       default_settings = {
         -- rust-analyzer language server configuration

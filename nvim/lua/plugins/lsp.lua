@@ -36,7 +36,7 @@ return({
 			end, '[C]ode [A]ction')
 
 			--nmap('gd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
-			nmap('gd', function() print("ahah") end, '[G]oto [D]efinition')
+			nmap('gd', vim.lsp.buf.definition, '[G]oto [D]efinition')
 			nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
 			nmap('gI', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
 			nmap('<leader>D', require('telescope.builtin').lsp_type_definitions, 'Type [D]efinition')
