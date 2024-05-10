@@ -1,6 +1,6 @@
 return ({
     'nvimdev/lspsaga.nvim',
-    enabled = true,
+    enabled = false,
     config = function()
         require('lspsaga').setup({
             preview = {

@@ -5,8 +5,8 @@
 
 
     "modules-left": ["sway/workspaces", "custom/scratch", "sway/mode", "sway/window"],
-    "modules-center": [],
-    "modules-right": ["temperature", "memory", "cpu", "disk", "network", "pulseaudio", "battery", "clock", "tray"],
+    "modules-center": ["custom/kitty"],
+    "modules-right": ["custom/pacman", "temperature", "memory", "cpu", "disk", "network", "pulseaudio", "battery", "clock", "tray"],
 
     "include": ["~/.config/waybar/conf.d/$(hostnamectl hostname)"],
 
@@ -25,12 +25,10 @@
       }
 },
 
-
 "sway/window": {
   "format": "{}",
   "max-length": 150
 },
-
 
 "custom/scratch": {
   "interval": 3,
@@ -40,12 +38,30 @@
   "on-click-right": "swaymsg 'move scratchpad'"
 },
 
+"custom/kitty": {
+     "format" : {
+        "default": "{title}",
+        "window": "{title}"
+     },
+    "exec": "python ~/.dotfiles/waybar/kitty-navbar.py",
+    "return-type": "json",
+    "restart-interval": 1,
+},
 
 "tray": {
   "icon-size": 18,
   "spacing": 15
 },
-
+"custom/pacman": {
+  "format": "{icon}{}",
+  "return-type": "json",
+  "format-icons": {
+    "pending-updates": " ",
+    "updated": ""
+  },
+  "exec-if": "which waybar-updates",
+  "exec": "waybar-updates"
+},
 
 "clock": {
     "format": "{:%a %b %e  %R}",

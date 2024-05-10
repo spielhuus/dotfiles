@@ -1,5 +1,6 @@
 return {
   "ghillb/cybu.nvim",
+  enabled = true,
   dependencies = { "nvim-tree/nvim-web-devicons" },
   config = function()
     local ok, cybu = pcall(require, "cybu")

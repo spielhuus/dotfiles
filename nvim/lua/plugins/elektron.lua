@@ -1,6 +1,6 @@
 return ({
   'spielhuus/elektron-nvim',
-  enabled = true,
+  enabled = false,
   config = function()
     require('elektron').setup()
   end,

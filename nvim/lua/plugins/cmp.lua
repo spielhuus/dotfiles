@@ -1,5 +1,6 @@
 return {
   'hrsh7th/nvim-cmp',
+  enabled = true,
   dependencies = {
     -- Snippet Engine & its associated nvim-cmp source
     {

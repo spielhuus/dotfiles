@@ -1,8 +1,8 @@
-return({
+return ({
   "vigoux/notifier.nvim",
   enabled = false,
   config = function()
-    require'notifier'.setup {
+    require 'notifier'.setup {
     }
   end
 })

@@ -1,5 +1,6 @@
 return ({
   'nvim-lualine/lualine.nvim',
+  enabled = true,
   dependencies = {
     'arkav/lualine-lsp-progress'
   },

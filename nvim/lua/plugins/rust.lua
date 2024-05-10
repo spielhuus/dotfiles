@@ -41,12 +41,26 @@ vim.g.rustaceanvim = function()
 
     -- other rustacean settings. --
     server = {
-      on_attach = function(_, bufnr)
+      on_attach = function(client, bufnr)
+
+			local nmap = function(keys, func, desc)
+				if desc then
+					desc = 'LSP: ' .. desc
+				end
+
+				vim.keymap.set('n', keys, func, { buffer = bufnr, desc = desc })
+			end
+
+			nmap('<leader>D', require('telescope.builtin').lsp_type_definitions, 'Type [D]efinition')
+			nmap('<leader>ds', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
+			nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
+
         vim.keymap.set("n", "ca", function() vim.cmd.RustLsp('codeAction') end, { buffer = bufnr })
         vim.keymap.set("n", "rd", function() vim.cmd.RustLsp('renderDiagnostic') end, { buffer = bufnr })
-        vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "LSP [g]o to [d]efinition.", buffer = bufnr })
-        vim.keymap.set("n", "gr", vim.lsp.buf.references, { desc = "LSP [g]o to [r]eferences.", buffer = bufnr })
-        vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "LSP go to previous diagnostic.", buffer = bufnr })
+        vim.keymap.set('n', 'gr', require('telescope.builtin').lsp_references, { desc = 'LSP: [G]oto [R]eferences' })
+        vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { desc = 'LSP: [G]oto [D]efinition' })
+        vim.keymap.set('n', 'gI', require('telescope.builtin').lsp_implementations, { desc =  'LSP: [G]oto [I]mplementation' })
+        vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "LSP: go to previous diagnostic.", buffer = bufnr })
         vim.keymap.set("n", "[e",
           function()
             vim.diagnostic.goto_prev({
@@ -67,7 +81,10 @@ vim.g.rustaceanvim = function()
           { desc = "LSP [R]ena[m]e symbol under cusror.", buffer = bufnr })
         vim.keymap.set('n', '<space>e', vim.diagnostic.open_float,
           { desc = "LSP open diagnostic as floating window.", buffer = bufnr })
+        vim.keymap.set('n', '<leader>f', "<cmd>RustFmt<cr>",
+          { desc = "LSP [f]ormat document.", buffer = bufnr })
       end,
+
       default_settings = {
         -- rust-analyzer language server configuration
         ['rust-analyzer'] = {

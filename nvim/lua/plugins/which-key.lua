@@ -1,6 +1,7 @@
 return {
   -- Useful plugin to show you pending keybinds.
   'folke/which-key.nvim',
+  enabled = true,
   config = function()
     vim.o.timeout = true
     vim.o.timeoutlen = 300
@@ -9,9 +10,12 @@ return {
     wk.register({
       f = {
         name = "file", -- optional group name
-        f = { "<cmd>Telescope find_files<cr>", "Find File" }, -- create a binding with label
-        -- r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File", noremap=false, buffer = bufnr }, -- additional options for creating the keymap
-        b = { function() print("bar") end, "Foobar" } -- you can also pass functions!
+      },
+
+      b = {
+        name = "build",
+        b = { "<cmd>OverseerRun<cr>", "Build Menu" }, -- create a binding with label
+        o = { "<cmd>OverseerToggle<cr>", "Open Build Tasklist" }, -- create a binding with label
       },
     }, { prefix = "<leader>" }
     )

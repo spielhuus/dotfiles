@@ -37,7 +37,7 @@ opt.softtabstop = 2
 -- opt.splitbelow = true
 -- opt.splitright = true
 -- opt.laststatus = 3 -- Global statusline
-opt.cmdheight = 0
+opt.cmdheight = 1
 -- opt.scrollback = 100000
 --
 -- -- go to previous/next line with h,l,left arrow and right arrow when cursor reaches end/beginning of line
