@@ -6,7 +6,7 @@
 
     "modules-left": ["sway/workspaces", "custom/scratch", "sway/mode", "sway/window"],
     "modules-center": ["custom/kitty"],
-    "modules-right": ["custom/pacman", "temperature", "memory", "cpu", "disk", "network", "pulseaudio", "battery", "clock", "tray"],
+    "modules-right": ["temperature", "memory", "cpu", "disk", "network", "pulseaudio", "battery", "custom/pacman", "clock", "tray"],
 
     "include": ["~/.config/waybar/conf.d/$(hostnamectl hostname)"],
 
@@ -52,11 +52,12 @@
   "icon-size": 18,
   "spacing": 15
 },
+
 "custom/pacman": {
-  "format": "{icon}{}",
+  "format": "{icon}{}  ",
   "return-type": "json",
   "format-icons": {
-    "pending-updates": " ",
+    "pending-updates": "",
     "updated": ""
   },
   "exec-if": "which waybar-updates",
@@ -103,9 +104,9 @@
         "warning": 20,
         "critical": 20
       },
-    "format": " {icon} {capacity}%",
-    "format-good": " {icon}",
-    "format-full": " {icon}",
+    "format": " {icon} {capacity}% ",
+    "format-good": " {icon} ",
+    "format-full": " {icon} ",
     "format-icons": ["", "", "", "", ""],
     "interval": 30
 },
