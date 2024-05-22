@@ -35,7 +35,7 @@ return {
       }
     end,
     dependencies = {
-      { "nvim-treesitter/nvim-treesitter-textobjects", event = "BufReadPre" },
+      { "nvim-treesitter/nvim-treesitter-textobjects", event = "BufReadPre", enabled = false },
       { "windwp/nvim-ts-autotag", event = "InsertEnter",
         config = function()
           require('nvim-ts-autotag').setup()
@@ -44,6 +44,7 @@ return {
       { "RRethy/nvim-treesitter-textsubjects", event = "BufReadPre" },
       { "theHamsta/nvim-treesitter-pairs" },
       { "nvim-treesitter/nvim-treesitter-context",
+        enabled = false,
         config = function()
           require 'treesitter-context'.setup {
             enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)

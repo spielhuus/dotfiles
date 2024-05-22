@@ -1,6 +1,6 @@
 return({
   "NeogitOrg/neogit",
-  branch = "nightly",
+  branch = "master",
   enabled = true,
   dependencies = {
     "nvim-lua/plenary.nvim",         -- required

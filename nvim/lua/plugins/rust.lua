@@ -1,48 +1,8 @@
 vim.g.rustaceanvim = function()
   return {
-    tools = {
-      -- inlay_hints = {
-      --   enabled = true,
-      --   -- automatically set inlay hints (type hints)
-      --   -- default: true
-      --   auto = true,
-      --
-      --   -- Only show inlay hints for the current line
-      --   only_current_line = false,
-      --
-      --   -- whether to show parameter hints with the inlay hints or not
-      --   -- default: true
-      --   show_parameter_hints = true,
-      --
-      --   -- prefix for parameter hints
-      --   -- default: "<-"
-      --   parameter_hints_prefix = "<- ",
-      --
-      --   -- prefix for all the other hints (type, chaining)
-      --   -- default: "=>"
-      --   other_hints_prefix = "=> ",
-      --
-      --   -- whether to align to the length of the longest line in the file
-      --   max_len_align = false,
-      --
-      --   -- padding from the left if max_len_align is true
-      --   max_len_align_padding = 1,
-      --
-      --   -- whether to align to the extreme right or not
-      --   right_align = false,
-      --
-      --   -- padding from the right if right_align is true
-      --   right_align_padding = 7,
-      --
-      --   -- The color of the hints
-      --   highlight = "Comment",
-      -- },
-    },
-
     -- other rustacean settings. --
     server = {
       on_attach = function(client, bufnr)
-
 			local nmap = function(keys, func, desc)
 				if desc then
 					desc = 'LSP: ' .. desc
@@ -55,6 +15,9 @@ vim.g.rustaceanvim = function()
 			nmap('<leader>ds', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
 			nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
 
+      vim.keymap.set('n', '<leader>h', function() vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled()) end)
+
+        -- vim.keymap.set("n", "hh", function() vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled()) end, { buffer = bufnr })
         vim.keymap.set("n", "ca", function() vim.cmd.RustLsp('codeAction') end, { buffer = bufnr })
         vim.keymap.set("n", "rd", function() vim.cmd.RustLsp('renderDiagnostic') end, { buffer = bufnr })
         vim.keymap.set('n', 'gr', require('telescope.builtin').lsp_references, { desc = 'LSP: [G]oto [R]eferences' })
@@ -83,6 +46,8 @@ vim.g.rustaceanvim = function()
           { desc = "LSP open diagnostic as floating window.", buffer = bufnr })
         vim.keymap.set('n', '<leader>f', "<cmd>RustFmt<cr>",
           { desc = "LSP [f]ormat document.", buffer = bufnr })
+
+          vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
       end,
 
       default_settings = {

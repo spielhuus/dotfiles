@@ -1,7 +1,7 @@
 -- TODO highlight and search
 return ({
   "folke/todo-comments.nvim",
-  enabled = false,
+  enabled = true,
   dependencies = { "nvim-lua/plenary.nvim" },
   config = true,
 })

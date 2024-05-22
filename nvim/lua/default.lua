@@ -8,7 +8,6 @@ vim.g.loaded_netrwPlugin = 1
 -- Remap leader and local leader to <Space>
 vim.keymap.set("", "<Space>", "<Nop>", { noremap = true, silent = true })
 g.mapleader = " "
--- g.maplocalleader = ","
 -- g.vimsyn_embed = "lPr" -- Syntax embedding for Lua, Python and Ruby
 --
 opt.termguicolors = true -- Enable colors in terminal
@@ -37,7 +36,7 @@ opt.softtabstop = 2
 -- opt.splitbelow = true
 -- opt.splitright = true
 -- opt.laststatus = 3 -- Global statusline
-opt.cmdheight = 1
+opt.cmdheight = 0
 -- opt.scrollback = 100000
 --
 -- -- go to previous/next line with h,l,left arrow and right arrow when cursor reaches end/beginning of line

@@ -9,11 +9,11 @@ vim.api.nvim_create_autocmd("BufWinEnter", vim.tbl_extend("force", {
 
 
 -- remove trailing whitespaces on save.
-vim.api.nvim_create_autocmd("BufWritePre", vim.tbl_extend("force", {
-		desc = "remove whitespaces on save",
-		pattern = "*",
-		command = "%s/\\s\\+$//e",
-	}, { group = group }))
+-- vim.api.nvim_create_autocmd("BufWritePre", vim.tbl_extend("force", {
+-- 		desc = "remove whitespaces on save",
+-- 		pattern = "*",
+-- 		command = "%s/\\s\\+$//e",
+-- 	}, { group = group }))
 
 -- highlight text on yank.
 vim.api.nvim_create_autocmd("TextYankPost", vim.tbl_extend("force", {

@@ -6,21 +6,13 @@ return({
 		-- Automatically install LSPs to stdpath for neovim
 		{ 'williamboman/mason.nvim', config = true },
 	  	'williamboman/mason-lspconfig.nvim',
-
-		-- Useful status updates for LSP
-		-- {
-		-- 	'j-hui/fidget.nvim',
-		-- 	opts = {}
-		-- },
-
-		-- Additional lua configuration, makes nvim stuff amazing!
-		'folke/neodev.nvim',
+	  	'folke/neodev.nvim',
 	},
 
 	config = function()
 		-- [[ Configure LSP ]]
 		--  This function gets run when an LSP connects to a particular buffer.
-		local on_attach = function(_, bufnr)
+		local on_attach = function(client, bufnr)
 			-- In this case, we create a function that lets us more easily define mappings specific
 			-- for LSP related items. It sets the mode, buffer and description for us each time.
 			local nmap = function(keys, func, desc)

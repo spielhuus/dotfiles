@@ -6,7 +6,7 @@
 
     "modules-left": ["sway/workspaces", "custom/scratch", "sway/mode", "sway/window"],
     "modules-center": ["custom/kitty"],
-    "modules-right": ["temperature", "memory", "cpu", "disk", "network", "pulseaudio", "battery", "custom/pacman", "clock", "tray"],
+    "modules-right": ["temperature", "memory", "cpu", "disk", "pulseaudio", "battery", "clock", "custom/pacman", "tray"],
 
     "include": ["~/.config/waybar/conf.d/$(hostnamectl hostname)"],
 
@@ -19,15 +19,26 @@
           "2": "",
           "3": "",
           "4": "",
+          "5": "",
           "urgent": "",
-          "focused": "",
+          //"focused": "",
           "default": ""
       }
 },
 
 "sway/window": {
   "format": "{}",
-  "max-length": 150
+  "max-length": 150,
+  "rewrite": {
+    "(.*) - Brave": "  $1",
+    "Newsflash": "  $1",
+    "(.*) - Mozilla Thunderbird": "  $1",
+    "nvim (.*)": "  $1",
+    "sudo (.*)": "🦸  $1",
+    "docker (.*)": "  $1",
+    "md": " >maturin develop",
+    "mb": " >maturin build",
+},
 },
 
 "custom/scratch": {
@@ -38,27 +49,17 @@
   "on-click-right": "swaymsg 'move scratchpad'"
 },
 
-"custom/kitty": {
-     "format" : {
-        "default": "{title}",
-        "window": "{title}"
-     },
-    "exec": "python ~/.dotfiles/waybar/kitty-navbar.py",
-    "return-type": "json",
-    "restart-interval": 1,
-},
-
 "tray": {
   "icon-size": 18,
   "spacing": 15
 },
 
 "custom/pacman": {
-  "format": "{icon}{}  ",
+  "format": "{icon}",
   "return-type": "json",
   "format-icons": {
-    "pending-updates": "",
-    "updated": ""
+    "pending-updates": "",
+    "updated": ""
   },
   "exec-if": "which waybar-updates",
   "exec": "waybar-updates"
@@ -71,19 +72,19 @@
 
 "cpu": {
     "interval": 10,
-    "format": "{}% ",
-    "max-length": 10
+    "format": "  {}%",
+    "max-length": 12
 },
 
 "disk": {
     "interval": 30,
-    "format": "󰗮{percentage_free}%  ",
+    "format": "󰗮  {percentage_free}%",
     "path": "/"
 },
 
 "memory": {
     "interval": 30,
-    "format": "󰍛{}%",
+    "format": "󰍛  {}%",
     "max-length": 10
 },
 
@@ -104,32 +105,31 @@
         "warning": 20,
         "critical": 20
       },
-    "format": " {icon} {capacity}% ",
-    "format-good": " {icon} ",
-    "format-full": " {icon} ",
+    "format": "{icon}  {capacity}%",
+    "format-good": "{icon}",
+    "format-full": "{icon}",
     "format-icons": ["", "", "", "", ""],
     "interval": 30
 },
 
 "temperature": {
-	   	"thermal-zone": 0,
-		"format": "{icon} {temperatureC}°C",
+	  "thermal-zone": 0,
+		"format": "{icon}  {temperatureC}°C",
 		"format-icons":[""],
 		"interval": 30
 },
 
-
 "backlight": {
     	"device": "intel_backlight",
-    	"format": "{icon}  {percent}%  ",
+    	"format": "{icon}  {percent}%",
     	"format-icons": ["","","",""],
     	"interval": 60
 },
 
 "pulseaudio": {
-      "format": "{icon}  {volume}%",
-      "format-bluetooth": "  {volume}%",
-      "format-muted":" Mute",
+      "format": "{icon}   {volume}%",
+      "format-bluetooth": "   {volume}%",
+      "format-muted":"   Mute",
       "interval": 60,
 
       "format-icons": {
@@ -137,5 +137,4 @@
       },
       "on-click": "alacritty --class mixer -e pulsemixer"
 }
-
 }
