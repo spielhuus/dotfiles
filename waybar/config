@@ -4,13 +4,19 @@
     "height": 27,
 
 
-    "modules-left": ["sway/workspaces", "custom/scratch", "sway/mode", "sway/window"],
+    "modules-left": ["hyprland/workspaces", "custom/scratch", "sway/mode", "hyprland/window"],
     "modules-center": ["custom/kitty"],
     "modules-right": ["temperature", "memory", "cpu", "disk", "pulseaudio", "battery", "clock", "custom/pacman", "tray"],
 
     "include": ["~/.config/waybar/conf.d/$(hostnamectl hostname)"],
 
-	"sway/workspaces": {
+"hyprland/workspaces": {
+     "format": "{icon}",
+     "on-scroll-up": "hyprctl dispatch workspace e+1",
+     "on-scroll-down": "hyprctl dispatch workspace e-1"
+ },
+
+ "sway/workspaces": {
         "disable-scroll": true,
         "disable-markup": true,
         "format": "{index}: {icon}",
@@ -24,7 +30,16 @@
           //"focused": "",
           "default": ""
       }
-},
+ },
+
+  "hyprland/window": {
+      "format": "👉 {}",
+      "rewrite": {
+          "(.*) — Mozilla Firefox": "🌎 $1",
+          "(.*) - fish": "> [$1]"
+      },
+     "separate-outputs": true
+ },
 
 "sway/window": {
   "format": "{}",
