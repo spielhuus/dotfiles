@@ -4,7 +4,7 @@
     "height": 27,
 
 
-    "modules-left": ["hyprland/workspaces", "custom/scratch", "sway/mode", "hyprland/window"],
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
     "modules-center": ["custom/kitty"],
     "modules-right": ["temperature", "memory", "cpu", "disk", "pulseaudio", "battery", "clock", "custom/pacman", "tray"],
 
@@ -16,22 +16,6 @@
      "on-scroll-down": "hyprctl dispatch workspace e-1"
  },
 
- "sway/workspaces": {
-        "disable-scroll": true,
-        "disable-markup": true,
-        "format": "{index}: {icon}",
-	"format-icons": {
-          "1": "",
-          "2": "",
-          "3": "",
-          "4": "",
-          "5": "",
-          "urgent": "",
-          //"focused": "",
-          "default": ""
-      }
- },
-
   "hyprland/window": {
       "format": "👉 {}",
       "rewrite": {
@@ -40,20 +24,6 @@
       },
      "separate-outputs": true
  },
-
-"sway/window": {
-  "format": "{}",
-  "max-length": 150,
-  "rewrite": {
-    "(.*) - Brave": "  $1",
-    "Newsflash": "  $1",
-    "(.*) - Mozilla Thunderbird": "  $1",
-    "nvim (.*)": "  $1",
-    "sudo (.*)": "🦸  $1",
-    "docker (.*)": "  $1",
-    "md": " >maturin develop",
-    "mb": " >maturin build",
-},
 },
 
 "custom/scratch": {
