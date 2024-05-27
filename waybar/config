@@ -26,14 +26,6 @@
  },
 },
 
-"custom/scratch": {
-  "interval": 3,
-  "exec": "swaymsg -t get_tree | jq 'recurse(.nodes[]) | first(select(.name==\"__i3_scratch\")) | .floating_nodes | length | select(. >= 0)'",
-  "format": "^{}",
-  "on-click": "swaymsg 'scratchpad show'",
-  "on-click-right": "swaymsg 'move scratchpad'"
-},
-
 "tray": {
   "icon-size": 18,
   "spacing": 15
