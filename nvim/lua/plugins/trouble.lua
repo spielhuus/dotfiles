@@ -1,36 +1,42 @@
 return {
-  "folke/trouble.nvim",
-  enabled = true,
-  dependencies = {
-    "nvim-tree/nvim-web-devicons",
-    'folke/which-key.nvim',
-  },
-  opts = function ()
-    require("trouble").setup()
-    require("which-key").register({
-      x = {
-        name = "Trouble", -- optional group name
-        x = {function() require("trouble").toggle() end, "Trouble toggle" },
-        t = {"<cmd>TodoTrouble<CR>", "Trouble TODO" },
-        w = {function() require("trouble").toggle("workspace_diagnostics") end, "Trouble open workspace diagnostics" },
-        d = {function() require("trouble").toggle("document_diagnostics") end, "Trouble open document diagnostics" },
-        q = {function() require("trouble").toggle("quickfix") end, "Trouble open quickfix" },
-        l = {function() require("trouble").toggle("locallist") end, "Trouble open loclist" },
-      },
-    }, { prefix = "<leader>" })
-
-    require("which-key").register({
-      g = {
-        name = "Trouble", -- optional group name
-        R = {function() require("trouble").toggle("lsp_references") end, "Trouble LSP refrences" },
-      },
-    })
-
-    -- vim.keymap.set("n", "<leader>xx", function() require("trouble").toggle() end)
-    -- vim.keymap.set("n", "<leader>xw", function() require("trouble").toggle("workspace_diagnostics") end)
-    -- vim.keymap.set("n", "<leader>xd", function() require("trouble").toggle("document_diagnostics") end)
-    -- vim.keymap.set("n", "<leader>xq", function() require("trouble").toggle("quickfix") end)
-    -- vim.keymap.set("n", "<leader>xl", function() require("trouble").toggle("loclist") end)
-    -- vim.keymap.set("n", "gR", function() require("trouble").toggle("lsp_references") end)
-  end
+        "folke/trouble.nvim",
+        enabled = false,
+        dependencies = {
+                "nvim-tree/nvim-web-devicons",
+                'folke/which-key.nvim',
+        },
+        cmd = "Trouble",
+        keys = {
+                {
+                        "<leader>xx",
+                        "<cmd>Trouble diagnostics toggle<cr>",
+                        desc = "Diagnostics (Trouble)",
+                },
+                {
+                        "<leader>xX",
+                        "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
+                        desc = "Buffer Diagnostics (Trouble)",
+                },
+                {
+                        "<leader>cs",
+                        "<cmd>Trouble symbols toggle focus=false<cr>",
+                        desc = "Symbols (Trouble)",
+                },
+                {
+                        "<leader>cl",
+                        "<cmd>Trouble lsp toggle focus=false win.position=right<cr>",
+                        desc = "LSP Definitions / references / ... (Trouble)",
+                },
+                {
+                        "<leader>xL",
+                        "<cmd>Trouble loclist toggle<cr>",
+                        desc = "Location List (Trouble)",
+                },
+                {
+                        "<leader>xQ",
+                        "<cmd>Trouble qflist toggle<cr>",
+                        desc = "Quickfix List (Trouble)",
+                },
+        },
+        opts = {},
 }

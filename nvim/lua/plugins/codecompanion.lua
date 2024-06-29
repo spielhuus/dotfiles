@@ -1,11 +1,14 @@
 return ({
         "olimorris/codecompanion.nvim",
-        enabled = false,
+        enabled = true,
         opts = {
                 strategies = {
                         chat = "ollama",
-                        inline = "ollama"
+                        inline = "ollama",
+                        tools = "ollama",
                 },
+
+
         },
         dependencies = {
                 "nvim-lua/plenary.nvim",

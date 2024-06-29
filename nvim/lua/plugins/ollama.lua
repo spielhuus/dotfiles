@@ -1,6 +1,6 @@
 return({
   "nomnivore/ollama.nvim",
-  enabled = true,
+  enabled = false,
   dependencies = {
     "nvim-lua/plenary.nvim",
   },

@@ -47,11 +47,11 @@ return {
                         }),
 
                         sources = cmp.config.sources({
+                                { name = "codeium" },
                                 { name = 'nvim_lsp' },
-                                { name = 'luasnip' },
-                                { name = 'buffer' },
-                                { name = 'cmp_tabnine' },
-                                { name = "codeium" }
+                                -- { name = 'luasnip' },
+                                -- { name = 'buffer' },
+                                -- { name = 'cmp_tabnine' },
                         })
                 })
 

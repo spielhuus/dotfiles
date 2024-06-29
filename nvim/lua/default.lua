@@ -36,7 +36,7 @@ opt.softtabstop = 2
 -- opt.splitbelow = true
 -- opt.splitright = true
 -- opt.laststatus = 3 -- Global statusline
-opt.cmdheight = 0
+-- opt.cmdheight = 0
 -- opt.scrollback = 100000
 --
 -- -- go to previous/next line with h,l,left arrow and right arrow when cursor reaches end/beginning of line
@@ -77,3 +77,20 @@ vim.fn.sign_define("DiagnosticSignInfo",
   { text = " ", texthl = "DiagnosticSignInfo" })
 vim.fn.sign_define("DiagnosticSignHint",
   { text = "", texthl = "DiagnosticSignHint" })
+
+local transparent_highlights = {
+  'Normal',
+  'NormalNC',
+  'LineNr',
+  'Folded',
+  'NonText',
+  'SpecialKey',
+  'VertSplit',
+  'SignColumn',
+  'EndOfBuffer',
+  'TablineFill', -- this might be preference
+}
+
+for _, hl in ipairs(transparent_highlights) do
+  vim.cmd.highlight(hl .. ' guibg=NONE ctermbg=NONE')
+end

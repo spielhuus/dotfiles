@@ -12,17 +12,17 @@ vim.g.rustaceanvim = function()
 			end
 
 			nmap('<leader>D', require('telescope.builtin').lsp_type_definitions, 'Type [D]efinition')
-			nmap('<leader>ds', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
-			nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
+			-- nmap('<leader>ds', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
+			-- nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
 
       vim.keymap.set('n', '<leader>h', function() vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled()) end)
 
         -- vim.keymap.set("n", "hh", function() vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled()) end, { buffer = bufnr })
         vim.keymap.set("n", "ca", function() vim.cmd.RustLsp('codeAction') end, { buffer = bufnr })
         vim.keymap.set("n", "rd", function() vim.cmd.RustLsp('renderDiagnostic') end, { buffer = bufnr })
-        vim.keymap.set('n', 'gr', require('telescope.builtin').lsp_references, { desc = 'LSP: [G]oto [R]eferences' })
-        vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { desc = 'LSP: [G]oto [D]efinition' })
-        vim.keymap.set('n', 'gI', require('telescope.builtin').lsp_implementations, { desc =  'LSP: [G]oto [I]mplementation' })
+        -- vim.keymap.set('n', 'gr', require('telescope.builtin').lsp_references, { desc = 'LSP: [G]oto [R]eferences' })
+        -- vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { desc = 'LSP: [G]oto [D]efinition' })
+        -- vim.keymap.set('n', 'gI', require('telescope.builtin').lsp_implementations, { desc =  'LSP: [G]oto [I]mplementation' })
         vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "LSP: go to previous diagnostic.", buffer = bufnr })
         vim.keymap.set("n", "[e",
           function()
@@ -46,8 +46,6 @@ vim.g.rustaceanvim = function()
           { desc = "LSP open diagnostic as floating window.", buffer = bufnr })
         vim.keymap.set('n', '<leader>f', "<cmd>RustFmt<cr>",
           { desc = "LSP [f]ormat document.", buffer = bufnr })
-
-          vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
       end,
 
       default_settings = {

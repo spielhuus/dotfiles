@@ -63,3 +63,22 @@ keymap("x", "gx", "<Plug>(openbrowser-smart-search)", default_opts)
 keymap("n", "<C-s>", ":Telescope lsp_document_symbols<CR>", default_opts)
 keymap("n", "<leader>g", ":Telescope live_grep_args<CR>", default_opts)
 
+keymap("n", "<leader>sf", require('fzf-lua').files, { desc = "[S]earch [F]iles " } )
+keymap("n", "<leader>sr", require('fzf-lua').resume, { desc = "[S]earch [R]esume" } )
+keymap("n", "<leader>sb", require('fzf-lua').buffers, { desc = "[S]earch [B]uffers" } )
+keymap("n", "<leader>sq", require('fzf-lua').quickfix, { desc = "[S]earch [Q]uickfix" } )
+keymap("n", "<leader>sl", require('fzf-lua').lines, { desc = "[S]search [L]ines in buffer" } )
+keymap("n", "<leader>sg", require('fzf-lua').live_grep, { desc = "[S]earch [G]rep in project" } )
+
+--vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
+
+-- keymaps for lsp
+keymap("n", 'gd', require('fzf-lua').lsp_definitions, { desc = 'LSP - [G]oto [D]efinition' } )
+keymap("n", 'gr', require('fzf-lua').lsp_references, { desc = 'LSP - [G]oto [R]eferences' } )
+keymap("n", 'gI', require('fzf-lua').lsp_implementations,{ desc = 'LSP - [G]oto [I]mplementation' } )
+-- nmap('<leader>D', require('telescope.builtin').lsp_type_definitions, 'Type [D]efinition')
+keymap("n", '<leader>ds', require('telescope.builtin').lsp_document_symbols, { desc = '[D]ocument [S]ymbols' } )
+-- nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
+keymap("n", "<leader>ds", require('fzf-lua').lsp_document_symbols, { desc = "LSP - [D]ocument [S]ymbols" } )
+keymap("n", "<leader>ws", require('fzf-lua').lsp_workspace_symbols, { desc = "LSP - [W]orkspace [S]ymbols" } )
+keymap("n", "<leader>wd", require('fzf-lua').lsp_workspace_diagnostics, { desc = "LSP - LSP : [W]orkspace [D]iagnostics" } )
