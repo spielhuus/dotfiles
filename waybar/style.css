@@ -56,10 +56,8 @@ tooltip label{
 }
 
 #workspaces {
-  color: transparent;
-	margin-right: 1.5px;
-	margin-left: 1.5px;
 }
+
 #workspaces button {
   padding: 3px;
   color: @content_inactive;

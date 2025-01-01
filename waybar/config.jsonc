@@ -7,9 +7,8 @@
             "hyprland/workspaces",
             "hyprland/window"
     ],
-    "modules-center": [
-            "custom/media",
-    ],
+    // "modules-center": [
+    // ],
     "modules-right": [
             "cpu",
             "memory",
@@ -28,7 +27,7 @@
             "on-click": "activate",
             "format":" {icon} ",
             "format-icons": {
-                    "1": "<span color=\"#FFCC00\"></span>",
+                    "1": "",
                     "2": "󱆃",
                     "3": "󰇮",
                     "4": "󰑫",
@@ -40,11 +39,11 @@
             "rewrite": {
                     "nvim (.*)": "<span color=\"#00aa00\"></span> $1",
                     "lua (.*)": "<span color=\"#0000ff\"></span>  $1",
+                    "python (.*)": "<span color=\"#ffc107\">󰌠</span>  $1",
                     "(.*) - Brave": "<span color=\"#FFCC00\"></span>  $1",
-                    " *python (.*)": "󰌠 $1",
                     " *ollama (.*)": "🦙 $1",
             },
-            "separate-outputs": true
+            "separate-outputs": false
     },
     "tray": {
             "spacing": 10
