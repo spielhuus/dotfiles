@@ -1,4 +1,4 @@
-return ({
+return {
   "gbprod/cutlass.nvim",
   enabled = false,
   opts = {
@@ -10,5 +10,5 @@ return ({
       delete = "_",
       change = "_",
     },
-  }
-})
+  },
+}

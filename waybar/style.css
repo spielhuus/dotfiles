@@ -4,8 +4,10 @@
 }
 
 window#waybar {
-    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
-    color: #aaaaaa;
+    border-bottom: 1px solid rgba(100, 114, 125, 0.5);
+    border-left: 50px;
+    opacity: 0.94;
+    border: 1px solid transparent; 
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -25,7 +27,7 @@ window#waybar.solo {
 
 window#waybar.nvim {
     /*background-color: #3F3F3F;*/
-    background-color: rgba(0.1, 0.1, 0.3, 0.1);
+    background-color: rgba(0.5, 0.1, 0.3, 0.1);
 }
 
 window#waybar.chromium {
@@ -232,7 +234,7 @@ label:focus {
 }
 
 #temperature {
-    color: #f0932b;
+    color: #003300;
 }
 
 #temperature.critical {

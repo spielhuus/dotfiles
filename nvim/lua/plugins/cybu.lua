@@ -1,3 +1,4 @@
+-- Neovim plugin that offers context when cycling buffers in the form of a customizable notification window. 
 return {
   "ghillb/cybu.nvim",
   enabled = true,

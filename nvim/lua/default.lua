@@ -10,6 +10,7 @@ vim.keymap.set("", "<Space>", "<Nop>", { noremap = true, silent = true })
 g.mapleader = " "
 -- g.vimsyn_embed = "lPr" -- Syntax embedding for Lua, Python and Ruby
 --
+opt.title = true
 opt.termguicolors = true -- Enable colors in terminal
 opt.hlsearch = true --Set highlight on search
 opt.number = true --Make line numbers default
@@ -55,6 +56,14 @@ opt.softtabstop = 2
 -- opt.wildignore:append("**/.git/*")
 --
 -- -- Treesitter based folding
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+-- -- vim.opt.foldcolumn = "0"
+-- vim.opt.foldtext = ""
+-- vim.opt.foldlevel = 99
+-- -- vim.opt.foldlevelstart = 1
+-- vim.opt.foldnestmax = 2
+
 -- opt.foldlevel = 20
 -- opt.foldmethod = "expr"
 -- opt.foldexpr = "nvim_treesitter#foldexpr()"
@@ -69,28 +78,28 @@ opt.softtabstop = 2
 --
 
 -- icons for diagnostic errors:
-vim.fn.sign_define("DiagnosticSignError",
-  { text = " ", texthl = "DiagnosticSignError" })
-vim.fn.sign_define("DiagnosticSignWarn",
-  { text = " ", texthl = "DiagnosticSignWarn" })
-vim.fn.sign_define("DiagnosticSignInfo",
-  { text = " ", texthl = "DiagnosticSignInfo" })
-vim.fn.sign_define("DiagnosticSignHint",
-  { text = "", texthl = "DiagnosticSignHint" })
+-- vim.fn.sign_define("DiagnosticSignError",
+--   { text = " ", texthl = "DiagnosticSignError" })
+-- vim.fn.sign_define("DiagnosticSignWarn",
+--   { text = " ", texthl = "DiagnosticSignWarn" })
+-- vim.fn.sign_define("DiagnosticSignInfo",
+--   { text = " ", texthl = "DiagnosticSignInfo" })
+-- vim.fn.sign_define("DiagnosticSignHint",
+--   { text = "", texthl = "DiagnosticSignHint" })
 
 local transparent_highlights = {
-  'Normal',
-  'NormalNC',
-  'LineNr',
-  'Folded',
-  'NonText',
-  'SpecialKey',
-  'VertSplit',
-  'SignColumn',
-  'EndOfBuffer',
-  'TablineFill', -- this might be preference
+  "Normal",
+  "NormalNC",
+  "LineNr",
+  "Folded",
+  "NonText",
+  "SpecialKey",
+  "VertSplit",
+  "SignColumn",
+  "EndOfBuffer",
+  "TablineFill", -- this might be preference
 }
 
 for _, hl in ipairs(transparent_highlights) do
-  vim.cmd.highlight(hl .. ' guibg=NONE ctermbg=NONE')
+  vim.cmd.highlight(hl .. " guibg=NONE ctermbg=NONE")
 end

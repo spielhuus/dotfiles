@@ -1,5 +1,5 @@
 -- Map leader to space
-vim.g.mapleader = ' '
+vim.g.mapleader = " "
 
 -- local keymap = vim.api.nvim_set_keymap
 local keymap = vim.keymap.set
@@ -60,25 +60,64 @@ keymap("n", "gx", "<Plug>(openbrowser-smart-search)", default_opts)
 keymap("x", "gx", "<Plug>(openbrowser-smart-search)", default_opts)
 
 -- Some plugin keymaps
-keymap("n", "<C-s>", ":Telescope lsp_document_symbols<CR>", default_opts)
+-- keymap("n", "<C-s>", ":Telescope lsp_document_symbols<CR>", default_opts)
 keymap("n", "<leader>g", ":Telescope live_grep_args<CR>", default_opts)
 
-keymap("n", "<leader>sf", require('fzf-lua').files, { desc = "[S]earch [F]iles " } )
-keymap("n", "<leader>sr", require('fzf-lua').resume, { desc = "[S]earch [R]esume" } )
-keymap("n", "<leader>sb", require('fzf-lua').buffers, { desc = "[S]earch [B]uffers" } )
-keymap("n", "<leader>sq", require('fzf-lua').quickfix, { desc = "[S]earch [Q]uickfix" } )
-keymap("n", "<leader>sl", require('fzf-lua').lines, { desc = "[S]search [L]ines in buffer" } )
-keymap("n", "<leader>sg", require('fzf-lua').live_grep, { desc = "[S]earch [G]rep in project" } )
+-- See `:help telescope.builtin`
+local builtin = require("telescope.builtin")
+vim.keymap.set("n", "<leader>sh", builtin.help_tags, { desc = "[S]earch [H]elp" })
+vim.keymap.set("n", "<leader>sk", builtin.keymaps, { desc = "[S]earch [K]eymaps" })
+vim.keymap.set("n", "<leader>sf", builtin.find_files, { desc = "[S]earch [F]iles" })
+vim.keymap.set("n", "<leader>ss", builtin.builtin, { desc = "[S]earch [S]elect Telescope" })
+vim.keymap.set("n", "<leader>sw", builtin.grep_string, { desc = "[S]earch current [W]ord" })
+vim.keymap.set("n", "<leader>sg", builtin.live_grep, { desc = "[S]earch by [G]rep" })
+vim.keymap.set("n", "<leader>sd", builtin.diagnostics, { desc = "[S]earch [D]iagnostics" })
+vim.keymap.set("n", "<leader>sr", builtin.resume, { desc = "[S]earch [R]esume" })
+vim.keymap.set("n", "<leader>s.", builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
+vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "[ ] Find existing buffers" })
+vim.keymap.set("n", "<leader>sp", "<cmd>Telescope repo<cr>", { desc = "[S]earch for [R]epositories" })
+
+-- set the DAP keymaps
+vim.keymap.set(
+  "n",
+  "<leader>db",
+  require("dap").toggle_breakpoint,
+  { noremap = true, desc = "[D]ebug toggle [B]reakpoint" }
+)
+vim.keymap.set("n", "<leader>dc", require("dap").continue, { noremap = true, desc = "[D]ebug [C]ontinue" })
+vim.keymap.set("n", "<leader>do", require("dap").step_over, { noremap = true, desc = "[D]ebug step [O]ver" })
+vim.keymap.set("n", "<leader>di", require("dap").step_into, { noremap = true, desc = "[D]ebug step [I]nto" })
+vim.keymap.set("n", "<leader>dr", require("osv").run_this, { noremap = true, desc = "[D]ebug [R]un" })
+
+vim.keymap.set("n", "<leader>dl", function()
+  require("osv").launch({ port = 8086 })
+end, { noremap = true, desc = "[D]ebug [L]aunch server" })
+
+vim.keymap.set("n", "<leader>dw", function()
+  local widgets = require("dap.ui.widgets")
+  widgets.hover()
+end)
+
+vim.keymap.set("n", "<leader>df", function()
+  local widgets = require("dap.ui.widgets")
+  widgets.centered_float(widgets.frames)
+end)
+
+-- keymap("n", "<leader>sf", require('fzf-lua').files, { desc = "[S]earch [F]iles " } )
+-- keymap("n", "<leader>sr", require('fzf-lua').resume, { desc = "[S]earch [R]esume" } )
+-- keymap("n", "<leader>sb", require('fzf-lua').buffers, { desc = "[S]earch [B]uffers" } )
+-- keymap("n", "<leader>sq", require('fzf-lua').quickfix, { desc = "[S]earch [Q]uickfix" } )
+-- keymap("n", "<leader>sl", require('fzf-lua').lines, { desc = "[S]search [L]ines in buffer" } )
+-- keymap("n", "<leader>sg", require('fzf-lua').live_grep, { desc = "[S]earch [G]rep in project" } )
+
+-- keymap("n", "<leader>ms", require('gen').select_model, { desc = "[M]odel [S]elect " } )
+-- keymap("v", "<leader>mr", ":'<,'>Gen Review_Code<CR>", { desc = "[M]odel [R]eview Code " } )
 
 --vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
 
--- keymaps for lsp
-keymap("n", 'gd', require('fzf-lua').lsp_definitions, { desc = 'LSP - [G]oto [D]efinition' } )
-keymap("n", 'gr', require('fzf-lua').lsp_references, { desc = 'LSP - [G]oto [R]eferences' } )
-keymap("n", 'gI', require('fzf-lua').lsp_implementations,{ desc = 'LSP - [G]oto [I]mplementation' } )
--- nmap('<leader>D', require('telescope.builtin').lsp_type_definitions, 'Type [D]efinition')
-keymap("n", '<leader>ds', require('telescope.builtin').lsp_document_symbols, { desc = '[D]ocument [S]ymbols' } )
--- nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
-keymap("n", "<leader>ds", require('fzf-lua').lsp_document_symbols, { desc = "LSP - [D]ocument [S]ymbols" } )
-keymap("n", "<leader>ws", require('fzf-lua').lsp_workspace_symbols, { desc = "LSP - [W]orkspace [S]ymbols" } )
-keymap("n", "<leader>wd", require('fzf-lua').lsp_workspace_diagnostics, { desc = "LSP - LSP : [W]orkspace [D]iagnostics" } )
+-- keymaps for codecompanion
+-- vim.api.nvim_set_keymap("n", "<C-a>", "<cmd>CodeCompanionActions<cr>", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("v", "<C-a>", "<cmd>CodeCompanionActions<cr>", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("n", "<LocalLeader>a", "<cmd>CodeCompanionToggle<cr>", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("v", "<LocalLeader>a", "<cmd>CodeCompanionToggle<cr>", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("v", "ga", "<cmd>CodeCompanionAdd<cr>", { noremap = true, silent = true })

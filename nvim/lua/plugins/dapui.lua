@@ -1,6 +1,7 @@
-return ({
+return {
   "rcarriga/nvim-dap-ui",
   enabled = true,
+  dependencies = {},
   keys = {
     {
       "<leader>du",
@@ -23,7 +24,7 @@ return ({
     layouts = {
       {
         elements = {
-          { id = "repl",    size = 0.30 },
+          { id = "repl", size = 0.30 },
           { id = "console", size = 0.70 },
         },
         size = 0.19,
@@ -31,10 +32,10 @@ return ({
       },
       {
         elements = {
-          { id = "scopes",      size = 0.30 },
+          { id = "scopes", size = 0.30 },
           { id = "breakpoints", size = 0.20 },
-          { id = "stacks",      size = 0.10 },
-          { id = "watches",     size = 0.30 },
+          { id = "stacks", size = 0.10 },
+          { id = "watches", size = 0.30 },
         },
         size = 0.20,
         position = "right",
@@ -65,13 +66,13 @@ return ({
   },
   config = function(_, opts)
     require("dapui").setup(opts)
-    require("which-key").register({
-      d = {
-        name = "Debug", -- optional group name
-        u = { function() require("dapui").toggle() end, "Debug [U]I" },
-      },
-    }, { prefix = "<leader>" }
-    )
 
+    -- require("which-key").register({
+    --   d = {
+    --     name = "Debug", -- optional group name
+    --     u = { function() require("dapui").toggle() end, "Debug [U]I" },
+    --   },
+    -- }, { prefix = "<leader>" }
+    -- )
   end,
-})
+}

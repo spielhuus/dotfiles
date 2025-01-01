@@ -9,7 +9,7 @@ return {
       require("nvim-treesitter.configs").setup {
         ensure_installed = { "arduino", "bash", "c", "cmake", "cpp", "css", "dockerfile", "git_config",
                              "git_rebase", "gitattributes", "gitcommit", "gitignore", "html", "javascript",
-                             "json", "latex", "lua", "make", "markdown", "markdown_inline", "python", "regex",
+                             "json", "lua", "make", "markdown", "markdown_inline", "python", "regex",
                              "rust", "scss", "yaml" },
 
         -- Install parsers synchronously (only applied to `ensure_installed`)

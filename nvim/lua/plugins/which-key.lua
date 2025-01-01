@@ -7,35 +7,28 @@ return {
     vim.o.timeoutlen = 300
     require("which-key").setup {}
     local wk = require("which-key")
-    wk.register({
-      f = {
-        name = "file", -- optional group name
-      },
+    wk.add(
+  {
+    { "<leader>b", group = "build" },
+    { "<leader>bb", "<cmd>OverseerRun<cr>", desc = "Build Menu" },
+    { "<leader>bo", "<cmd>OverseerToggle<cr>", desc = "Open Build Tasklist" },
+    { "<leader>f", group = "file" },
+  })
 
-      b = {
-        name = "build",
-        b = { "<cmd>OverseerRun<cr>", "Build Menu" }, -- create a binding with label
-        o = { "<cmd>OverseerToggle<cr>", "Open Build Tasklist" }, -- create a binding with label
-      },
-    }, { prefix = "<leader>" }
-    )
+    wk.add(
+  {
+    { "<leader>l", group = "LSP" },
+    { "<leader>la", "<cmd>Lspsaga code_action<cr>", desc = "Code action" },
+    { "<leader>ld", "<cmd>Lspsaga peek_definition<cr>", desc = "Peek definition" },
+    { "<leader>li", "<cmd>Lspsaga incoming_calls<cr>", desc = "Incomming calls" },
+    { "<leader>lo", "<cmd>Lspsaga outgoing_calls<cr>", desc = "Outgoing calls" },
+    { "<leader>lr", "<cmd>Lspsaga rename<cr>", desc = "Rename" },
+    { "<leader>lt", "<cmd>Lspsaga peek_type_definition<cr>", desc = "Peek type definition" },
+  })
 
-    wk.register({
-      l = {
-        name = "LSP", -- optional group name
-        i = { "<cmd>Lspsaga incoming_calls<cr>", "Incomming calls" },
-        o = { "<cmd>Lspsaga outgoing_calls<cr>", "Outgoing calls" },
-        a = { "<cmd>Lspsaga code_action<cr>", "Code action" },
-        d = { "<cmd>Lspsaga peek_definition<cr>", "Peek definition" },
-        t = { "<cmd>Lspsaga peek_type_definition<cr>", "Peek type definition" },
-        r = { "<cmd>Lspsaga rename<cr>", "Rename" },
-      },
-    }, { prefix = "<leader>" }
-    )
-
-    wk.register({
-      ["<C-g>"] = { "<cmd>Neogit<cr>", "Open Neogit buffer." },
-      ["\\"] = { "<cmd>Triptych<cr>", "File Browser." },
+    wk.add({
+    { "<C-g>", "<cmd>Neogit<cr>", desc = "Open Neogit buffer." },
+    { "\\", "<cmd>Triptych<cr>", desc = "File Browser." },
     })
   end
 }
