@@ -4,7 +4,6 @@
 
 | **Plugin Name** | **Dependencies** | **Description** |
 | --- | --- | --- |
-| [FixCursorHold.nvim](https://github.com/antoinemadec/FixCursorHold.nvim.git) |  | Fix cursor hold issue in Neovim |
 | [busted-types](https://github.com/LuaCATS/busted.git) |  | Lua types for busted testing framework |
 | [catppuccin](https://github.com/catppuccin/nvim.git) |  | Soothing pastel theme for Neovim |
 | [cmp-ai](https://github.com/tzachar/cmp-ai.git) | plenary.nvim | AI-powered completion source for nvim-cmp |
@@ -25,7 +24,6 @@
 | [mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim.git) |  | LSP config for Mason.nvim |
 | [mason-nvim-lint](https://github.com/rshkarin/mason-nvim-lint.git) |  | Nvim-lint config for Mason.nvim |
 | [mason.nvim](https://github.com/williamboman/mason.nvim.git) |  | Portable package manager for Neovim |
-| [mini.cursorword](https://github.com/echasnovski/mini.cursorword.git) |  | Highlight word under cursor for Neovim |
 | [mini.doc](https://github.com/echasnovski/mini.doc.git) |  | Document symbol highlights for Neovim |
 | [mini.icons](https://github.com/echasnovski/mini.icons.git) |  | Icon module for Mini.nvim |
 | [neogit](https://github.com/NeogitOrg/neogit.git) | plenary.nvim, diffview.nvim, telescope.nvim | Magit for Neovim |
