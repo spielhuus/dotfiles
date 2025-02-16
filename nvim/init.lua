@@ -21,4 +21,4 @@ require("lazy").setup("plugins", {
 	},
 })
 
-require("breadcrumbs")
+require("breadcrumbs").setup()

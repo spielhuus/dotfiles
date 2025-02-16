@@ -36,7 +36,7 @@ opt.tabstop = 2
 opt.softtabstop = 2
 -- opt.splitbelow = true
 -- opt.splitright = true
--- opt.laststatus = 3 -- Global statusline
+opt.laststatus = 0
 -- opt.cmdheight = 0
 -- opt.scrollback = 100000
 --
@@ -56,8 +56,8 @@ opt.softtabstop = 2
 -- opt.wildignore:append("**/.git/*")
 --
 -- -- Treesitter based folding
-vim.opt.foldmethod = "expr"
-vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+-- vim.opt.foldmethod = "expr"
+-- vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 -- -- vim.opt.foldcolumn = "0"
 -- vim.opt.foldtext = ""
 -- vim.opt.foldlevel = 99
@@ -88,18 +88,18 @@ vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 --   { text = "", texthl = "DiagnosticSignHint" })
 
 local transparent_highlights = {
-  "Normal",
-  "NormalNC",
-  "LineNr",
-  "Folded",
-  "NonText",
-  "SpecialKey",
-  "VertSplit",
-  "SignColumn",
-  "EndOfBuffer",
-  "TablineFill", -- this might be preference
+	"Normal",
+	"NormalNC",
+	"LineNr",
+	"Folded",
+	"NonText",
+	"SpecialKey",
+	"VertSplit",
+	"SignColumn",
+	"EndOfBuffer",
+	"TablineFill", -- this might be preference
 }
 
 for _, hl in ipairs(transparent_highlights) do
-  vim.cmd.highlight(hl .. " guibg=NONE ctermbg=NONE")
+	vim.cmd.highlight(hl .. " guibg=NONE ctermbg=NONE")
 end

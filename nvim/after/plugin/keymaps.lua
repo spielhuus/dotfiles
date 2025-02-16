@@ -61,28 +61,28 @@ keymap("x", "gx", "<Plug>(openbrowser-smart-search)", default_opts)
 
 -- Some plugin keymaps
 -- keymap("n", "<C-s>", ":Telescope lsp_document_symbols<CR>", default_opts)
-keymap("n", "<leader>g", ":Telescope live_grep_args<CR>", default_opts)
+-- keymap("n", "<leader>g", ":Telescope live_grep_args<CR>", default_opts)
 
 -- See `:help telescope.builtin`
-local builtin = require("telescope.builtin")
-vim.keymap.set("n", "<leader>sh", builtin.help_tags, { desc = "[S]earch [H]elp" })
-vim.keymap.set("n", "<leader>sk", builtin.keymaps, { desc = "[S]earch [K]eymaps" })
-vim.keymap.set("n", "<leader>sf", builtin.find_files, { desc = "[S]earch [F]iles" })
-vim.keymap.set("n", "<leader>ss", builtin.builtin, { desc = "[S]earch [S]elect Telescope" })
-vim.keymap.set("n", "<leader>sw", builtin.grep_string, { desc = "[S]earch current [W]ord" })
-vim.keymap.set("n", "<leader>sg", builtin.live_grep, { desc = "[S]earch by [G]rep" })
-vim.keymap.set("n", "<leader>sd", builtin.diagnostics, { desc = "[S]earch [D]iagnostics" })
-vim.keymap.set("n", "<leader>sr", builtin.resume, { desc = "[S]earch [R]esume" })
-vim.keymap.set("n", "<leader>s.", builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
-vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "[ ] Find existing buffers" })
-vim.keymap.set("n", "<leader>sp", "<cmd>Telescope repo<cr>", { desc = "[S]earch for [R]epositories" })
+-- local builtin = require("telescope.builtin")
+-- vim.keymap.set("n", "<leader>sh", builtin.help_tags, { desc = "[S]earch [H]elp" })
+-- vim.keymap.set("n", "<leader>sk", builtin.keymaps, { desc = "[S]earch [K]eymaps" })
+-- vim.keymap.set("n", "<leader>sf", builtin.find_files, { desc = "[S]earch [F]iles" })
+-- vim.keymap.set("n", "<leader>ss", builtin.builtin, { desc = "[S]earch [S]elect Telescope" })
+-- vim.keymap.set("n", "<leader>sw", builtin.grep_string, { desc = "[S]earch current [W]ord" })
+-- vim.keymap.set("n", "<leader>sg", builtin.live_grep, { desc = "[S]earch by [G]rep" })
+-- vim.keymap.set("n", "<leader>sd", builtin.diagnostics, { desc = "[S]earch [D]iagnostics" })
+-- vim.keymap.set("n", "<leader>sr", builtin.resume, { desc = "[S]earch [R]esume" })
+-- vim.keymap.set("n", "<leader>s.", builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
+-- vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "[ ] Find existing buffers" })
+-- vim.keymap.set("n", "<leader>sp", "<cmd>Telescope repo<cr>", { desc = "[S]earch for [R]epositories" })
 
 -- set the DAP keymaps
 vim.keymap.set(
-  "n",
-  "<leader>db",
-  require("dap").toggle_breakpoint,
-  { noremap = true, desc = "[D]ebug toggle [B]reakpoint" }
+	"n",
+	"<leader>db",
+	require("dap").toggle_breakpoint,
+	{ noremap = true, desc = "[D]ebug toggle [B]reakpoint" }
 )
 vim.keymap.set("n", "<leader>dc", require("dap").continue, { noremap = true, desc = "[D]ebug [C]ontinue" })
 vim.keymap.set("n", "<leader>do", require("dap").step_over, { noremap = true, desc = "[D]ebug step [O]ver" })
@@ -90,18 +90,18 @@ vim.keymap.set("n", "<leader>di", require("dap").step_into, { noremap = true, de
 vim.keymap.set("n", "<leader>dr", require("osv").run_this, { noremap = true, desc = "[D]ebug [R]un" })
 
 vim.keymap.set("n", "<leader>dl", function()
-  require("osv").launch({ port = 8086 })
+	require("osv").launch({ port = 8086 })
 end, { noremap = true, desc = "[D]ebug [L]aunch server" })
 
 vim.keymap.set("n", "<leader>dw", function()
-  local widgets = require("dap.ui.widgets")
-  widgets.hover()
+	local widgets = require("dap.ui.widgets")
+	widgets.hover()
 end)
 
 vim.keymap.set("n", "<leader>df", function()
-  local widgets = require("dap.ui.widgets")
-  widgets.centered_float(widgets.frames)
-end)
+	local widgets = require("dap.ui.widgets")
+	widgets.centered_float(widgets.frames)
+end, { noremap = true, desc = "[D]apUI Widgets" })
 
 -- keymap("n", "<leader>sf", require('fzf-lua').files, { desc = "[S]earch [F]iles " } )
 -- keymap("n", "<leader>sr", require('fzf-lua').resume, { desc = "[S]earch [R]esume" } )

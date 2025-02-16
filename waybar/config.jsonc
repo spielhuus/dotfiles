@@ -41,6 +41,8 @@
                     "lua (.*)": "<span color=\"#0000ff\"></span>  $1",
                     "python (.*)": "<span color=\"#ffc107\">󰌠</span>  $1",
                     "(.*) - Brave": "<span color=\"#FFCC00\"></span>  $1",
+                    "(.*) - Mozilla Thunderbird": "<span color=\"#FF9900\"></span>  $1",
+                    "Newsflash": "📰 Newsflash",
                     " *ollama (.*)": "🦙 $1",
             },
             "separate-outputs": false
@@ -94,7 +96,13 @@
             "format-plugged": "",
             "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": [
+            "<span color='#FF5733'></span>", 
+            "<span color='#FFBF00'></span>", 
+            "<span color='#404040'></span>", 
+            "<span color='#a0a0a0'></span>", 
+            "<span color='#f0f0f0'></span>", 
+        ],
     },
     "battery#bat2": {
             "bat": "BAT2"
@@ -111,19 +119,15 @@
     },
     "pulseaudio": {
             "format": "{icon} {format_source}",
-            "format-bluetooth": "{volume}% {icon} {format_source}",
-            "format-bluetooth-muted": " {icon} {format_source}",
-            "format-muted": "󰝟 {format_source}",
+            "format-muted": "<span color='#707070'>󰝟</span> {format_source}",
             "format-source": "",
-            "format-source-muted": "",
+            "format-source-muted": "<span color='#707070'></span>",
             "format-icons": {
-                    "headphone": "",
-                    "hands-free": "",
-                    "headset": "",
-                    "phone": "",
-                    "portable": "",
-                    "car": "",
-                    "default": ["", "", ""]
+                    "default": [
+                            "<span color='#a0a0a0'></span>", 
+                            "<span color='#c0c0c0'></span>", 
+                            "<span color='#f0f0f0'></span>", 
+                    ],
             },
             "on-click": "pavucontrol"
     },

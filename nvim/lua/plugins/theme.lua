@@ -1,7 +1,7 @@
 return {
 	{
 		"Mofiqul/dracula.nvim",
-		enabled = true,
+		enabled = false,
 		lazy = false,
 		priority = 1000,
 		config = function()
@@ -99,7 +99,7 @@ return {
 	{
 		{
 			"catppuccin/nvim",
-			enabled = false,
+			enabled = true,
 			name = "catppuccin",
 			priority = 1000,
 			config = function()
@@ -107,25 +107,13 @@ return {
 					transparent_background = true,
 					show_end_of_buffer = true,
 					dim_inactive = {
-						enabled = true, -- dims the background color of inactive window
+						enabled = false, -- dims the background color of inactive window
 						shade = "dark",
 						percentage = 0.15, -- percentage of the shade to apply to the inactive window
 					},
 				})
-
 				vim.cmd("colorscheme catppuccin")
 			end,
 		},
-	},
-	{
-		"aktersnurra/no-clown-fiesta.nvim",
-		lazy = false,
-		priority = 1000,
-		config = function()
-			require("no-clown-fiesta").setup({
-				transparent = true,
-			})
-			vim.cmd("colorscheme no-clown-fiesta")
-		end,
 	},
 }
