@@ -1,4 +1,5 @@
 local lsp = require("breadcrumbs.lsp")
+local ts = require("breadcrumbs.treesitter")
 local fs = require("breadcrumbs.fs")
 
 local options = {
@@ -57,6 +58,9 @@ local function is_valid_buffer(buf)
 end
 
 local function get_path(buf)
+	local win = vim.api.nvim_get_current_win()
+	local buf = vim.api.nvim_get_current_buf()
+	local cursor = vim.api.nvim_win_get_cursor(win)
 	local line = ""
 
 	local filetype = vim.bo[buf].filetype
@@ -81,7 +85,13 @@ local function get_path(buf)
 			line = line .. " " .. options.symbols[entry.kind] .. " " .. entry["name"]
 		end
 	end
-
+	--
+	-- local symbols = ts.get_path(buf, win, cursor)
+	-- line = line .. " "
+	-- for _, entry in ipairs(symbols) do
+	-- 	line = line .. " " .. (options.symbols[entry.kind] or ">") .. " " .. entry["name"]
+	-- 	-- print(vim.inspect(entry))
+	-- end
 	return line
 end
 

@@ -80,15 +80,6 @@ local function init()
 		end
 	end
 
-	for _, buf in ipairs(vim.api.nvim_list_bufs()) do
-		local clients = vim.tbl_filter(function(client)
-			return client.supports_method("textDocument/documentSymbol")
-		end, vim.lsp.get_clients({ bufnr = buf }))
-		-- if not vim.tbl_isempty(clients) then
-		-- 	attach(buf)
-		-- end
-	end
-
 	vim.api.nvim_create_autocmd({ "LspAttach" }, {
 		desc = "Attach LSP symbol getter to buffer when an LS that supports documentSymbol attaches.",
 		group = groupid,

@@ -2,223 +2,313 @@
 
 ## Plugins
 
-| **Plugin Name** | **Dependencies** | **Description** |
+| Name | URL | Description |
 | --- | --- | --- |
-| [busted-types](https://github.com/LuaCATS/busted.git) |  | Lua types for busted testing framework |
-| [catppuccin](https://github.com/catppuccin/nvim.git) |  | Soothing pastel theme for Neovim |
-| [cmp-ai](https://github.com/tzachar/cmp-ai.git) | plenary.nvim | AI-powered completion source for nvim-cmp |
-| [cmp-cmdline](https://github.com/hrsh7th/cmp-cmdline.git) |  | Cmdline completion source for nvim-cmp |
-| [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp.git) |  | LSP completion source for nvim-cmp |
-| [cmp-path](https://github.com/hrsh7th/cmp-path.git) |  | Path completion source for nvim-cmp |
-| [conform.nvim](https://github.com/stevearc/conform.nvim.git) |  | Format code on save for Neovim |
-| [crates.nvim](https://github.com/saecki/crates.nvim.git) | plenary.nvim | Cargo project management for Neovim |
-| [cybu.nvim](https://github.com/ghillb/cybu.nvim.git) | nvim-web-devicons | Customizable buffer line for Neovim |
-| [diffview.nvim](https://github.com/sindrets/diffview.nvim.git) |  | Single-tabpage diff viewer for Neovim |
-| [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim.git) |  | Git decorations for Neovim |
-| [lazy.nvim](https://github.com/folke/lazy.nvim.git) |  | Plugin manager for Neovim |
-| [lazydev.nvim](https://github.com/folke/lazydev.nvim.git) | wezterm-types, luassert-types, busted-types | Development tools for lazy.nvim |
-| [lspkind.nvim](https://github.com/onsails/lspkind.nvim.git) |  | VSCode-like kind labels for Neovim LSP |
-| [luassert-types](https://github.com/LuaCATS/luassert.git) |  | Lua types for luassert testing framework |
-| [lungan](https://github.com//lungan.git) |  | **(Local Plugin, no description)** |
-| [luvit-meta](https://github.com/Bilal2453/luvit-meta.git) |  | Luvit metadata for Neovim |
-| [mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim.git) |  | LSP config for Mason.nvim |
-| [mason-nvim-lint](https://github.com/rshkarin/mason-nvim-lint.git) |  | Nvim-lint config for Mason.nvim |
-| [mason.nvim](https://github.com/williamboman/mason.nvim.git) |  | Portable package manager for Neovim |
-| [mini.doc](https://github.com/echasnovski/mini.doc.git) |  | Document symbol highlights for Neovim |
-| [mini.icons](https://github.com/echasnovski/mini.icons.git) |  | Icon module for Mini.nvim |
-| [neogit](https://github.com/NeogitOrg/neogit.git) | plenary.nvim, diffview.nvim, telescope.nvim | Magit for Neovim |
-| [neotest](https://github.com/nvim-neotest/neotest.git) | plenary.nvim, FixCursorHold.nvim, nvim-treesitter, nvim-nio, neotest-busted | TAP-compliant test framework for Neovim |
-| [neotest-busted](https://github.com/HiPhish/neotest-busted.git) |  | Busted adapter for Neotest | 
-| [nui-components.nvim](https://github.com/grapp-dev/nui-components.nvim.git) | | UI component library for Neovim |
-| [nui.nvim](https://github.com/MunifTanjim/nui.nvim.git) |  | UI library for Neovim |
-| [nvim-cmp](https://github.com/hrsh7th/nvim-cmp.git) | cmp-ai, cmp-nvim-lsp, cmp-path, cmp-cmdline, lspkind.nvim | Completion engine for Neovim |
-| [nvim-dap](https://github.com/mfussenegger/nvim-dap.git) | nvim-dap-ui, one-small-step-for-vimkind | DAP client for Neovim |
-| [nvim-dap-ui](https://github.com/rcarriga/nvim-dap-ui.git) |  | UI for nvim-dap |
-| [nvim-lint](https://github.com/mfussenegger/nvim-lint.git) |  | Linter for Neovim |
-| [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig.git) | mason.nvim, nvim-lint, mason-nvim-lint, mason-lspconfig.nvim, cmp-nvim-lsp | LSP configurations for Neovim |
-| [nvim-nio](https://github.com/nvim-neotest/nvim-nio.git) |  | I/O library for Neovim |
-| [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter.git) | nvim-treesitter-textobjects, nvim-ts-autotag, nvim-treesitter-textsubjects, nvim-treesitter-pairs | Treesitter integration for Neovim |
-| [nvim-treesitter-pairs](https://github.com/theHamsta/nvim-treesitter-pairs.git) |  | Auto-pairing for nvim-treesitter |
-| [nvim-treesitter-textobjects](https://github.com/nvim-treesitter/nvim-treesitter-textobjects.git) |  | Text objects for nvim-treesitter |
-| [nvim-treesitter-textsubjects](https://github.com/RRethy/nvim-treesitter-textsubjects.git) |  | Text subjects for nvim-treesitter |
-| [nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag.git) |  | Auto-tagging for nvim-treesitter |
-| [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons.git) |  | Web devicons for Neovim |
-| [one-small-step-for-vimkind](https://github.com/jbyuki/one-small-step-for-vimkind.git) |  | DAP step control for Neovim |
-| [plenary.nvim](https://github.com/nvim-lua/plenary.nvim.git) |  | Lua library for Neovim plugins |
-| [rustaceanvim](https://github.com/mrcjkb/rustaceanvim.git) |  | Rust tooling for Neovim |
-| [satellite.nvim](https://github.com/lewis6991/satellite.nvim.git) |  | Status line for Neovim |
-| [snacks.nvim](https://github.com/folke/snacks.nvim.git) |  | Snack menu for Neovim |
-| [telescope-fzf-native.nvim](https://github.com/nvim-telescope/telescope-fzf-native.nvim.git) |  | FZF native sorter for Telescope.nvim |
-| [telescope-helpgrep.nvim](https://github.com/catgoose/telescope-helpgrep.nvim.git) |  | Helpgrep extension for Telescope.nvim |
-| [telescope-lazy.nvim](https://github.com/tsakirist/telescope-lazy.nvim.git) | | Lazy.nvim extension for Telescope.nvim |
-| [telescope-repo.nvim](https://github.com/cljoly/telescope-repo.nvim.git) |  | Repository finder for Telescope.nvim |
-| [telescope-symbols.nvim](https://github.com/nvim-telescope/telescope-symbols.nvim.git) |  | Symbol finder for Telescope.nvim | 
-| [telescope-undo.nvim](https://github.com/debugloop/telescope-undo.nvim.git) | | Undo history for Telescope.nvim |
-| [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim.git) | plenary.nvim, telescope-lazy.nvim, telescope-repo.nvim, telescope-symbols.nvim, telescope-helpgrep.nvim, telescope-fzf-native.nvim, plenary.nvim, telescope-undo.nvim | Highly extendable fuzzy finder for Neovim |
-| [vim-visual-multi](https://github.com/mg979/vim-visual-multi.git) |  | Multi-cursor editing for Neovim |
-| [wezterm-types](https://github.com/justinsgithub/wezterm-types.git) |  | Wezterm types for Neovim |
-| [which-key.nvim](https://github.com/folke/which-key.nvim.git) |  | Keybinding explorer for Neovim |
+| blink.cmp | https://github.com/saghen/blink.cmp.git | Completion plugin |
+| busted-types | https://github.com/LuaCATS/busted.git | Busted testing framework |
+| catppuccin | https://github.com/catppuccin/nvim.git | Color scheme |
+| conform.nvim | https://github.com/stevearc/conform.nvim.git | Code formatter |
+| crates.nvim | https://github.com/saecki/crates.nvim.git | Rust package manager |
+| cybu.nvim | https://github.com/ghillb/cybu.nvim.git | Custom plugin |
+| diffview.nvim | https://github.com/sindrets/diffview.nvim.git | Diff viewer |
+| dressing.nvim | https://github.com/stevearc/dressing.nvim.git | Custom plugin |
+| friendly-snippets | https://github.com/rafamadriz/friendly-snippets.git | Snippet manager |
+| gitsigns.nvim | https://github.com/lewis6991/gitsigns.nvim.git | Git signs |
+| lazy.nvim | https://github.com/folke/lazy.nvim.git | Plugin manager |
+| lazydev.nvim | https://github.com/folke/lazydev.nvim.git | Development plugin |
+| luassert-types | https://github.com/LuaCATS/luassert.git | Lua assertion library |
+| lungan |  | Custom plugin |
+| luvit-meta | https://github.com/Bilal2453/luvit-meta.git | Luvit meta plugin |
+| mason-lspconfig.nvim | https://github.com/williamboman/mason-lspconfig.nvim.git | LSP configuration |
+| mason.nvim | https://github.com/williamboman/mason.nvim.git | Package manager |
+| mini.doc | https://github.com/echasnovski/mini.doc.git | Documentation plugin |
+| neogit | https://github.com/NeogitOrg/neogit.git | Git client |
+| neotest | https://github.com/nvim-neotest/neotest.git | Testing framework |
+| neotest-busted | https://github.com/HiPhish/neotest-busted.git | Busted test runner |
+| nui-components.nvim | https://github.com/grapp-dev/nui-components.nvim.git | UI components |
+| nui.nvim | https://github.com/MunifTanjim/nui.nvim.git | UI library |
+| nvim-dap | https://github.com/mfussenegger/nvim-dap.git | Debugger |
+| nvim-dap-ui | https://github.com/rcarriga/nvim-dap-ui.git | Debugger UI |
+| nvim-lspconfig | https://github.com/neovim/nvim-lspconfig.git | LSP configuration |
+| nvim-nio | https://github.com/nvim-neotest/nvim-nio.git | I/O library |
+| nvim-treesitter | https://github.com/nvim-treesitter/nvim-treesitter.git | Syntax highlighting |
+| nvim-treesitter-pairs | https://github.com/theHamsta/nvim-treesitter-pairs.git | Tree sitter pairs |
+| nvim-treesitter-textobjects | https://github.com/nvim-treesitter/nvim-treesitter-textobjects.git | Text objects |
+| nvim-treesitter-textsubjects | https://github.com/RRethy/nvim-treesitter-textsubjects.git | Text subjects |
+| nvim-ts-autotag | https://github.com/windwp/nvim-ts-autotag.git | Auto tag |
+| nvim-web-devicons | https://github.com/nvim-tree/nvim-web-devicons.git | Web devicons |
+| one-small-step-for-vimkind | https://github.com/jbyuki/one-small-step-for-vimkind.git | Debugger |
+| plenary.nvim | https://github.com/nvim-lua/plenary.nvim.git | Utility library |
+| rustaceanvim | https://github.com/mrcjkb/rustaceanvim.git | Rust plugin |
+| satellite.nvim | https://github.com/lewis6991/satellite.nvim.git | Status line |
+| schemastore.nvim | https://github.com/b0o/schemastore.nvim.git | Schema store |
+| snacks.nvim | https://github.com/folke/snacks.nvim.git | Snack plugin |
+| vim-visual-multi | https://github.com/mg979/vim-visual-multi.git | Visual multi |
+| which-key.nvim | https://github.com/folke/which-key.nvim.git | Keybinding plugin |
 
 ## Keybindings
-
-| **Key** | **Command** | **Description** |
+| Key | Mode | Description |
 | --- | --- | --- |
-| `<Esc>` | `:nohlsearch|:echo<CR>` | Clear search highlight |
-| `<Space>df` |  | DapUI Widgets |
-| `<Space>dw` |  | *No description available* |
-| `<Space>dl` | `[D]ebug [L]aunch server` | Launch debug server |
-| `<Space>dr` | `[D]ebug [R]un` | Run debug |
-| `<Space>di` | `[D]ebug step [I]nto` | Debug step into |
-| `<Space>do` | `[D]ebug step [O]ver` | Debug step over |
-| `<Space>dc` | `[D]ebug [C]ontinue` | Debug continue |
-| `<Space>db` | `[D]ebug toggle [B]reakpoint` | Toggle debug breakpoint |
-| `<Space>wc` (n/v) | `[W]orkbench [C]hat` | Workbench chat |
-| `<Space>du` |  | *No description available* |
-| `<Space>to` | `[T]est [O]output panel.` | Test output panel |
-| `<Space>ts` | `[T]est [S]ummary open.` | Test summary open |
-| `<Space>td` | `[T]est [D]ebug nearest nest.` | Test debug nearest nest |
-| `<Space>tr` | `[T]est [R]un nearest nest.` | Test run nearest nest |
-| `<Space>u` | `Telescope Undo` | Telescope undo |
-| `<Space>fc` | `Find Config File` | Find config file |
-| `<Space>fb` | `Buffers` | Buffers |
-| `<Space>e` | `File Explorer` | File explorer |
-| `<Space>n` | `Notification History` | Notification history |
-| `<Space>:` | `Command History` | Command history |
-| `<Space>/` | `Grep` | Grep |
-| `<Space>,` | `Buffers` | Buffers |
-| `<Space>Z` | `Toggle Zoom` | Toggle zoom |
-| `<Space>N` | `Neovim News` | Neovim news |
-| `<Space>un` | `Dismiss All Notifications` | Dismiss all notifications |
-| `<Space>gg` | `Lazygit` | Lazygit |
-| `<Space>gB` (n/v) | `Git Browse` | Git browse |
-| `<Space>cR` | `Rename File` | Rename file |
-| `<Space>bd` | `Delete Buffer` | Delete buffer |
-| `<Space>S` | `Select Scratch Buffer` | Select scratch buffer |
-| `<Space>.` | `Toggle Scratch Buffer` | Toggle scratch buffer |
-| `<Space><Space>` | `Smart Find Files` | Smart find files |
-| `<Space>z` | `Toggle Zen Mode` | Toggle zen mode |
-| `<Space>sS` | `LSP Workspace Symbols` | LSP workspace symbols |
-| `<Space>ss` | `LSP Symbols` | LSP symbols |
-| `<Space>uC` | `Colorschemes` | Colorschemes |
-| `<Space>su` | `Undo History` | Undo history |
-| `<Space>sR` | `Resume` | Resume |
-| `<Space>sq` | `Quickfix List` | Quickfix list |
-| `<Space>sp` | `Search for Plugin Spec` | Search for plugin spec |
-| `<Space>sM` | `Man Pages` | Man pages |
-| `<Space>sm` | `Marks` | Marks |
-| `<Space>sl` | `Location List` | Location list |
-| `<Space>sk` | `Keymaps` | Keymaps |
-| `<Space>sj` | `Jumps` | Jumps |
-| `<Space>si` | `Icons` | Icons |
-| `<Space>sH` | `Highlights` | Highlights |
-| `<Space>sh` | `Help Pages` | Help pages |
-| `<Space>sD` | `Buffer Diagnostics` | Buffer diagnostics |
-| `<Space>sd` | `Diagnostics` | Diagnostics |
-| `<Space>sC` | `Commands` | Commands |
-| `<Space>sc` | `Command History` | Command history |
-| `<Space>sa` | `Autocmds` | Autocmds |
-| `<Space>s/` | `Search History` | Search history |
-| `<Space>s"` | `Registers` | Registers |
-| `<Space>sw` (n/v) | `Visual selection or word` | Visual selection or word |
-| `<Space>sg` | `Grep` | Grep |
-| `<Space>sB` | `Grep Open Buffers` | Grep open buffers |
-| `<Space>sb` | `Buffer Lines` | Buffer lines |
-| `<Space>gf` | `Git Log File` | Git log file |
-| `<Space>gd` | `Git Diff (Hunks)` | Git diff (hunks) |
-| `<Space>gS` | `Git Stash` | Git stash |
-| `<Space>gs` | `Git Status` | Git status |
-| `<Space>gL` | `Git Log Line` | Git log line |
-| `<Space>gl` | `Git Log` | Git log |
-| `<Space>gb` | `Git Branches` | Git branches |
-| `<Space>fr` | `Recent` | Recent |
-| `<Space>fp` | `Projects` | Projects |
-| `<Space>fg` | `Find Git Files` | Find git files |
-| `<Space>ff` | `Find Files` | Find files |
-| `<Space>f` | `[F]ormat buffer` | Format buffer |
-| `#` (x) | *No description available* |
-| `%` (o/n/v) | *Matchit plugin functionality* |
-| `&` | *No description available* |
-| `*` (x) | *No description available* |
-| `<` (v) | *No description available* |
-| `>` (v) | *No description available* |
-| `@` (x) | *No description available* |
-| `J` (x) | *No description available* |
-| `K` (x) | *No description available* |
-| `N` | `Nzz` | *No description available* |
-| `Q` (x) | *No description available* |
-| `Y` | `y$` | *No description available* |
-| `[<Space>` | `O<Esc>` | *No description available* |
-| `[%` (o/v/n) | *Matchit plugin functionality* |
-| `]]` | `Next Reference` | Next reference |
-| `[d` | `Jump to the previous diagnostic` | Jump to previous diagnostic |
-| `\\c` (x) | *Vim-visual-multi plugin functionality* |
-| `\\gS` (n) | *Vim-visual-multi plugin functionality* |
-| `\\/` (n) | *Vim-visual-multi plugin functionality* |
-| `\\\` (x) | *Vim-visual-multi plugin functionality* |
-| `\\a` (x) | *Vim-visual-multi plugin functionality* |
-| `\\f` (x) | *Vim-visual-multi plugin functionality* |
-| `\\/` (x) | *Vim-visual-multi plugin functionality* |
-| `\\A` (x/n) | *Vim-visual-multi plugin functionality* |
-| `] `<Space>` | `o<Esc>` | *No description available* |
-| `]%` (o/v/n) | *Matchit plugin functionality* |
-| `]]` | `Next Reference` | Next reference |
-| `]d` | `Jump to the next diagnostic` | Jump to next diagnostic |
-| `a%` (x) | *Matchit plugin functionality* |
-| `g%` (o/v/n) | *Matchit plugin functionality* |
-| `gy` | `Goto T[y]pe Definition` | Goto type definition |
-| `gd` | `Goto Definition` | Goto definition |
-| `gr` | `References` | References |
-| `gI` | `Goto Implementation` | Goto implementation |
-| `gD` | `Goto Declaration` | Goto declaration |
-| `gc` (o/n/v) | `Comment textobject` / `Toggle comment` | Comment textobject /
-Toggle comment |
-| `gcc` (n) | `Toggle comment line` | Toggle comment line |
-| `gx` (n/x) | *Openbrowser-smart-search plugin functionality* |
-| `j` | `v:count == 0 ? 'gj' : 'j'` | *No description available* |
-| `k` | `v:count == 0 ? 'gk' : 'k'` | *No description available* |
-| `n` | `nzz` | *No description available* |
-| `p` (v) | *No description available* |
-| `zi` (n/x) | *Satellite.nvim plugin functionality* |
-| `zN` (n/x) | *Satellite.nvim plugin functionality* |
-| `zn` (n/x) | *Satellite.nvim plugin functionality* |
-| `zR` (n/x) | *Satellite.nvim plugin functionality* |
-| `zr` (n/x) | *Satellite.nvim plugin functionality* |
-| `zM` (n/x) | *Satellite.nvim plugin functionality* |
-| `zm` (n/x) | *Satellite.nvim plugin functionality* |
-| `zX` (n/x) | *Satellite.nvim plugin functionality* |
-| `zx` (n/x) | *Satellite.nvim plugin functionality* |
-| `zv` (n/x) | *Satellite.nvim plugin functionality* |
-| `zA` (n/x) | *Satellite.nvim plugin functionality* |
-| `za` (n/x) | *Satellite.nvim plugin functionality* |
-| `zC` (n/x) | *Satellite.nvim plugin functionality* |
-| `zc` (n/x) | *Satellite.nvim plugin functionality* |
-| `zO` (n/x) | *Satellite.nvim plugin functionality* |
-| `zo` (n/x) | *Satellite.nvim plugin functionality* |
-| `zE` (n/x) | *Satellite.nvim plugin functionality* |
-| `zD` (n/x) | *Satellite.nvim plugin functionality* |
-| `zd` (n/x) | *Satellite.nvim plugin functionality* |
-| `zF` (n/x) | *Satellite.nvim plugin functionality* |
-| `zf` (n) | *Satellite.nvim plugin functionality* |
-| `<Plug>`\* (various) | *Various plugin functionalities* |
-| `<C-Down>` | `<Plug>(VM-Add-Cursor-Down)` | *Vim-visual-multi plugin
-functionality* |
-| `<C-N>` (n/x) | *Vim-visual-multi plugin functionality* |
-| `<C-Up>` | `<Plug>(VM-Add-Cursor-Up)` | *Vim-visual-multi plugin
-functionality* |
-| `<S-Right>` | `<Plug>(VM-Select-l)` | *Vim-visual-multi plugin functionality*
+| `<Esc>` | n | Clear Highlight |
+| `<Space>df` | n | DapUI Widgets |
+| `<Space>dw` | n |  |
+| `<Space>dl` | n | Debug Launch Server |
+| `<Space>dr` | n | Debug Run |
+| `<Space>di` | n | Debug Step Into |
+| `<Space>do` | n | Debug Step Over |
+| `<Space>dc` | n | Debug Continue |
+| `<Space>db` | n | Debug Toggle Breakpoint |
+| `<Space>to` | n | Test Output Panel |
+| `<Space>ts` | n | Test Summary Open |
+| `<Space>td` | n | Test Debug Nearest Nest |
+| `<Space>tr` | n | Test Run Nearest Nest |
+| `<Space>wc` | n/v | Workbench Chat |
+| `<Space>du` | n |  |
+| `<Space>.` | n | Toggle Scratch Buffer |
+| `<Space>z` | n | Toggle Zen Mode |
+| `<Space>sD` | n | Buffer Diagnostics |
+| `<Space>gf` | n | Git Log File |
+| `<Space>N` | n | Neovim News |
+| `<Space>un` | n | Dismiss All Notifications |
+| `<Space>gg` | n | Lazygit |
+| `<Space>gB` | n/v | Git Browse |
+| `<Space>cR` | n | Rename File |
+| `<Space>bd` | n | Delete Buffer |
+| `<Space>S` | n | Select Scratch Buffer |
+| `<Space>Z` | n | Toggle Zoom |
+| `<Space>sS` | n | LSP Workspace Symbols |
+| `<Space>ss` | n | LSP Symbols |
+| `<Space>uC` | n | Colorschemes |
+| `<Space>su` | n | Undo History |
+| `<Space>sR` | n | Resume |
+| `<Space>sq` | n | Quickfix List |
+| `<Space>sp` | n | Search for Plugin Spec |
+| `<Space>sM` | n | Man Pages |
+| `<Space>sm` | n | Marks |
+| `<Space>sl` | n | Location List |
+| `<Space>sk` | n | Keymaps |
+| `<Space>sj` | n | Jumps |
+| `<Space>si` | n | Icons |
+| `<Space>sH` | n | Highlights |
+| `<Space>sh` | n | Help Pages |
+| `<Space><Space>` | n | Smart Find Files |
+| `<Space>sd` | n | Diagnostics |
+| `<Space>sC` | n | Commands |
+| `<Space>sc` | n | Command History |
+| `<Space>sa` | n | Autocmds |
+| `<Space>s/` | n | Search History |
+| `<Space>s"` | n | Registers |
+| `<Space>sw` | n/x | Visual selection or word |
+| `<Space>sg` | n | Grep |
+| `<Space>sB` | n | Grep Open Buffers |
+| `<Space>sb` | n | Buffer Lines |
+| `<Space>gd` | n | Git Diff (Hunks) |
+| `<Space>gS` | n | Git Stash |
+| `<Space>gs` | n | Git Status |
+| `<Space>gL` | n | Git Log Line |
+| `<Space>gl` | n | Git Log |
+| `<Space>gb` | n | Git Branches |
+| `<Space>fr` | n | Recent |
+| `<Space>fp` | n | Projects |
+| `<Space>fg` | n | Find Git Files |
+| `<Space>ff` | n | Find Files |
+| `<Space>fc` | n | Find Config File |
+| `<Space>fb` | n | Buffers |
+| `<Space>e` | n | File Explorer |
+| `<Space>n` | n | Notification History |
+| `<Space>:` | n | Command History |
+| `<Space>/` | n | Grep |
+| `<Space>,` | n | Buffers |
+| `<Space>f` |  | [F]ormat buffer |
+| `#` | x | :help v_#-default |
+| `%` | o/n/x | :help %-default |
+| `&` | n | :help &-default |
+| `*` | x | :help v_star-default |
+| `<` | v | <gv |
+| `>` | v | >gv |
+| `@` | x | :help v_@-default |
+| `J` | x | :move '>+1<CR>gv-gv |
+| `K` | x | :move '<-2<CR>gv-gv |
+| `N` | n | Nzz |
+| `Q` | x | mode() ==# 'V' ? ':normal! @<C-R>=reg_recorded()<CR><CR>' : 'Q' |
+| `Y` | n | y$ |
+| `[<Space>` | n | O<Esc> |
+| `[%` | o/n/x | <Plug>(MatchitOperationMultiBackward) |
+| `]]` | n | Next Reference |
+| `[d` | n | Jump to the previous diagnostic |
+| `\c` | x | <Plug>(VM-Visual-Cursors) |
+| `\gS` | n | <Plug>(VM-Reselect-Last) |
+| `\/` | n | <Plug>(VM-Start-Regex-Search) |
+| `\\` | x | <Plug>(VM-Add-Cursor-At-Pos) |
+| `\a` | x | <Plug>(VM-Visual-Add) |
+| `\f` | x | <Plug>(VM-Visual-Find) |
+| `\/` | x | <Plug>(VM-Visual-Regex) |
+| `\A` | x/n | <Plug>(VM-Visual-All) |
+| `]` | n | o<Esc> |
+| `]%` | o/n/x | <Plug>(MatchitOperationMultiForward) |
+| `]]` | n | Next Reference |
+| `]d` | n | Jump to the next diagnostic |
+| `a%` | x | <Plug>(MatchitVisualTextObject) |
+| `g%` | o/n/x | <Plug>(MatchitOperationBackward) |
+| `gD` | n | Goto Declaration |
+| `gI` | n | Goto Implementation |
+| `gd` | n | Goto Definition |
+| `gy` | n | Goto Type Definition |
+| `gr` | n | References |
+| `gc` | o/n/x | Toggle comment |
+| `gx` | n/x | <Plug>(openbrowser-smart-search) |
+| `j` | n | v:count == 0 ? 'gj' : 'j' |
+| `k` | n | v:count == 0 ? 'gk' : 'k' |
+| `n` | n | nzz |
+| `p` | v | "_dP |
+| `zi` | x/n | <Lua 208:
+~/.local/share/nvim/lazy/satellite.nvim/lua/satellite.lua:134> |
+| `zN` | x/n | <Lua 206:
+~/.local/share/nvim/lazy/satellite.nvim/lua/satellite.lua:134> |
+| `zn` | x/n | <Lua 204:
+~/.local/share/nvim/lazy/satellite.nvim/lua/satellite.lua:134> |
+| `zR` | x/n | <Lua 202:
+~/.local/share/nvim/lazy/satellite.nvim/lua/satellite.lua:134> |
+| `zr` | x/n | <Lua 200:
+~/.local/share/nvim/lazy/satellite.nvim/lua/satellite.lua:134> |
+| `zM` | x/n | <Lua 198:
+~/.local/share/nvim/lazy/satellite.nvim/lua/satellite.lua:134> |
+| `zm` | x/n | <Lua 196:
+~/.local/share/nvim/lazy/satellite.nvim/lua/satellite.lua:134> |
+| `zX` | x/n | <Lua 194:
+~/.local/share/nvim/lazy/satellite.nvim/lua/satellite.lua:134> |
+| `zx` | x/n | <Lua 192:
+~/.local/share/nvim/lazy/satellite.nvim/lua/satellite.lua:134> |
+| `zv` | x/n | <Lua 190:
+~/.local/share/nvim/lazy/satellite.nvim/lua/satellite.lua:134> |
+| `zA` | x/n | <Lua 188:
+~/.local/share/nvim/lazy/satellite.nvim/lua/satellite.lua:134> |
+| `za` | x/n | <Lua 186:
+~/.local/share/nvim/lazy/satellite.nvim/lua/satellite.lua:134> |
+| `zC` | x/n | <Lua 184:
+~/.local/share/nvim/lazy/satellite.nvim/lua/satellite.lua:134> |
+| `zc` | x/n | <Lua 182:
+~/.local/share/nvim/lazy/satellite.nvim/lua/satellite.lua:134> |
+| `zO` | x/n | <Lua 180:
+~/.local/share/nvim/lazy/satellite.nvim/lua/satellite.lua:134> |
+| `zo` | x/n | <Lua 178:
+~/.local/share/nvim/lazy/satellite.nvim/lua/satellite.lua:134> |
+| `zE` | x/n | <Lua 176:
+~/.local/share/nvim/lazy/satellite.nvim/lua/satellite.lua:134> |
+| `zD` | x/n | <Lua 174:
+~/.local/share/nvim/lazy/satellite.nvim/lua/satellite.lua:134> |
+| `zd` | x/n | <Lua 172:
+~/.local/share/nvim/lazy/satellite.nvim/lua/satellite.lua:134> |
+| `zF` | x/n | <Lua 170:
+~/.local/share/nvim/lazy/satellite.nvim/lua/satellite.lua:134> |
+| `zf` | n | <Lua 168:
+~/.local/share/nvim/lazy/satellite.nvim/lua/satellite.lua:105> |
+| `<Plug>(MatchitVisualTextObject)` | x |
+<Plug>(MatchitVisualMultiBackward)o<Plug>(MatchitVisualMultiForward) |
+| `<Plug>(MatchitOperationMultiForward)` | o | :<C-U>call
+matchit#MultiMatch("W",  "o")<CR> |
+| `<Plug>(MatchitOperationMultiBackward)` | o | :<C-U>call
+matchit#MultiMatch("bW", "o")<CR> |
+| `<Plug>(MatchitVisualMultiForward)` | x | :<C-U>call matchit#MultiMatch("W", 
+"n")<CR>m'gv`` |
+| `<Plug>(MatchitVisualMultiBackward)` | x | :<C-U>call
+matchit#MultiMatch("bW", "n")<CR>m'gv`` |
+| `<Plug>(MatchitNormalMultiForward)` | n | :<C-U>call matchit#MultiMatch("W", 
+"n")<CR> |
+| `<Plug>(MatchitNormalMultiBackward)` | n | :<C-U>call
+matchit#MultiMatch("bW", "n")<CR> |
+| `<Plug>(MatchitOperationBackward)` | o | :<C-U>call
+matchit#Match_wrapper('',0,'o')<CR> |
+| `<Plug>(MatchitOperationForward)` | o | :<C-U>call
+matchit#Match_wrapper('',1,'o')<CR> |
+| `<Plug>(MatchitVisualBackward)` | x | :<C-U>call
+matchit#Match_wrapper('',0,'v')<CR>m'gv`` |
+| `<Plug>(MatchitVisualForward)` | x | :<C-U>call
+matchit#Match_wrapper('',1,'v')<CR>:if col("''") != col("$") | exe ":normal!
+m'" | endif<CR>gv`` |
+| `<Plug>(MatchitNormalBackward)` | n | :<C-U>call
+matchit#Match_wrapper('',0,'n')<CR> |
+| `<Plug>(MatchitNormalForward)` | n | :<C-U>call
+matchit#Match_wrapper('',1,'n')<CR> |
+| `<C-Tab>` | n/v | <Plug>(CybuLastusedNext) |
+| `<C-S-Tab>` | n/v | <Plug>(CybuLastusedPrev) |
+| `<C-H>` | n | <Plug>(CybuPrev) |
+| `<Plug>(CybuLastusedNext)` | n | :lua require('cybu').cycle('next',
+'last_used')<CR> |
+| `<Plug>(CybuLastusedPrev)` | n | :lua require('cybu').cycle('prev',
+'last_used')<CR> |
+| `<Plug>(CybuNext)` | n | :lua require('cybu').cycle('next')<CR> |
+| `<Plug>(CybuPrev)` | n | :lua require('cybu').cycle('prev')<CR> |
+| `<Plug>PlenaryTestFile` | n | :lua
+require('plenary.test_harness').test_file(vim.fn.expand("%:p"))<CR> |
+| `<LeftMouse>` | o/n/v/x | <Lua 211:
+~/.local/share/nvim/lazy/satellite.nvim/lua/satellite.lua:143> |
+| `<C-Down>` | n | <Plug>(VM-Add-Cursor-Down) |
+| `<C-N>` | x | <Plug>(VM-Find-Subword-Under) |
+| `<C-Up>` | n | <Plug>(VM-Add-Cursor-Up) |
+| `<S-Right>` | n | <Plug>(VM-Select-l) |
+| `<S-Left>` | n | <Plug>(VM-Select-h) |
+| `<C-N>` | n | <Plug>(VM-Find-Under) |
+| `<Plug>(VM-Select-BBW)` | n | :<C-U>call vm#commands#motion('BBW', v:count1,
+1, 0)<CR> |
+| `<Plug>(VM-Select-gE)` | n | :<C-U>call vm#commands#motion('gE', v:count1, 1,
+0)<CR> |
+| `<Plug>(VM-Select-ge)` | n | :<C-U>call vm#commands#motion('ge', v:count1, 1,
+0)<CR> |
+| `<Plug>(VM-Select-E)` | n | :<C-U>call vm#commands#motion('E', v:count1, 1,
+0)<CR> |
+| `<Plug>(VM-Select-e)` | n | :<C-U>call vm#commands#motion('e', v:count1, 1,
+0)<CR> |
+| `<Plug>(VM-Select-B)` | n | :<C-U>call vm#commands#motion('B', v:count1, 1,
+0)<CR> |
+| `<Plug>(VM-Select-b)` | n | :<C-U>call vm#commands#motion('b', v:count1, 1,
+0)<CR> |
+| `<Plug>(VM-Select-W)` | n | :<C-U>call vm#commands#motion('W', v:count1, 1,
+0)<CR> |
+| `<Plug>(VM-Select-w)` | n | :<C-U>call vm#commands#motion('w', v:count1, 1,
+0)<CR> |
+| `<Plug>(VM-Select-l)` | n | :<C-U>call vm#commands#motion('l', v:count1, 1,
+0)<CR> |
+| `<Plug>(VM-Select-k)` | n | :<C-U>call vm#commands#motion('k', v:count1, 1,
+0)<CR> |
+| `<Plug>(VM-Select-j)` | n | :<C-U>call vm#commands#motion('j', v:count1, 1,
+0)<CR> |
+| `<Plug>(VM-Select-h)` | n | :<C-U>call vm#commands#motion('h', v:count1, 1,
+0)<CR> |
+| `<Plug>(VM-Mouse-Column)` | n | :call vm#commands#mouse_column()<CR> |
+| `<Plug>(VM-Mouse-Word)` | n | <Plug>(VM-Left-Mouse)<Plug>(VM-Find-Under) |
+| `<Plug>(VM-Mouse-Cursor)` | n |
+<Plug>(VM-Left-Mouse)<Plug>(VM-Add-Cursor-At-Pos) |
+| `<Plug>(VM-Left-Mouse)` | n | <LeftMouse> |
+| `<Plug>(VM-Visual-Regex)` | x | :call vm#commands#find_by_regex(2)<CR>:call
+feedkeys('/', 'n')<CR> |
+| `<Plug>(VM-Slash-Search)` | n | @=vm#commands#find_by_regex(3)<CR> |
+| `<Plug>(VM-Start-Regex-Search)` | n | @=vm#commands#find_by_regex(1)<CR> |
+| `<Plug>(VM-Find-Subword-Under)` | x | <SNR>8_Visual('under') |
+| `<Plug>(VM-Find-Under)` | n | :<C-U>call vm#commands#ctrln(v:count1)<CR> |
+| `<Plug>(VM-Visual-Reduce)` | x | :<C-U>call vm#visual#reduce()<CR> |
+| `<Plug>(VM-Visual-Add)` | x | <Esc>:call vm#commands#visual_add()<CR> |
+| `<Plug>(VM-Visual-Cursors)` | x | <Esc>:call vm#commands#visual_cursors()<CR>
 |
-| `<S-Left>` | `<Plug>(VM-Select-h)` | *Vim-visual-multi plugin functionality*
-|
-| `<C-N>` | `<Plug>(VM-Find-Under)` | *Vim-visual-multi plugin functionality* |
-| `<LeftMouse>` (n/v) | *Satellite.nvim plugin functionality* |
-| `<C-Tab>` (n/v) | `<Plug>(CybuLastusedNext)` | Cycle buffers (last used) |
-| `<C-S-Tab>` (n/v) | `<Plug>(CybuLastusedPrev)` | Cycle buffers (last used,
-reverse) |
-| `<C-H>` | `<Plug>(CybuPrev)` | Cycle buffers (previous) |
-| `<Plug>(CybuLastusedNext/Prev/Next/Prev)` | *Cycle buffers functionalities* |
-| `<C-_>` | `which_key_ignore` | *No description available* |
-| `<C-/>` | `Toggle Terminal` | Toggle terminal |
-| `<C-W><C-D>` | `<C-W>d` | Show diagnostics under the cursor |
-| `<C-W>d` | `Show diagnostics under the cursor` | Show diagnostics under the
-cursor |
-| `<C-L>` | `<Plug>(CybuNext)` | Cycle buffers (next)
+| `<Plug>(VM-Visual-All)` | x | <SNR>8_Visual('all') |
+| `<Plug>(VM-Select-All)` | n | :call vm#commands#find_all(0, 1)<CR> |
+| `<Plug>(VM-Reselect-Last)` | n | :call vm#commands#reselect_last()<CR> |
+| `<Plug>(VM-Select-Cursor-Up)` | n | :<C-U>call vm#commands#add_cursor_up(1,
+v:count1)<CR> |
+| `<Plug>(VM-Select-Cursor-Down)` | n | :<C-U>call
+vm#commands#add_cursor_down(1, v:count1)<CR> |
+| `<Plug>(VM-Add-Cursor-Up)` | n | :<C-U>call vm#commands#add_cursor_up(0,
+v:count1)<CR> |
+| `<Plug>(VM-Add-Cursor-Down)` | n | :<C-U>call vm#commands#add_cursor_down(0,
+v:count1)<CR> |
+| `<Plug>(VM-Add-Cursor-At-Word)` | n | :call vm#commands#add_cursor_at_word(1,
+1)<CR> |
+| `<Plug>(VM-Add-Cursor-At-Pos)` | n | :call
+vm#commands#add_cursor_at_pos(0)<CR> |
+| `<Plug>(VM-Visual-Find)` | x | vm#operators#find(1, 1) |
+| `<C-_>` | n | which_key_ignore |
+| `<C-/>` | n | Toggle Terminal |
+| `<C-W><C-D>` | n | Show diagnostics under the cursor |
+| `<C-W>d` | n | Show diagnostics under the cursor |
+| `<C-L>` | n | <Plug>(CybuNext) |
+

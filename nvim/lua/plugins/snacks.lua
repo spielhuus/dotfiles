@@ -8,23 +8,23 @@ return {
 		dashboard = {
 			enabled = true,
 		},
-	},
-	explorer = { enabled = true },
-	indent = { enabled = true },
-	input = { enabled = true },
-	notifier = {
-		enabled = true,
-		timeout = 3000,
-	},
-	picker = { enabled = true },
-	quickfile = { enabled = true },
-	scope = { enabled = true },
-	scroll = { enabled = false },
-	statuscolumn = { enabled = true },
-	words = { enabled = true },
-	styles = {
-		notification = {
-			-- wo = { wrap = true } -- Wrap notifications
+		explorer = { enabled = false },
+		indent = { enabled = true },
+		input = { enabled = true },
+		notifier = {
+			enabled = true,
+			timeout = 3000,
+		},
+		picker = { enabled = true, layout = { preset = "ivy", layout = { position = "bottom" } } },
+		quickfile = { enabled = true },
+		scope = { enabled = true },
+		scroll = { enabled = false },
+		statuscolumn = { enabled = true },
+		words = { enabled = true },
+		styles = {
+			notification = {
+				-- wo = { wrap = true } -- Wrap notifications
+			},
 		},
 	},
 	keys = {
