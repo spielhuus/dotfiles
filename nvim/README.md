@@ -2,49 +2,51 @@
 
 ## Plugins
 
-| Name | URL | Description |
-| --- | --- | --- |
-| blink.cmp | https://github.com/saghen/blink.cmp.git | Completion plugin |
-| busted-types | https://github.com/LuaCATS/busted.git | Busted testing framework |
-| catppuccin | https://github.com/catppuccin/nvim.git | Color scheme |
-| conform.nvim | https://github.com/stevearc/conform.nvim.git | Code formatter |
-| crates.nvim | https://github.com/saecki/crates.nvim.git | Rust package manager |
-| cybu.nvim | https://github.com/ghillb/cybu.nvim.git | Custom plugin |
-| diffview.nvim | https://github.com/sindrets/diffview.nvim.git | Diff viewer |
-| dressing.nvim | https://github.com/stevearc/dressing.nvim.git | Custom plugin |
-| friendly-snippets | https://github.com/rafamadriz/friendly-snippets.git | Snippet manager |
-| gitsigns.nvim | https://github.com/lewis6991/gitsigns.nvim.git | Git signs |
-| lazy.nvim | https://github.com/folke/lazy.nvim.git | Plugin manager |
-| lazydev.nvim | https://github.com/folke/lazydev.nvim.git | Development plugin |
-| luassert-types | https://github.com/LuaCATS/luassert.git | Lua assertion library |
-| lungan |  | Custom plugin |
-| luvit-meta | https://github.com/Bilal2453/luvit-meta.git | Luvit meta plugin |
-| mason-lspconfig.nvim | https://github.com/williamboman/mason-lspconfig.nvim.git | LSP configuration |
-| mason.nvim | https://github.com/williamboman/mason.nvim.git | Package manager |
-| mini.doc | https://github.com/echasnovski/mini.doc.git | Documentation plugin |
-| neogit | https://github.com/NeogitOrg/neogit.git | Git client |
-| neotest | https://github.com/nvim-neotest/neotest.git | Testing framework |
-| neotest-busted | https://github.com/HiPhish/neotest-busted.git | Busted test runner |
-| nui-components.nvim | https://github.com/grapp-dev/nui-components.nvim.git | UI components |
-| nui.nvim | https://github.com/MunifTanjim/nui.nvim.git | UI library |
-| nvim-dap | https://github.com/mfussenegger/nvim-dap.git | Debugger |
-| nvim-dap-ui | https://github.com/rcarriga/nvim-dap-ui.git | Debugger UI |
-| nvim-lspconfig | https://github.com/neovim/nvim-lspconfig.git | LSP configuration |
-| nvim-nio | https://github.com/nvim-neotest/nvim-nio.git | I/O library |
-| nvim-treesitter | https://github.com/nvim-treesitter/nvim-treesitter.git | Syntax highlighting |
-| nvim-treesitter-pairs | https://github.com/theHamsta/nvim-treesitter-pairs.git | Tree sitter pairs |
-| nvim-treesitter-textobjects | https://github.com/nvim-treesitter/nvim-treesitter-textobjects.git | Text objects |
-| nvim-treesitter-textsubjects | https://github.com/RRethy/nvim-treesitter-textsubjects.git | Text subjects |
-| nvim-ts-autotag | https://github.com/windwp/nvim-ts-autotag.git | Auto tag |
-| nvim-web-devicons | https://github.com/nvim-tree/nvim-web-devicons.git | Web devicons |
-| one-small-step-for-vimkind | https://github.com/jbyuki/one-small-step-for-vimkind.git | Debugger |
-| plenary.nvim | https://github.com/nvim-lua/plenary.nvim.git | Utility library |
-| rustaceanvim | https://github.com/mrcjkb/rustaceanvim.git | Rust plugin |
-| satellite.nvim | https://github.com/lewis6991/satellite.nvim.git | Status line |
-| schemastore.nvim | https://github.com/b0o/schemastore.nvim.git | Schema store |
-| snacks.nvim | https://github.com/folke/snacks.nvim.git | Snack plugin |
-| vim-visual-multi | https://github.com/mg979/vim-visual-multi.git | Visual multi |
-| which-key.nvim | https://github.com/folke/which-key.nvim.git | Keybinding plugin |
+| Name | Description | 
+|---|---| 
+| [LuaSnip](https://github.com/L3MON4D3/LuaSnip.git) | Snippet Engine | 
+| [blink.cmp](https://github.com/saghen/blink.cmp.git) | Completion plugin based on nvim-cmp | 
+| [busted-types](https://github.com/LuaCATS/busted.git) |  | 
+| [catppuccin](https://github.com/catppuccin/nvim.git) | Soothing pastel theme for the high-spirited! | 
+| [conform.nvim](https://github.com/stevearc/conform.nvim.git) |  Formatters for Neovim | 
+| [crates.nvim](https://github.com/saecki/crates.nvim.git) |  crates.nvim | 
+| [cybu.nvim](https://github.com/ghillb/cybu.nvim.git) |  Cycle through buffers with Telescope | 
+| [diffview.nvim](https://github.com/sindrets/diffview.nvim.git) |  View diffs inside Neovim | 
+| [dressing.nvim](https://github.com/stevearc/dressing.nvim.git) |  Improve Neovim's default vim.ui interfaces. | 
+| [friendly-snippets](https://github.com/rafamadriz/friendly-snippets.git) |  A collection of snippets for different languages. | 
+| [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim.git) |  Git signs in your Neovim editor | 
+| [lazy.nvim](https://github.com/folke/lazy.nvim.git) |  Lazy Plugin Manager for Neovim | 
+| [lazydev.nvim](https://github.com/folke/lazydev.nvim.git) |  LazyVim Dev | 
+| [luassert-types](https://github.com/LuaCATS/luassert.git) |  | 
+| [lungan](~/github/lungan) |  | 
+| [luvit-meta](https://github.com/Bilal2453/luvit-meta.git) |  | 
+| [mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim.git) |  Bridge between mason.nvim and nvim-lspconfig | 
+| [mason.nvim](https://github.com/williamboman/mason.nvim.git) |  Easily install and manage language servers, linters, formatters, and more | 
+| [mini.doc](https://github.com/echasnovski/mini.doc.git) |  Minimalistic document viewer for Neovim | 
+| [neogit](https://github.com/NeogitOrg/neogit.git) |  Neogit: A git porcelain for Neovim | 
+| [neotest](https://github.com/nvim-neotest/neotest.git) |  An extensible test framework for Neovim | 
+| [neotest-busted](https://github.com/HiPhish/neotest-busted.git) |  Neotest adapter for Busted | 
+| [nui-components.nvim](https://github.com/grapp-dev/nui-components.nvim.git) |  NUI Components Library for Neovim | 
+| [nui.nvim](https://github.com/MunifTanjim/nui.nvim.git) |  UI Library for Neovim | 
+| [nvim-dap](https://github.com/mfussenegger/nvim-dap.git) |  Debug Adapter Protocol Client for Neovim | 
+| [nvim-dap-ui](https://github.com/rcarriga/nvim-dap-ui.git) |  A UI for nvim-dap. | 
+| [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig.git) |  Quickstart configurations for the Nvim LSP client | 
+| [nvim-nio](https://github.com/nvim-neotest/nvim-nio.git) |  | 
+| [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter.git) |  Nvim Treesitter configurations and abstraction layer | 
+| [nvim-treesitter-pairs](https://github.com/theHamsta/nvim-treesitter-pairs.git) |  Use treesitter to automatically close pairs [], {}, () | 
+| [nvim-treesitter-textobjects](https://github.com/nvim-treesitter/nvim-treesitter-textobjects.git) |  | 
+| [nvim-treesitter-textsubjects](https://github.com/RRethy/nvim-treesitter-textsubjects.git) |  | 
+| [nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag.git) |  Autotag for nvim-treesitter | 
+| [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons.git) |  A reasonably complete icon set for developers | 
+| [oil.nvim](https://github.com/stevearc/oil.nvim.git) |  Open files like a civilized person | 
+| [one-small-step-for-vimkind](https://github.com/jbyuki/one-small-step-for-vimkind.git) |  | 
+| [plenary.nvim](https://github.com/nvim-lua/plenary.nvim.git) |  Useful functions which defy categorization | 
+| [rustaceanvim](https://github.com/mrcjkb/rustaceanvim.git) |  Modern Neovim tooling for Rust | 
+| [satellite.nvim](https://github.com/lewis6991/satellite.nvim.git) |  A minimal take on the popular minimap plugin | 
+| [schemastore.nvim](https://github.com/b0o/schemastore.nvim.git) |  JSON schema store catalog for Neovim | 
+| [snacks.nvim](https://github.com/folke/snacks.nvim.git) |  My Neovim config | 
+| [vim-visual-multi](https://github.com/mg979/vim-visual-multi.git) |  Multiple cursors / selections with Vim | 
+| [which-key.nvim](https://github.com/folke/which-key.nvim.git) |  Show available keybindings in popup | 
 
 ## Keybindings
 | Key | Mode | Description |
