@@ -1,8 +1,10 @@
 return {
     "williamboman/mason.nvim",
+    enabled = false,
     cmd = "Mason",
     opts = {
         cmd = "Mason",
+        PATH = "prepend",
         ui = {
             icons = {
                 package_installed = "✓",

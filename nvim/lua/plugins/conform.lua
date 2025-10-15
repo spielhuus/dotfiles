@@ -1,6 +1,6 @@
 return {
 	"stevearc/conform.nvim",
-	enabled = true,
+	enabled = false,
 	event = { "BufWritePre" },
 	cmd = { "ConformInfo" },
 	keys = {
@@ -32,6 +32,9 @@ return {
 		formatters_by_ft = {
 			lua = { "stylua" },
 			python = { "isort", "black" },
+			rust = { "rustfmt" },
+			javascript = { "prettierd", "prettier", stop_after_first = true },
+			css = { "prettierd", "prettier" },
 		},
 	},
 }

@@ -1,5 +1,14 @@
 
 
+## install the LSP server
+
+
+WGSL Analyzer
+```
+cargo install --git https://github.com/wgsl-analyzer/wgsl-analyzer.git wgsl-analyzer
+```
+
+
 ## Plugins
 
 | Name | Description | 

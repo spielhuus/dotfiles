@@ -1,7 +1,7 @@
 return {
   -- Useful plugin to show you pending keybinds.
   'folke/which-key.nvim',
-  enabled = true,
+  enabled = false,
   config = function()
     vim.o.timeout = true
     vim.o.timeoutlen = 300

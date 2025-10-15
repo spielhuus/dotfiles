@@ -17,6 +17,7 @@
             "battery",
             "pulseaudio",
             "systemd-failed-units",
+            "hyprland/language",
             "tray",
             "clock",
     ],
@@ -137,5 +138,10 @@
             "format-ok": "✓",
             "system": true,
             "user": true,
+    },
+    "hyprland/language": {
+            "format": "{}",
+            "format-en": "US",
+            "format-de": "CH",
     },
 }

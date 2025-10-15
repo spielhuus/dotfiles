@@ -1,28 +1,3 @@
-require("default")
-require("autocommands")
-
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
-        vim.fn.system({
-                "git",
-                "clone",
-                "--filter=blob:none",
-                "https://github.com/folke/lazy.nvim.git",
-                "--branch=stable", -- latest stable release
-                lazypath,
-        })
-end
-vim.opt.rtp:prepend(lazypath)
-
-require("lazy").setup("plugins", {
-        change_detection = {
-                enabled = true,
-                notify = false,
-        },
-})
-
-vim.lsp.enable({ 'clangd', 'wgsl_analyzer', 'lua_ls', 'ts_ls', 'bash_ls', 'html_ls', 'python_ls' })
-
 local config = {
         signs = {
                 text = {
@@ -44,23 +19,53 @@ local config = {
                 prefix = "",
                 suffix = "",
         },
-        virtual_lines = true,
 }
 vim.diagnostic.config(config)
+-- }}}
 
--- lsp autocompletion
-vim.api.nvim_create_autocmd('LspAttach', {
-        callback = function(ev)
-                local client = vim.lsp.get_client_by_id(ev.data.client_id)
+-- Improve LSPs UI {{{
+local icons = {
+        Class = " ",
+        Color = " ",
+        Constant = " ",
+        Constructor = " ",
+        Enum = " ",
+        EnumMember = " ",
+        Event = " ",
+        Field = " ",
+        File = " ",
+        Folder = " ",
+        Function = "󰊕 ",
+        Interface = " ",
+        Keyword = " ",
+        Method = "ƒ ",
+        Module = "󰏗 ",
+        Property = " ",
+        Snippet = " ",
+        Struct = " ",
+        Text = " ",
+        Unit = " ",
+        Value = " ",
+        Variable = " ",
+}
+
+local completion_kinds = vim.lsp.protocol.CompletionItemKind
+for i, kind in ipairs(completion_kinds) do
+        completion_kinds[i] = icons[kind] and icons[kind] .. kind or kind
+end
+
+vim.diagnostic.config({ virtual_text = true })
+
+vim.api.nvim_create_autocmd("LspAttach", {
+        group = vim.api.nvim_create_augroup("lsp_buf_conf", { clear = true }),
+        callback = function(event_context)
+                local client = vim.lsp.get_client_by_id(event_context.data.client_id)
+
                 if not client then
                         return
                 end
-                -- if client:supports_method('textDocument/completion') then
-                --         vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = true })
-                -- end
 
-
-                local bufnr = ev.buf
+                local bufnr = event_context.buf
 
                 -- Mappings.
                 local map = function(mode, l, r, opts)
@@ -114,8 +119,24 @@ vim.api.nvim_create_autocmd('LspAttach', {
                         })
                 end
         end,
+        nested = true,
+        desc = "Configure buffer keymap and behavior based on LSP",
 })
 
--- vim.cmd [[set completeopt+=menuone,noselect,popup]]
+vim.lsp.enable({ "lua_ls", "rust_analyzer" })
+-- vim.lsp.enable(
+-- 	{
+-- 		"lua_ls",
+-- 		"rust_analyzer",
+-- 		"clangd",
+-- 		"wgsl_analyzer"
+-- 	}
+-- )
 
-require("breadcrumbs").setup()
+-- return {
+--         { "mason-org/mason.nvim", opts = {} },
+--         {
+--                 "mason-org/mason-lspconfig.nvim",
+--                 dependencies = { "neovim/nvim-lspconfig" },
+--         },
+-- }

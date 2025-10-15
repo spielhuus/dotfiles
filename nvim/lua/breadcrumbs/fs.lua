@@ -14,8 +14,11 @@ local function find_project_root(path)
 			return results
 		elseif vim.fn.isdirectory(path) == 1 then
 			table.insert(results, 1, { type = "dir", name = token })
+		elseif path == "health:" then
+			table.insert(results, 1, { type = "dir", name = "health" })
+      return results
 		else
-			error("unknown type: " .. path)
+			error("unknown type: '" .. path .. "'")
 		end
 		token = vim.fn.fnamemodify(path, ":t")
 		path = vim.fn.fnamemodify(path, ":h")
