@@ -52,18 +52,18 @@ return {
 			ghost_text = { enabled = true },
 		},
 		sources = {
-			default = { "lazydev", "models", "lsp", "path", "snippets", "buffer" },
+			default = { "lazydev", "lsp", "path", "snippets", "buffer" },
 			providers = {
 				lazydev = {
 					name = "LazyDev",
 					module = "lazydev.integrations.blink",
 					score_offset = 100,
 				},
-				models = {
-					name = "Models",
-					module = "lungan.nvim.cmp.blink.frontmatter",
-					score_offset = 100,
-				},
+				-- models = {
+				-- 	name = "Models",
+				-- 	module = "lungan.nvim.cmp.blink.frontmatter",
+				-- 	score_offset = 100,
+				-- },
 			},
 		},
 	},

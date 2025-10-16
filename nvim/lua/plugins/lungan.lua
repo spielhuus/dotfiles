@@ -1,7 +1,7 @@
 return {
 	name = "lungan",
 	dir = "~/github/lungan",
-	enabled = true,
+	enabled = false,
 	rocks = { enabled = false },
 	config = function()
 		require("lungan.nvim").setup({
