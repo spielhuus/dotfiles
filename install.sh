@@ -18,6 +18,9 @@ install)
 			fi
 		fi
 	done
+  cp .gtkrc-2.0 ~/.gtkrc-2.0
+  gsettings set org.gnome.desktop.interface gtk-theme Breeze-Dark
+  gsettings set org.gnome.desktop.wm.preferences theme Breeze-Dark
 	;;
 
 uninstall)
@@ -29,6 +32,7 @@ uninstall)
 			fi
 		fi
 	done
+  rm ~/.gtkrc-2.0
 	;;
 
 *)
