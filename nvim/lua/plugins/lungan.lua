@@ -1,7 +1,8 @@
 return {
+	-- "spielhuus/lungan",
 	name = "lungan",
 	dir = "~/github/lungan",
-	enabled = false,
+	enabled = true,
 	rocks = { enabled = false },
 	config = function()
 		require("lungan.nvim").setup({
