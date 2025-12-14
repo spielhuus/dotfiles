@@ -18,7 +18,9 @@ local function find_project_root(path)
 			table.insert(results, 1, { type = "dir", name = "health" })
       return results
 		else
-			error("unknown type: '" .. path .. "'")
+			table.insert(results, 1, { type = "dir", name = path })
+      return results
+			-- error("unknown type: '" .. path .. "'")
 		end
 		token = vim.fn.fnamemodify(path, ":t")
 		path = vim.fn.fnamemodify(path, ":h")

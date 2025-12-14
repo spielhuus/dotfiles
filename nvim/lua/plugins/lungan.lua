@@ -3,7 +3,6 @@ return {
 	name = "lungan",
 	dir = "~/github/lungan",
 	enabled = true,
-	rocks = { enabled = false },
 	config = function()
 		require("lungan.nvim").setup({
 			model = "tinyllama",

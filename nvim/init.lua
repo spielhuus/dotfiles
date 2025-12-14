@@ -19,6 +19,9 @@ require("lazy").setup("plugins", {
                 enabled = true,
                 notify = false,
         },
+        rocks = {
+          enabled = false,
+        },
 })
 
 vim.lsp.enable({ 'clangd', 'wgsl_analyzer', 'lua_ls', 'ts_ls', 'bash_ls', 'html_ls', 'python_ls' })
