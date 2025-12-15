@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/etienne/.dotfiles/quickshell/extensions/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

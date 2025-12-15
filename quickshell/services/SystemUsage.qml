@@ -1,19 +1,18 @@
 pragma Singleton
-
-// import qs.config
 import Quickshell
 import Quickshell.Io
 import QtQuick
 
+//TODO remove gpu stuff
 Singleton {
     id: root
 
     property real cpuPerc
     property real cpuTemp
-    readonly property string gpuType: "" //Config.services.gpuType.toUpperCase() || autoGpuType
-    property string autoGpuType: "NONE"
-    property real gpuPerc
-    property real gpuTemp
+    // readonly property string gpuType: autoGpuType
+    // property string autoGpuType: "NONE"
+    // property real gpuPerc
+    // property real gpuTemp
     property real memUsed
     property real memTotal
     readonly property real memPerc: memTotal > 0 ? memUsed / memTotal : 0
@@ -61,7 +60,7 @@ Singleton {
             stat.reload();
             meminfo.reload();
             storage.running = true;
-            gpuUsage.running = true;
+            // gpuUsage.running = true;
             sensors.running = true;
         }
     }
@@ -71,7 +70,7 @@ Singleton {
 
         path: "/proc/stat"
         onLoaded: {
-            const data = text().match(/^cpu\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)/);
+          const data = text().match(/^cpu\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)/);
             if (data) {
                 const stats = data.slice(1).map(n => parseInt(n, 10));
                 const total = stats.reduce((a, b) => a + b, 0);
@@ -80,7 +79,6 @@ Singleton {
                 const totalDiff = total - root.lastCpuTotal;
                 const idleDiff = idle - root.lastCpuIdle;
                 root.cpuPerc = totalDiff > 0 ? (1 - idleDiff / totalDiff) : 0;
-
                 root.lastCpuTotal = total;
                 root.lastCpuIdle = idle;
             }
@@ -140,37 +138,37 @@ Singleton {
         }
     }
 
-    Process {
-        id: gpuTypeCheck
+    // Process {
+    //     id: gpuTypeCheck
+    //
+    //     running: !Config.services.gpuType
+    //     command: ["sh", "-c", "if command -v nvidia-smi &>/dev/null && nvidia-smi -L &>/dev/null; then echo NVIDIA; elif ls /sys/class/drm/card*/device/gpu_busy_percent 2>/dev/null | grep -q .; then echo GENERIC; else echo NONE; fi"]
+    //     stdout: StdioCollector {
+    //         onStreamFinished: root.autoGpuType = text.trim()
+    //     }
+    // }
 
-        running: !Config.services.gpuType
-        command: ["sh", "-c", "if command -v nvidia-smi &>/dev/null && nvidia-smi -L &>/dev/null; then echo NVIDIA; elif ls /sys/class/drm/card*/device/gpu_busy_percent 2>/dev/null | grep -q .; then echo GENERIC; else echo NONE; fi"]
-        stdout: StdioCollector {
-            onStreamFinished: root.autoGpuType = text.trim()
-        }
-    }
-
-    Process {
-        id: gpuUsage
-
-        command: root.gpuType === "GENERIC" ? ["sh", "-c", "cat /sys/class/drm/card*/device/gpu_busy_percent"] : root.gpuType === "NVIDIA" ? ["nvidia-smi", "--query-gpu=utilization.gpu,temperature.gpu", "--format=csv,noheader,nounits"] : ["echo"]
-        stdout: StdioCollector {
-            onStreamFinished: {
-                if (root.gpuType === "GENERIC") {
-                    const percs = text.trim().split("\n");
-                    const sum = percs.reduce((acc, d) => acc + parseInt(d, 10), 0);
-                    root.gpuPerc = sum / percs.length / 100;
-                } else if (root.gpuType === "NVIDIA") {
-                    const [usage, temp] = text.trim().split(",");
-                    root.gpuPerc = parseInt(usage, 10) / 100;
-                    root.gpuTemp = parseInt(temp, 10);
-                } else {
-                    root.gpuPerc = 0;
-                    root.gpuTemp = 0;
-                }
-            }
-        }
-    }
+    // Process {
+    //     id: gpuUsage
+    //
+    //     command: root.gpuType === "GENERIC" ? ["sh", "-c", "cat /sys/class/drm/card*/device/gpu_busy_percent"] : root.gpuType === "NVIDIA" ? ["nvidia-smi", "--query-gpu=utilization.gpu,temperature.gpu", "--format=csv,noheader,nounits"] : ["echo"]
+    //     stdout: StdioCollector {
+    //         onStreamFinished: {
+    //             if (root.gpuType === "GENERIC") {
+    //                 const percs = text.trim().split("\n");
+    //                 const sum = percs.reduce((acc, d) => acc + parseInt(d, 10), 0);
+    //                 root.gpuPerc = sum / percs.length / 100;
+    //             } else if (root.gpuType === "NVIDIA") {
+    //                 const [usage, temp] = text.trim().split(",");
+    //                 root.gpuPerc = parseInt(usage, 10) / 100;
+    //                 root.gpuTemp = parseInt(temp, 10);
+    //             } else {
+    //                 root.gpuPerc = 0;
+    //                 root.gpuTemp = 0;
+    //             }
+    //         }
+    //     }
+    // }
 
     Process {
         id: sensors
@@ -190,32 +188,32 @@ Singleton {
                 if (cpuTemp)
                     root.cpuTemp = parseFloat(cpuTemp[1]);
 
-                if (root.gpuType !== "GENERIC")
-                    return;
+                // if (root.gpuType !== "GENERIC")
+                //     return;
+                //
+                // let eligible = false;
+                // let sum = 0;
+                // let count = 0;
+                //
+                // for (const line of text.trim().split("\n")) {
+                //     if (line === "Adapter: PCI adapter")
+                //         eligible = true;
+                //     else if (line === "")
+                //         eligible = false;
+                //     else if (eligible) {
+                //         let match = line.match(/^(temp[0-9]+|GPU core|edge)+:\s+\+([0-9]+\.[0-9]+)(°| )C/);
+                //         if (!match)
+                //             // Fall back to junction/mem if GPU doesn't have edge temp (for AMD GPUs)
+                //             match = line.match(/^(junction|mem)+:\s+\+([0-9]+\.[0-9]+)(°| )C/);
+                //
+                //         if (match) {
+                //             sum += parseFloat(match[2]);
+                //             count++;
+                //         }
+                //     }
+                // }
 
-                let eligible = false;
-                let sum = 0;
-                let count = 0;
-
-                for (const line of text.trim().split("\n")) {
-                    if (line === "Adapter: PCI adapter")
-                        eligible = true;
-                    else if (line === "")
-                        eligible = false;
-                    else if (eligible) {
-                        let match = line.match(/^(temp[0-9]+|GPU core|edge)+:\s+\+([0-9]+\.[0-9]+)(°| )C/);
-                        if (!match)
-                            // Fall back to junction/mem if GPU doesn't have edge temp (for AMD GPUs)
-                            match = line.match(/^(junction|mem)+:\s+\+([0-9]+\.[0-9]+)(°| )C/);
-
-                        if (match) {
-                            sum += parseFloat(match[2]);
-                            count++;
-                        }
-                    }
-                }
-
-                root.gpuTemp = count > 0 ? sum / count : 0;
+                // root.gpuTemp = count > 0 ? sum / count : 0;
             }
         }
     }

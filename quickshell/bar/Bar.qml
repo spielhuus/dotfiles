@@ -4,6 +4,7 @@ import Quickshell.Hyprland
 import Quickshell.Wayland
 import QtQuick
 import QtQuick.Layouts
+import qs.services.Compositor
 import "blocks" as Blocks
 import "root:/"
 
@@ -74,19 +75,18 @@ Scope {
           Layout.leftMargin: 10
           anchors.centerIn: undefined
 
+          // Calculate available space and pass it as chopLength
           chopLength: {
             var space = Math.floor(bar.width - (rightBlocks.implicitWidth + leftBlocks.implicitWidth))
-            return space * 0.08;
+            return Math.max(10, Math.floor(space * 0.08));
           }
 
-          text: {
-            var str = activeWindowTitle
-            return str.length > chopLength ? str.slice(0, chopLength) + '...' : str;
-          }
-
+          // The complex 'text' and 'color' bindings are now handled internally 
+          // or have been simplified to work across compositors.
           color: {
-            return Hyprland.focusedMonitor == Hyprland.monitorFor(screen)
-              ? "#FFFFFF" : "#CCCCCC"
+            // This logic is also made more generic
+            const currentWs = CompositorService.getCurrentWorkspace();
+            return (currentWs && currentWs.output === modelData.name) ? "#FFFFFF" : "#CCCCCC";
           }
         }
 
@@ -104,7 +104,7 @@ Scope {
           Layout.fillWidth: true
   
           Blocks.SystemTray {}
-          Blocks.Load {}
+          Blocks.CpuLoad {}
           Blocks.Memory {}
           Blocks.Sound {}
           Blocks.Battery {}

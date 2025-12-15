@@ -8,8 +8,8 @@ import Qt5Compat.GraphicalEffects
 import "root:/"
 
 Text {
-  property string mainFont: Theme.get.bar.fontFamily // "FiraCode"
-  property string symbolFont: Theme.get.bar.fontSymbol //"Symbols Nerd Font Mono"
+  property string mainFont: Theme.get.bar.fontFamily
+  property string symbolFont: Theme.get.bar.fontSymbol
   property int pointSize:Theme.get.bar.fontSize
   property int symbolSize: pointSize * 1.4
   property string symbolText
@@ -51,7 +51,6 @@ Text {
 
     return text.replace(/./gu, (c) => isSymbol(c.codePointAt(0))
       ? `<span style='font-family: ${symbolFont}; letter-spacing: 5px; font-size: ${symbolSize}px'>${c}</span>`
-      // ? c
       : c);
   }
 }

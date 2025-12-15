@@ -1,0 +1,4 @@
+set(__QT_DEPLOY_TARGET_QSExtensions_FILE /home/etienne/.dotfiles/quickshell/extensions/build/libQSExtensions.so)
+set(__QT_DEPLOY_TARGET_QSExtensions_TYPE SHARED_LIBRARY)
+set(__QT_DEPLOY_TARGET_QSExtensionsplugin_FILE /home/etienne/.dotfiles/quickshell/extensions/build/libQSExtensionsplugin.so)
+set(__QT_DEPLOY_TARGET_QSExtensionsplugin_TYPE MODULE_LIBRARY)

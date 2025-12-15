@@ -3,6 +3,7 @@ import Quickshell
 import Quickshell.Io
 import "bar"
 import "wlogout"
+import qs.modules.chat
 import qs
 // import qs.components
 // import qs.launcher
@@ -28,42 +29,25 @@ ShellRoot {
     //     active: false // Config.ready && Config.options.enabledPanels.includes(identifier) && extraCondition
     //   }
 
-  Chat {
-    id: chatWidget
-    visible: false
-  }
+    // Load the Chat Window
+    ChatWindow {
+        id: myChatWindow
+        visible: false
+      }
 
   Logout {
     id: logoutWidget
 
      visible: showLogout
-      
-      // Allow the window to close itself (sets shared property to false)
       onVisibleChanged: {
           if (!visible) showLogout = false
       }
   }   
-  // IpcHandler {
-  //     target: "sidebarLeft"
-  //
-  //     function toggle(): void {
-  //       console.log("toggle sidebar")
-  //         GlobalStates.sidebarLeftOpen = !GlobalStates.sidebarLeftOpen
-  //     }
-  //
-  //     function close(): void {
-  //         GlobalStates.sidebarLeftOpen = false
-  //     }
-  //
-  //     function open(): void {
-  //         GlobalStates.sidebarLeftOpen = true
-  //     }
-  //   }
 
-  IpcHandler {
+IpcHandler {
     target: "Chat"
     function toggle(): void {
-      chatWidget.visible = !chatWidget.visible
+      myChatWindow.visible = !myChatWindow.visible
     }
   }
 

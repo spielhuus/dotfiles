@@ -1,0 +1,8 @@
+-I
+/home/etienne/.dotfiles/quickshell
+-I
+/usr/lib/qt6/qml
+--resource
+/home/etienne/.dotfiles/quickshell/extensions/build/.qt/rcc/qmake_extensions_build.qrc
+--module
+extensions.build

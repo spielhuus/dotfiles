@@ -1,0 +1,8 @@
+module extensions.build
+linktarget QSExtensionsplugin
+optional plugin QSExtensionsplugin
+classname extensions_buildPlugin
+typeinfo QSExtensions.qmltypes
+prefer :/extensions/build/
+depends QtQuick
+

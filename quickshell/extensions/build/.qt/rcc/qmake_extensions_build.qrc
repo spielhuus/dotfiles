@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/extensions/build">
+    <file alias="qmldir">/home/etienne/.dotfiles/quickshell/extensions/build/qmldir</file>
+  </qresource>
+</RCC>
+

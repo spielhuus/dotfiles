@@ -1,0 +1,1 @@
+/home/etienne/.dotfiles/quickshell/extensions/build/QSExtensions_autogen/include/../EWIEGA46WW/moc_AiPlugin.cpp.json
