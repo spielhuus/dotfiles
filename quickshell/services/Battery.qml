@@ -1,11 +1,11 @@
 pragma Singleton
 
-import qs.services
-import qs.config
 import Quickshell
 import Quickshell.Services.UPower
 import QtQuick
 import Quickshell.Io
+import qs.services
+import qs.config
 
 Singleton {
     id: root
@@ -60,8 +60,6 @@ Singleton {
             "-a", "Shell",
             "--hint=int:transient:1",
         ])
-
-        if (root.soundEnabled) Audio.playSystemSound("dialog-warning");
     }
 
     onIsCriticalAndNotChargingChanged: {
@@ -74,8 +72,6 @@ Singleton {
             "-a", "Shell",
             "--hint=int:transient:1",
         ]);
-
-        if (root.soundEnabled) Audio.playSystemSound("suspend-error");
     }
 
     onIsSuspendingAndNotChargingChanged: {
@@ -93,16 +89,8 @@ Singleton {
             "-a", "Shell",
             "--hint=int:transient:1",
         ]);
-
-        if (root.soundEnabled) Audio.playSystemSound("complete");
     }
 
     onIsPluggedInChanged: {
-        if (!root.available || !root.soundEnabled) return;
-        if (isPluggedIn) {
-            Audio.playSystemSound("power-plug")
-        } else {
-            Audio.playSystemSound("power-unplug")
-        }
     }
 }

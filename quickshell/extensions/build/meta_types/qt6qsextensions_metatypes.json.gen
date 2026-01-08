@@ -9,7 +9,7 @@
                     }
                 ],
                 "className": "AiPlugin",
-                "lineNumber": 6,
+                "lineNumber": 8,
                 "methods": [
                     {
                         "access": "public",
@@ -19,8 +19,8 @@
                                 "type": "QString"
                             }
                         ],
-                        "index": 0,
-                        "lineNumber": 14,
+                        "index": 5,
+                        "lineNumber": 16,
                         "name": "generateText",
                         "returnType": "QString"
                     },
@@ -32,14 +32,170 @@
                                 "type": "QString"
                             }
                         ],
-                        "index": 1,
-                        "lineNumber": 17,
+                        "index": 6,
+                        "lineNumber": 19,
                         "name": "parseChat",
                         "returnType": "QVariantMap"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "path",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "config",
+                                "type": "QVariantMap"
+                            },
+                            {
+                                "name": "messages",
+                                "type": "QVariantList"
+                            }
+                        ],
+                        "index": 7,
+                        "lineNumber": 22,
+                        "name": "createChatFile",
+                        "returnType": "bool"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "path",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "role",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "content",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 8,
+                        "lineNumber": 25,
+                        "name": "appendMessage",
+                        "returnType": "bool"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "settings",
+                                "type": "QVariantMap"
+                            },
+                            {
+                                "name": "messages",
+                                "type": "QVariantList"
+                            }
+                        ],
+                        "index": 9,
+                        "lineNumber": 28,
+                        "name": "createChatPayload",
+                        "returnType": "QString"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "url",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "payload",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "apiKey",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 10,
+                        "lineNumber": 31,
+                        "name": "sendChatRequest",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "url",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "payload",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 11,
+                        "isCloned": true,
+                        "lineNumber": 31,
+                        "name": "sendChatRequest",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 12,
+                        "lineNumber": 34,
+                        "name": "cancelRequest",
+                        "returnType": "void"
                     }
                 ],
                 "object": true,
                 "qualifiedClassName": "AiPlugin",
+                "signals": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "content",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 0,
+                        "lineNumber": 37,
+                        "name": "streamReceived",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 1,
+                        "lineNumber": 38,
+                        "name": "streamFinished",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "error",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 2,
+                        "lineNumber": 39,
+                        "name": "streamError",
+                        "returnType": "void"
+                    }
+                ],
+                "slots": [
+                    {
+                        "access": "private",
+                        "index": 3,
+                        "lineNumber": 42,
+                        "name": "onReadyRead",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "private",
+                        "index": 4,
+                        "lineNumber": 43,
+                        "name": "onReplyFinished",
+                        "returnType": "void"
+                    }
+                ],
                 "superClasses": [
                     {
                         "access": "public",
@@ -49,6 +205,56 @@
             }
         ],
         "inputFile": "AiPlugin.h",
+        "outputRevision": 69
+    },
+    {
+        "classes": [
+            {
+                "classInfos": [
+                    {
+                        "name": "QML.Element",
+                        "value": "auto"
+                    },
+                    {
+                        "name": "QML.Singleton",
+                        "value": "true"
+                    }
+                ],
+                "className": "PamAuth",
+                "lineNumber": 7,
+                "methods": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "password",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 0,
+                        "lineNumber": 17,
+                        "name": "checkPassword",
+                        "returnType": "bool"
+                    },
+                    {
+                        "access": "public",
+                        "index": 1,
+                        "lineNumber": 18,
+                        "name": "getUser",
+                        "returnType": "QString"
+                    }
+                ],
+                "object": true,
+                "qualifiedClassName": "PamAuth",
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "PamAuth.h",
         "outputRevision": 69
     }
 ]

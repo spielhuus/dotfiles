@@ -1,24 +1,17 @@
 import QtQuick
 import Quickshell
 import "root:/" // for Globals
+import qs.config
 
 LazyLoader {
   id: root
 
-  // The item to display the tooltip at. If set to null the tooltip will be hidden.
   property Item relativeItem: null
-
-  // Tracks the item after relativeItem is unset.
   property Item displayItem: null
-
   property PopupContext popupContext: Globals.popupContext
-
   property bool hoverable: false;
   readonly property bool hovered: item?.hovered ?? false
-
-  // The content to show in the tooltip.
   required default property Component contentDelegate
-
   active: displayItem != null && popupContext.popup == this
 
   onRelativeItemChanged: {
@@ -46,19 +39,16 @@ LazyLoader {
 
     property Timer hideTimer: Timer {
       interval: 250
-
-      // unloads the popup by causing active to become false
       onTriggered: root.popupContext.popup = null;
     }
 
     color: "transparent"
 
-    // don't accept mouse input if !hoverable
     Region { id: emptyRegion }
     mask: root.hoverable ? null : emptyRegion
 
-    width: body.implicitWidth
-    height: body.implicitHeight
+    implicitWidth: body.implicitWidth
+    implicitHeight: body.implicitHeight
 
     MouseArea {
       id: body
@@ -74,8 +64,8 @@ LazyLoader {
 
         radius: 5
         border.width: 1
-        color: palette.active.toolTipBase
-        border.color: palette.active.light
+        color: Config.theme.osdBgColor
+        border.color:Config.theme.osdBorderColor 
 
         Loader {
           id: content

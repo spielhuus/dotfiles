@@ -1,3 +1,3 @@
 vim.cmd([[
-	setlocal makeprg=cargo\ build
+	setlocal makeprg=cargo\ check
 ]])

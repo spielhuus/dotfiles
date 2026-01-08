@@ -8,7 +8,7 @@ import qs.services.Compositor
 
 Singleton {
   id: root
-  property string currentLayout: I18n.tr("system.unknown-layout")
+  property string currentLayout: qsTr("system.unknown-layout")
   property string previousLayout: ""
   property bool isInitialized: false
 
@@ -20,7 +20,7 @@ Singleton {
   // Extract layout code from various format strings using Commons data
   function extractLayoutCode(layoutString) {
     if (!layoutString)
-      return I18n.tr("system.unknown-layout");
+      return qsTr("system.unknown-layout");
 
     const str = layoutString.toLowerCase();
 
@@ -47,17 +47,17 @@ Singleton {
 
     // If nothing matches, try first 2-3 characters if they look like a code
     const codeMatch = str.match(/^([a-z]{2,3})/);
-    return codeMatch ? codeMatch[1] : I18n.tr("system.unknown-layout");
+    return codeMatch ? codeMatch[1] : qsTr("system.unknown-layout");
   }
 
   // Watch for layout changes and show toast
   onCurrentLayoutChanged: {
     // Update previousLayout after checking for changes
-    const layoutChanged = isInitialized && currentLayout !== previousLayout && currentLayout !== I18n.tr("system.unknown-layout") && previousLayout !== "" && previousLayout !== I18n.tr("system.unknown-layout");
+    const layoutChanged = isInitialized && currentLayout !== previousLayout && currentLayout !== qsTr("system.unknown-layout") && previousLayout !== "" && previousLayout !== qsTr("system.unknown-layout");
 
     if (layoutChanged) {
       if (Settings.data.notifications.enableKeyboardLayoutToast) {
-        const message = I18n.tr("toast.keyboard-layout.changed", {
+        const message = qsTr("toast.keyboard-layout.changed", {
                                   "layout": currentLayout.toUpperCase()
                                 });
         ToastService.showNotice(message, "", "", 2000);

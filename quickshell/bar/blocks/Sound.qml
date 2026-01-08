@@ -19,12 +19,12 @@ BarBlock {
         }
     }
 
-    function updateVolume() {
-        if (sink?.audio) {
-            const icon = sink.audio.muted ? "󰖁" : "󰕾"
-            content.symbolText = `${icon} ${Math.round(sink.audio.volume * 100)}%`
-        }
-    }
+    // function updateVolume() {
+    //     if (sink?.audio) {
+    //         const icon = sink.audio.muted ? "x 󰖁" : "󰕾"
+    //         content.symbolText = `${icon} ${Math.round(sink.audio.volume * 100)}% xxx`
+    //     }
+    // }
 
     content: BarText { 
       symbolText: `${sink?.audio?.muted ? "󰖁" : "󰕾"}${Math.round(sink?.audio?.volume * 100)}%` 
@@ -48,8 +48,8 @@ BarBlock {
 
     PopupWindow {
         id: menuWindow
-        width: 200
-        height: 150
+        implicitWidth: 200
+        implicitHeight: 150
         visible: false
 
         anchor {

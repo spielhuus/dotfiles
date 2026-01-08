@@ -274,9 +274,15 @@ QSExtensions_autogen/timestamp: /home/etienne/.dotfiles/quickshell/extensions/Ai
   /usr/include/linux/types.h \
   /usr/include/locale.h \
   /usr/include/pthread.h \
+  /usr/include/qt6/QtCore/QFlags \
+  /usr/include/qt6/QtCore/QIODevice \
+  /usr/include/qt6/QtCore/QList \
   /usr/include/qt6/QtCore/QMap \
+  /usr/include/qt6/QtCore/QMetaType \
   /usr/include/qt6/QtCore/QObject \
+  /usr/include/qt6/QtCore/QSharedDataPointer \
   /usr/include/qt6/QtCore/QString \
+  /usr/include/qt6/QtCore/QUrl \
   /usr/include/qt6/QtCore/QVariant \
   /usr/include/qt6/QtCore/QVariantMap \
   /usr/include/qt6/QtCore/q17memory.h \
@@ -287,6 +293,7 @@ QSExtensions_autogen/timestamp: /home/etienne/.dotfiles/quickshell/extensions/Ai
   /usr/include/qt6/QtCore/q20utility.h \
   /usr/include/qt6/QtCore/q23type_traits.h \
   /usr/include/qt6/QtCore/q23utility.h \
+  /usr/include/qt6/QtCore/q26numeric.h \
   /usr/include/qt6/QtCore/qalgorithms.h \
   /usr/include/qt6/QtCore/qalloc.h \
   /usr/include/qt6/QtCore/qanystringview.h \
@@ -314,6 +321,7 @@ QSExtensions_autogen/timestamp: /home/etienne/.dotfiles/quickshell/extensions/Ai
   /usr/include/qt6/QtCore/qcontainerinfo.h \
   /usr/include/qt6/QtCore/qcontainertools_impl.h \
   /usr/include/qt6/QtCore/qcontiguouscache.h \
+  /usr/include/qt6/QtCore/qcryptographichash.h \
   /usr/include/qt6/QtCore/qdarwinhelpers.h \
   /usr/include/qt6/QtCore/qdatastream.h \
   /usr/include/qt6/QtCore/qdatetime.h \
@@ -329,6 +337,7 @@ QSExtensions_autogen/timestamp: /home/etienne/.dotfiles/quickshell/extensions/Ai
   /usr/include/qt6/QtCore/qglobalstatic.h \
   /usr/include/qt6/QtCore/qhash.h \
   /usr/include/qt6/QtCore/qhashfunctions.h \
+  /usr/include/qt6/QtCore/qiodevice.h \
   /usr/include/qt6/QtCore/qiodevicebase.h \
   /usr/include/qt6/QtCore/qiterable.h \
   /usr/include/qt6/QtCore/qiterator.h \
@@ -409,6 +418,24 @@ QSExtensions_autogen/timestamp: /home/etienne/.dotfiles/quickshell/extensions/Ai
   /usr/include/qt6/QtCore/qversiontagging.h \
   /usr/include/qt6/QtCore/qxptype_traits.h \
   /usr/include/qt6/QtCore/qyieldcpu.h \
+  /usr/include/qt6/QtNetwork/QNetworkAccessManager \
+  /usr/include/qt6/QtNetwork/QNetworkReply \
+  /usr/include/qt6/QtNetwork/QNetworkRequest \
+  /usr/include/qt6/QtNetwork/QSslConfiguration \
+  /usr/include/qt6/QtNetwork/QSslPreSharedKeyAuthenticator \
+  /usr/include/qt6/QtNetwork/qabstractsocket.h \
+  /usr/include/qt6/QtNetwork/qhostaddress.h \
+  /usr/include/qt6/QtNetwork/qhttpheaders.h \
+  /usr/include/qt6/QtNetwork/qnetworkaccessmanager.h \
+  /usr/include/qt6/QtNetwork/qnetworkreply.h \
+  /usr/include/qt6/QtNetwork/qnetworkrequest.h \
+  /usr/include/qt6/QtNetwork/qssl.h \
+  /usr/include/qt6/QtNetwork/qsslcertificate.h \
+  /usr/include/qt6/QtNetwork/qsslconfiguration.h \
+  /usr/include/qt6/QtNetwork/qsslerror.h \
+  /usr/include/qt6/QtNetwork/qsslpresharedkeyauthenticator.h \
+  /usr/include/qt6/QtNetwork/qsslsocket.h \
+  /usr/include/qt6/QtNetwork/qtcpsocket.h \
   /usr/include/qt6/QtNetwork/qtnetwork-config.h \
   /usr/include/qt6/QtNetwork/qtnetworkexports.h \
   /usr/include/qt6/QtNetwork/qtnetworkglobal.h \
@@ -1226,8 +1253,6 @@ QSExtensions_autogen/timestamp: /home/etienne/.dotfiles/quickshell/extensions/Ai
 
 /usr/share/cmake/Modules/Platform/UnixPaths.cmake:
 
-/usr/share/cmake/Modules/Platform/Linux.cmake:
-
 /usr/share/cmake/Modules/Platform/Linux-GNU.cmake:
 
 /usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake:
@@ -1263,8 +1288,6 @@ QSExtensions_autogen/timestamp: /home/etienne/.dotfiles/quickshell/extensions/Ai
 /usr/share/cmake/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake:
 
 /usr/share/cmake/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake:
-
-/usr/share/cmake/Modules/Compiler/XL-CXX-DetermineCompiler.cmake:
 
 /usr/share/cmake/Modules/Compiler/Watcom-DetermineCompiler.cmake:
 
@@ -1352,45 +1375,51 @@ QSExtensions_autogen/timestamp: /home/etienne/.dotfiles/quickshell/extensions/Ai
 
 /usr/lib/cmake/Qt6QuickTools/Qt6QuickToolsTargets.cmake:
 
-/usr/lib/cmake/Qt6DBus/Qt6DBusConfigVersionImpl.cmake:
+/usr/lib/cmake/Qt6QuickTools/Qt6QuickToolsConfigVersionImpl.cmake:
 
-/usr/lib/cmake/Qt6QmlMeta/Qt6QmlMetaVersionlessAliasTargets.cmake:
+/usr/lib/cmake/Qt6QuickTools/Qt6QuickToolsConfigVersion.cmake:
 
-/usr/lib/cmake/Qt6ExamplesAssetDownloaderPrivate/Qt6ExamplesAssetDownloaderPrivateConfigVersionImpl.cmake:
+/usr/lib/cmake/Qt6QuickTools/Qt6QuickToolsConfig.cmake:
 
-/usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsVersionlessTargets.cmake:
+/usr/lib/cmake/Qt6QuickTools/Qt6QuickToolsAdditionalTargetInfo.cmake:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6TextToSpeechQmlAdditionalTargetInfo.cmake:
+/usr/lib/cmake/Qt6Quick/Qt6QuickTargets-relwithdebinfo.cmake:
 
-/usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsTargets-relwithdebinfo.cmake:
+/usr/lib/cmake/Qt6Quick/Qt6QuickDependencies.cmake:
 
-/usr/lib/cmake/Qt6Gui/Qt6QXcbEglIntegrationPluginTargets-relwithdebinfo.cmake:
+/usr/lib/cmake/Qt6Quick/Qt6QuickConfigVersionImpl.cmake:
 
-/usr/lib/cmake/Qt6Qml/Qt6QQmlDebugServerFactoryPluginAdditionalTargetInfo.cmake:
+/usr/lib/cmake/Qt6Quick/Qt6QuickAdditionalTargetInfo.cmake:
 
-/usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersion.cmake:
+/usr/lib/cmake/Qt6QmlWorkerScript/Qt6QmlWorkerScriptTargets-relwithdebinfo.cmake:
 
-/usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfig.cmake:
+/usr/lib/cmake/Qt6QmlWorkerScript/Qt6QmlWorkerScriptDependencies.cmake:
 
-/usr/lib/cmake/Qt6DBus/Qt6DBusConfigVersion.cmake:
+/usr/lib/cmake/Qt6QmlWorkerScript/Qt6QmlWorkerScriptConfigVersionImpl.cmake:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6modelspluginTargets.cmake:
+/usr/lib/cmake/Qt6QmlWorkerScript/Qt6QmlWorkerScriptConfig.cmake:
 
-/usr/include/qt6/QtCore/QObject:
+/usr/lib/cmake/Qt6QmlWorkerScript/Qt6QmlWorkerScriptAdditionalTargetInfo.cmake:
+
+/usr/lib/cmake/Qt6QmlTools/Qt6QmlToolsTargets.cmake:
+
+/usr/lib/cmake/Qt6QmlTools/Qt6QmlToolsTargets-relwithdebinfo.cmake:
+
+/usr/lib/cmake/Qt6QmlTools/Qt6QmlToolsDependencies.cmake:
+
+/usr/lib/cmake/Qt6QmlTools/Qt6QmlToolsConfigVersion.cmake:
 
 /usr/lib/cmake/Qt6Core/Qt6CoreConfigureFileTemplate.in:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2universalstylepluginTargets.cmake:
+/usr/include/qt6/QtNetwork/qhostaddress.h:
 
-/usr/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake:
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2universalstylepluginTargets.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WaylandTextureSharingExtensionConfig.cmake:
 
 /usr/lib/cmake/Qt6Core/Qt6CoreConfigVersionImpl.cmake:
 
 /usr/lib/cmake/Qt6Concurrent/Qt6ConcurrentTargets-relwithdebinfo.cmake:
-
-/usr/lib/cmake/Qt6Concurrent/Qt6ConcurrentConfig.cmake:
 
 /usr/include/c++/15.2.1/debug/debug.h:
 
@@ -1408,10 +1437,6 @@ QSExtensions_autogen/timestamp: /home/etienne/.dotfiles/quickshell/extensions/Ai
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6LabsPlatformpluginAdditionalTargetInfo.cmake:
 
-/usr/lib/cmake/Qt6/QtPublicGitHelpers.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2imaginestyleimplpluginAdditionalTargetInfo.cmake:
-
 /usr/include/c++/15.2.1/bits/algorithmfwd.h:
 
 /usr/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:
@@ -1427,14 +1452,6 @@ QSExtensions_autogen/timestamp: /home/etienne/.dotfiles/quickshell/extensions/Ai
 /usr/lib/cmake/Qt6Gui/Qt6QLinuxFbIntegrationPluginTargets.cmake:
 
 /usr/lib/cmake/Qt6/Qt6VersionlessAliasTargets.cmake:
-
-/usr/share/cmake/Modules/Compiler/Fujitsu-DetermineCompiler.cmake:
-
-/usr/bin/cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickshapesdesignhelperspluginConfig.cmake:
-
-/usr/lib/cmake/Qt6Network/Qt6QTlsBackendCertOnlyPluginConfig.cmake:
 
 /usr/lib/cmake/Qt6/Qt6ConfigExtras.cmake:
 
@@ -1470,12 +1487,6 @@ QSExtensions_autogen/timestamp: /home/etienne/.dotfiles/quickshell/extensions/Ai
 
 /usr/lib/cmake/Qt6Gui/Qt6QGtk3ThemePluginTargets.cmake:
 
-/usr/include/qt6/QtQml/qqmlpropertyvaluesource.h:
-
-/usr/lib/cmake/Qt6Gui/Qt6QSvgPluginAdditionalTargetInfo.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtgraphicaleffectspluginConfig.cmake:
-
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquicklayoutspluginConfig.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2materialstylepluginTargets.cmake:
@@ -1485,6 +1496,48 @@ QSExtensions_autogen/timestamp: /home/etienne/.dotfiles/quickshell/extensions/Ai
 /usr/lib/cmake/Qt6Concurrent/Qt6ConcurrentDependencies.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6QMinimalEglIntegrationPluginTargets.cmake:
+
+/usr/include/qt6/QtNetwork/qsslsocket.h:
+
+/usr/include/qt6/QtNetwork/qsslpresharedkeyauthenticator.h:
+
+/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/atomic_word.h:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlwavefrontmeshpluginTargets.cmake:
+
+/usr/lib/cmake/Qt6Gui/Qt6QVncIntegrationPluginConfig.cmake:
+
+/usr/include/qt6/QtNetwork/qsslerror.h:
+
+/usr/lib/cmake/Qt6Gui/Qt6QWaylandIntegrationPluginConfig.cmake:
+
+/usr/include/qt6/QtNetwork/qsslconfiguration.h:
+
+/usr/include/qt6/QtQml/qqmlpropertyvaluesource.h:
+
+/usr/lib/cmake/Qt6Gui/Qt6QSvgPluginAdditionalTargetInfo.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtgraphicaleffectspluginConfig.cmake:
+
+/usr/share/cmake/Modules/Platform/Linux.cmake:
+
+/usr/include/qt6/QtNetwork/qssl.h:
+
+/usr/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginTargets.cmake:
+
+/usr/include/qt6/QtCore/QObject:
+
+/usr/include/qt6/QtNetwork/qnetworkaccessmanager.h:
+
+/usr/include/qt6/QtNetwork/qhttpheaders.h:
+
+/usr/include/qt6/QtNetwork/qabstractsocket.h:
+
+/usr/include/qt6/QtNetwork/qsslcertificate.h:
+
+/usr/share/cmake/Modules/CMakeCXXCompiler.cmake.in:
+
+/usr/include/features-time64.h:
 
 /usr/include/qt6/QtCore/qyieldcpu.h:
 
@@ -1532,8 +1585,6 @@ QSExtensions_autogen/timestamp: /home/etienne/.dotfiles/quickshell/extensions/Ai
 
 /usr/lib/cmake/Qt6CoreTools/Qt6CoreToolsAdditionalTargetInfo.cmake:
 
-/usr/lib/cmake/Qt6Quick/Qt6QuickDependencies.cmake:
-
 /usr/include/qt6/QtCore/qtdeprecationmarkers.h:
 
 /usr/include/locale.h:
@@ -1548,8 +1599,6 @@ QSExtensions_autogen/timestamp: /home/etienne/.dotfiles/quickshell/extensions/Ai
 
 /usr/include/qt6/QtCore/qsysinfo.h:
 
-/usr/include/qt6/QtCore/qswap.h:
-
 /usr/include/qt6/QtCore/qstringtokenizer.h:
 
 /usr/include/assert.h:
@@ -1563,10 +1612,6 @@ QSExtensions_autogen/timestamp: /home/etienne/.dotfiles/quickshell/extensions/Ai
 /usr/include/qt6/QtCore/qshareddata.h:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6labsanimationpluginAdditionalTargetInfo.cmake:
-
-/usr/include/qt6/QtCore/qprocessordetection.h:
-
-/usr/lib/cmake/Qt6Gui/Qt6QGtk3ThemePluginConfig.cmake:
 
 /usr/include/qt6/QtCore/qobjectdefs.h:
 
@@ -1591,6 +1636,8 @@ QSExtensions_autogen/timestamp: /home/etienne/.dotfiles/quickshell/extensions/Ai
 /usr/include/qt6/QtCore/qmetatype.h:
 
 /usr/include/qt6/QtCore/qmap.h:
+
+/usr/include/stdio.h:
 
 /usr/include/qt6/QtCore/qlogging.h:
 
@@ -1642,7 +1689,17 @@ QSExtensions_autogen/timestamp: /home/etienne/.dotfiles/quickshell/extensions/Ai
 
 /usr/lib/cmake/Qt6Gui/Qt6QTsLibPluginTargets.cmake:
 
+/usr/include/qt6/QtCore/qswap.h:
+
+/usr/lib/cmake/Qt6Quick/Qt6QuickVersionlessAliasTargets.cmake:
+
+/usr/include/c++/15.2.1/bits/exception.h:
+
 /usr/include/c++/15.2.1/pstl/execution_defs.h:
+
+/usr/include/qt6/QtNetwork/qnetworkrequest.h:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlpluginAdditionalTargetInfo.cmake:
 
 /usr/share/cmake/Modules/Compiler/ADSP-DetermineCompiler.cmake:
 
@@ -1652,9 +1709,9 @@ QSExtensions_autogen/timestamp: /home/etienne/.dotfiles/quickshell/extensions/Ai
 
 /usr/include/qt6/QtCore/qcontainerinfo.h:
 
-/usr/include/time.h:
-
 /usr/lib/cmake/Qt6Quick/Qt6QuickConfig.cmake:
+
+/usr/include/time.h:
 
 /usr/include/qt6/QtCore/qcontainerfwd.h:
 
@@ -1687,6 +1744,10 @@ QSExtensions_autogen/timestamp: /home/etienne/.dotfiles/quickshell/extensions/Ai
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquicktemplates2pluginTargets-relwithdebinfo.cmake:
 
 /usr/include/qt6/QtCore/qbytearrayview.h:
+
+/usr/lib/cmake/Qt6QmlTools/Qt6QmlToolsVersionlessTargets.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2basicstylepluginTargets-relwithdebinfo.cmake:
 
 /usr/lib/cmake/Qt6Qml/Qt6QQmlProfilerServiceFactoryPluginAdditionalTargetInfo.cmake:
 
@@ -1744,6 +1805,8 @@ QSExtensions_autogen/timestamp: /home/etienne/.dotfiles/quickshell/extensions/Ai
 
 /usr/include/qt6/QtCore/qalgorithms.h:
 
+/usr/include/qt6/QtCore/q26numeric.h:
+
 /usr/include/qt6/QtCore/q23type_traits.h:
 
 /usr/include/c++/15.2.1/bits/streambuf_iterator.h:
@@ -1790,6 +1853,24 @@ QSExtensions_autogen/timestamp: /home/etienne/.dotfiles/quickshell/extensions/Ai
 
 /usr/lib/cmake/Qt6Gui/Qt6QIbusPlatformInputContextPluginAdditionalTargetInfo.cmake:
 
+/usr/include/qt6/QtCore/qprocessordetection.h:
+
+/usr/lib/cmake/Qt6Gui/Qt6QGtk3ThemePluginConfig.cmake:
+
+/usr/lib/cmake/Qt6Gui/Qt6QMinimalEglIntegrationPluginAdditionalTargetInfo.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquicktimelinepluginTargets-relwithdebinfo.cmake:
+
+/usr/lib/cmake/Qt6Concurrent/Qt6ConcurrentConfig.cmake:
+
+/usr/include/qt6/QtCore/QMetaType:
+
+/usr/include/c++/15.2.1/utility:
+
+/usr/lib/cmake/Qt6/QtPublicGitHelpers.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2imaginestyleimplpluginAdditionalTargetInfo.cmake:
+
 /usr/include/linux/stddef.h:
 
 /usr/include/linux/sched/types.h:
@@ -1798,19 +1879,13 @@ QSExtensions_autogen/timestamp: /home/etienne/.dotfiles/quickshell/extensions/Ai
 
 /usr/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake:
 
+/usr/include/qt6/QtCore/QFlags:
+
 /usr/include/bits/locale.h:
 
 /usr/include/linux/errno.h:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2basicstylepluginTargets-relwithdebinfo.cmake:
-
-/usr/lib/cmake/Qt6QmlTools/Qt6QmlToolsVersionlessTargets.cmake:
-
 /usr/include/qt6/QtCore/qatomic.h:
-
-/usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsAdditionalTargetInfo.cmake:
-
-/usr/include/c++/15.2.1/numeric:
 
 /usr/include/qt6/QtCore/qtconfigmacros.h:
 
@@ -1821,10 +1896,6 @@ QSExtensions_autogen/timestamp: /home/etienne/.dotfiles/quickshell/extensions/Ai
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickdialogspluginAdditionalTargetInfo.cmake:
 
 /usr/include/qt6/QtCore/q17memory.h:
-
-/usr/share/cmake/Modules/CMakeCXXCompiler.cmake.in:
-
-/usr/include/features-time64.h:
 
 /usr/include/ctype.h:
 
@@ -1844,10 +1915,6 @@ QSExtensions_autogen/timestamp: /home/etienne/.dotfiles/quickshell/extensions/Ai
 
 /usr/lib/cmake/Qt6Qml/Qt6QmlModuleDirMappingTemplate.qrc.in:
 
-/usr/lib/cmake/Qt6DBus/Qt6DBusVersionlessAliasTargets.cmake:
-
-/usr/include/qt6/QtCore/qscopedpointer.h:
-
 /usr/include/c++/15.2.1/bits/stl_function.h:
 
 /usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:
@@ -1858,8 +1925,6 @@ QSExtensions_autogen/timestamp: /home/etienne/.dotfiles/quickshell/extensions/Ai
 
 /usr/include/c++/15.2.1/bits/hash_bytes.h:
 
-/usr/include/stdio.h:
-
 /usr/lib/cmake/Qt6QmlTools/Qt6QmlToolsConfigVersionImpl.cmake:
 
 /usr/include/c++/15.2.1/bits/cxxabi_init_exception.h:
@@ -1867,8 +1932,6 @@ QSExtensions_autogen/timestamp: /home/etienne/.dotfiles/quickshell/extensions/Ai
 QSExtensions_autogen/moc_predefs.h:
 
 /usr/include/c++/15.2.1/memory:
-
-/usr/lib/cmake/Qt6Quick/Qt6QuickConfigVersionImpl.cmake:
 
 /usr/include/c++/15.2.1/bits/concept_check.h:
 
@@ -1897,6 +1960,14 @@ QSExtensions_autogen/moc_predefs.h:
 /usr/include/c++/15.2.1/bits/alloc_traits.h:
 
 /usr/include/asm/bitsperlong.h:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3dassetutilspluginConfig.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6Quick3DXrpluginTargets.cmake:
+
+/usr/lib/cmake/Qt6QmlTools/Qt6QmlToolsAdditionalTargetInfo.cmake:
+
+/usr/lib/cmake/Qt6Qml/Qt6QQuick3DProfilerAdapterFactoryPluginConfig.cmake:
 
 /usr/include/c++/15.2.1/bits/erase_if.h:
 
@@ -1928,12 +1999,6 @@ QSExtensions_autogen/moc_predefs.h:
 
 /usr/include/c++/15.2.1/climits:
 
-/usr/lib/cmake/Qt6Gui/Qt6GuiConfigVersion.cmake:
-
-/usr/lib/cmake/Qt6Gui/Qt6QIbusPlatformInputContextPluginConfig.cmake:
-
-/usr/include/bits/types/__fpos64_t.h:
-
 /usr/include/qt6/QtQml/qtqmlexports.h:
 
 /usr/include/c++/15.2.1/cassert:
@@ -1951,8 +2016,6 @@ QSExtensions_autogen/moc_predefs.h:
 /usr/lib/cmake/Qt6Network/Qt6NetworkVersionlessAliasTargets.cmake:
 
 /usr/include/bits/types/struct_tm.h:
-
-/usr/include/qt6/QtCore/qiterable.h:
 
 /usr/include/c++/15.2.1/ext/atomicity.h:
 
@@ -1972,8 +2035,6 @@ QSExtensions_autogen/moc_predefs.h:
 
 /usr/include/bits/waitflags.h:
 
-/usr/lib/cmake/Qt6QuickTools/Qt6QuickToolsConfigVersionImpl.cmake:
-
 /usr/include/c++/15.2.1/bits/stl_pair.h:
 
 /usr/include/c++/15.2.1/bits/functexcept.h:
@@ -1987,6 +2048,8 @@ QSExtensions_autogen/moc_predefs.h:
 /usr/include/qt6/QtCore/qscopeguard.h:
 
 /usr/include/c++/15.2.1/bits/stl_iterator_base_funcs.h:
+
+/usr/include/qt6/QtNetwork/QNetworkReply:
 
 /usr/include/bits/sched.h:
 
@@ -2003,10 +2066,6 @@ QSExtensions_autogen/moc_predefs.h:
 /usr/include/bits/types/mbstate_t.h:
 
 /usr/lib/cmake/Qt6QmlIntegration/Qt6QmlIntegrationConfigVersionImpl.cmake:
-
-/usr/lib/cmake/Qt6DBus/Qt6DBusDependencies.cmake:
-
-/usr/lib/cmake/Qt6CoreTools/Qt6CoreToolsTargets-relwithdebinfo.cmake:
 
 /usr/lib/cmake/Qt6CoreTools/Qt6CoreToolsTargets.cmake:
 
@@ -2040,15 +2099,13 @@ QSExtensions_autogen/moc_predefs.h:
 
 /usr/include/c++/15.2.1/bits/parse_numbers.h:
 
-/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/atomic_word.h:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlwavefrontmeshpluginTargets.cmake:
-
-/usr/lib/cmake/Qt6Gui/Qt6QVncIntegrationPluginConfig.cmake:
-
 /usr/include/c++/15.2.1/bits/hashtable_policy.h:
 
-/usr/lib/cmake/Qt6Gui/Qt6QXcbGlxIntegrationPluginTargets.cmake:
+/usr/share/cmake/Modules/Compiler/XL-CXX-DetermineCompiler.cmake:
+
+/usr/include/qt6/QtCore/QUrl:
+
+/usr/lib/cmake/Qt6Gui/Qt6QEvdevTabletPluginConfig.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2fluentwinui3styleimplpluginTargets.cmake:
 
@@ -2062,6 +2119,10 @@ QSExtensions_autogen/moc_predefs.h:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WaylandCompositorIviapplicationpluginConfig.cmake:
 
+/usr/include/qt6/QtNetwork/qtcpsocket.h:
+
+/usr/include/c++/15.2.1/pstl/glue_numeric_defs.h:
+
 /usr/include/c++/15.2.1/tr1/special_function_util.h:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2materialstyleimplpluginConfig.cmake:
@@ -2069,10 +2130,6 @@ QSExtensions_autogen/moc_predefs.h:
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2universalstylepluginTargets-relwithdebinfo.cmake:
 
 /usr/include/bits/time64.h:
-
-/usr/lib/cmake/Qt6/QtPublicTargetHelpers.cmake:
-
-/usr/lib/cmake/Qt6ExamplesAssetDownloaderPrivate/Qt6ExamplesAssetDownloaderPrivateVersionlessAliasTargets.cmake:
 
 /usr/share/cmake/Modules/Internal/CMakeInspectCXXLinker.cmake:
 
@@ -2090,8 +2147,6 @@ QSExtensions_autogen/moc_predefs.h:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3dassetutilspluginTargets.cmake:
 
-/usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsDependencies.cmake:
-
 /usr/include/qt6/QtQml/qqmlabstracturlinterceptor.h:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6sharedimagepluginTargets.cmake:
@@ -2108,15 +2163,9 @@ QSExtensions_autogen/moc_predefs.h:
 
 /usr/include/bits/local_lim.h:
 
+/usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfig.cmake:
+
 /usr/include/asm-generic/int-ll64.h:
-
-/usr/lib/cmake/Qt6Gui/Qt6GuiAdditionalTargetInfo.cmake:
-
-/usr/include/c++/15.2.1/cctype:
-
-/usr/include/c++/15.2.1/version:
-
-/usr/lib/cmake/Qt6Gui/Qt6QSvgIconPluginTargets.cmake:
 
 /usr/lib/cmake/Qt6Qml/Qt6QQmlProfilerServiceFactoryPluginConfig.cmake:
 
@@ -2166,11 +2215,13 @@ QSExtensions_autogen/moc_predefs.h:
 
 /usr/include/c++/15.2.1/bits/hashtable.h:
 
-/usr/include/qt6/QtQml/qqmlengine.h:
-
-/usr/lib/cmake/Qt6ExamplesAssetDownloaderPrivate/Qt6ExamplesAssetDownloaderPrivateConfigVersion.cmake:
-
 /usr/include/qt6/QtCore/qsharedpointer.h:
+
+/usr/share/cmake/Modules/Compiler/Fujitsu-DetermineCompiler.cmake:
+
+/usr/bin/cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickshapesdesignhelperspluginConfig.cmake:
 
 /usr/include/c++/15.2.1/atomic:
 
@@ -2183,6 +2234,10 @@ QSExtensions_autogen/moc_predefs.h:
 /usr/lib/cmake/Qt6DBus/Qt6DBusConfig.cmake:
 
 /usr/include/bits/floatn.h:
+
+/usr/lib/cmake/Qt6/QtPublicTargetHelpers.cmake:
+
+/usr/lib/cmake/Qt6ExamplesAssetDownloaderPrivate/Qt6ExamplesAssetDownloaderPrivateVersionlessAliasTargets.cmake:
 
 /usr/lib/cmake/Qt6Concurrent/Qt6ConcurrentAdditionalTargetInfo.cmake:
 
@@ -2217,8 +2272,6 @@ QSExtensions_autogen/moc_predefs.h:
 /usr/include/c++/15.2.1/new:
 
 CMakeFiles/4.2.1/CMakeSystem.cmake:
-
-/usr/lib/cmake/Qt6QmlWorkerScript/Qt6QmlWorkerScriptAdditionalTargetInfo.cmake:
 
 /usr/include/bits/long-double.h:
 
@@ -2294,12 +2347,6 @@ QSExtensionsplugin_extensions_buildPlugin_in.cpp:
 
 /usr/include/c++/15.2.1/bits/atomic_base.h:
 
-/usr/lib/cmake/Qt6ExamplesAssetDownloaderPrivate/Qt6ExamplesAssetDownloaderPrivateTargets-relwithdebinfo.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6QmlNetworkpluginAdditionalTargetInfo.cmake:
-
-/usr/include/bits/pthreadtypes-arch.h:
-
 /usr/include/bits/types/wint_t.h:
 
 /usr/include/qt6/QtCore/qpointer.h:
@@ -2334,13 +2381,15 @@ QSExtensionsplugin_extensions_buildPlugin_in.cpp:
 
 /usr/lib/cmake/Qt6Gui/Qt6QTsLibPluginTargets-relwithdebinfo.cmake:
 
-/usr/lib/cmake/Qt6QmlTools/Qt6QmlToolsConfigVersion.cmake:
+/usr/lib/cmake/Qt6Gui/Qt6QIbusPlatformInputContextPluginConfig.cmake:
+
+/usr/include/bits/types/__fpos64_t.h:
+
+/usr/lib/cmake/Qt6Gui/Qt6GuiConfigVersion.cmake:
 
 /usr/include/c++/15.2.1/bits/align.h:
 
 /usr/include/c++/15.2.1/type_traits:
-
-/usr/lib/cmake/Qt6ExamplesAssetDownloaderPrivate/Qt6ExamplesAssetDownloaderPrivateDependencies.cmake:
 
 /usr/share/cmake/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake:
 
@@ -2350,9 +2399,7 @@ QSExtensionsplugin_extensions_buildPlugin_in.cpp:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquicktimelinepluginAdditionalTargetInfo.cmake:
 
-/usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersionImpl.cmake:
-
-/usr/include/c++/15.2.1/bits/move.h:
+/usr/include/qt6/QtCore/qiodevice.h:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6LabsSynchronizerpluginTargets.cmake:
 
@@ -2366,8 +2413,6 @@ QSExtensionsplugin_extensions_buildPlugin_in.cpp:
 
 /usr/include/bits/types/__locale_t.h:
 
-/usr/lib/cmake/Qt6/Qt6ConfigVersion.cmake:
-
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquickvectorimagepluginConfig.cmake:
 
 /usr/lib/cmake/Qt6/Qt6Config.cmake:
@@ -2380,21 +2425,9 @@ QSExtensionsplugin_extensions_buildPlugin_in.cpp:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WaylandCompositorIviapplicationpluginTargets-relwithdebinfo.cmake:
 
-/usr/lib/cmake/Qt6ExamplesAssetDownloaderPrivate/Qt6ExamplesAssetDownloaderPrivateTargets.cmake:
-
-/usr/lib/cmake/Qt6/QtPublicSbomPurlHelpers.cmake:
-
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6QmlAssetDownloaderpluginTargets.cmake:
 
 /usr/include/c++/15.2.1/bits/stringfwd.h:
-
-/usr/lib/cmake/Qt6ExamplesAssetDownloaderPrivate/Qt6ExamplesAssetDownloaderPrivateConfig.cmake:
-
-/usr/include/qt6/QtCore/qflags.h:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3dassetutilspluginAdditionalTargetInfo.cmake:
-
-/usr/include/c++/15.2.1/cmath:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtqmlcorepluginConfig.cmake:
 
@@ -2432,10 +2465,6 @@ QSExtensionsplugin_extensions_buildPlugin_in.cpp:
 
 /usr/include/c++/15.2.1/unordered_map:
 
-/usr/lib/cmake/Qt6DBus/Qt6DBusMacros.cmake:
-
-/usr/include/qt6/QtCore/qsystemdetection.h:
-
 /usr/lib/cmake/Qt6/Qt6Targets.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2fluentwinui3styleimplpluginTargets-relwithdebinfo.cmake:
@@ -2466,6 +2495,10 @@ QSExtensionsplugin_extensions_buildPlugin_in.cpp:
 
 /usr/include/asm-generic/errno.h:
 
+/usr/lib/cmake/Qt6/Qt6ConfigVersion.cmake:
+
+/usr/include/qt6/QtNetwork/QSslPreSharedKeyAuthenticator:
+
 /usr/include/c++/15.2.1/bits/shared_ptr.h:
 
 /usr/lib/cmake/Qt6Gui/Qt6QEvdevTouchScreenPluginConfig.cmake:
@@ -2485,12 +2518,6 @@ QSExtensionsplugin_extensions_buildPlugin_in.cpp:
 /usr/include/c++/15.2.1/bits/specfun.h:
 
 /usr/include/qt6/QtCore/QMap:
-
-/usr/include/qt6/QtQml/qqmlerror.h:
-
-/usr/lib/cmake/Qt6DBus/Qt6DBusTargets-relwithdebinfo.cmake:
-
-/usr/include/c++/15.2.1/bits/std_function.h:
 
 /usr/lib/cmake/Qt6Qml/Qt6QQmlNativeDebugServiceFactoryPluginConfig.cmake:
 
@@ -2515,8 +2542,6 @@ QSExtensionsplugin_extensions_buildPlugin_in.cpp:
 /usr/include/bits/pthreadtypes.h:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6LabsPlatformpluginTargets.cmake:
-
-/usr/lib/cmake/Qt6QuickTools/Qt6QuickToolsConfigVersion.cmake:
 
 /usr/include/c++/15.2.1/bits/stl_multiset.h:
 
@@ -2564,8 +2589,6 @@ QSExtensionsplugin_extensions_buildPlugin_in.cpp:
 
 /usr/include/c++/15.2.1/bits/uniform_int_dist.h:
 
-/usr/include/c++/15.2.1/utility:
-
 /usr/include/qt6/QtCore/qtclasshelpermacros.h:
 
 /usr/include/c++/15.2.1/bits/unordered_map.h:
@@ -2573,8 +2596,6 @@ QSExtensionsplugin_extensions_buildPlugin_in.cpp:
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2imaginestylepluginTargets-relwithdebinfo.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3dhelperspluginAdditionalTargetInfo.cmake:
-
-/usr/include/c++/15.2.1/pstl/glue_numeric_defs.h:
 
 /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/cpu_defines.h:
 
@@ -2585,6 +2606,10 @@ QSExtensionsplugin_extensions_buildPlugin_in.cpp:
 /usr/include/qt6/QtCore/qoverload.h:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2imaginestylepluginConfig.cmake:
+
+/usr/include/qt6/QtCore/qiterable.h:
+
+/usr/include/qt6/QtNetwork/QNetworkRequest:
 
 /usr/include/c++/15.2.1/bits/stl_relops.h:
 
@@ -2634,11 +2659,19 @@ QSExtensionsplugin_extensions_buildPlugin_in.cpp:
 
 /usr/lib/cmake/Qt6QmlAssetDownloader/Qt6QmlAssetDownloaderTargets.cmake:
 
+/usr/include/qt6/QtNetwork/QNetworkAccessManager:
+
 /usr/include/c++/15.2.1/cstdint:
 
 /usr/include/c++/15.2.1/cstring:
 
+/usr/include/qt6/QtCore/QIODevice:
+
+/usr/lib/cmake/Qt6Gui/Qt6QIbusPlatformInputContextPluginTargets-relwithdebinfo.cmake:
+
 /usr/include/bits/timex.h:
+
+/usr/include/qt6/QtCore/QList:
 
 /usr/include/c++/15.2.1/ctime:
 
@@ -2646,15 +2679,15 @@ QSExtensionsplugin_extensions_buildPlugin_in.cpp:
 
 /usr/lib/cmake/Qt6Gui/Qt6QEvdevMousePluginTargets-relwithdebinfo.cmake:
 
+/usr/lib/cmake/Qt6CoreTools/Qt6CoreToolsTargets-relwithdebinfo.cmake:
+
+/usr/lib/cmake/Qt6DBus/Qt6DBusDependencies.cmake:
+
 /usr/lib/cmake/Qt6/QtPublicPluginHelpers.cmake:
 
 /usr/include/c++/15.2.1/bits/shared_ptr_base.h:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmllocalstoragepluginTargets.cmake:
-
-/usr/include/c++/15.2.1/bits/exception.h:
-
-/usr/lib/cmake/Qt6Quick/Qt6QuickVersionlessAliasTargets.cmake:
 
 /usr/include/sched.h:
 
@@ -2711,6 +2744,10 @@ QSExtensionsplugin_extensions_buildPlugin_in.cpp:
 /usr/include/c++/15.2.1/iterator:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6effectspluginTargets-relwithdebinfo.cmake:
+
+/usr/include/c++/15.2.1/numeric:
+
+/usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsAdditionalTargetInfo.cmake:
 
 /usr/include/c++/15.2.1/tr1/exp_integral.tcc:
 
@@ -2782,6 +2819,88 @@ QSExtensionsplugin_extensions_buildPlugin_in.cpp:
 
 /usr/lib/cmake/Qt6Gui/Qt6QGifPluginAdditionalTargetInfo.cmake:
 
+/usr/lib/cmake/Qt6DBus/Qt6DBusConfigVersion.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6modelspluginTargets.cmake:
+
+/usr/lib/cmake/Qt6DBus/Qt6DBusConfigVersionImpl.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6QmlNetworkpluginAdditionalTargetInfo.cmake:
+
+/usr/include/bits/pthreadtypes-arch.h:
+
+/usr/lib/cmake/Qt6ExamplesAssetDownloaderPrivate/Qt6ExamplesAssetDownloaderPrivateTargets-relwithdebinfo.cmake:
+
+/usr/lib/cmake/Qt6QmlMeta/Qt6QmlMetaVersionlessAliasTargets.cmake:
+
+/usr/include/qt6/QtCore/qsystemdetection.h:
+
+/usr/lib/cmake/Qt6DBus/Qt6DBusMacros.cmake:
+
+/usr/include/qt6/QtQml/qqmlerror.h:
+
+/usr/include/c++/15.2.1/bits/std_function.h:
+
+/usr/lib/cmake/Qt6DBus/Qt6DBusTargets-relwithdebinfo.cmake:
+
+/usr/lib/cmake/Qt6Gui/Qt6QXcbGlxIntegrationPluginTargets.cmake:
+
+/usr/include/qt6/QtCore/qcryptographichash.h:
+
+/usr/include/qt6/QtCore/qscopedpointer.h:
+
+/usr/lib/cmake/Qt6DBus/Qt6DBusVersionlessAliasTargets.cmake:
+
+/usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersion.cmake:
+
+/usr/include/c++/15.2.1/bits/move.h:
+
+/usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersionImpl.cmake:
+
+/usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsDependencies.cmake:
+
+/usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsTargets-relwithdebinfo.cmake:
+
+/usr/lib/cmake/Qt6Gui/Qt6QXcbEglIntegrationPluginTargets-relwithdebinfo.cmake:
+
+/usr/lib/cmake/Qt6Qml/Qt6QQmlDebugServerFactoryPluginAdditionalTargetInfo.cmake:
+
+/usr/lib/cmake/Qt6Network/Qt6QTlsBackendCertOnlyPluginConfig.cmake:
+
+/usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsVersionlessTargets.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6TextToSpeechQmlAdditionalTargetInfo.cmake:
+
+/usr/include/qt6/QtCore/qflags.h:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3dassetutilspluginAdditionalTargetInfo.cmake:
+
+/usr/include/c++/15.2.1/cmath:
+
+/usr/lib/cmake/Qt6ExamplesAssetDownloaderPrivate/Qt6ExamplesAssetDownloaderPrivateConfig.cmake:
+
+/usr/include/qt6/QtQml/qqmlengine.h:
+
+/usr/lib/cmake/Qt6ExamplesAssetDownloaderPrivate/Qt6ExamplesAssetDownloaderPrivateConfigVersion.cmake:
+
+/usr/lib/cmake/Qt6ExamplesAssetDownloaderPrivate/Qt6ExamplesAssetDownloaderPrivateConfigVersionImpl.cmake:
+
+/usr/lib/cmake/Qt6ExamplesAssetDownloaderPrivate/Qt6ExamplesAssetDownloaderPrivateDependencies.cmake:
+
+/usr/lib/cmake/Qt6/QtPublicSbomPurlHelpers.cmake:
+
+/usr/lib/cmake/Qt6ExamplesAssetDownloaderPrivate/Qt6ExamplesAssetDownloaderPrivateTargets.cmake:
+
+/usr/include/c++/15.2.1/cctype:
+
+/usr/include/c++/15.2.1/version:
+
+/usr/lib/cmake/Qt6Gui/Qt6QSvgIconPluginTargets.cmake:
+
+/usr/lib/cmake/Qt6Gui/Qt6GuiAdditionalTargetInfo.cmake:
+
+/usr/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake:
+
 /usr/lib/cmake/Qt6Gui/Qt6GuiDependencies.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6GuiPlugins.cmake:
@@ -2807,6 +2926,12 @@ QSExtensionsplugin_extensions_buildPlugin_in.cpp:
 /usr/lib/cmake/Qt6Gui/Qt6QEglFSIntegrationPluginConfig.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6QEglFSIntegrationPluginTargets-relwithdebinfo.cmake:
+
+/usr/lib/cmake/Qt6QmlWorkerScript/Qt6QmlWorkerScriptConfigVersion.cmake:
+
+/usr/include/c++/15.2.1/bits/list.tcc:
+
+/usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsEglDeviceIntegrationPluginAdditionalTargetInfo.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsEglDeviceIntegrationPluginTargets-relwithdebinfo.cmake:
 
@@ -2836,13 +2961,9 @@ QSExtensionsplugin_extensions_buildPlugin_in.cpp:
 
 /usr/lib/cmake/Qt6Gui/Qt6QEvdevTabletPluginAdditionalTargetInfo.cmake:
 
-/usr/lib/cmake/Qt6Gui/Qt6QEvdevTabletPluginConfig.cmake:
-
 /usr/lib/cmake/Qt6Gui/Qt6QEvdevTabletPluginTargets-relwithdebinfo.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2universalstyleimplpluginConfig.cmake:
-
-/usr/lib/cmake/Qt6Quick/Qt6QuickAdditionalTargetInfo.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6QEvdevTouchScreenPluginAdditionalTargetInfo.cmake:
 
@@ -2857,6 +2978,8 @@ QSExtensionsplugin_extensions_buildPlugin_in.cpp:
 /usr/lib/cmake/Qt6Gui/Qt6QGifPluginTargets.cmake:
 
 /usr/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfig.cmake:
+
+/usr/include/qt6/QtNetwork/QSslConfiguration:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6QuickControlsTestUtilsPrivatepluginTargets-relwithdebinfo.cmake:
 
@@ -2874,13 +2997,17 @@ QSExtensionsplugin_extensions_buildPlugin_in.cpp:
 
 /usr/lib/cmake/Qt6Gui/Qt6QICOPluginTargets.cmake:
 
-/usr/lib/cmake/Qt6Gui/Qt6QIbusPlatformInputContextPluginTargets-relwithdebinfo.cmake:
+/usr/lib/cmake/Qt6QmlWorkerScript/Qt6QmlWorkerScriptVersionlessAliasTargets.cmake:
+
+/usr/lib/cmake/Qt6Gui/Qt6QJpegPluginAdditionalTargetInfo.cmake:
 
 /usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6QWaylandIntegrationPluginTargets-relwithdebinfo.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6QJpegPluginConfig.cmake:
+
+/usr/include/qt6/QtNetwork/qnetworkreply.h:
 
 /usr/lib/cmake/Qt6Gui/Qt6QJpegPluginTargets-relwithdebinfo.cmake:
 
@@ -2914,10 +3041,6 @@ QSExtensionsplugin_extensions_buildPlugin_in.cpp:
 
 /usr/lib/cmake/Qt6Gui/Qt6QLinuxFbIntegrationPluginTargets-relwithdebinfo.cmake:
 
-/usr/lib/cmake/Qt6Gui/Qt6QMinimalEglIntegrationPluginAdditionalTargetInfo.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquicktimelinepluginTargets-relwithdebinfo.cmake:
-
 /usr/lib/cmake/Qt6Gui/Qt6QMinimalEglIntegrationPluginTargets-relwithdebinfo.cmake:
 
 /usr/lib/cmake/Qt6QuickTools/Qt6QuickToolsDependencies.cmake:
@@ -2931,8 +3054,6 @@ QSExtensionsplugin_extensions_buildPlugin_in.cpp:
 /usr/lib/cmake/Qt6Gui/Qt6QComposePlatformInputContextPluginTargets.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2basicstylepluginConfig.cmake:
-
-/usr/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginTargets.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginTargets-relwithdebinfo.cmake:
 
@@ -2955,10 +3076,6 @@ QSExtensionsplugin_extensions_buildPlugin_in.cpp:
 /usr/lib/cmake/Qt6Gui/Qt6QSvgPluginTargets-relwithdebinfo.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6QSvgPluginTargets.cmake:
-
-/usr/lib/cmake/Qt6Qml/Qt6QQuick3DProfilerAdapterFactoryPluginConfig.cmake:
-
-/usr/lib/cmake/Qt6QmlTools/Qt6QmlToolsAdditionalTargetInfo.cmake:
 
 /usr/include/qt6/QtNetwork/qtnetworkexports.h:
 
@@ -2987,8 +3104,6 @@ QSExtensionsplugin_extensions_buildPlugin_in.cpp:
 /usr/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6QWaylandIntegrationPluginAdditionalTargetInfo.cmake:
-
-/usr/lib/cmake/Qt6Gui/Qt6QWaylandIntegrationPluginConfig.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6QXcbEglIntegrationPluginConfig.cmake:
 
@@ -3178,8 +3293,6 @@ QSExtensionsplugin_extensions_buildPlugin_in.cpp:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6labsmodelspluginTargets-relwithdebinfo.cmake:
 
-/usr/lib/cmake/Qt6Quick/Qt6QuickTargets-relwithdebinfo.cmake:
-
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6modelspluginConfig.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6modelspluginTargets-relwithdebinfo.cmake:
@@ -3194,13 +3307,15 @@ QSExtensionsplugin_extensions_buildPlugin_in.cpp:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlfolderlistmodelpluginTargets.cmake:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlpluginAdditionalTargetInfo.cmake:
-
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlpluginConfig.cmake:
 
 /usr/include/bits/types/locale_t.h:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlpluginTargets-relwithdebinfo.cmake:
+
+/usr/lib/cmake/Qt6Quick/Qt6QuickPlugins.cmake:
+
+/usr/lib/cmake/Qt6QmlAssetDownloader/Qt6QmlAssetDownloaderConfigVersion.cmake:
 
 /usr/include/bits/types/struct_timeval.h:
 
@@ -3232,8 +3347,6 @@ QSExtensionsplugin_extensions_buildPlugin_in.cpp:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquickvectorimagehelperspluginConfig.cmake:
 
-/usr/lib/cmake/Qt6QmlTools/Qt6QmlToolsTargets-relwithdebinfo.cmake:
-
 /usr/include/bits/waitstatus.h:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquickvectorimagehelperspluginTargets-relwithdebinfo.cmake:
@@ -3252,9 +3365,11 @@ QSExtensionsplugin_extensions_buildPlugin_in.cpp:
 
 /usr/lib/cmake/Qt6Qml/Qt6QQmlPreviewServiceFactoryPluginTargets.cmake:
 
+/usr/lib/cmake/Qt6Gui/Qt6QTsLibPluginConfig.cmake:
+
 /usr/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersionImpl.cmake:
 
-/usr/lib/cmake/Qt6Gui/Qt6QTsLibPluginConfig.cmake:
+/usr/include/qt6/QtCore/QSharedDataPointer:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtqmlcorepluginTargets-relwithdebinfo.cmake:
 
@@ -3271,10 +3386,6 @@ QSExtensionsplugin_extensions_buildPlugin_in.cpp:
 /usr/lib/cmake/Qt6Qml/Qt6QQmlPreviewServiceFactoryPluginConfig.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2fusionstyleimplpluginTargets-relwithdebinfo.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6Quick3DXrpluginTargets.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3dassetutilspluginConfig.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3dassetutilspluginTargets-relwithdebinfo.cmake:
 
@@ -3319,8 +3430,6 @@ QSExtensionsplugin_extensions_buildPlugin_in.cpp:
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6QuickControlsTestUtilsPrivatepluginTargets.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3dparticleeffectspluginConfig.cmake:
-
-/usr/lib/cmake/Qt6QmlTools/Qt6QmlToolsDependencies.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6QSvgIconPluginConfig.cmake:
 
@@ -3402,9 +3511,9 @@ QSExtensionsplugin_extensions_buildPlugin_in.cpp:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2materialstylepluginAdditionalTargetInfo.cmake:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3dparticles3dpluginAdditionalTargetInfo.cmake:
-
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtgraphicaleffectspluginTargets.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3dparticles3dpluginAdditionalTargetInfo.cmake:
 
 /usr/lib/cmake/Qt6Qml/Qt6QQmlNativeDebugServiceFactoryPluginAdditionalTargetInfo.cmake:
 
@@ -3612,8 +3721,6 @@ QSExtensionsplugin_extensions_buildPlugin_in.cpp:
 
 /usr/lib/cmake/Qt6QmlAssetDownloader/Qt6QmlAssetDownloaderConfigVersionImpl.cmake:
 
-/usr/lib/cmake/Qt6QmlWorkerScript/Qt6QmlWorkerScriptConfig.cmake:
-
 /usr/lib/cmake/Qt6QmlAssetDownloader/Qt6QmlAssetDownloaderDependencies.cmake:
 
 /usr/lib/cmake/Qt6QmlIntegration/Qt6QmlIntegrationAdditionalTargetInfo.cmake:
@@ -3639,29 +3746,3 @@ CMakeFiles/4.2.1/CMakeCXXCompiler.cmake:
 /usr/include/qt6/QtQml/qjsengine.h:
 
 /usr/lib/cmake/Qt6QmlModels/Qt6QmlModelsTargets.cmake:
-
-/usr/lib/cmake/Qt6QmlTools/Qt6QmlToolsTargets.cmake:
-
-/usr/include/c++/15.2.1/bits/list.tcc:
-
-/usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsEglDeviceIntegrationPluginAdditionalTargetInfo.cmake:
-
-/usr/lib/cmake/Qt6QmlWorkerScript/Qt6QmlWorkerScriptConfigVersion.cmake:
-
-/usr/lib/cmake/Qt6QmlWorkerScript/Qt6QmlWorkerScriptConfigVersionImpl.cmake:
-
-/usr/lib/cmake/Qt6QmlWorkerScript/Qt6QmlWorkerScriptDependencies.cmake:
-
-/usr/lib/cmake/Qt6QmlWorkerScript/Qt6QmlWorkerScriptTargets-relwithdebinfo.cmake:
-
-/usr/lib/cmake/Qt6Gui/Qt6QJpegPluginAdditionalTargetInfo.cmake:
-
-/usr/lib/cmake/Qt6QmlWorkerScript/Qt6QmlWorkerScriptVersionlessAliasTargets.cmake:
-
-/usr/lib/cmake/Qt6QmlAssetDownloader/Qt6QmlAssetDownloaderConfigVersion.cmake:
-
-/usr/lib/cmake/Qt6Quick/Qt6QuickPlugins.cmake:
-
-/usr/lib/cmake/Qt6QuickTools/Qt6QuickToolsAdditionalTargetInfo.cmake:
-
-/usr/lib/cmake/Qt6QuickTools/Qt6QuickToolsConfig.cmake:

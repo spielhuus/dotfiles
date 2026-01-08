@@ -1,15 +1,10 @@
-/**
- * See https:gnome.pages.gitlab.gnome.org/libadwaita/doc/main/css-variables.html for more CSS variables.
- * Or use your own colors. Both work, but using your own colors may break the automatic light/dark theme function.
- */
 window {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(12, 12, 12, 0.2);
 }
 
 button {
-    /* color: oklab(from var(#ffffff) var(#ff0000)); */
-    /* background-color: var(--view-bg-color); */
-    background-color: rgba(0, 0, 0, 0.0);
+    color: var(--view-fg-color);
+    background-color: var(--view-bg-color);
     border: none;
     padding: 10px;
 }
@@ -25,40 +20,15 @@ button label.keybind {
 
 button:hover label.keybind, button:focus label.keybind {
     opacity: 1;
-    background-color: rgba(0, 0, 0, 0);
 }
 
-button:focus,
-button:hover {
-    /* background-color: color-mix(in srgb, #3e3e3eef, #181818ef); */
-    background-color: rgba(0, 0, 0, 0);
+button:hover,
+button:focus {
+    color: var(--accent-color);
+    background-color: var(--window-bg-color);
 }
 
 button:active {
-    color: #ffffff;
-    /* background-color: #aaaaaaef; */
-}
-
-button#shutdown {
-    --view-fg-color: #ffffff;
-}
-
-button#hibernate {
-    --view-fg-color: #ffffff;
-}
-
-button#reboot {
-    --view-fg-color: #ffffff;
-}
-
-button#lock {
-    --view-fg-color: #ffffff;
-}
-
-button#logout {
-    --view-fg-color: #ffffff;
-}
-
-button#suspend {
-    --view-fg-color: #ffffff;
+    color: var(--accent-fg-color);
+    background-color: var(--accent-bg-color);
 }

@@ -2,49 +2,40 @@
 import Quickshell
 import Quickshell.Io
 import "bar"
-import "wlogout"
-import qs.modules.chat
+import qs.modules
+import qs.modules.logout
 import qs
-// import qs.components
-// import qs.launcher
-// import qs.modules
 
 ShellRoot {
   property bool showLogout: false
 
   Bar {}
-  // Background {}
-  // PanelLoader {
-  //   id: leftSidebarLoader
-  //   identifier: "sidebarLeft"
-  //   component: SidebarLeft {}
-  //   active: GlobalStates.sidebarLeftOpen // Bind active to the global state
-  // }
+  NotificationPopup {} 
+  VolumeOSD {} 
+  Wallpaper {} 
+  LockScreen {}
 
-    // PanelLoader { identifier: "sidebarLeft"; component: SidebarLeft {} }
+  ChatWindow {
+    id: myChatWindow
+    visible: false
+  }
 
-    // component PanelLoader: LazyLoader {
-    //     required property string identifier
-    //     property bool extraCondition: true
-    //     active: false // Config.ready && Config.options.enabledPanels.includes(identifier) && extraCondition
-    //   }
+  AppLauncher {
+    id: appLauncher
+  }
 
-    // Load the Chat Window
-    ChatWindow {
-        id: myChatWindow
-        visible: false
-      }
-
-  Logout {
+  LogoutMenu {
     id: logoutWidget
-
-     visible: showLogout
-      onVisibleChanged: {
-          if (!visible) showLogout = false
-      }
+    
+    // Bind visibility to the shell property
+    visible: showLogout
+    
+    // When the window closes itself (via Esc or Button click), update the shell property
+    onVisibleChanged: {
+      if (!visible) showLogout = false
+    }
   }   
-
-IpcHandler {
+  IpcHandler {
     target: "Chat"
     function toggle(): void {
       myChatWindow.visible = !myChatWindow.visible

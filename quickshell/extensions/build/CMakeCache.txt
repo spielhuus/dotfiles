@@ -297,6 +297,12 @@ OPENGL_opengl_LIBRARY:FILEPATH=/usr/lib/libOpenGL.so
 //Path to a file.
 OPENGL_xmesa_INCLUDE_DIR:PATH=OPENGL_xmesa_INCLUDE_DIR-NOTFOUND
 
+//Arguments to supply to pkg-config
+PKG_CONFIG_ARGN:STRING=
+
+//pkg-config executable
+PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
+
 //Value Computed by CMake
 QSExtensions_BINARY_DIR:STATIC=/home/etienne/.dotfiles/quickshell/extensions/build
 
@@ -387,6 +393,9 @@ Vulkan_INCLUDE_DIR:PATH=Vulkan_INCLUDE_DIR-NOTFOUND
 
 //Path to a library.
 Vulkan_LIBRARY:FILEPATH=/lib/libvulkan.so
+
+//Path to a library.
+pkgcfg_lib_PAM_pam:FILEPATH=/usr/lib/libpam.so
 
 //The directory containing a CMake configuration file for yaml-cpp.
 yaml-cpp_DIR:PATH=/usr/lib/cmake/yaml-cpp
@@ -565,6 +574,8 @@ CMAKE_UNAME:INTERNAL=/usr/bin/uname
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding OpenGL
 FIND_PACKAGE_MESSAGE_DETAILS_OpenGL:INTERNAL=[/usr/lib/libOpenGL.so][/usr/lib/libGLX.so][/usr/include][ ][v()]
+//Details about finding PkgConfig
+FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v2.5.1()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //Details about finding WrapAtomic
@@ -599,6 +610,45 @@ OPENGL_glx_LIBRARY-ADVANCED:INTERNAL=1
 OPENGL_opengl_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OPENGL_xmesa_INCLUDE_DIR
 OPENGL_xmesa_INCLUDE_DIR-ADVANCED:INTERNAL=1
+PAM_CFLAGS:INTERNAL=-I/usr/include
+PAM_CFLAGS_I:INTERNAL=
+PAM_CFLAGS_OTHER:INTERNAL=
+PAM_FOUND:INTERNAL=1
+PAM_INCLUDEDIR:INTERNAL=/usr/include
+PAM_INCLUDE_DIRS:INTERNAL=/usr/include
+PAM_LDFLAGS:INTERNAL=-L/usr/lib;-lpam
+PAM_LDFLAGS_OTHER:INTERNAL=
+PAM_LIBDIR:INTERNAL=/usr/lib
+PAM_LIBRARIES:INTERNAL=pam
+PAM_LIBRARY_DIRS:INTERNAL=/usr/lib
+PAM_LIBS:INTERNAL=
+PAM_LIBS_L:INTERNAL=
+PAM_LIBS_OTHER:INTERNAL=
+PAM_LIBS_PATHS:INTERNAL=
+PAM_MODULE_NAME:INTERNAL=pam
+PAM_PREFIX:INTERNAL=/usr
+PAM_STATIC_CFLAGS:INTERNAL=-I/usr/include
+PAM_STATIC_CFLAGS_I:INTERNAL=
+PAM_STATIC_CFLAGS_OTHER:INTERNAL=
+PAM_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include
+PAM_STATIC_LDFLAGS:INTERNAL=-L/usr/lib;-lpam
+PAM_STATIC_LDFLAGS_OTHER:INTERNAL=
+PAM_STATIC_LIBDIR:INTERNAL=
+PAM_STATIC_LIBRARIES:INTERNAL=pam
+PAM_STATIC_LIBRARY_DIRS:INTERNAL=/usr/lib
+PAM_STATIC_LIBS:INTERNAL=
+PAM_STATIC_LIBS_L:INTERNAL=
+PAM_STATIC_LIBS_OTHER:INTERNAL=
+PAM_STATIC_LIBS_PATHS:INTERNAL=
+PAM_VERSION:INTERNAL=1.7.1
+PAM_pam_INCLUDEDIR:INTERNAL=
+PAM_pam_LIBDIR:INTERNAL=
+PAM_pam_PREFIX:INTERNAL=
+PAM_pam_VERSION:INTERNAL=
+//ADVANCED property for variable: PKG_CONFIG_ARGN
+PKG_CONFIG_ARGN-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
+PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //Qt feature: accept4 (from target Qt6::Core)
 QT_FEATURE_accept4:INTERNAL=ON
 //Qt feature: accessibility (from target Qt6::Gui)
@@ -1418,5 +1468,10 @@ Vulkan_INCLUDE_DIR-ADVANCED:INTERNAL=1
 Vulkan_LIBRARY-ADVANCED:INTERNAL=1
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
+__pkg_config_arguments_PAM:INTERNAL=REQUIRED;pam
+__pkg_config_checked_PAM:INTERNAL=1
 __qt_qml_macros_module_base_dir:INTERNAL=/usr/lib/cmake/Qt6Qml
+//ADVANCED property for variable: pkgcfg_lib_PAM_pam
+pkgcfg_lib_PAM_pam-ADVANCED:INTERNAL=1
+prefix_result:INTERNAL=/usr/lib
 

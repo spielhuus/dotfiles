@@ -5,8 +5,10 @@ libQSExtensions.so: \
   CMakeFiles/QSExtensions.dir/qsextensions_qmltyperegistrations.cpp.o \
   CMakeFiles/QSExtensions.dir/build/.qt/rcc/qrc_qmake_extensions_build.cpp.o \
   CMakeFiles/QSExtensions.dir/AiPlugin.cpp.o \
+  CMakeFiles/QSExtensions.dir/PamAuth.cpp.o \
   /usr/lib/libQt6Quick.so.6.10.1 \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libyaml-cpp.so \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libpam.so \
   /usr/lib/libQt6OpenGL.so.6.10.1 \
   /usr/lib/libQt6Gui.so.6.10.1 \
   /usr/lib/libGLX.so \
@@ -51,9 +53,13 @@ CMakeFiles/QSExtensions.dir/build/.qt/rcc/qrc_qmake_extensions_build.cpp.o:
 
 CMakeFiles/QSExtensions.dir/AiPlugin.cpp.o:
 
+CMakeFiles/QSExtensions.dir/PamAuth.cpp.o:
+
 /usr/lib/libQt6Quick.so.6.10.1:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libyaml-cpp.so:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libpam.so:
 
 /usr/lib/libQt6OpenGL.so.6.10.1:
 

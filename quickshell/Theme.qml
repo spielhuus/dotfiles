@@ -4,8 +4,16 @@ import QtQuick
 import Quickshell
 
 Singleton {
-  property Item get:cyberpunk
+  property Item get: cyberpunk
   
+  // specific font settings to fallback on if a theme doesn't provide them
+  readonly property QtObject defaultBar: QtObject {
+      property string fontFamily: "Sans"
+      property string fontSymbol: "Symbols Nerd Font Mono"
+      property real fontSize: 14
+      property string fontColor: "#ffffff"
+  }
+
   Item {
     id: windowsXP
 
@@ -16,7 +24,7 @@ Singleton {
     property bool onTop: true
     property string iconColor: "green"
     property string iconPressedColor: "green"
-    property Gradient barGradient: black.barGradient
+    // REMOVED: property Gradient barGradient: black.barGradient (Property does not exist on target)
   }
 
   Item {
@@ -56,7 +64,8 @@ Singleton {
     property string iconColor: "#05D9E8"  // Electric blue
     property string iconPressedColor: "#FF2A6D"  // Neon pink
     property QtObject bar: QtObject {
-      property string fontfamily: "Verdana"
+      // FIXED: typo 'fontfamily' -> 'fontFamily'
+      property string fontFamily: "Verdana"
       property string fontSymbol: "Symbols Nerd Font Mono"
       property real fontSize: 14
       property string fontColor: "#fff00fff"
@@ -90,4 +99,3 @@ Singleton {
   }
 
 }
-

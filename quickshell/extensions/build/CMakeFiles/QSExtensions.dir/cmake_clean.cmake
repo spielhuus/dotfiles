@@ -6,6 +6,8 @@ file(REMOVE_RECURSE
   "QSExtensions_autogen"
   "CMakeFiles/QSExtensions.dir/AiPlugin.cpp.o"
   "CMakeFiles/QSExtensions.dir/AiPlugin.cpp.o.d"
+  "CMakeFiles/QSExtensions.dir/PamAuth.cpp.o"
+  "CMakeFiles/QSExtensions.dir/PamAuth.cpp.o.d"
   "CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o"
   "CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o.d"
   "CMakeFiles/QSExtensions.dir/build/.qt/rcc/qrc_qmake_extensions_build.cpp.o"

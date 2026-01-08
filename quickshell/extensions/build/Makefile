@@ -387,6 +387,30 @@ AiPlugin.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/QSExtensions.dir/build.make CMakeFiles/QSExtensions.dir/AiPlugin.cpp.s
 .PHONY : AiPlugin.cpp.s
 
+PamAuth.o: PamAuth.cpp.o
+.PHONY : PamAuth.o
+
+# target to build an object file
+PamAuth.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QSExtensions.dir/build.make CMakeFiles/QSExtensions.dir/PamAuth.cpp.o
+.PHONY : PamAuth.cpp.o
+
+PamAuth.i: PamAuth.cpp.i
+.PHONY : PamAuth.i
+
+# target to preprocess a source file
+PamAuth.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QSExtensions.dir/build.make CMakeFiles/QSExtensions.dir/PamAuth.cpp.i
+.PHONY : PamAuth.cpp.i
+
+PamAuth.s: PamAuth.cpp.s
+.PHONY : PamAuth.s
+
+# target to generate assembly for a file
+PamAuth.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QSExtensions.dir/build.make CMakeFiles/QSExtensions.dir/PamAuth.cpp.s
+.PHONY : PamAuth.cpp.s
+
 QSExtensions_autogen/mocs_compilation.o: QSExtensions_autogen/mocs_compilation.cpp.o
 .PHONY : QSExtensions_autogen/mocs_compilation.o
 
@@ -537,6 +561,9 @@ help:
 	@echo "... AiPlugin.o"
 	@echo "... AiPlugin.i"
 	@echo "... AiPlugin.s"
+	@echo "... PamAuth.o"
+	@echo "... PamAuth.i"
+	@echo "... PamAuth.s"
 	@echo "... QSExtensions_autogen/mocs_compilation.o"
 	@echo "... QSExtensions_autogen/mocs_compilation.i"
 	@echo "... QSExtensions_autogen/mocs_compilation.s"

@@ -8,23 +8,92 @@ import QtQuick.tooling 1.2
 Module {
     Component {
         file: "AiPlugin.h"
-        lineNumber: 6
+        lineNumber: 8
         name: "AiPlugin"
         accessSemantics: "reference"
         prototype: "QObject"
         exports: ["extensions.build/AiPlugin 1.0"]
         exportMetaObjectRevisions: [256]
+        Signal {
+            name: "streamReceived"
+            lineNumber: 37
+            Parameter { name: "content"; type: "QString" }
+        }
+        Signal { name: "streamFinished"; lineNumber: 38 }
+        Signal {
+            name: "streamError"
+            lineNumber: 39
+            Parameter { name: "error"; type: "QString" }
+        }
+        Method { name: "onReadyRead"; lineNumber: 42 }
+        Method { name: "onReplyFinished"; lineNumber: 43 }
         Method {
             name: "generateText"
             type: "QString"
-            lineNumber: 14
+            lineNumber: 16
             Parameter { name: "prompt"; type: "QString" }
         }
         Method {
             name: "parseChat"
             type: "QVariantMap"
-            lineNumber: 17
+            lineNumber: 19
             Parameter { name: "content"; type: "QString" }
         }
+        Method {
+            name: "createChatFile"
+            type: "bool"
+            lineNumber: 22
+            Parameter { name: "path"; type: "QString" }
+            Parameter { name: "config"; type: "QVariantMap" }
+            Parameter { name: "messages"; type: "QVariantList" }
+        }
+        Method {
+            name: "appendMessage"
+            type: "bool"
+            lineNumber: 25
+            Parameter { name: "path"; type: "QString" }
+            Parameter { name: "role"; type: "QString" }
+            Parameter { name: "content"; type: "QString" }
+        }
+        Method {
+            name: "createChatPayload"
+            type: "QString"
+            lineNumber: 28
+            Parameter { name: "settings"; type: "QVariantMap" }
+            Parameter { name: "messages"; type: "QVariantList" }
+        }
+        Method {
+            name: "sendChatRequest"
+            lineNumber: 31
+            Parameter { name: "url"; type: "QString" }
+            Parameter { name: "payload"; type: "QString" }
+            Parameter { name: "apiKey"; type: "QString" }
+        }
+        Method {
+            name: "sendChatRequest"
+            isCloned: true
+            lineNumber: 31
+            Parameter { name: "url"; type: "QString" }
+            Parameter { name: "payload"; type: "QString" }
+        }
+        Method { name: "cancelRequest"; lineNumber: 34 }
+    }
+    Component {
+        file: "PamAuth.h"
+        lineNumber: 7
+        name: "PamAuth"
+        accessSemantics: "reference"
+        prototype: "QObject"
+        exports: ["extensions.build/PamAuth 1.0"]
+        isCreatable: false
+        isSingleton: true
+        exportMetaObjectRevisions: [256]
+        Method {
+            name: "checkPassword"
+            type: "bool"
+            lineNumber: 17
+            Parameter { name: "password"; type: "QString" }
+        }
+        Method { name: "getUser"; type: "QString"; lineNumber: 18 }
     }
 }
