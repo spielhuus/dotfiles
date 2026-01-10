@@ -1,60 +1,124 @@
+import "../"
+import "../services"
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 import Quickshell
 import Quickshell.Wayland
 import extensions.build
-import "../services"
-import "../"
+import qs.config
 
 WlSessionLock {
     id: sessionLock
-    
-    // Bind to the Idle service
-    // Note: Use 'locked', not 'active' for WlSessionLock
-    locked: Idle.locked
 
-    // If the lock is destroyed externally (e.g. by the compositor), sync state
+    // 1. Bind to the Idle service
+    locked: Idle.locked
+    // 2. Sync state: If the compositor unlocks us forcefully, tell Idle service
     onLockedChanged: {
-        if (!locked && Idle.locked) {
+        if (!locked && Idle.locked)
             Idle.unlock();
-        }
+
     }
 
-    // This component is automatically instantiated for EVERY screen
     WlSessionLockSurface {
         id: lockSurface
-        
-        // Background
+
+        // --- LOGIC: Screensaver vs Login Mode ---
+        property bool showLogin: false
+
+        // Reset state when lock appears
+        Component.onCompleted: {
+            showLogin = false;
+        }
+
+        // Background (Wallpaper)
         Rectangle {
             anchors.fill: parent
             color: "black"
 
-            // Optional: Wallpaper background
             Image {
                 anchors.fill: parent
-                source: Config.theme.background_color === "#000000" ? "" : "file:///path/to/lock_wallpaper.jpg"
+                source: Config.theme.background_color === "#000000" ? "" : "file://" + Config.chat.homeDir + "/Pictures/wallpaper.jpg" // Adjust path
                 fillMode: Image.PreserveAspectCrop
-                opacity: 0.3
-                visible: source != ""
+                opacity: 0.5
+            }
+
+        }
+
+        // --- SCREENSAVER CONTENT (Visible when NOT logging in) ---
+        Item {
+            // Simple "Bouncing" animation or fade effect could go here
+
+            anchors.fill: parent
+            visible: !lockSurface.showLogin
+
+            // Example: A moving clock or large text
+            ColumnLayout {
+                anchors.centerIn: parent
+
+                Text {
+                    text: Qt.formatDateTime(new Date(), "HH:mm")
+                    color: "white"
+                    font.pixelSize: 100
+                    font.bold: true
+                    Layout.alignment: Qt.AlignHCenter
+                }
+
+                Text {
+                    text: Qt.formatDateTime(new Date(), "dddd, MMMM d")
+                    color: "#ddd"
+                    font.pixelSize: 32
+                    Layout.alignment: Qt.AlignHCenter
+                }
+
+            }
+
+        }
+
+        // --- INTERACTION HANDLER ---
+        // Detects activity to switch from Screensaver -> Login
+        MouseArea {
+            // Optional: Uncomment if you want mouse movement to show login immediately
+            // lockSurface.showLogin = true
+
+            anchors.fill: parent
+            hoverEnabled: true
+            onClicked: lockSurface.showLogin = true
+            onPositionChanged: {
             }
         }
 
-        // Login Box
+        // Detect Keyboard activity to switch to Login
+        Item {
+            focus: true
+            anchors.fill: parent
+            Keys.onPressed: (event) => {
+                if (!lockSurface.showLogin) {
+                    lockSurface.showLogin = true;
+                    event.accepted = true;
+                }
+            }
+        }
+
+        // --- LOGIN BOX (Visible only after interaction) ---
         Rectangle {
+            id: loginBox
+
             anchors.centerIn: parent
             width: 300
             height: 350
+            // Visibility logic
+            visible: lockSurface.showLogin
+            opacity: visible ? 1 : 0
             color: Theme.get.osdBgColor || "#cc222222"
             radius: 10
             border.color: authState.error ? "red" : (Theme.get.osdBorderColor || "#444")
             border.width: 1
 
-            // State for visual feedback
             QtObject {
                 id: authState
+
                 property bool error: false
-                property bool processing: false
             }
 
             ColumnLayout {
@@ -62,7 +126,6 @@ WlSessionLock {
                 spacing: 20
                 width: parent.width - 40
 
-                // Lock Icon
                 Text {
                     text: ""
                     font.family: Theme.get.bar.fontSymbol
@@ -71,35 +134,42 @@ WlSessionLock {
                     Layout.alignment: Qt.AlignHCenter
                 }
 
-                // Clock
-                ColumnLayout {
+                // Small clock inside login box
+                Text {
+                    text: Qt.formatDateTime(new Date(), "HH:mm")
+                    color: "white"
+                    font.pixelSize: 24
                     Layout.alignment: Qt.AlignHCenter
-                    spacing: 0
-                    Text {
-                        text: Qt.formatDateTime(new Date(), "HH:mm")
-                        color: "white"
-                        font.pixelSize: 42
-                        font.bold: true
-                        Layout.alignment: Qt.AlignHCenter
-                    }
-                    Text {
-                        text: Qt.formatDateTime(new Date(), "dddd, MMMM d")
-                        color: "#aaa"
-                        font.pixelSize: 14
-                        Layout.alignment: Qt.AlignHCenter
-                    }
                 }
 
-                // Password Input
                 TextField {
                     id: passwordInput
+
+                    function checkPassword() {
+                        // Your PamAuth logic
+                        if (PamAuth.checkPassword(passwordInput.text)) {
+                            passwordInput.text = "";
+                            authState.error = false;
+                            Idle.unlock();
+                            // Reset state for next time
+                            lockSurface.showLogin = false;
+                        } else {
+                            passwordInput.text = "";
+                            authState.error = true;
+                            shakeAnimation.start();
+                        }
+                    }
+
                     Layout.fillWidth: true
                     placeholderText: "Password"
                     echoMode: TextInput.Password
                     color: "white"
                     font.pixelSize: 16
                     horizontalAlignment: TextInput.AlignHCenter
-                    
+                    // Focus Management
+                    focus: lockSurface.showLogin
+                    onAccepted: checkPassword()
+
                     background: Rectangle {
                         color: "#333"
                         radius: 5
@@ -107,37 +177,6 @@ WlSessionLock {
                         border.color: parent.activeFocus ? Theme.get.iconColor : "transparent"
                     }
 
-                    // Ensure focus is grabbed when lock appears
-                    focus: true
-                    
-                    Connections {
-                        target: sessionLock
-                        function onLockedChanged() {
-                            if (sessionLock.locked) {
-                                passwordInput.text = ""
-                                passwordInput.forceActiveFocus()
-                                authState.error = false
-                            }
-                        }
-                    }
-
-                    onAccepted: checkPassword()
-
-                    function checkPassword() {
-                        authState.processing = true;
-                        
-                        // Use the C++ PamAuth extension
-                        if (PamAuth.checkPassword(passwordInput.text)) {
-                            passwordInput.text = "";
-                            authState.error = false;
-                            Idle.unlock(); // This will set sessionLock.locked = false
-                        } else {
-                            passwordInput.text = "";
-                            authState.error = true;
-                            shakeAnimation.start();
-                        }
-                        authState.processing = false;
-                    }
                 }
 
                 Text {
@@ -145,18 +184,25 @@ WlSessionLock {
                     color: "#ff5555"
                     visible: authState.error
                     Layout.alignment: Qt.AlignHCenter
-                    font.pixelSize: 12
                 }
+
             }
 
-            // Shake Animation for wrong password
             SequentialAnimation {
+                // ... (Keep existing shake animation) ...
+
                 id: shakeAnimation
-                loops: 2
-                NumberAnimation { target: passwordInput; property: "Layout.leftMargin"; from: 0; to: 10; duration: 50 }
-                NumberAnimation { target: passwordInput; property: "Layout.leftMargin"; from: 10; to: -10; duration: 50 }
-                NumberAnimation { target: passwordInput; property: "Layout.leftMargin"; from: -10; to: 0; duration: 50 }
             }
+
+            Behavior on opacity {
+                NumberAnimation {
+                    duration: 300
+                }
+
+            }
+
         }
+
     }
+
 }

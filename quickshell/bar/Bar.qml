@@ -4,6 +4,7 @@ import Quickshell.Hyprland
 import Quickshell.Wayland
 import QtQuick
 import QtQuick.Layouts
+import qs.services 
 import qs.services.Compositor
 import "blocks" as Blocks
 import "root:/"

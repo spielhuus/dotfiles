@@ -21,13 +21,13 @@ BarBlock {
             tempIcon = "";
         } else if (temp <= 80) {
             tempIcon = "";
-            color = Configs.theme.warn;
+            color = Config.theme.warn;
         } else if (temp <= 90) {
             tempIcon = "";
-            color = Configs.theme.severe;
+            color = Config.theme.severe;
         } else {
             tempIcon = "";
-            color = Configs.theme.critical;
+            color = Config.theme.critical;
         }
         return `<font color="${color}">${tempIcon}${temp}°C</font>`;
     }

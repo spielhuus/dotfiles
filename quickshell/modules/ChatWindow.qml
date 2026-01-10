@@ -148,7 +148,7 @@ FloatingWindow {
         var jsonBody = aiPlugin.createChatPayload(settings, conversation);
         var endpoint = settings["endpoint"] || Config.chat.defaultEndpoint;
         var apiKey = settings["api_key"] || "";
-        console.log("LLM Streaming Request to: " + endpoint + ", content: " + jsonBody);
+        // console.log("LLM Streaming Request to: " + endpoint + ", content: " + jsonBody);
         // Trigger C++ Network Request
         aiPlugin.sendChatRequest(endpoint, jsonBody, apiKey);
     }
@@ -177,7 +177,7 @@ FloatingWindow {
         var jsonBody = aiPlugin.createChatPayload(settings, conversation);
         var endpoint = settings["endpoint"] || Config.chat.defaultEndpoint;
         var apiKey = settings["api_key"] || "";
-        console.log("LLM request: " + jsonBody);
+        // console.log("LLM request: " + jsonBody);
         aiPlugin.sendChatRequest(endpoint, jsonBody, apiKey);
     }
 
@@ -203,7 +203,7 @@ FloatingWindow {
             if (!content || content.length === 0)
                 return ;
 
-            console.log("LLM reponse: " + JSON.stringify(content));
+            // console.log("LLM reponse: " + JSON.stringify(content));
             // Find the last message (Assistant's placeholder)
             if (chatModel.count > 0) {
                 var lastIndex = chatModel.count - 1;
@@ -218,7 +218,6 @@ FloatingWindow {
             }
         }
         onStreamFinished: {
-            console.log("Stream finished.");
             // Save the full response to file
             if (chatModel.count > 0) {
                 var lastItem = chatModel.get(chatModel.count - 1);
@@ -244,7 +243,6 @@ FloatingWindow {
             if (exitCode === 0 && fileSelectorModel.count > 0) {
                 fileSelector.currentIndex = 0;
                 var firstFile = fileSelectorModel.get(0).text;
-                console.log("Auto-loading first template: " + firstFile);
                 loadTemplate(firstFile);
             }
         }

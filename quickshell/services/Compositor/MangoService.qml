@@ -6,14 +6,12 @@ import Quickshell.Wayland
 import qs.services.Keyboard
 
 Item {
+    // internal.processScales(scaleQuery.buffer);
+
     id: root
 
     // ===== PUBLIC INTERFACE =====
     property ListModel workspaces
-
-    workspaces: ListModel {
-    }
-
     property var windows: []
     property int focusedWindowIndex: -1
     property bool initialized: false
@@ -25,90 +23,9 @@ Item {
     property var toplevelList: ToplevelManager.toplevels.values
     // ===== PROCESSES =====
     property QtObject _eventStream
-
-    _eventStream: Process {
-        id: eventStream
-
-        running: false
-        command: ["mmsg", "-w"]
-        onExited: (code) => {
-            if (code !== 0)
-                restartTimer.start();
-
-        }
-
-        stdout: SplitParser {
-            onRead: (line) => {
-                internal.streamBuffer += line + "\n";
-                if (line.match(internal.patterns.tagBinary) || line.match(internal.patterns.kbLayout)) {
-                    internal.processTagData(internal.streamBuffer);
-                    internal.streamBuffer = "";
-                }
-            }
-        }
-
-    }
-
     property QtObject _restartTimer
-
-    _restartTimer: Timer {
-        id: restartTimer
-
-        interval: 2000
-        onTriggered: {
-            if (root.initialized)
-                eventStream.running = true;
-
-        }
-    }
-
     property QtObject _initialQuery
-
-    _initialQuery: Process {
-        id: initialQuery
-
-        property string buffer: ""
-
-        command: ["mmsg", "-g", "-t"]
-        onExited: (code) => {
-            if (code === 0) {
-                internal.processTagData(initialQuery.buffer);
-                initialQuery.buffer = "";
-            } else {
-                console.error("MangoService: Initial query failed (code " + code + ")");
-            }
-        }
-
-        stdout: SplitParser {
-            onRead: (line) => {
-                return initialQuery.buffer += line + "\n";
-            }
-        }
-
-    }
-
     property QtObject _scaleQuery
-
-    _scaleQuery: Process {
-        id: scaleQuery
-
-        property string buffer: ""
-
-        command: ["mmsg", "-g", "-A"]
-        onExited: (code) => {
-            if (code === 0)
-                // internal.processScales(scaleQuery.buffer);
-                scaleQuery.buffer = "";
-
-        }
-
-        stdout: SplitParser {
-            onRead: (line) => {
-                return scaleQuery.buffer += line + "\n";
-            }
-        }
-
-    }
 
     signal workspaceChanged()
     signal activeWindowChanged()
@@ -185,6 +102,12 @@ Item {
 
     function logout() {
         Quickshell.execDetached(["mmsg", "-s", "-q"]);
+    }
+
+    function toggleKeyboardLayout() {
+        const current = KeyboardLayoutService.currentLayout.toLowerCase();
+        const nextLayout = (current === "us" || current.startsWith("en")) ? "ch" : "us";
+        Quickshell.execDetached(["mmsg", "-d", "setoption,xkb_rules_layout," + nextLayout]);
     }
 
     Connections {
@@ -404,6 +327,86 @@ Item {
             root.workspaces.clear();
             for (let k = 0; k < workspaceList.length; k++) root.workspaces.append(workspaceList[k])
             root.workspaceChanged();
+        }
+
+    }
+
+    workspaces: ListModel {
+    }
+
+    _eventStream: Process {
+        id: eventStream
+
+        running: false
+        command: ["mmsg", "-w"]
+        onExited: (code) => {
+            if (code !== 0)
+                restartTimer.start();
+
+        }
+
+        stdout: SplitParser {
+            onRead: (line) => {
+                internal.streamBuffer += line + "\n";
+                if (line.match(internal.patterns.tagBinary) || line.match(internal.patterns.kbLayout)) {
+                    internal.processTagData(internal.streamBuffer);
+                    internal.streamBuffer = "";
+                }
+            }
+        }
+
+    }
+
+    _restartTimer: Timer {
+        id: restartTimer
+
+        interval: 2000
+        onTriggered: {
+            if (root.initialized)
+                eventStream.running = true;
+
+        }
+    }
+
+    _initialQuery: Process {
+        id: initialQuery
+
+        property string buffer: ""
+
+        command: ["mmsg", "-g", "-t"]
+        onExited: (code) => {
+            if (code === 0) {
+                internal.processTagData(initialQuery.buffer);
+                initialQuery.buffer = "";
+            } else {
+                console.error("MangoService: Initial query failed (code " + code + ")");
+            }
+        }
+
+        stdout: SplitParser {
+            onRead: (line) => {
+                return initialQuery.buffer += line + "\n";
+            }
+        }
+
+    }
+
+    _scaleQuery: Process {
+        id: scaleQuery
+
+        property string buffer: ""
+
+        command: ["mmsg", "-g", "-A"]
+        onExited: (code) => {
+            if (code === 0)
+                scaleQuery.buffer = "";
+
+        }
+
+        stdout: SplitParser {
+            onRead: (line) => {
+                return scaleQuery.buffer += line + "\n";
+            }
         }
 
     }

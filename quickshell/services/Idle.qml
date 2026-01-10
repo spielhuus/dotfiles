@@ -1,52 +1,62 @@
-pragma Singleton
-
 import QtQuick
 import Quickshell
 import Quickshell.Io
+pragma Singleton
 
 Singleton {
     id: root
 
     property bool locked: false
-    // 5 Minutes timeout
-    property int timeoutSeconds: 300 
-
-    // We use swayidle as the backend detection engine
-    Process {
-        id: idleProc
-        running: true
-        
-        // 'stdbuf -oL' forces swayidle to output text immediately instead of buffering it
-        command: [
-            "stdbuf", "-oL", 
-            "swayidle", "-w", 
-            "timeout", root.timeoutSeconds.toString(), "echo idle", 
-            "resume", "echo resume"
-        ]
-
-        stdout: SplitParser {
-            onRead: data => {
-                const msg = data.trim()
-                if (msg === "idle") {
-                    root.lock()
-                } 
-                // Uncomment to auto-unlock when mouse moves (screensaver behavior)
-                // else if (msg === "resume") {
-                //     root.unlock()
-                // }
-            }
-        }
-        
-        onExited: code => console.log(`[Idle] swayidle exited with code ${code}`)
-    }
+    // Set to 300 (5 mins) for production, or 5 for testing
+    property int timeoutSeconds: 300
 
     function lock() {
-        console.log("[Idle] Locking screen")
-        root.locked = true
+        console.log("[Idle] Locking screen");
+        root.locked = true;
     }
 
     function unlock() {
-        console.log("[Idle] Unlocking screen")
-        root.locked = false
+        console.log("[Idle] Unlocking screen");
+        root.locked = false;
     }
+
+    Process {
+        id: idleProc
+
+        running: true
+        // We run swayidle.
+        // timeout: Triggers when user is inactive.
+        // resume: Triggers when user moves mouse/types AFTER timeout has fired.
+        // before-sleep: Triggers immediately before system suspend.
+        command: ["stdbuf", "-oL", "swayidle", "-w", "timeout", root.timeoutSeconds.toString(), "echo idle", "resume", "echo resume", "before-sleep", "echo idle"]
+        onExited: (code) => {
+            console.log(`[Idle] swayidle exited with code ${code}. Restarting...`);
+            restartTimer.start();
+        }
+
+        stdout: SplitParser {
+            onRead: (data) => {
+                // Note: Once the WlSessionLock is active, the compositor might
+                // not send a 'resume' event until the lock surface is destroyed
+                // or configured specific ways. This is mostly for safety.
+                // root.unlock()
+
+                const msg = data.trim();
+                if (msg === "idle")
+                    root.lock();
+                else if (msg === "resume")
+                    console.log("[Idle] Resume detected");
+            }
+        }
+
+    }
+
+    Timer {
+        id: restartTimer
+
+        interval: 2000
+        repeat: false
+        onTriggered: idleProc.running = true
+    }
+
 }
