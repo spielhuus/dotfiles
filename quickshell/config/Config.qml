@@ -14,6 +14,11 @@ Singleton {
 
         id: internalTheme
 
+        property string inactive: "#999999"
+        property string normal: "#eeeeee"
+        property string warn: "yellow"
+        property string critical: "red"
+        property string ok: "green"
         property int bar_font_size: 18
         property string barBgColor: "#c1000000"
         property string osdBgColor: "#c1111111"
@@ -78,7 +83,7 @@ Singleton {
         property string homeDir: Quickshell.env("HOME")
         property string chatDirectory: homeDir + "/.config/lungan"
         property string historyDirectory: homeDir + "/.local/share/nvim/lungan"
-        property string defaultEndpoint: "http://localhost:8080/v1/chat/completions"
+        property string defaultEndpoint: "http://192.168.1.124:8033/v1/chat/completions"
     }
 
     QtObject {

@@ -3,6 +3,7 @@ import QtQuick.Controls
 import Quickshell
 import Quickshell.Services.Pipewire
 import Quickshell.Io
+import qs.config
 import "../"
 
 BarBlock {
@@ -19,15 +20,11 @@ BarBlock {
         }
     }
 
-    // function updateVolume() {
-    //     if (sink?.audio) {
-    //         const icon = sink.audio.muted ? "x 󰖁" : "󰕾"
-    //         content.symbolText = `${icon} ${Math.round(sink.audio.volume * 100)}% xxx`
-    //     }
-    // }
-
     content: BarText { 
-      symbolText: `${sink?.audio?.muted ? "󰖁" : "󰕾"}${Math.round(sink?.audio?.volume * 100)}%` 
+      symbolText: sink?.audio?.muted 
+      ? "󰖁" 
+      : `󰕾${Math.round(sink?.audio?.volume * 100)}%`
+    color: sink?.audio?.muted ? Config.theme.inactive : Config.theme.normal
     }
 
     MouseArea {

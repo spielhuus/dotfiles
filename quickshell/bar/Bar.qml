@@ -95,13 +95,15 @@ Scope {
           Layout.alignment: Qt.AlignRight
           Layout.fillWidth: true
 
-          Blocks.SystemTray {}
           Blocks.CpuLoad {}
           Blocks.Memory {}
           Blocks.Sound {}
-          Blocks.Battery {}
+          Blocks.Battery {
+             visible: Battery.available 
+          }
           Blocks.Temperature {}
           Blocks.KeyboardLayout {} 
+          Blocks.SystemTray {}
           Blocks.Time {}
         }
       }
