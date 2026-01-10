@@ -18,9 +18,12 @@ install)
 			fi
 		fi
 	done
-  cp .gtkrc-2.0 ~/.gtkrc-2.0
-  gsettings set org.gnome.desktop.interface gtk-theme Tokyonight-Dark
-  gsettings set org.gnome.desktop.wm.preferences theme Tokyonight-Dark
+  # cp .gtkrc-2.0 ~/.gtkrc-2.0
+  ln -s $(pwd)/themes ~/.themes
+  mkdir -p ~/.local/share/
+  ln -s $(pwd)/themes ~/.local/share/themes
+  # gsettings set org.gnome.desktop.interface gtk-theme Tokyonight-Dark
+  # gsettings set org.gnome.desktop.wm.preferences theme Tokyonight-Dark
   if [ "$(hostnamectl hostname)" = "trillian" ]; then
     cp ~/.config/mango/trillian.conf ~/.config/mango/host.conf
   else
@@ -37,7 +40,8 @@ uninstall)
 			fi
 		fi
 	done
-  rm ~/.gtkrc-2.0
+  rm -f ~/.local/share/themes
+  rm -f ~/.themes
 	;;
 
 *)
