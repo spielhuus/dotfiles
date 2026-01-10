@@ -17,6 +17,7 @@ Singleton {
         property string inactive: "#999999"
         property string normal: "#eeeeee"
         property string warn: "yellow"
+        property string severe: "orange"
         property string critical: "red"
         property string ok: "green"
         property int bar_font_size: 18

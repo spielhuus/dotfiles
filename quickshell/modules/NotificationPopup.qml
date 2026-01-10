@@ -8,7 +8,7 @@ import Quickshell.Wayland
 PanelWindow {
     id: window
 
-    implicitWidth: 400
+    implicitWidth: 350
     implicitHeight: Screen.height
     color: "transparent"
     WlrLayershell.layer: WlrLayer.Overlay
@@ -50,6 +50,7 @@ PanelWindow {
 
         Repeater {
             model: notificationModel
+            Layout.fillWidth: true
 
             delegate: NotificationToast {
                 summary: notificationModel.get(index).summary
