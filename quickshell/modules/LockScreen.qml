@@ -4,186 +4,261 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 import Quickshell
+import Quickshell.Io
 import Quickshell.Wayland
 import extensions.build
 
 WlSessionLock {
     id: sessionLock
 
-    // Bind to the Idle service
-    // Note: Use 'locked', not 'active' for WlSessionLock
+    property string username: "User"
+
     locked: Idle.locked
-    // If the lock is destroyed externally (e.g. by the compositor), sync state
+    Component.onCompleted: {
+        var envUser = Quickshell.env("USER");
+        if (envUser)
+            sessionLock.username = envUser;
+
+    }
     onLockedChanged: {
-        if (!locked && Idle.locked)
+        if (!locked && Idle.locked) {
+            console.log("[LockScreen] Session unlocked externally. Resetting Idle.");
             Idle.unlock();
+        }
+    }
+
+    Process {
+        id: userProcess
+
+        running: sessionLock.username === "User"
+        command: ["whoami"]
+
+        stdout: StdioCollector {
+            onStreamFinished: {
+                var output = this.text.trim();
+                if (output !== "")
+                    sessionLock.username = output;
+
+            }
+        }
 
     }
 
-    // This component is automatically instantiated for EVERY screen
     WlSessionLockSurface {
         id: lockSurface
 
-        // Background
+        // --- Logic & State ---
+        property int inactivityTimeout: 30000
+        property bool isScreenOff: false
+        property bool mouseThrottle: false
+
+        function setDpms(on) {
+            WaylandPower.setDpms(on);
+            lockSurface.isScreenOff = !on;
+        }
+
+        function resetActivity() {
+            if (lockSurface.isScreenOff) {
+                console.log("[LockScreen] Activity detected. Waking screen.");
+                lockSurface.setDpms(true);
+            }
+            inactivityTimer.restart();
+        }
+
+        // --- Start Timer when Surface Appears ---
+        Component.onCompleted: {
+            console.log("[LockScreen] Surface created. Starting inactivity timer.");
+            inactivityTimer.restart();
+            // Ensure input focus
+            passwordInput.forceActiveFocus();
+        }
+        // --- Cleanup when Surface Destroys (Unlocks) ---
+        Component.onDestruction: {
+            console.log("[LockScreen] Surface destroying. Ensuring screen is ON.");
+            lockSurface.setDpms(true);
+        }
+
+        // --- Inactivity Timer ---
+        Timer {
+            id: inactivityTimer
+
+            interval: lockSurface.inactivityTimeout
+            repeat: false
+            running: false
+            onTriggered: {
+                console.log("[LockScreen] Inactivity timeout reached. Turning screen OFF.");
+                lockSurface.setDpms(false);
+            }
+        }
+
+        Timer {
+            id: throttleTimer
+
+            interval: 1000
+            repeat: false
+            onTriggered: lockSurface.mouseThrottle = false
+        }
+
+        // --- Visuals ---
         Rectangle {
             anchors.fill: parent
             color: "black"
 
-            // Optional: Wallpaper background
-            Image {
+            MouseArea {
                 anchors.fill: parent
-                source: Config.theme.background_color === "#000000" ? "" : "file:///path/to/lock_wallpaper.jpg"
-                fillMode: Image.PreserveAspectCrop
-                opacity: 0.3
-                visible: source != ""
+                hoverEnabled: true
+                onClicked: {
+                    passwordInput.forceActiveFocus();
+                    lockSurface.resetActivity();
+                }
+                onPositionChanged: {
+                    if (!lockSurface.mouseThrottle) {
+                        lockSurface.resetActivity();
+                        lockSurface.mouseThrottle = true;
+                        throttleTimer.restart();
+                    }
+                }
+                onWheel: lockSurface.resetActivity()
             }
 
         }
 
-        // Login Box
-        Rectangle {
+        Item {
+            id: clock
+
+            property var time: new Date()
+
+            Timer {
+                interval: 1000
+                running: true
+                repeat: true
+                onTriggered: clock.time = new Date()
+            }
+
+        }
+
+        ColumnLayout {
+            id: mainLayout
+
             anchors.centerIn: parent
-            width: 300
-            height: 350
-            color: Theme.get.osdBgColor || "#cc222222"
-            radius: 10
-            border.color: authState.error ? "red" : (Theme.get.osdBorderColor || "#444")
-            border.width: 1
+            spacing: 20
 
-            // State for visual feedback
-            QtObject {
-                id: authState
+            Text {
+                text: Qt.formatDateTime(clock.time, "hh:mm")
+                color: "white"
+                font.pixelSize: 100
+                font.weight: Font.Light
+                font.family: {
+                    if (typeof Theme !== "undefined" && Theme.get && Theme.get.bar && Theme.get.bar.fontFamily)
+                        return Theme.get.bar.fontFamily;
 
-                property bool error: false
-                property bool processing: false
+                    if (typeof Theme !== "undefined" && Theme.defaultBar)
+                        return Theme.defaultBar.fontFamily;
+
+                    return "Sans Serif";
+                }
+                Layout.alignment: Qt.AlignHCenter
             }
 
-            ColumnLayout {
-                anchors.centerIn: parent
-                spacing: 20
-                width: parent.width - 40
+            Text {
+                text: Qt.formatDateTime(clock.time, "dd MMM dddd")
+                color: "#999999"
+                font.pixelSize: 24
+                font.bold: true
+                font.capitalization: Font.AllUppercase
+                Layout.alignment: Qt.AlignHCenter
+            }
 
-                // Lock Icon
-                Text {
-                    text: ""
-                    font.family: Theme.get.bar.fontSymbol
-                    font.pixelSize: 48
-                    color: "white"
-                    Layout.alignment: Qt.AlignHCenter
+            Text {
+                text: "Hi " + sessionLock.username + " :)"
+                color: "#cccccc"
+                font.pixelSize: 18
+                font.italic: true
+                Layout.alignment: Qt.AlignHCenter
+                Layout.bottomMargin: 30
+            }
+
+            TextField {
+                id: passwordInput
+
+                Layout.preferredWidth: 220
+                Layout.preferredHeight: 45
+                Layout.alignment: Qt.AlignHCenter
+                placeholderText: "Use Me ;)"
+                placeholderTextColor: "#ccffffff"
+                color: "white"
+                font.pixelSize: 14
+                font.italic: true
+                echoMode: TextInput.Password
+                horizontalAlignment: TextInput.AlignHCenter
+                verticalAlignment: TextInput.AlignVCenter
+                focus: true
+                Keys.onPressed: (event) => {
+                    lockSurface.resetActivity();
+                    event.accepted = false;
+                }
+                onTextEdited: lockSurface.resetActivity()
+                Component.onCompleted: forceActiveFocus()
+                onAccepted: {
+                    authState.processing = true;
+                    if (PamAuth.checkPassword(passwordInput.text)) {
+                        passwordInput.text = "";
+                        authState.error = false;
+                        // Unlock via global service.
+                        // This changes sessionLock.locked -> destroys Surface -> triggers onDestruction -> ensures DPMS on.
+                        Idle.unlock();
+                    } else {
+                        passwordInput.text = "";
+                        authState.error = true;
+                        shakeAnimation.start();
+                        lockSurface.resetActivity();
+                    }
+                    authState.processing = false;
                 }
 
-                // Clock
-                ColumnLayout {
-                    Layout.alignment: Qt.AlignHCenter
-                    spacing: 0
-
-                    Text {
-                        text: Qt.formatDateTime(new Date(), "HH:mm")
-                        color: "white"
-                        font.pixelSize: 42
-                        font.bold: true
-                        Layout.alignment: Qt.AlignHCenter
-                    }
-
-                    Text {
-                        text: Qt.formatDateTime(new Date(), "dddd, MMMM d")
-                        color: "#aaa"
-                        font.pixelSize: 14
-                        Layout.alignment: Qt.AlignHCenter
-                    }
-
-                }
-
-                // Password Input
-                TextField {
-                    id: passwordInput
-
-                    function checkPassword() {
-                        authState.processing = true;
-                        // Use the C++ PamAuth extension
-                        if (PamAuth.checkPassword(passwordInput.text)) {
-                            passwordInput.text = "";
-                            authState.error = false;
-                            Idle.unlock(); // This will set sessionLock.locked = false
-                        } else {
-                            passwordInput.text = "";
-                            authState.error = true;
-                            shakeAnimation.start();
-                        }
-                        authState.processing = false;
-                    }
-
-                    Layout.fillWidth: true
-                    placeholderText: "Password"
-                    echoMode: TextInput.Password
-                    color: "white"
-                    font.pixelSize: 16
-                    horizontalAlignment: TextInput.AlignHCenter
-                    // Ensure focus is grabbed when lock appears
-                    focus: true
-                    onAccepted: checkPassword()
-
-                    Connections {
-                        function onLockedChanged() {
-                            if (sessionLock.locked) {
-                                passwordInput.text = "";
-                                passwordInput.forceActiveFocus();
-                                authState.error = false;
-                            }
-                        }
-
-                        target: sessionLock
-                    }
-
-                    background: Rectangle {
-                        color: "#333"
-                        radius: 5
-                        border.width: 1
-                        border.color: parent.activeFocus ? Theme.get.iconColor : "transparent"
-                    }
-
-                }
-
-                Text {
-                    text: authState.error ? "Incorrect Password" : ""
-                    color: "#ff5555"
-                    visible: authState.error
-                    Layout.alignment: Qt.AlignHCenter
-                    font.pixelSize: 12
+                background: Rectangle {
+                    color: "#20ffffff"
+                    radius: height / 2
+                    border.width: 1
+                    border.color: authState.error ? "#ff5555" : "transparent"
                 }
 
             }
 
-            // Shake Animation for wrong password
-            SequentialAnimation {
-                id: shakeAnimation
+        }
 
-                loops: 2
+        QtObject {
+            id: authState
 
-                NumberAnimation {
-                    target: passwordInput
-                    property: "Layout.leftMargin"
-                    from: 0
-                    to: 10
-                    duration: 50
-                }
+            property bool error: false
+            property bool processing: false
+        }
 
-                NumberAnimation {
-                    target: passwordInput
-                    property: "Layout.leftMargin"
-                    from: 10
-                    to: -10
-                    duration: 50
-                }
+        SequentialAnimation {
+            id: shakeAnimation
 
-                NumberAnimation {
-                    target: passwordInput
-                    property: "Layout.leftMargin"
-                    from: -10
-                    to: 0
-                    duration: 50
-                }
+            NumberAnimation {
+                target: mainLayout
+                property: "anchors.horizontalCenterOffset"
+                from: 0
+                to: 10
+                duration: 50
+            }
 
+            NumberAnimation {
+                target: mainLayout
+                property: "anchors.horizontalCenterOffset"
+                from: 10
+                to: -10
+                duration: 50
+            }
+
+            NumberAnimation {
+                target: mainLayout
+                property: "anchors.horizontalCenterOffset"
+                from: -10
+                to: 0
+                duration: 50
             }
 
         }
