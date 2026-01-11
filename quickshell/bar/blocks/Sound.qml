@@ -22,9 +22,9 @@ BarBlock {
 
     content: BarText { 
       symbolText: sink?.audio?.muted 
-      ? "󰖁" 
-      : `󰕾${Math.round(sink?.audio?.volume * 100)}%`
-    color: sink?.audio?.muted ? Config.theme.inactive : Config.theme.normal
+        ? "󰖁" 
+        : `󰕾${Math.round(sink?.audio?.volume * 100)}%`
+      color: sink?.audio?.muted ? Config.theme.inactive : Config.theme.normal
     }
 
     MouseArea {

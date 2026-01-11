@@ -389,4 +389,11 @@ CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o: \
  /home/etienne/.dotfiles/quickshell/extensions/build/QSExtensions_autogen/EWIEGA46WW/moc_PamAuth.cpp \
  /home/etienne/.dotfiles/quickshell/extensions/build/QSExtensions_autogen/EWIEGA46WW/../../../PamAuth.h \
  /usr/include/qt6/QtCore/QString /usr/include/security/pam_appl.h \
- /usr/include/security/_pam_types.h /usr/include/security/_pam_compat.h
+ /usr/include/security/_pam_types.h /usr/include/security/_pam_compat.h \
+ /home/etienne/.dotfiles/quickshell/extensions/build/QSExtensions_autogen/EWIEGA46WW/moc_WaylandPower.cpp \
+ /home/etienne/.dotfiles/quickshell/extensions/build/QSExtensions_autogen/EWIEGA46WW/../../../WaylandPower.h \
+ /usr/include/wayland-client.h /usr/include/wayland-client-core.h \
+ /usr/include/wayland-util.h /usr/include/c++/15.2.1/math.h \
+ /usr/include/inttypes.h /usr/include/wayland-version.h \
+ /usr/include/wayland-client-protocol.h /usr/include/wayland-client.h \
+ /home/etienne/.dotfiles/quickshell/extensions/build/wlr-output-power-management-unstable-v1-client-protocol.h

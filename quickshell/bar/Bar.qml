@@ -98,12 +98,12 @@ Scope {
 
           Blocks.CpuLoad {}
           Blocks.Memory {}
-          Blocks.Sound {}
           Blocks.Battery {
              visible: Battery.available 
           }
           Blocks.Temperature {}
           Blocks.KeyboardLayout {} 
+          Blocks.Sound {}
           Blocks.SystemTray {}
           Blocks.Time {}
         }

@@ -96,4 +96,20 @@ Module {
         }
         Method { name: "getUser"; type: "QString"; lineNumber: 18 }
     }
+    Component {
+        file: "WaylandPower.h"
+        lineNumber: 8
+        name: "WaylandPower"
+        accessSemantics: "reference"
+        prototype: "QObject"
+        exports: ["extensions.build/WaylandPower 1.0"]
+        isCreatable: false
+        isSingleton: true
+        exportMetaObjectRevisions: [256]
+        Method {
+            name: "setDpms"
+            lineNumber: 18
+            Parameter { name: "on"; type: "bool" }
+        }
+    }
 }

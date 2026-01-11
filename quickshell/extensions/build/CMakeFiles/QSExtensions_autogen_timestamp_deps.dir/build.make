@@ -66,9 +66,23 @@ include CMakeFiles/QSExtensions_autogen_timestamp_deps.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/QSExtensions_autogen_timestamp_deps.dir/progress.make
 
+CMakeFiles/QSExtensions_autogen_timestamp_deps: wlr-output-power-management-unstable-v1-client-protocol.h
+CMakeFiles/QSExtensions_autogen_timestamp_deps: wlr-output-power-management-unstable-v1-protocol.c
+
+wlr-output-power-management-unstable-v1-client-protocol.h: /home/etienne/.dotfiles/quickshell/extensions/wlr-output-power-management-unstable-v1.xml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/etienne/.dotfiles/quickshell/extensions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating wlr-output-power-management-unstable-v1-client-protocol.h"
+	/usr/bin/wayland-scanner client-header /home/etienne/.dotfiles/quickshell/extensions/wlr-output-power-management-unstable-v1.xml /home/etienne/.dotfiles/quickshell/extensions/build/wlr-output-power-management-unstable-v1-client-protocol.h
+
+wlr-output-power-management-unstable-v1-protocol.c: /home/etienne/.dotfiles/quickshell/extensions/wlr-output-power-management-unstable-v1.xml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/etienne/.dotfiles/quickshell/extensions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating wlr-output-power-management-unstable-v1-protocol.c"
+	/usr/bin/wayland-scanner private-code /home/etienne/.dotfiles/quickshell/extensions/wlr-output-power-management-unstable-v1.xml /home/etienne/.dotfiles/quickshell/extensions/build/wlr-output-power-management-unstable-v1-protocol.c
+
 CMakeFiles/QSExtensions_autogen_timestamp_deps.dir/codegen:
 .PHONY : CMakeFiles/QSExtensions_autogen_timestamp_deps.dir/codegen
 
+QSExtensions_autogen_timestamp_deps: CMakeFiles/QSExtensions_autogen_timestamp_deps
+QSExtensions_autogen_timestamp_deps: wlr-output-power-management-unstable-v1-client-protocol.h
+QSExtensions_autogen_timestamp_deps: wlr-output-power-management-unstable-v1-protocol.c
 QSExtensions_autogen_timestamp_deps: CMakeFiles/QSExtensions_autogen_timestamp_deps.dir/build.make
 .PHONY : QSExtensions_autogen_timestamp_deps
 

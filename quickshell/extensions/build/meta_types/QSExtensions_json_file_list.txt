@@ -1,2 +1,3 @@
 /home/etienne/.dotfiles/quickshell/extensions/build/QSExtensions_autogen/include/../EWIEGA46WW/moc_AiPlugin.cpp.json
 /home/etienne/.dotfiles/quickshell/extensions/build/QSExtensions_autogen/include/../EWIEGA46WW/moc_PamAuth.cpp.json
+/home/etienne/.dotfiles/quickshell/extensions/build/QSExtensions_autogen/include/../EWIEGA46WW/moc_WaylandPower.cpp.json

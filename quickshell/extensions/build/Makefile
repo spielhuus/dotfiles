@@ -483,6 +483,30 @@ QSExtensionsplugin_extensions_buildPlugin.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/QSExtensionsplugin.dir/build.make CMakeFiles/QSExtensionsplugin.dir/QSExtensionsplugin_extensions_buildPlugin.cpp.s
 .PHONY : QSExtensionsplugin_extensions_buildPlugin.cpp.s
 
+WaylandPower.o: WaylandPower.cpp.o
+.PHONY : WaylandPower.o
+
+# target to build an object file
+WaylandPower.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QSExtensions.dir/build.make CMakeFiles/QSExtensions.dir/WaylandPower.cpp.o
+.PHONY : WaylandPower.cpp.o
+
+WaylandPower.i: WaylandPower.cpp.i
+.PHONY : WaylandPower.i
+
+# target to preprocess a source file
+WaylandPower.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QSExtensions.dir/build.make CMakeFiles/QSExtensions.dir/WaylandPower.cpp.i
+.PHONY : WaylandPower.cpp.i
+
+WaylandPower.s: WaylandPower.cpp.s
+.PHONY : WaylandPower.s
+
+# target to generate assembly for a file
+WaylandPower.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QSExtensions.dir/build.make CMakeFiles/QSExtensions.dir/WaylandPower.cpp.s
+.PHONY : WaylandPower.cpp.s
+
 build/.qt/rcc/qrc_qmake_extensions_build.o: build/.qt/rcc/qrc_qmake_extensions_build.cpp.o
 .PHONY : build/.qt/rcc/qrc_qmake_extensions_build.o
 
@@ -531,6 +555,30 @@ qsextensions_qmltyperegistrations.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/QSExtensions.dir/build.make CMakeFiles/QSExtensions.dir/qsextensions_qmltyperegistrations.cpp.s
 .PHONY : qsextensions_qmltyperegistrations.cpp.s
 
+wlr-output-power-management-unstable-v1-protocol.o: wlr-output-power-management-unstable-v1-protocol.c.o
+.PHONY : wlr-output-power-management-unstable-v1-protocol.o
+
+# target to build an object file
+wlr-output-power-management-unstable-v1-protocol.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QSExtensions.dir/build.make CMakeFiles/QSExtensions.dir/wlr-output-power-management-unstable-v1-protocol.c.o
+.PHONY : wlr-output-power-management-unstable-v1-protocol.c.o
+
+wlr-output-power-management-unstable-v1-protocol.i: wlr-output-power-management-unstable-v1-protocol.c.i
+.PHONY : wlr-output-power-management-unstable-v1-protocol.i
+
+# target to preprocess a source file
+wlr-output-power-management-unstable-v1-protocol.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QSExtensions.dir/build.make CMakeFiles/QSExtensions.dir/wlr-output-power-management-unstable-v1-protocol.c.i
+.PHONY : wlr-output-power-management-unstable-v1-protocol.c.i
+
+wlr-output-power-management-unstable-v1-protocol.s: wlr-output-power-management-unstable-v1-protocol.c.s
+.PHONY : wlr-output-power-management-unstable-v1-protocol.s
+
+# target to generate assembly for a file
+wlr-output-power-management-unstable-v1-protocol.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QSExtensions.dir/build.make CMakeFiles/QSExtensions.dir/wlr-output-power-management-unstable-v1-protocol.c.s
+.PHONY : wlr-output-power-management-unstable-v1-protocol.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -573,12 +621,18 @@ help:
 	@echo "... QSExtensionsplugin_extensions_buildPlugin.o"
 	@echo "... QSExtensionsplugin_extensions_buildPlugin.i"
 	@echo "... QSExtensionsplugin_extensions_buildPlugin.s"
+	@echo "... WaylandPower.o"
+	@echo "... WaylandPower.i"
+	@echo "... WaylandPower.s"
 	@echo "... build/.qt/rcc/qrc_qmake_extensions_build.o"
 	@echo "... build/.qt/rcc/qrc_qmake_extensions_build.i"
 	@echo "... build/.qt/rcc/qrc_qmake_extensions_build.s"
 	@echo "... qsextensions_qmltyperegistrations.o"
 	@echo "... qsextensions_qmltyperegistrations.i"
 	@echo "... qsextensions_qmltyperegistrations.s"
+	@echo "... wlr-output-power-management-unstable-v1-protocol.o"
+	@echo "... wlr-output-power-management-unstable-v1-protocol.i"
+	@echo "... wlr-output-power-management-unstable-v1-protocol.s"
 .PHONY : help
 
 

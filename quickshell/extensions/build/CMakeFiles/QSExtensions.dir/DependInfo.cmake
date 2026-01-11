@@ -8,10 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/etienne/.dotfiles/quickshell/extensions/build/wlr-output-power-management-unstable-v1-protocol.c" "CMakeFiles/QSExtensions.dir/wlr-output-power-management-unstable-v1-protocol.c.o" "gcc" "CMakeFiles/QSExtensions.dir/wlr-output-power-management-unstable-v1-protocol.c.o.d"
   "" "QSExtensions_autogen/timestamp" "custom" "QSExtensions_autogen/deps"
   "/home/etienne/.dotfiles/quickshell/extensions/AiPlugin.cpp" "CMakeFiles/QSExtensions.dir/AiPlugin.cpp.o" "gcc" "CMakeFiles/QSExtensions.dir/AiPlugin.cpp.o.d"
   "/home/etienne/.dotfiles/quickshell/extensions/PamAuth.cpp" "CMakeFiles/QSExtensions.dir/PamAuth.cpp.o" "gcc" "CMakeFiles/QSExtensions.dir/PamAuth.cpp.o.d"
   "/home/etienne/.dotfiles/quickshell/extensions/build/QSExtensions_autogen/mocs_compilation.cpp" "CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o.d"
+  "/home/etienne/.dotfiles/quickshell/extensions/WaylandPower.cpp" "CMakeFiles/QSExtensions.dir/WaylandPower.cpp.o" "gcc" "CMakeFiles/QSExtensions.dir/WaylandPower.cpp.o.d"
   "/home/etienne/.dotfiles/quickshell/extensions/build/.qt/rcc/qrc_qmake_extensions_build.cpp" "CMakeFiles/QSExtensions.dir/build/.qt/rcc/qrc_qmake_extensions_build.cpp.o" "gcc" "CMakeFiles/QSExtensions.dir/build/.qt/rcc/qrc_qmake_extensions_build.cpp.o.d"
   "/home/etienne/.dotfiles/quickshell/extensions/build/qsextensions_qmltyperegistrations.cpp" "CMakeFiles/QSExtensions.dir/qsextensions_qmltyperegistrations.cpp.o" "gcc" "CMakeFiles/QSExtensions.dir/qsextensions_qmltyperegistrations.cpp.o.d"
   "" "libQSExtensions.so" "gcc" "CMakeFiles/QSExtensions.dir/link.d"

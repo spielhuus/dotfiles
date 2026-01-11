@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<protocol name="wlr_output_power_management_unstable_v1">
+  <copyright>
+    Copyright © 2019 Purism SPC
+
+    Permission is hereby granted, free of charge, to any person obtaining a
+    copy of this software and associated documentation files (the "Software"),
+    to deal in the Software without restriction, including without limitation
+    the rights to use, copy, modify, merge, publish, distribute, sublicense,
+    and/or sell copies of the Software, and to permit persons to whom the
+    Software is furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice (including the next
+    paragraph) shall be included in all copies or substantial portions of the
+    Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+    THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+    FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+    DEALINGS IN THE SOFTWARE.
+  </copyright>
+
+  <interface name="zwlr_output_power_manager_v1" version="1">
+    <description summary="manager to create per-output power management">
+      This interface is a manager that allows creating per-output power
+      management mode controls.
+    </description>
+
+    <request name="get_output_power">
+      <description summary="get a power management for an output">
+        Create a output power management mode control that can be used to
+        adjust the power management mode for a given output.
+      </description>
+      <arg name="id" type="new_id" interface="zwlr_output_power_v1"/>
+      <arg name="output" type="object" interface="wl_output"/>
+    </request>
+
+    <request name="destroy" type="destructor">
+      <description summary="destroy the manager">
+        All objects created by the manager will still remain valid, until their
+        specific destroy request has been received.
+      </description>
+    </request>
+  </interface>
+
+  <interface name="zwlr_output_power_v1" version="1">
+    <description summary="adjust power management mode for an output">
+      This interface allows changing the power management mode for an output.
+    </description>
+
+    <enum name="mode">
+      <entry name="off" value="0" summary="Output is turned off."/>
+      <entry name="on" value="1" summary="Output is turned on, no power saving."/>
+    </enum>
+
+    <request name="set_mode">
+      <description summary="Set the power management mode for this output">
+        Set the power management mode for this output.
+
+        The new mode is applied immediately.
+      </description>
+      <arg name="mode" type="uint" enum="mode"/>
+    </request>
+
+    <event name="mode">
+      <description summary="Report a power management mode change">
+        Report a power management mode change.
+
+        This event is sent immediately when the object is created so that a
+        client is informed about the current power management mode. It is
+        also sent when the mode changes, for example when the power management
+        mode is changed via the set_mode request or by the compositor
+        itself.
+      </description>
+      <arg name="mode" type="uint" enum="mode"/>
+    </event>
+
+    <event name="failed">
+      <description summary="object no longer valid">
+        This event indicates that the output power management mode control
+        is no longer valid. This can happen for a number of reasons,
+        including:
+        - The output is capable of changing power management modes, but
+          this client is not allowed to change it.
+        - The output is no longer capable of changing power management
+          modes.
+
+        The client should exit or look for other power management modes
+        controls.
+      </description>
+    </event>
+
+    <request name="destroy" type="destructor">
+      <description summary="destroy the output power management">
+        This request indicates that the client will no longer use this
+        output power management object.
+      </description>
+    </request>
+  </interface>
+</protocol>

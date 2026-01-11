@@ -2,6 +2,7 @@ import "../"
 import "../services"
 import QtQuick
 import QtQuick.Controls
+import QtQuick.Effects
 import QtQuick.Layouts
 import Quickshell
 import Quickshell.Io
@@ -13,6 +14,7 @@ WlSessionLock {
 
     property string username: "User"
 
+    // --- Lock State ---
     locked: Idle.locked
     Component.onCompleted: {
         var envUser = Quickshell.env("USER");
@@ -21,12 +23,12 @@ WlSessionLock {
 
     }
     onLockedChanged: {
-        if (!locked && Idle.locked) {
-            console.log("[LockScreen] Session unlocked externally. Resetting Idle.");
+        if (!locked && Idle.locked)
             Idle.unlock();
-        }
+
     }
 
+    // --- User Info ---
     Process {
         id: userProcess
 
@@ -35,230 +37,291 @@ WlSessionLock {
 
         stdout: StdioCollector {
             onStreamFinished: {
-                var output = this.text.trim();
-                if (output !== "")
-                    sessionLock.username = output;
+                if (text.trim() !== "")
+                    sessionLock.username = text.trim();
 
             }
         }
 
     }
 
-    WlSessionLockSurface {
-        id: lockSurface
+    // --- Surface Loader ---
+    Loader {
+        active: sessionLock.locked
+        sourceComponent: lockSurfaceComponent
+    }
 
-        // --- Logic & State ---
-        property int inactivityTimeout: 30000
-        property bool isScreenOff: false
-        property bool mouseThrottle: false
+    Component {
+        id: lockSurfaceComponent
 
-        function setDpms(on) {
-            WaylandPower.setDpms(on);
-            lockSurface.isScreenOff = !on;
-        }
+        WlSessionLockSurface {
+            id: lockSurface
 
-        function resetActivity() {
-            if (lockSurface.isScreenOff) {
-                console.log("[LockScreen] Activity detected. Waking screen.");
-                lockSurface.setDpms(true);
+            property int inactivityTimeout: 30000
+            property bool isScreenOff: false
+            property bool mouseThrottle: false
+            property var collectedPaths: []
+            property string currentWallpaper: ""
+            property string wallpaperSearchPath: {
+                var url = Qt.resolvedUrl("../assets/wallpaper").toString();
+                if (url.indexOf("file://") === 0)
+                    return url.substring(7);
+                else if (url.indexOf("file:") === 0)
+                    return url.substring(5);
+                return url;
             }
-            inactivityTimer.restart();
-        }
 
-        // --- Start Timer when Surface Appears ---
-        Component.onCompleted: {
-            console.log("[LockScreen] Surface created. Starting inactivity timer.");
-            inactivityTimer.restart();
-            // Ensure input focus
-            passwordInput.forceActiveFocus();
-        }
-        // --- Cleanup when Surface Destroys (Unlocks) ---
-        Component.onDestruction: {
-            console.log("[LockScreen] Surface destroying. Ensuring screen is ON.");
-            lockSurface.setDpms(true);
-        }
-
-        // --- Inactivity Timer ---
-        Timer {
-            id: inactivityTimer
-
-            interval: lockSurface.inactivityTimeout
-            repeat: false
-            running: false
-            onTriggered: {
-                console.log("[LockScreen] Inactivity timeout reached. Turning screen OFF.");
-                lockSurface.setDpms(false);
+            // --- Power Logic ---
+            function setDpms(on) {
+                WaylandPower.setDpms(on);
+                lockSurface.isScreenOff = !on;
             }
-        }
 
-        Timer {
-            id: throttleTimer
+            function resetActivity() {
+                if (lockSurface.isScreenOff)
+                    lockSurface.setDpms(true);
 
-            interval: 1000
-            repeat: false
-            onTriggered: lockSurface.mouseThrottle = false
-        }
+                inactivityTimer.restart();
+            }
 
-        // --- Visuals ---
-        Rectangle {
-            anchors.fill: parent
-            color: "black"
+            Component.onCompleted: {
+                console.log("[LockScreen] Surface Loaded.");
+                inactivityTimer.restart();
+                passwordInput.forceActiveFocus();
+            }
+            Component.onDestruction: {
+                WaylandPower.setDpms(true);
+            }
 
-            MouseArea {
-                anchors.fill: parent
-                hoverEnabled: true
-                onClicked: {
-                    passwordInput.forceActiveFocus();
-                    lockSurface.resetActivity();
-                }
-                onPositionChanged: {
-                    if (!lockSurface.mouseThrottle) {
-                        lockSurface.resetActivity();
-                        lockSurface.mouseThrottle = true;
-                        throttleTimer.restart();
+            Process {
+                id: scanProcess
+
+                running: true
+                command: ["find", "-L", lockSurface.wallpaperSearchPath, "-maxdepth", "1", "-type", "f"]
+                onExited: {
+                    console.log("[LockScreen] Scanned: " + lockSurface.wallpaperSearchPath);
+                    if (lockSurface.collectedPaths.length > 0) {
+                        var randomIndex = Math.floor(Math.random() * lockSurface.collectedPaths.length);
+                        lockSurface.currentWallpaper = "file://" + lockSurface.collectedPaths[randomIndex];
+                        console.log("[LockScreen] Selected: " + lockSurface.currentWallpaper);
+                    } else {
+                        console.log("[LockScreen] No images found. Screen will be black.");
                     }
                 }
-                onWheel: lockSurface.resetActivity()
+
+                stdout: SplitParser {
+                    onRead: (data) => {
+                        var file = data.trim();
+                        if (file.match(/\.(jpg|jpeg|png|webp|bmp|svg)$/i)) {
+                            var temp = lockSurface.collectedPaths;
+                            temp.push(file);
+                            lockSurface.collectedPaths = temp;
+                        }
+                    }
+                }
+
+                stderr: StdioCollector {
+                    onTextChanged: console.log("[LockScreen] Wallpaper Scan Error: " + text)
+                }
+
             }
-
-        }
-
-        Item {
-            id: clock
-
-            property var time: new Date()
 
             Timer {
+                id: inactivityTimer
+
+                interval: lockSurface.inactivityTimeout
+                repeat: false
+                onTriggered: lockSurface.setDpms(false)
+            }
+
+            Timer {
+                id: throttleTimer
+
                 interval: 1000
-                running: true
-                repeat: true
-                onTriggered: clock.time = new Date()
+                repeat: false
+                onTriggered: lockSurface.mouseThrottle = false
             }
 
-        }
+            QtObject {
+                id: authState
 
-        ColumnLayout {
-            id: mainLayout
+                property bool error: false
+                property bool processing: false
+            }
 
-            anchors.centerIn: parent
-            spacing: 20
+            // --- Visuals ---
+            Rectangle {
+                anchors.fill: parent
+                color: "black"
 
-            Text {
-                text: Qt.formatDateTime(clock.time, "hh:mm")
-                color: "white"
-                font.pixelSize: 100
-                font.weight: Font.Light
-                font.family: {
-                    if (typeof Theme !== "undefined" && Theme.get && Theme.get.bar && Theme.get.bar.fontFamily)
-                        return Theme.get.bar.fontFamily;
+                Image {
+                    id: bgImage
 
-                    if (typeof Theme !== "undefined" && Theme.defaultBar)
-                        return Theme.defaultBar.fontFamily;
-
-                    return "Sans Serif";
+                    anchors.fill: parent
+                    source: lockSurface.currentWallpaper
+                    fillMode: Image.PreserveAspectCrop
+                    smooth: true
+                    visible: false // Hidden, used by MultiEffect
+                    asynchronous: true
+                    onStatusChanged: {
+                        if (status === Image.Ready)
+                            console.log("[LockScreen] Image Loaded Successfully.");
+                        else if (status === Image.Error)
+                            console.log("[LockScreen] Failed to load image source.");
+                    }
                 }
-                Layout.alignment: Qt.AlignHCenter
-            }
 
-            Text {
-                text: Qt.formatDateTime(clock.time, "dd MMM dddd")
-                color: "#999999"
-                font.pixelSize: 24
-                font.bold: true
-                font.capitalization: Font.AllUppercase
-                Layout.alignment: Qt.AlignHCenter
-            }
-
-            Text {
-                text: "Hi " + sessionLock.username + " :)"
-                color: "#cccccc"
-                font.pixelSize: 18
-                font.italic: true
-                Layout.alignment: Qt.AlignHCenter
-                Layout.bottomMargin: 30
-            }
-
-            TextField {
-                id: passwordInput
-
-                Layout.preferredWidth: 220
-                Layout.preferredHeight: 45
-                Layout.alignment: Qt.AlignHCenter
-                placeholderText: "Use Me ;)"
-                placeholderTextColor: "#ccffffff"
-                color: "white"
-                font.pixelSize: 14
-                font.italic: true
-                echoMode: TextInput.Password
-                horizontalAlignment: TextInput.AlignHCenter
-                verticalAlignment: TextInput.AlignVCenter
-                focus: true
-                Keys.onPressed: (event) => {
-                    lockSurface.resetActivity();
-                    event.accepted = false;
+                MultiEffect {
+                    anchors.fill: parent
+                    source: bgImage
+                    visible: bgImage.status === Image.Ready
+                    blurEnabled: true
+                    blurMax: 64
+                    blur: 1
+                    saturation: 0
                 }
-                onTextEdited: lockSurface.resetActivity()
-                Component.onCompleted: forceActiveFocus()
-                onAccepted: {
-                    authState.processing = true;
-                    if (PamAuth.checkPassword(passwordInput.text)) {
-                        passwordInput.text = "";
-                        authState.error = false;
-                        // Unlock via global service.
-                        // This changes sessionLock.locked -> destroys Surface -> triggers onDestruction -> ensures DPMS on.
-                        Idle.unlock();
-                    } else {
-                        passwordInput.text = "";
-                        authState.error = true;
-                        shakeAnimation.start();
+
+                Rectangle {
+                    anchors.fill: parent
+                    color: "black"
+                    opacity: 0.5
+                }
+
+                MouseArea {
+                    anchors.fill: parent
+                    hoverEnabled: true
+                    onClicked: {
+                        passwordInput.forceActiveFocus();
                         lockSurface.resetActivity();
                     }
-                    authState.processing = false;
+                    onPositionChanged: {
+                        if (!lockSurface.mouseThrottle) {
+                            lockSurface.resetActivity();
+                            lockSurface.mouseThrottle = true;
+                            throttleTimer.restart();
+                        }
+                    }
+                    onWheel: lockSurface.resetActivity()
                 }
 
-                background: Rectangle {
-                    color: "#20ffffff"
-                    radius: height / 2
-                    border.width: 1
-                    border.color: authState.error ? "#ff5555" : "transparent"
+            }
+
+            Item {
+                id: clock
+
+                property var time: new Date()
+
+                Timer {
+                    interval: 1000
+                    running: true
+                    repeat: true
+                    onTriggered: clock.time = new Date()
                 }
 
             }
 
-        }
+            ColumnLayout {
+                anchors.centerIn: parent
+                spacing: 15
 
-        QtObject {
-            id: authState
+                Text {
+                    Layout.alignment: Qt.AlignHCenter
+                    text: Qt.formatDateTime(clock.time, "h:mm") + (clock.time.getHours() >= 12 ? "PM" : "AM")
+                    color: "white"
+                    font.pixelSize: 80
+                    font.family: "JetBrainsMono Nerd Font"
+                    font.weight: Font.ExtraBold
+                    font.letterSpacing: 2
+                }
 
-            property bool error: false
-            property bool processing: false
-        }
+                Text {
+                    Layout.alignment: Qt.AlignHCenter
+                    Layout.topMargin: 10
+                    Layout.bottomMargin: 10
+                    text: "Hi there, " + sessionLock.username
+                    color: "white"
+                    font.pixelSize: 18
+                    font.family: "JetBrainsMono Nerd Font"
+                    font.weight: Font.Medium
+                    opacity: 0.9
+                }
 
-        SequentialAnimation {
-            id: shakeAnimation
+                TextField {
+                    id: passwordInput
 
-            NumberAnimation {
-                target: mainLayout
-                property: "anchors.horizontalCenterOffset"
-                from: 0
-                to: 10
-                duration: 50
-            }
+                    Layout.alignment: Qt.AlignHCenter
+                    Layout.preferredWidth: 220
+                    Layout.preferredHeight: 40
+                    placeholderText: "Input Password..."
+                    placeholderTextColor: "#99ffffff"
+                    color: "white"
+                    font.pixelSize: 13
+                    font.family: "JetBrainsMono Nerd Font"
+                    font.italic: true
+                    echoMode: TextInput.Password
+                    passwordCharacter: "●"
+                    horizontalAlignment: TextInput.AlignHCenter
+                    verticalAlignment: TextInput.AlignVCenter
+                    focus: true
+                    Keys.onPressed: (event) => {
+                        lockSurface.resetActivity();
+                        event.accepted = false;
+                    }
+                    onTextEdited: lockSurface.resetActivity()
+                    Component.onCompleted: forceActiveFocus()
+                    onAccepted: {
+                        authState.processing = true;
+                        if (PamAuth.checkPassword(passwordInput.text)) {
+                            passwordInput.text = "";
+                            authState.error = false;
+                            Idle.unlock();
+                        } else {
+                            passwordInput.text = "";
+                            authState.error = true;
+                            shakeAnimation.start();
+                            lockSurface.resetActivity();
+                        }
+                        authState.processing = false;
+                    }
 
-            NumberAnimation {
-                target: mainLayout
-                property: "anchors.horizontalCenterOffset"
-                from: 10
-                to: -10
-                duration: 50
-            }
+                    SequentialAnimation {
+                        id: shakeAnimation
 
-            NumberAnimation {
-                target: mainLayout
-                property: "anchors.horizontalCenterOffset"
-                from: -10
-                to: 0
-                duration: 50
+                        NumberAnimation {
+                            target: passwordInput
+                            property: "Layout.leftMargin"
+                            from: 0
+                            to: 10
+                            duration: 50
+                        }
+
+                        NumberAnimation {
+                            target: passwordInput
+                            property: "Layout.leftMargin"
+                            from: 10
+                            to: -10
+                            duration: 50
+                        }
+
+                        NumberAnimation {
+                            target: passwordInput
+                            property: "Layout.leftMargin"
+                            from: -10
+                            to: 0
+                            duration: 50
+                        }
+
+                    }
+
+                    background: Rectangle {
+                        color: "#50000000"
+                        radius: height / 2
+                        border.width: 1
+                        border.color: authState.error ? "#cc8822" : "transparent"
+                    }
+
+                }
+
             }
 
         }

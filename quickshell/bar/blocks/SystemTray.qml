@@ -25,6 +25,7 @@ RowLayout {
       property alias item: delegate.modelData
 
       Layout.fillHeight: true
+      // The container width will automatically grow with the icon
       implicitWidth: icon.implicitWidth + 5
 
       acceptedButtons: Qt.LeftButton | Qt.RightButton | Qt.MiddleButton
@@ -50,7 +51,7 @@ RowLayout {
         id: icon
         anchors.centerIn: parent
         source: item.icon
-        implicitSize: 16
+        implicitSize: 20.0
       }
 
       QsMenuAnchor {

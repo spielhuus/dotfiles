@@ -98,19 +98,27 @@ QSExtensions.qmltypes: qsextensions_qmltyperegistrations.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/etienne/.dotfiles/quickshell/extensions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Running rcc for resource qmake_extensions_build"
 	/usr/lib/qt6/rcc --output /home/etienne/.dotfiles/quickshell/extensions/build/.qt/rcc/qrc_qmake_extensions_build.cpp --name qmake_extensions_build /home/etienne/.dotfiles/quickshell/extensions/build/.qt/rcc/qmake_extensions_build.qrc
 
+wlr-output-power-management-unstable-v1-client-protocol.h: /home/etienne/.dotfiles/quickshell/extensions/wlr-output-power-management-unstable-v1.xml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/etienne/.dotfiles/quickshell/extensions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating wlr-output-power-management-unstable-v1-client-protocol.h"
+	/usr/bin/wayland-scanner client-header /home/etienne/.dotfiles/quickshell/extensions/wlr-output-power-management-unstable-v1.xml /home/etienne/.dotfiles/quickshell/extensions/build/wlr-output-power-management-unstable-v1-client-protocol.h
+
+wlr-output-power-management-unstable-v1-protocol.c: /home/etienne/.dotfiles/quickshell/extensions/wlr-output-power-management-unstable-v1.xml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/etienne/.dotfiles/quickshell/extensions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating wlr-output-power-management-unstable-v1-protocol.c"
+	/usr/bin/wayland-scanner private-code /home/etienne/.dotfiles/quickshell/extensions/wlr-output-power-management-unstable-v1.xml /home/etienne/.dotfiles/quickshell/extensions/build/wlr-output-power-management-unstable-v1-protocol.c
+
 QSExtensions_autogen/timestamp: /usr/lib/qt6/moc
 QSExtensions_autogen/timestamp: CMakeFiles/QSExtensions.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/etienne/.dotfiles/quickshell/extensions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Automatic MOC and UIC for target QSExtensions"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/etienne/.dotfiles/quickshell/extensions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Automatic MOC and UIC for target QSExtensions"
 	/usr/bin/cmake -E cmake_autogen /home/etienne/.dotfiles/quickshell/extensions/build/CMakeFiles/QSExtensions_autogen.dir/AutogenInfo.json ""
 	/usr/bin/cmake -E touch /home/etienne/.dotfiles/quickshell/extensions/build/QSExtensions_autogen/timestamp
 
 meta_types/QSExtensions_json_file_list.txt: /usr/lib/qt6/cmake_automoc_parser
 meta_types/QSExtensions_json_file_list.txt: QSExtensions_autogen/timestamp
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/etienne/.dotfiles/quickshell/extensions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Running AUTOMOC file extraction for target QSExtensions"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/etienne/.dotfiles/quickshell/extensions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Running AUTOMOC file extraction for target QSExtensions"
 	/usr/lib/qt6/cmake_automoc_parser --cmake-autogen-cache-file /home/etienne/.dotfiles/quickshell/extensions/build/CMakeFiles/QSExtensions_autogen.dir/ParseCache.txt --cmake-autogen-info-file /home/etienne/.dotfiles/quickshell/extensions/build/CMakeFiles/QSExtensions_autogen.dir/AutogenInfo.json --output-file-path /home/etienne/.dotfiles/quickshell/extensions/build/meta_types/QSExtensions_json_file_list.txt --timestamp-file-path /home/etienne/.dotfiles/quickshell/extensions/build/meta_types/QSExtensions_json_file_list.txt.timestamp --cmake-autogen-include-dir-path /home/etienne/.dotfiles/quickshell/extensions/build/QSExtensions_autogen/include
 
 meta_types/qt6qsextensions_metatypes.json: meta_types/qt6qsextensions_metatypes.json.gen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/etienne/.dotfiles/quickshell/extensions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating meta_types/qt6qsextensions_metatypes.json"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/etienne/.dotfiles/quickshell/extensions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating meta_types/qt6qsextensions_metatypes.json"
 	/usr/bin/cmake -E true
 
 CMakeFiles/QSExtensions.dir/codegen:
@@ -119,7 +127,7 @@ CMakeFiles/QSExtensions.dir/codegen:
 CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o: CMakeFiles/QSExtensions.dir/flags.make
 CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o: QSExtensions_autogen/mocs_compilation.cpp
 CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o: CMakeFiles/QSExtensions.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/etienne/.dotfiles/quickshell/extensions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/etienne/.dotfiles/quickshell/extensions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o -MF CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o -c /home/etienne/.dotfiles/quickshell/extensions/build/QSExtensions_autogen/mocs_compilation.cpp
 
 CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.i: cmake_force
@@ -133,7 +141,7 @@ CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.s: cmake_f
 CMakeFiles/QSExtensions.dir/qsextensions_qmltyperegistrations.cpp.o: CMakeFiles/QSExtensions.dir/flags.make
 CMakeFiles/QSExtensions.dir/qsextensions_qmltyperegistrations.cpp.o: qsextensions_qmltyperegistrations.cpp
 CMakeFiles/QSExtensions.dir/qsextensions_qmltyperegistrations.cpp.o: CMakeFiles/QSExtensions.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/etienne/.dotfiles/quickshell/extensions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/QSExtensions.dir/qsextensions_qmltyperegistrations.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/etienne/.dotfiles/quickshell/extensions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/QSExtensions.dir/qsextensions_qmltyperegistrations.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QSExtensions.dir/qsextensions_qmltyperegistrations.cpp.o -MF CMakeFiles/QSExtensions.dir/qsextensions_qmltyperegistrations.cpp.o.d -o CMakeFiles/QSExtensions.dir/qsextensions_qmltyperegistrations.cpp.o -c /home/etienne/.dotfiles/quickshell/extensions/build/qsextensions_qmltyperegistrations.cpp
 
 CMakeFiles/QSExtensions.dir/qsextensions_qmltyperegistrations.cpp.i: cmake_force
@@ -147,7 +155,7 @@ CMakeFiles/QSExtensions.dir/qsextensions_qmltyperegistrations.cpp.s: cmake_force
 CMakeFiles/QSExtensions.dir/build/.qt/rcc/qrc_qmake_extensions_build.cpp.o: CMakeFiles/QSExtensions.dir/flags.make
 CMakeFiles/QSExtensions.dir/build/.qt/rcc/qrc_qmake_extensions_build.cpp.o: .qt/rcc/qrc_qmake_extensions_build.cpp
 CMakeFiles/QSExtensions.dir/build/.qt/rcc/qrc_qmake_extensions_build.cpp.o: CMakeFiles/QSExtensions.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/etienne/.dotfiles/quickshell/extensions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/QSExtensions.dir/build/.qt/rcc/qrc_qmake_extensions_build.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/etienne/.dotfiles/quickshell/extensions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/QSExtensions.dir/build/.qt/rcc/qrc_qmake_extensions_build.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QSExtensions.dir/build/.qt/rcc/qrc_qmake_extensions_build.cpp.o -MF CMakeFiles/QSExtensions.dir/build/.qt/rcc/qrc_qmake_extensions_build.cpp.o.d -o CMakeFiles/QSExtensions.dir/build/.qt/rcc/qrc_qmake_extensions_build.cpp.o -c /home/etienne/.dotfiles/quickshell/extensions/build/.qt/rcc/qrc_qmake_extensions_build.cpp
 
 CMakeFiles/QSExtensions.dir/build/.qt/rcc/qrc_qmake_extensions_build.cpp.i: cmake_force
@@ -161,7 +169,7 @@ CMakeFiles/QSExtensions.dir/build/.qt/rcc/qrc_qmake_extensions_build.cpp.s: cmak
 CMakeFiles/QSExtensions.dir/AiPlugin.cpp.o: CMakeFiles/QSExtensions.dir/flags.make
 CMakeFiles/QSExtensions.dir/AiPlugin.cpp.o: /home/etienne/.dotfiles/quickshell/extensions/AiPlugin.cpp
 CMakeFiles/QSExtensions.dir/AiPlugin.cpp.o: CMakeFiles/QSExtensions.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/etienne/.dotfiles/quickshell/extensions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/QSExtensions.dir/AiPlugin.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/etienne/.dotfiles/quickshell/extensions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/QSExtensions.dir/AiPlugin.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QSExtensions.dir/AiPlugin.cpp.o -MF CMakeFiles/QSExtensions.dir/AiPlugin.cpp.o.d -o CMakeFiles/QSExtensions.dir/AiPlugin.cpp.o -c /home/etienne/.dotfiles/quickshell/extensions/AiPlugin.cpp
 
 CMakeFiles/QSExtensions.dir/AiPlugin.cpp.i: cmake_force
@@ -175,7 +183,7 @@ CMakeFiles/QSExtensions.dir/AiPlugin.cpp.s: cmake_force
 CMakeFiles/QSExtensions.dir/PamAuth.cpp.o: CMakeFiles/QSExtensions.dir/flags.make
 CMakeFiles/QSExtensions.dir/PamAuth.cpp.o: /home/etienne/.dotfiles/quickshell/extensions/PamAuth.cpp
 CMakeFiles/QSExtensions.dir/PamAuth.cpp.o: CMakeFiles/QSExtensions.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/etienne/.dotfiles/quickshell/extensions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/QSExtensions.dir/PamAuth.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/etienne/.dotfiles/quickshell/extensions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/QSExtensions.dir/PamAuth.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QSExtensions.dir/PamAuth.cpp.o -MF CMakeFiles/QSExtensions.dir/PamAuth.cpp.o.d -o CMakeFiles/QSExtensions.dir/PamAuth.cpp.o -c /home/etienne/.dotfiles/quickshell/extensions/PamAuth.cpp
 
 CMakeFiles/QSExtensions.dir/PamAuth.cpp.i: cmake_force
@@ -186,13 +194,43 @@ CMakeFiles/QSExtensions.dir/PamAuth.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/QSExtensions.dir/PamAuth.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/etienne/.dotfiles/quickshell/extensions/PamAuth.cpp -o CMakeFiles/QSExtensions.dir/PamAuth.cpp.s
 
+CMakeFiles/QSExtensions.dir/WaylandPower.cpp.o: CMakeFiles/QSExtensions.dir/flags.make
+CMakeFiles/QSExtensions.dir/WaylandPower.cpp.o: /home/etienne/.dotfiles/quickshell/extensions/WaylandPower.cpp
+CMakeFiles/QSExtensions.dir/WaylandPower.cpp.o: CMakeFiles/QSExtensions.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/etienne/.dotfiles/quickshell/extensions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/QSExtensions.dir/WaylandPower.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QSExtensions.dir/WaylandPower.cpp.o -MF CMakeFiles/QSExtensions.dir/WaylandPower.cpp.o.d -o CMakeFiles/QSExtensions.dir/WaylandPower.cpp.o -c /home/etienne/.dotfiles/quickshell/extensions/WaylandPower.cpp
+
+CMakeFiles/QSExtensions.dir/WaylandPower.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/QSExtensions.dir/WaylandPower.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/etienne/.dotfiles/quickshell/extensions/WaylandPower.cpp > CMakeFiles/QSExtensions.dir/WaylandPower.cpp.i
+
+CMakeFiles/QSExtensions.dir/WaylandPower.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/QSExtensions.dir/WaylandPower.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/etienne/.dotfiles/quickshell/extensions/WaylandPower.cpp -o CMakeFiles/QSExtensions.dir/WaylandPower.cpp.s
+
+CMakeFiles/QSExtensions.dir/wlr-output-power-management-unstable-v1-protocol.c.o: CMakeFiles/QSExtensions.dir/flags.make
+CMakeFiles/QSExtensions.dir/wlr-output-power-management-unstable-v1-protocol.c.o: wlr-output-power-management-unstable-v1-protocol.c
+CMakeFiles/QSExtensions.dir/wlr-output-power-management-unstable-v1-protocol.c.o: CMakeFiles/QSExtensions.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/etienne/.dotfiles/quickshell/extensions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/QSExtensions.dir/wlr-output-power-management-unstable-v1-protocol.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/QSExtensions.dir/wlr-output-power-management-unstable-v1-protocol.c.o -MF CMakeFiles/QSExtensions.dir/wlr-output-power-management-unstable-v1-protocol.c.o.d -o CMakeFiles/QSExtensions.dir/wlr-output-power-management-unstable-v1-protocol.c.o -c /home/etienne/.dotfiles/quickshell/extensions/build/wlr-output-power-management-unstable-v1-protocol.c
+
+CMakeFiles/QSExtensions.dir/wlr-output-power-management-unstable-v1-protocol.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/QSExtensions.dir/wlr-output-power-management-unstable-v1-protocol.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/etienne/.dotfiles/quickshell/extensions/build/wlr-output-power-management-unstable-v1-protocol.c > CMakeFiles/QSExtensions.dir/wlr-output-power-management-unstable-v1-protocol.c.i
+
+CMakeFiles/QSExtensions.dir/wlr-output-power-management-unstable-v1-protocol.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/QSExtensions.dir/wlr-output-power-management-unstable-v1-protocol.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/etienne/.dotfiles/quickshell/extensions/build/wlr-output-power-management-unstable-v1-protocol.c -o CMakeFiles/QSExtensions.dir/wlr-output-power-management-unstable-v1-protocol.c.s
+
 # Object files for target QSExtensions
 QSExtensions_OBJECTS = \
 "CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/QSExtensions.dir/qsextensions_qmltyperegistrations.cpp.o" \
 "CMakeFiles/QSExtensions.dir/build/.qt/rcc/qrc_qmake_extensions_build.cpp.o" \
 "CMakeFiles/QSExtensions.dir/AiPlugin.cpp.o" \
-"CMakeFiles/QSExtensions.dir/PamAuth.cpp.o"
+"CMakeFiles/QSExtensions.dir/PamAuth.cpp.o" \
+"CMakeFiles/QSExtensions.dir/WaylandPower.cpp.o" \
+"CMakeFiles/QSExtensions.dir/wlr-output-power-management-unstable-v1-protocol.c.o"
 
 # External object files for target QSExtensions
 QSExtensions_EXTERNAL_OBJECTS =
@@ -202,9 +240,12 @@ libQSExtensions.so: CMakeFiles/QSExtensions.dir/qsextensions_qmltyperegistration
 libQSExtensions.so: CMakeFiles/QSExtensions.dir/build/.qt/rcc/qrc_qmake_extensions_build.cpp.o
 libQSExtensions.so: CMakeFiles/QSExtensions.dir/AiPlugin.cpp.o
 libQSExtensions.so: CMakeFiles/QSExtensions.dir/PamAuth.cpp.o
+libQSExtensions.so: CMakeFiles/QSExtensions.dir/WaylandPower.cpp.o
+libQSExtensions.so: CMakeFiles/QSExtensions.dir/wlr-output-power-management-unstable-v1-protocol.c.o
 libQSExtensions.so: CMakeFiles/QSExtensions.dir/build.make
 libQSExtensions.so: CMakeFiles/QSExtensions.dir/compiler_depend.ts
 libQSExtensions.so: /usr/lib/libQt6Quick.so.6.10.1
+libQSExtensions.so: /usr/lib/libwayland-client.so
 libQSExtensions.so: /usr/lib/libQt6OpenGL.so.6.10.1
 libQSExtensions.so: /usr/lib/libQt6Gui.so.6.10.1
 libQSExtensions.so: /usr/lib/libGLX.so
@@ -213,7 +254,7 @@ libQSExtensions.so: /usr/lib/libQt6Qml.so.6.10.1
 libQSExtensions.so: /usr/lib/libQt6Network.so.6.10.1
 libQSExtensions.so: /usr/lib/libQt6Core.so.6.10.1
 libQSExtensions.so: CMakeFiles/QSExtensions.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/etienne/.dotfiles/quickshell/extensions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX shared library libQSExtensions.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/etienne/.dotfiles/quickshell/extensions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX shared library libQSExtensions.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/QSExtensions.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -231,6 +272,8 @@ CMakeFiles/QSExtensions.dir/depend: meta_types/QSExtensions_json_file_list.txt
 CMakeFiles/QSExtensions.dir/depend: meta_types/qt6qsextensions_metatypes.json
 CMakeFiles/QSExtensions.dir/depend: meta_types/qt6qsextensions_metatypes.json.gen
 CMakeFiles/QSExtensions.dir/depend: qsextensions_qmltyperegistrations.cpp
+CMakeFiles/QSExtensions.dir/depend: wlr-output-power-management-unstable-v1-client-protocol.h
+CMakeFiles/QSExtensions.dir/depend: wlr-output-power-management-unstable-v1-protocol.c
 	cd /home/etienne/.dotfiles/quickshell/extensions/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/etienne/.dotfiles/quickshell/extensions /home/etienne/.dotfiles/quickshell/extensions /home/etienne/.dotfiles/quickshell/extensions/build /home/etienne/.dotfiles/quickshell/extensions/build /home/etienne/.dotfiles/quickshell/extensions/build/CMakeFiles/QSExtensions.dir/DependInfo.cmake "--color=$(COLOR)" QSExtensions
 .PHONY : CMakeFiles/QSExtensions.dir/depend
 
