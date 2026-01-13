@@ -4,13 +4,10 @@ import Quickshell.Io
 pragma Singleton
 
 Singleton {
-    //300
-
     id: root
 
     property bool locked: false
-    // Set to 300 (5 mins) for production, or 5 for testing
-    property int timeoutSeconds: 300
+    property int timeoutSeconds: 100 // 5 mins
 
     function lock() {
         console.log("[Idle] Locking screen");
@@ -23,20 +20,39 @@ Singleton {
     }
 
     Process {
+        id: audioCheckProc
+
+        command: ["sh", "-c", "pactl list sinks | grep 'State: RUNNING'"]
+        onExited: (code) => {
+            if (code === 0) {
+                console.log("[Idle] Media playing. Resetting idle timer...");
+                idleProc.running = false;
+                restartTimer.start();
+            } else {
+                root.lock();
+            }
+        }
+    }
+
+    Process {
+        // specific unlock logic if needed
+
         id: idleProc
 
         running: true
         command: ["stdbuf", "-oL", "swayidle", "-w", "timeout", root.timeoutSeconds.toString(), "echo idle", "resume", "echo resume", "before-sleep", "echo idle"]
         onExited: (code) => {
             console.log(`[Idle] swayidle exited with code ${code}. Restarting...`);
-            restartTimer.start();
+            if (running)
+                restartTimer.start();
+
         }
 
         stdout: SplitParser {
             onRead: (data) => {
                 const msg = data.trim();
                 if (msg === "idle")
-                    root.lock();
+                    audioCheckProc.running = true;
                 else if (msg === "resume")
                     console.log("[Idle] Resume detected");
             }
