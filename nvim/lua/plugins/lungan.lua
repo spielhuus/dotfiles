@@ -5,6 +5,13 @@ return {
 	enabled = true,
 	config = function()
 		require("lungan.nvim").setup({
+			providers = {
+				LlamaCPP = require("lungan.providers.LlamaCPP"):new(require("lungan.nvim.Http"):new(), {
+					name = "LlamaCPP",
+					url = "http://192.168.1.124:8033",
+					-- url = "http://127.0.0.1:8080",
+				}),
+			},
 			model = "tinyllama",
 			host = "127.0.0.1",
 			port = "11434",

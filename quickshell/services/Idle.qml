@@ -7,7 +7,7 @@ Singleton {
     id: root
 
     property bool locked: false
-    property int timeoutSeconds: 100 // 5 mins
+    property int timeoutSeconds: 300 // 5 mins
 
     function lock() {
         console.log("[Idle] Locking screen");

@@ -94,11 +94,18 @@ WlSessionLock {
             }
 
             Process {
+                // Push to the internal buffer, not the bound property
+
                 id: scanProcess
+
+                // Internal buffer to store paths without triggering QML updates
+                property var _buffer: []
 
                 running: true
                 command: ["find", "-L", lockSurface.wallpaperSearchPath, "-maxdepth", "1", "-type", "f"]
                 onExited: {
+                    // Bulk assignment: Update the UI property only once!
+                    lockSurface.collectedPaths = scanProcess._buffer;
                     console.log("[LockScreen] Scanned: " + lockSurface.wallpaperSearchPath);
                     if (lockSurface.collectedPaths.length > 0) {
                         var randomIndex = Math.floor(Math.random() * lockSurface.collectedPaths.length);
@@ -107,16 +114,16 @@ WlSessionLock {
                     } else {
                         console.log("[LockScreen] No images found. Screen will be black.");
                     }
+                    // Clear buffer to free memory
+                    scanProcess._buffer = [];
                 }
 
                 stdout: SplitParser {
                     onRead: (data) => {
                         var file = data.trim();
-                        if (file.match(/\.(jpg|jpeg|png|webp|bmp|svg)$/i)) {
-                            var temp = lockSurface.collectedPaths;
-                            temp.push(file);
-                            lockSurface.collectedPaths = temp;
-                        }
+                        if (file.match(/\.(jpg|jpeg|png|webp|bmp|svg)$/i))
+                            scanProcess._buffer.push(file);
+
                     }
                 }
 
@@ -176,7 +183,7 @@ WlSessionLock {
                     source: bgImage
                     visible: bgImage.status === Image.Ready
                     blurEnabled: true
-                    blurMax: 64
+                    blurMax: 20
                     blur: 1
                     saturation: 0
                 }
@@ -215,7 +222,13 @@ WlSessionLock {
                     interval: 1000
                     running: true
                     repeat: true
-                    onTriggered: clock.time = new Date()
+                    onTriggered: {
+                        var now = new Date();
+                        // Only update the QML property if the minute has actually changed
+                        if (now.getMinutes() !== clock.time.getMinutes() || now.getHours() !== clock.time.getHours())
+                            clock.time = now;
+
+                    }
                 }
 
             }
