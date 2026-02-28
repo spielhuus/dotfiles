@@ -5,7 +5,7 @@ local function find_project_root(path)
 	local token = vim.fn.fnamemodify(path, ":t")
 	path = vim.fn.fnamemodify(path, ":h")
 	while true do
-		if path == "/" then
+		if path == "/" or path == "." then
 			table.insert(results, 1, { type = "dir", name = "/" .. token })
 			return results
 		end
@@ -16,10 +16,10 @@ local function find_project_root(path)
 			table.insert(results, 1, { type = "dir", name = token })
 		elseif path == "health:" then
 			table.insert(results, 1, { type = "dir", name = "health" })
-      return results
+			return results
 		else
 			table.insert(results, 1, { type = "dir", name = path })
-      return results
+			return results
 			-- error("unknown type: '" .. path .. "'")
 		end
 		token = vim.fn.fnamemodify(path, ":t")
