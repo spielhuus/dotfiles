@@ -106,6 +106,9 @@ Singleton {
             "pattern": /^(.*)\s-\sMozilla Thunderbird$/,
             "replacement": "<font color='#FF9900'></font>&nbsp;&nbsp;$1"
         }, {
+            "pattern": /^(.*)\s—\sZen Browser$/,
+            "replacement": "<img src='/usr/share/icons/hicolor/16x16/apps/zen-browser.png'>&nbsp;&nbsp;$1"
+        }, {
             "pattern": /^Newsflash$/,
             "replacement": "📰&nbsp;Newsflash"
         }, {
