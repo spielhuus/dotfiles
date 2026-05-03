@@ -9,6 +9,8 @@
 /home/etienne/.dotfiles/quickshell/extensions/build/CMakeFiles/all_qmllint.dir
 /home/etienne/.dotfiles/quickshell/extensions/build/CMakeFiles/all_qmllint_json.dir
 /home/etienne/.dotfiles/quickshell/extensions/build/CMakeFiles/all_qmllint_module.dir
+/home/etienne/.dotfiles/quickshell/extensions/build/CMakeFiles/dump_qml_context_properties.dir
+/home/etienne/.dotfiles/quickshell/extensions/build/CMakeFiles/clean_qml_context_properties.dir
 /home/etienne/.dotfiles/quickshell/extensions/build/CMakeFiles/QSExtensions_copy_qml.dir
 /home/etienne/.dotfiles/quickshell/extensions/build/CMakeFiles/QSExtensions_copy_res.dir
 /home/etienne/.dotfiles/quickshell/extensions/build/CMakeFiles/generate_qmlls_build_ini_file.dir

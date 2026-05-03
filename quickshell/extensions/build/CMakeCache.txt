@@ -28,7 +28,7 @@ CMAKE_BUILD_TYPE:STRING=
 CMAKE_COLOR_MAKEFILE:BOOL=ON
 
 //CXX compiler
-CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/c++
+CMAKE_CXX_COMPILER:STRING=/usr/bin/c++
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -54,7 +54,7 @@ CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
 //C compiler
-CMAKE_C_COMPILER:FILEPATH=/usr/bin/cc
+CMAKE_C_COMPILER:STRING=/usr/bin/cc
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -455,7 +455,7 @@ CMAKE_CACHEFILE_DIR:INTERNAL=/home/etienne/.dotfiles/quickshell/extensions/build
 //Major version of cmake used to create the current loaded cache
 CMAKE_CACHE_MAJOR_VERSION:INTERNAL=4
 //Minor version of cmake used to create the current loaded cache
-CMAKE_CACHE_MINOR_VERSION:INTERNAL=2
+CMAKE_CACHE_MINOR_VERSION:INTERNAL=3
 //Patch version of cmake used to create the current loaded cache
 CMAKE_CACHE_PATCH_VERSION:INTERNAL=1
 //ADVANCED property for variable: CMAKE_COLOR_MAKEFILE
@@ -767,6 +767,8 @@ QT_FEATURE_arm_crc32:INTERNAL=OFF
 QT_FEATURE_arm_crypto:INTERNAL=OFF
 //Qt feature: arm_sve (from target Qt6::Core)
 QT_FEATURE_arm_sve:INTERNAL=OFF
+//Qt feature: async_io (from target Qt6::Core)
+QT_FEATURE_async_io:INTERNAL=ON
 //Qt feature: avx (from target Qt6::Core)
 QT_FEATURE_avx:INTERNAL=ON
 //Qt feature: avx2 (from target Qt6::Core)
@@ -1065,6 +1067,8 @@ QT_FEATURE_libresolv:INTERNAL=ON
 QT_FEATURE_libstdcpp_assertions:INTERNAL=ON
 //Qt feature: libudev (from target Qt6::Core)
 QT_FEATURE_libudev:INTERNAL=ON
+//Qt feature: liburing (from target Qt6::Core)
+QT_FEATURE_liburing:INTERNAL=ON
 //Qt feature: linkat (from target Qt6::Core)
 QT_FEATURE_linkat:INTERNAL=ON
 //Qt feature: linux_netlink (from target Qt6::Network)
@@ -1201,6 +1205,8 @@ QT_FEATURE_qml_delegate_model:INTERNAL=ON
 QT_FEATURE_qml_itemmodel:INTERNAL=ON
 //Qt feature: qml_jit (from target Qt6::Qml)
 QT_FEATURE_qml_jit:INTERNAL=ON
+//Qt feature: qml_labs (from target Qt6::Qml)
+QT_FEATURE_qml_labs:INTERNAL=ON
 //Qt feature: qml_list_model (from target Qt6::QmlModels)
 QT_FEATURE_qml_list_model:INTERNAL=ON
 //Qt feature: qml_locale (from target Qt6::Qml)
@@ -1231,6 +1237,8 @@ QT_FEATURE_qml_worker_script:INTERNAL=ON
 QT_FEATURE_qml_xml_http_request:INTERNAL=ON
 //Qt feature: qml_xmllistmodel (from target Qt6::Qml)
 QT_FEATURE_qml_xmllistmodel:INTERNAL=ON
+//Qt feature: qmlcontextpropertydump (from target Qt6::Qml)
+QT_FEATURE_qmlcontextpropertydump:INTERNAL=ON
 //Qt feature: qqnx_imf (from target Qt6::Gui)
 QT_FEATURE_qqnx_imf:INTERNAL=OFF
 //Qt feature: qqnx_pps (from target Qt6::Core)
@@ -1243,6 +1251,8 @@ QT_FEATURE_quick_animatedimage:INTERNAL=ON
 QT_FEATURE_quick_canvas:INTERNAL=ON
 //Qt feature: quick_designer (from target Qt6::Quick)
 QT_FEATURE_quick_designer:INTERNAL=ON
+//Qt feature: quick_dialogs (from target Qt6::Quick)
+QT_FEATURE_quick_dialogs:INTERNAL=ON
 //Qt feature: quick_draganddrop (from target Qt6::Quick)
 QT_FEATURE_quick_draganddrop:INTERNAL=ON
 //Qt feature: quick_flipable (from target Qt6::Quick)
@@ -1274,6 +1284,8 @@ QT_FEATURE_quick_sprite:INTERNAL=ON
 QT_FEATURE_quick_tableview:INTERNAL=ON
 //Qt feature: quick_treeview (from target Qt6::Quick)
 QT_FEATURE_quick_treeview:INTERNAL=ON
+//Qt feature: quick_vectorimage (from target Qt6::Quick)
+QT_FEATURE_quick_vectorimage:INTERNAL=ON
 //Qt feature: quick_viewtransitions (from target Qt6::Quick)
 QT_FEATURE_quick_viewtransitions:INTERNAL=ON
 //Qt feature: raster_64bit (from target Qt6::Gui)
@@ -1402,6 +1414,8 @@ QT_FEATURE_tabletevent:INTERNAL=ON
 QT_FEATURE_temporaryfile:INTERNAL=ON
 //Qt feature: test_gui (from target Qt6::Core)
 QT_FEATURE_test_gui:INTERNAL=ON
+//Qt feature: test_squish (from target Qt6::Core)
+QT_FEATURE_test_squish:INTERNAL=ON
 //Qt feature: testlib (from target Qt6::Core)
 QT_FEATURE_testlib:INTERNAL=ON
 //Qt feature: textdate (from target Qt6::Core)
@@ -1518,6 +1532,11 @@ QT_FEATURE_whatsthis:INTERNAL=ON
 QT_FEATURE_wheelevent:INTERNAL=ON
 //Qt feature: widgets (from target Qt6::Core)
 QT_FEATURE_widgets:INTERNAL=ON
+//Qt feature: windows_ioring (from target Qt6::Core)
+QT_FEATURE_windows_ioring:INTERNAL=OFF
+//Qt feature: windows_ioring_skip_builder_param_checks (from target
+// Qt6::Core)
+QT_FEATURE_windows_ioring_skip_builder_param_checks:INTERNAL=OFF
 //Qt feature: winsdkicu (from target Qt6::Core)
 QT_FEATURE_winsdkicu:INTERNAL=OFF
 //Qt feature: x86intrin (from target Qt6::Core)

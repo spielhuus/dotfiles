@@ -256,6 +256,7 @@
  mdp:/usr/include/qt6/QtCore/QUrl
  mdp:/usr/include/qt6/QtCore/q17memory.h
  mdp:/usr/include/qt6/QtCore/q20algorithm.h
+ mdp:/usr/include/qt6/QtCore/q20bit.h
  mdp:/usr/include/qt6/QtCore/q20functional.h
  mdp:/usr/include/qt6/QtCore/q20memory.h
  mdp:/usr/include/qt6/QtCore/q20type_traits.h

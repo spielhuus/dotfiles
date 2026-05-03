@@ -221,7 +221,8 @@ CMakeFiles/QSExtensionsplugin.dir/QSExtensionsplugin_extensions_buildPlugin.cpp.
  /usr/include/qt6/QtCore/qarraydatapointer.h \
  /usr/include/qt6/QtCore/qarraydataops.h \
  /usr/include/qt6/QtCore/qcontainertools_impl.h \
- /usr/include/qt6/QtCore/qxptype_traits.h /usr/include/c++/15.2.1/cstring \
+ /usr/include/qt6/QtCore/qxptype_traits.h \
+ /usr/include/qt6/QtCore/q23type_traits.h /usr/include/c++/15.2.1/cstring \
  /usr/include/c++/15.2.1/iterator \
  /usr/include/c++/15.2.1/bits/stream_iterator.h \
  /usr/include/c++/15.2.1/bits/streambuf_iterator.h \
@@ -266,7 +267,6 @@ CMakeFiles/QSExtensionsplugin.dir/QSExtensionsplugin_extensions_buildPlugin.cpp.
  /usr/include/qt6/QtCore/qanystringview.h \
  /usr/include/qt6/QtCore/qutf8stringview.h \
  /usr/include/qt6/QtCore/qstringtokenizer.h \
- /usr/include/qt6/QtCore/q23type_traits.h \
  /usr/include/qt6/QtCore/qstringbuilder.h \
  /usr/include/qt6/QtCore/qstringconverter.h \
  /usr/include/qt6/QtCore/qstringconverter_base.h \
@@ -277,7 +277,7 @@ CMakeFiles/QSExtensionsplugin.dir/QSExtensionsplugin_extensions_buildPlugin.cpp.
  /usr/include/qt6/QtCore/qiterator.h \
  /usr/include/qt6/QtCore/qbytearraylist.h \
  /usr/include/qt6/QtCore/qstringlist.h \
- /usr/include/qt6/QtCore/qalgorithms.h \
+ /usr/include/qt6/QtCore/qalgorithms.h /usr/include/qt6/QtCore/q20bit.h \
  /usr/include/qt6/QtCore/qstringmatcher.h \
  /usr/include/qt6/QtCore/qscopedpointer.h \
  /usr/include/qt6/QtCore/qmetatype.h \
@@ -333,7 +333,6 @@ CMakeFiles/QSExtensionsplugin.dir/QSExtensionsplugin_extensions_buildPlugin.cpp.
  /usr/include/qt6/QtCore/qjsondocument.h \
  /usr/include/qt6/QtCore/qjsonparseerror.h \
  /usr/include/qt6/QtCore/q20algorithm.h /usr/include/qt6/QtCore/QUrl \
- /usr/include/qt6/QtCore/qurl.h \
  /usr/include/qt6/QtQml/qqmlextensioninterface.h \
  /usr/include/qt6/QtQml/qtqmlglobal.h \
  /usr/include/qt6/QtQml/qtqml-config.h \

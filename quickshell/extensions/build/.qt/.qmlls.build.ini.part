@@ -1,0 +1,3 @@
+[<SLASH>home<SLASH>etienne<SLASH>.dotfiles<SLASH>quickshell<SLASH>extensions]
+importPaths="/home/etienne/.dotfiles/quickshell:/home/etienne/.dotfiles/quickshell/extensions/build:/usr/lib/qt6/qml"
+resourceFiles="/home/etienne/.dotfiles/quickshell/extensions/build/.qt/rcc/qmake_extensions_build.qrc"

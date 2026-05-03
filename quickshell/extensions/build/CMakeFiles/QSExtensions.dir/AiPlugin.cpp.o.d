@@ -221,7 +221,8 @@ CMakeFiles/QSExtensions.dir/AiPlugin.cpp.o: \
  /usr/include/qt6/QtCore/qarraydatapointer.h \
  /usr/include/qt6/QtCore/qarraydataops.h \
  /usr/include/qt6/QtCore/qcontainertools_impl.h \
- /usr/include/qt6/QtCore/qxptype_traits.h /usr/include/c++/15.2.1/cstring \
+ /usr/include/qt6/QtCore/qxptype_traits.h \
+ /usr/include/qt6/QtCore/q23type_traits.h /usr/include/c++/15.2.1/cstring \
  /usr/include/c++/15.2.1/iterator \
  /usr/include/c++/15.2.1/bits/stream_iterator.h \
  /usr/include/c++/15.2.1/bits/streambuf_iterator.h \
@@ -266,7 +267,6 @@ CMakeFiles/QSExtensions.dir/AiPlugin.cpp.o: \
  /usr/include/qt6/QtCore/qanystringview.h \
  /usr/include/qt6/QtCore/qutf8stringview.h \
  /usr/include/qt6/QtCore/qstringtokenizer.h \
- /usr/include/qt6/QtCore/q23type_traits.h \
  /usr/include/qt6/QtCore/qstringbuilder.h \
  /usr/include/qt6/QtCore/qstringconverter.h \
  /usr/include/qt6/QtCore/qstringconverter_base.h \
@@ -277,7 +277,7 @@ CMakeFiles/QSExtensions.dir/AiPlugin.cpp.o: \
  /usr/include/qt6/QtCore/qiterator.h \
  /usr/include/qt6/QtCore/qbytearraylist.h \
  /usr/include/qt6/QtCore/qstringlist.h \
- /usr/include/qt6/QtCore/qalgorithms.h \
+ /usr/include/qt6/QtCore/qalgorithms.h /usr/include/qt6/QtCore/q20bit.h \
  /usr/include/qt6/QtCore/qstringmatcher.h \
  /usr/include/qt6/QtCore/qscopedpointer.h \
  /usr/include/qt6/QtCore/qmetatype.h \
@@ -300,8 +300,7 @@ CMakeFiles/QSExtensions.dir/AiPlugin.cpp.o: \
  /usr/include/c++/15.2.1/bits/chrono.h /usr/include/c++/15.2.1/ratio \
  /usr/include/c++/15.2.1/ctime /usr/include/qt6/QtQml/QQmlEngine \
  /usr/include/qt6/QtQml/qqmlengine.h /usr/include/qt6/QtCore/qurl.h \
- /usr/include/qt6/QtCore/qobject.h /usr/include/qt6/QtCore/qmap.h \
- /usr/include/qt6/QtCore/qshareddata.h \
+ /usr/include/qt6/QtCore/qmap.h /usr/include/qt6/QtCore/qshareddata.h \
  /usr/include/qt6/QtCore/qshareddata_impl.h \
  /usr/include/qt6/QtQml/qjsengine.h /usr/include/qt6/QtCore/qvariant.h \
  /usr/include/qt6/QtCore/qdebug.h /usr/include/qt6/QtCore/qtextstream.h \
@@ -337,6 +336,8 @@ CMakeFiles/QSExtensions.dir/AiPlugin.cpp.o: \
  /usr/include/qt6/QtQml/qqmlprivate.h /usr/include/qt6/QtQml/qqmllist.h \
  /usr/include/qt6/QtQml/qqmlparserstatus.h \
  /usr/include/qt6/QtQml/qqmlpropertyvaluesource.h \
+ /usr/include/qt6/QtCore/qmetasequence.h \
+ /usr/include/qt6/QtCore/qiterable_impl.h \
  /usr/include/qt6/QtCore/qmetaobject.h /usr/include/qt6/QtCore/qpointer.h \
  /usr/include/qt6/QtCore/qversionnumber.h /usr/include/qt6/QtCore/qspan.h \
  /usr/include/c++/15.2.1/cassert /usr/include/qt6/QtCore/q20iterator.h \
@@ -347,17 +348,13 @@ CMakeFiles/QSExtensions.dir/AiPlugin.cpp.o: \
  /usr/include/qt6/QtQml/qqmlabstracturlinterceptor.h \
  /usr/include/qt6/QtCore/QVariantMap \
  /usr/include/qt6/QtCore/qvariantmap.h /usr/include/qt6/QtCore/QMap \
- /usr/include/qt6/QtCore/qmap.h /usr/include/qt6/QtCore/QVariant \
- /usr/include/qt6/QtCore/qvariant.h /usr/include/qt6/QtCore/QString \
- /usr/include/qt6/QtCore/qstring.h \
+ /usr/include/qt6/QtCore/QVariant /usr/include/qt6/QtCore/QString \
  /usr/include/qt6/QtNetwork/QNetworkAccessManager \
  /usr/include/qt6/QtNetwork/qnetworkaccessmanager.h \
  /usr/include/qt6/QtNetwork/qnetworkrequest.h \
  /usr/include/qt6/QtNetwork/qhttpheaders.h \
- /usr/include/qt6/QtCore/QSharedDataPointer \
- /usr/include/qt6/QtCore/qshareddata.h /usr/include/qt6/QtCore/QUrl \
- /usr/include/qt6/QtCore/qurl.h /usr/include/qt6/QtCore/q26numeric.h \
- /usr/include/qt6/QtCore/QList /usr/include/qt6/QtCore/qlist.h \
+ /usr/include/qt6/QtCore/QSharedDataPointer /usr/include/qt6/QtCore/QUrl \
+ /usr/include/qt6/QtCore/q26numeric.h /usr/include/qt6/QtCore/QList \
  /usr/include/qt6/QtCore/QObject \
  /usr/include/qt6/QtNetwork/QSslConfiguration \
  /usr/include/qt6/QtNetwork/qsslconfiguration.h \
@@ -370,15 +367,13 @@ CMakeFiles/QSExtensions.dir/AiPlugin.cpp.o: \
  /usr/include/qt6/QtNetwork/qsslcertificate.h \
  /usr/include/qt6/QtCore/qcryptographichash.h \
  /usr/include/qt6/QtNetwork/qssl.h /usr/include/qt6/QtCore/QFlags \
- /usr/include/qt6/QtCore/qflags.h \
  /usr/include/qt6/QtNetwork/QSslPreSharedKeyAuthenticator \
  /usr/include/qt6/QtNetwork/qsslpresharedkeyauthenticator.h \
- /usr/include/qt6/QtCore/QMetaType /usr/include/qt6/QtCore/qmetatype.h \
+ /usr/include/qt6/QtCore/QMetaType \
  /usr/include/qt6/QtNetwork/QNetworkReply \
  /usr/include/qt6/QtNetwork/qnetworkreply.h \
- /usr/include/qt6/QtCore/QIODevice /usr/include/qt6/QtCore/qiodevice.h \
+ /usr/include/qt6/QtCore/QIODevice \
  /usr/include/qt6/QtNetwork/QNetworkRequest \
- /usr/include/qt6/QtNetwork/qnetworkrequest.h \
  /usr/include/qt6/QtNetwork/QNetworkAccessManager \
  /usr/include/c++/15.2.1/iostream /usr/include/c++/15.2.1/ostream \
  /usr/include/c++/15.2.1/bits/ostream.h /usr/include/c++/15.2.1/ios \
@@ -396,9 +391,9 @@ CMakeFiles/QSExtensions.dir/AiPlugin.cpp.o: \
  /usr/include/qt6/QtCore/qregularexpression.h \
  /usr/include/qt6/QtCore/QVariantList \
  /usr/include/qt6/QtCore/qvariantlist.h /usr/include/qt6/QtCore/QDebug \
- /usr/include/qt6/QtCore/qdebug.h /usr/include/qt6/QtCore/QFile \
- /usr/include/qt6/QtCore/qfile.h /usr/include/qt6/QtCore/qfiledevice.h \
- /usr/include/c++/15.2.1/filesystem /usr/include/c++/15.2.1/bits/fs_fwd.h \
+ /usr/include/qt6/QtCore/QFile /usr/include/qt6/QtCore/qfile.h \
+ /usr/include/qt6/QtCore/qfiledevice.h /usr/include/c++/15.2.1/filesystem \
+ /usr/include/c++/15.2.1/bits/fs_fwd.h \
  /usr/include/c++/15.2.1/bits/fs_path.h /usr/include/c++/15.2.1/locale \
  /usr/include/c++/15.2.1/bits/locale_facets_nonio.h \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/time_members.h \
@@ -411,19 +406,17 @@ CMakeFiles/QSExtensions.dir/AiPlugin.cpp.o: \
  /usr/include/c++/15.2.1/sstream /usr/include/c++/15.2.1/bits/sstream.tcc \
  /usr/include/c++/15.2.1/codecvt /usr/include/c++/15.2.1/bits/fs_dir.h \
  /usr/include/c++/15.2.1/bits/fs_ops.h /usr/include/qt6/QtCore/QFileInfo \
- /usr/include/qt6/QtCore/qfileinfo.h /usr/include/qt6/QtCore/qfile.h \
- /usr/include/qt6/QtCore/QDir /usr/include/qt6/QtCore/qdir.h \
- /usr/include/qt6/QtCore/qdirlisting.h \
- /usr/include/qt6/QtCore/qfileinfo.h /usr/include/qt6/QtCore/QTextStream \
- /usr/include/qt6/QtCore/qtextstream.h /usr/include/yaml-cpp/yaml.h \
+ /usr/include/qt6/QtCore/qfileinfo.h /usr/include/qt6/QtCore/QDir \
+ /usr/include/qt6/QtCore/qdir.h /usr/include/qt6/QtCore/qdirlisting.h \
+ /usr/include/qt6/QtCore/QTextStream /usr/include/yaml-cpp/yaml.h \
  /usr/include/yaml-cpp/parser.h /usr/include/yaml-cpp/dll.h \
  /usr/include/yaml-cpp/emitter.h /usr/include/yaml-cpp/binary.h \
  /usr/include/yaml-cpp/emitterdef.h /usr/include/yaml-cpp/emittermanip.h \
  /usr/include/yaml-cpp/null.h /usr/include/yaml-cpp/ostream_wrapper.h \
- /usr/include/yaml-cpp/emitterstyle.h /usr/include/yaml-cpp/stlemitter.h \
- /usr/include/yaml-cpp/exceptions.h /usr/include/yaml-cpp/mark.h \
- /usr/include/yaml-cpp/noexcept.h /usr/include/yaml-cpp/traits.h \
- /usr/include/yaml-cpp/node/node.h \
+ /usr/include/yaml-cpp/fptostring.h /usr/include/yaml-cpp/emitterstyle.h \
+ /usr/include/yaml-cpp/stlemitter.h /usr/include/yaml-cpp/exceptions.h \
+ /usr/include/yaml-cpp/mark.h /usr/include/yaml-cpp/noexcept.h \
+ /usr/include/yaml-cpp/traits.h /usr/include/yaml-cpp/node/node.h \
  /usr/include/yaml-cpp/node/detail/iterator_fwd.h \
  /usr/include/yaml-cpp/node/ptr.h /usr/include/yaml-cpp/node/type.h \
  /usr/include/yaml-cpp/node/impl.h \
@@ -453,9 +446,7 @@ CMakeFiles/QSExtensions.dir/AiPlugin.cpp.o: \
  /usr/include/qt6/QtCore/qjsonobject.h \
  /usr/include/qt6/QtCore/qjsonvalue.h \
  /usr/include/qt6/QtCore/qcborvalue.h \
- /usr/include/qt6/QtCore/qcborcommon.h \
- /usr/include/qt6/QtCore/qregularexpression.h \
- /usr/include/qt6/QtCore/quuid.h /usr/include/qt6/QtCore/qendian.h \
- /usr/include/qt6/QtCore/qjsondocument.h \
- /usr/include/qt6/QtCore/QJsonArray /usr/include/qt6/QtCore/qjsonarray.h \
+ /usr/include/qt6/QtCore/qcborcommon.h /usr/include/qt6/QtCore/quuid.h \
+ /usr/include/qt6/QtCore/qendian.h /usr/include/qt6/QtCore/QJsonArray \
+ /usr/include/qt6/QtCore/qjsonarray.h \
  /usr/include/qt6/QtNetwork/QNetworkRequest

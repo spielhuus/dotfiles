@@ -97,6 +97,9 @@ Singleton {
             "pattern": /^lua\s+(.*)/,
             "replacement": "<font color='#0000ff'></font>&nbsp;&nbsp;$1"
         }, {
+            "pattern": /^rust\s+(.*)/,
+            "replacement": "<font color='#CE422B'></font>&nbsp;&nbsp;$1"
+        }, {
             "pattern": /^python\s+(.*)/,
             "replacement": "<font color='#ffc107'>󰌠</font>&nbsp;&nbsp;$1"
         }, {
