@@ -11,7 +11,6 @@ BarBlock {
     }
 
     content: BarText {
-        symbolText: `󰌌 ${KeyboardLayoutService.currentLayout.toUpperCase()}`
+        symbolText: "󰌌 " + (KeyboardLayoutService.currentLayout ? KeyboardLayoutService.currentLayout.toUpperCase() : "US")
     }
-
 }

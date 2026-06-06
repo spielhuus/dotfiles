@@ -8,9 +8,9 @@ QSExtensions_autogen/timestamp: /home/etienne/.dotfiles/quickshell/extensions/Ai
   /home/etienne/.dotfiles/quickshell/extensions/PamAuth.h \
   /home/etienne/.dotfiles/quickshell/extensions/WaylandPower.cpp \
   /home/etienne/.dotfiles/quickshell/extensions/WaylandPower.h \
-  CMakeFiles/4.3.1/CMakeCCompiler.cmake \
-  CMakeFiles/4.3.1/CMakeCXXCompiler.cmake \
-  CMakeFiles/4.3.1/CMakeSystem.cmake \
+  CMakeFiles/4.3.3/CMakeCCompiler.cmake \
+  CMakeFiles/4.3.3/CMakeCXXCompiler.cmake \
+  CMakeFiles/4.3.3/CMakeSystem.cmake \
   QSExtensions_autogen/moc_predefs.h \
   QSExtensionsplugin_extensions_buildPlugin_in.cpp \
   wlr-output-power-management-unstable-v1-client-protocol.h \
@@ -104,177 +104,182 @@ QSExtensions_autogen/timestamp: /home/etienne/.dotfiles/quickshell/extensions/Ai
   /usr/include/bits/wchar.h \
   /usr/include/bits/wordsize.h \
   /usr/include/bits/xopen_lim.h \
-  /usr/include/c++/15.2.1/algorithm \
-  /usr/include/c++/15.2.1/array \
-  /usr/include/c++/15.2.1/atomic \
-  /usr/include/c++/15.2.1/backward/auto_ptr.h \
-  /usr/include/c++/15.2.1/backward/binders.h \
-  /usr/include/c++/15.2.1/bit \
-  /usr/include/c++/15.2.1/bits/algorithmfwd.h \
-  /usr/include/c++/15.2.1/bits/align.h \
-  /usr/include/c++/15.2.1/bits/alloc_traits.h \
-  /usr/include/c++/15.2.1/bits/allocated_ptr.h \
-  /usr/include/c++/15.2.1/bits/allocator.h \
-  /usr/include/c++/15.2.1/bits/atomic_base.h \
-  /usr/include/c++/15.2.1/bits/atomic_lockfree_defines.h \
-  /usr/include/c++/15.2.1/bits/basic_string.h \
-  /usr/include/c++/15.2.1/bits/basic_string.tcc \
-  /usr/include/c++/15.2.1/bits/char_traits.h \
-  /usr/include/c++/15.2.1/bits/charconv.h \
-  /usr/include/c++/15.2.1/bits/chrono.h \
-  /usr/include/c++/15.2.1/bits/concept_check.h \
-  /usr/include/c++/15.2.1/bits/cpp_type_traits.h \
-  /usr/include/c++/15.2.1/bits/cxxabi_forced.h \
-  /usr/include/c++/15.2.1/bits/cxxabi_init_exception.h \
-  /usr/include/c++/15.2.1/bits/enable_special_members.h \
-  /usr/include/c++/15.2.1/bits/erase_if.h \
-  /usr/include/c++/15.2.1/bits/exception.h \
-  /usr/include/c++/15.2.1/bits/exception_defines.h \
-  /usr/include/c++/15.2.1/bits/exception_ptr.h \
-  /usr/include/c++/15.2.1/bits/functexcept.h \
-  /usr/include/c++/15.2.1/bits/functional_hash.h \
-  /usr/include/c++/15.2.1/bits/hash_bytes.h \
-  /usr/include/c++/15.2.1/bits/hashtable.h \
-  /usr/include/c++/15.2.1/bits/hashtable_policy.h \
-  /usr/include/c++/15.2.1/bits/invoke.h \
-  /usr/include/c++/15.2.1/bits/ios_base.h \
-  /usr/include/c++/15.2.1/bits/list.tcc \
-  /usr/include/c++/15.2.1/bits/locale_classes.h \
-  /usr/include/c++/15.2.1/bits/locale_classes.tcc \
-  /usr/include/c++/15.2.1/bits/localefwd.h \
-  /usr/include/c++/15.2.1/bits/memory_resource.h \
-  /usr/include/c++/15.2.1/bits/memoryfwd.h \
-  /usr/include/c++/15.2.1/bits/move.h \
-  /usr/include/c++/15.2.1/bits/nested_exception.h \
-  /usr/include/c++/15.2.1/bits/new_allocator.h \
-  /usr/include/c++/15.2.1/bits/node_handle.h \
-  /usr/include/c++/15.2.1/bits/ostream_insert.h \
-  /usr/include/c++/15.2.1/bits/parse_numbers.h \
-  /usr/include/c++/15.2.1/bits/postypes.h \
-  /usr/include/c++/15.2.1/bits/predefined_ops.h \
-  /usr/include/c++/15.2.1/bits/ptr_traits.h \
-  /usr/include/c++/15.2.1/bits/range_access.h \
-  /usr/include/c++/15.2.1/bits/refwrap.h \
-  /usr/include/c++/15.2.1/bits/requires_hosted.h \
-  /usr/include/c++/15.2.1/bits/shared_ptr.h \
-  /usr/include/c++/15.2.1/bits/shared_ptr_atomic.h \
-  /usr/include/c++/15.2.1/bits/shared_ptr_base.h \
-  /usr/include/c++/15.2.1/bits/specfun.h \
-  /usr/include/c++/15.2.1/bits/std_abs.h \
-  /usr/include/c++/15.2.1/bits/std_function.h \
-  /usr/include/c++/15.2.1/bits/stl_algo.h \
-  /usr/include/c++/15.2.1/bits/stl_algobase.h \
-  /usr/include/c++/15.2.1/bits/stl_bvector.h \
-  /usr/include/c++/15.2.1/bits/stl_construct.h \
-  /usr/include/c++/15.2.1/bits/stl_function.h \
-  /usr/include/c++/15.2.1/bits/stl_heap.h \
-  /usr/include/c++/15.2.1/bits/stl_iterator.h \
-  /usr/include/c++/15.2.1/bits/stl_iterator_base_funcs.h \
-  /usr/include/c++/15.2.1/bits/stl_iterator_base_types.h \
-  /usr/include/c++/15.2.1/bits/stl_list.h \
-  /usr/include/c++/15.2.1/bits/stl_map.h \
-  /usr/include/c++/15.2.1/bits/stl_multimap.h \
-  /usr/include/c++/15.2.1/bits/stl_multiset.h \
-  /usr/include/c++/15.2.1/bits/stl_numeric.h \
-  /usr/include/c++/15.2.1/bits/stl_pair.h \
-  /usr/include/c++/15.2.1/bits/stl_raw_storage_iter.h \
-  /usr/include/c++/15.2.1/bits/stl_relops.h \
-  /usr/include/c++/15.2.1/bits/stl_set.h \
-  /usr/include/c++/15.2.1/bits/stl_tempbuf.h \
-  /usr/include/c++/15.2.1/bits/stl_tree.h \
-  /usr/include/c++/15.2.1/bits/stl_uninitialized.h \
-  /usr/include/c++/15.2.1/bits/stl_vector.h \
-  /usr/include/c++/15.2.1/bits/stream_iterator.h \
-  /usr/include/c++/15.2.1/bits/streambuf.tcc \
-  /usr/include/c++/15.2.1/bits/streambuf_iterator.h \
-  /usr/include/c++/15.2.1/bits/string_view.tcc \
-  /usr/include/c++/15.2.1/bits/stringfwd.h \
-  /usr/include/c++/15.2.1/bits/uniform_int_dist.h \
-  /usr/include/c++/15.2.1/bits/unique_ptr.h \
-  /usr/include/c++/15.2.1/bits/unordered_map.h \
-  /usr/include/c++/15.2.1/bits/unordered_set.h \
-  /usr/include/c++/15.2.1/bits/uses_allocator.h \
-  /usr/include/c++/15.2.1/bits/uses_allocator_args.h \
-  /usr/include/c++/15.2.1/bits/utility.h \
-  /usr/include/c++/15.2.1/bits/vector.tcc \
-  /usr/include/c++/15.2.1/bits/version.h \
-  /usr/include/c++/15.2.1/cassert \
-  /usr/include/c++/15.2.1/cctype \
-  /usr/include/c++/15.2.1/cerrno \
-  /usr/include/c++/15.2.1/chrono \
-  /usr/include/c++/15.2.1/climits \
-  /usr/include/c++/15.2.1/clocale \
-  /usr/include/c++/15.2.1/cmath \
-  /usr/include/c++/15.2.1/compare \
-  /usr/include/c++/15.2.1/concepts \
-  /usr/include/c++/15.2.1/cstddef \
-  /usr/include/c++/15.2.1/cstdint \
-  /usr/include/c++/15.2.1/cstdio \
-  /usr/include/c++/15.2.1/cstdlib \
-  /usr/include/c++/15.2.1/cstring \
-  /usr/include/c++/15.2.1/ctime \
-  /usr/include/c++/15.2.1/cwchar \
-  /usr/include/c++/15.2.1/debug/assertions.h \
-  /usr/include/c++/15.2.1/debug/debug.h \
-  /usr/include/c++/15.2.1/exception \
-  /usr/include/c++/15.2.1/ext/aligned_buffer.h \
-  /usr/include/c++/15.2.1/ext/alloc_traits.h \
-  /usr/include/c++/15.2.1/ext/atomicity.h \
-  /usr/include/c++/15.2.1/ext/concurrence.h \
-  /usr/include/c++/15.2.1/ext/numeric_traits.h \
-  /usr/include/c++/15.2.1/ext/string_conversions.h \
-  /usr/include/c++/15.2.1/ext/type_traits.h \
-  /usr/include/c++/15.2.1/functional \
-  /usr/include/c++/15.2.1/initializer_list \
-  /usr/include/c++/15.2.1/iosfwd \
-  /usr/include/c++/15.2.1/iterator \
-  /usr/include/c++/15.2.1/limits \
-  /usr/include/c++/15.2.1/list \
-  /usr/include/c++/15.2.1/map \
-  /usr/include/c++/15.2.1/memory \
-  /usr/include/c++/15.2.1/new \
-  /usr/include/c++/15.2.1/numeric \
-  /usr/include/c++/15.2.1/optional \
-  /usr/include/c++/15.2.1/pstl/execution_defs.h \
-  /usr/include/c++/15.2.1/pstl/glue_numeric_defs.h \
-  /usr/include/c++/15.2.1/pstl/pstl_config.h \
-  /usr/include/c++/15.2.1/ratio \
-  /usr/include/c++/15.2.1/set \
-  /usr/include/c++/15.2.1/stdexcept \
-  /usr/include/c++/15.2.1/streambuf \
-  /usr/include/c++/15.2.1/string \
-  /usr/include/c++/15.2.1/string_view \
-  /usr/include/c++/15.2.1/system_error \
-  /usr/include/c++/15.2.1/tr1/bessel_function.tcc \
-  /usr/include/c++/15.2.1/tr1/beta_function.tcc \
-  /usr/include/c++/15.2.1/tr1/ell_integral.tcc \
-  /usr/include/c++/15.2.1/tr1/exp_integral.tcc \
-  /usr/include/c++/15.2.1/tr1/gamma.tcc \
-  /usr/include/c++/15.2.1/tr1/hypergeometric.tcc \
-  /usr/include/c++/15.2.1/tr1/legendre_function.tcc \
-  /usr/include/c++/15.2.1/tr1/modified_bessel_func.tcc \
-  /usr/include/c++/15.2.1/tr1/poly_hermite.tcc \
-  /usr/include/c++/15.2.1/tr1/poly_laguerre.tcc \
-  /usr/include/c++/15.2.1/tr1/riemann_zeta.tcc \
-  /usr/include/c++/15.2.1/tr1/special_function_util.h \
-  /usr/include/c++/15.2.1/tuple \
-  /usr/include/c++/15.2.1/type_traits \
-  /usr/include/c++/15.2.1/typeinfo \
-  /usr/include/c++/15.2.1/unordered_map \
-  /usr/include/c++/15.2.1/unordered_set \
-  /usr/include/c++/15.2.1/utility \
-  /usr/include/c++/15.2.1/variant \
-  /usr/include/c++/15.2.1/vector \
-  /usr/include/c++/15.2.1/version \
-  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/atomic_word.h \
-  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++allocator.h \
-  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
-  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++locale.h \
-  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/cpu_defines.h \
-  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/error_constants.h \
-  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/gthr-default.h \
-  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/gthr.h \
-  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/os_defines.h \
+  /usr/include/c++/16.1.1/algorithm \
+  /usr/include/c++/16.1.1/array \
+  /usr/include/c++/16.1.1/atomic \
+  /usr/include/c++/16.1.1/backward/auto_ptr.h \
+  /usr/include/c++/16.1.1/backward/binders.h \
+  /usr/include/c++/16.1.1/bit \
+  /usr/include/c++/16.1.1/bits/algorithmfwd.h \
+  /usr/include/c++/16.1.1/bits/align.h \
+  /usr/include/c++/16.1.1/bits/alloc_traits.h \
+  /usr/include/c++/16.1.1/bits/allocated_ptr.h \
+  /usr/include/c++/16.1.1/bits/allocator.h \
+  /usr/include/c++/16.1.1/bits/atomic_base.h \
+  /usr/include/c++/16.1.1/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/16.1.1/bits/basic_string.h \
+  /usr/include/c++/16.1.1/bits/basic_string.tcc \
+  /usr/include/c++/16.1.1/bits/char_traits.h \
+  /usr/include/c++/16.1.1/bits/charconv.h \
+  /usr/include/c++/16.1.1/bits/chrono.h \
+  /usr/include/c++/16.1.1/bits/concept_check.h \
+  /usr/include/c++/16.1.1/bits/cpp_type_traits.h \
+  /usr/include/c++/16.1.1/bits/cxxabi_forced.h \
+  /usr/include/c++/16.1.1/bits/cxxabi_init_exception.h \
+  /usr/include/c++/16.1.1/bits/enable_special_members.h \
+  /usr/include/c++/16.1.1/bits/erase_if.h \
+  /usr/include/c++/16.1.1/bits/exception.h \
+  /usr/include/c++/16.1.1/bits/exception_defines.h \
+  /usr/include/c++/16.1.1/bits/exception_ptr.h \
+  /usr/include/c++/16.1.1/bits/functexcept.h \
+  /usr/include/c++/16.1.1/bits/functional_hash.h \
+  /usr/include/c++/16.1.1/bits/hash_bytes.h \
+  /usr/include/c++/16.1.1/bits/hashtable.h \
+  /usr/include/c++/16.1.1/bits/hashtable_policy.h \
+  /usr/include/c++/16.1.1/bits/invoke.h \
+  /usr/include/c++/16.1.1/bits/ios_base.h \
+  /usr/include/c++/16.1.1/bits/list.tcc \
+  /usr/include/c++/16.1.1/bits/locale_classes.h \
+  /usr/include/c++/16.1.1/bits/locale_classes.tcc \
+  /usr/include/c++/16.1.1/bits/localefwd.h \
+  /usr/include/c++/16.1.1/bits/memory_resource.h \
+  /usr/include/c++/16.1.1/bits/memoryfwd.h \
+  /usr/include/c++/16.1.1/bits/move.h \
+  /usr/include/c++/16.1.1/bits/nested_exception.h \
+  /usr/include/c++/16.1.1/bits/new_allocator.h \
+  /usr/include/c++/16.1.1/bits/new_except.h \
+  /usr/include/c++/16.1.1/bits/new_throw.h \
+  /usr/include/c++/16.1.1/bits/node_handle.h \
+  /usr/include/c++/16.1.1/bits/ostream_insert.h \
+  /usr/include/c++/16.1.1/bits/parse_numbers.h \
+  /usr/include/c++/16.1.1/bits/postypes.h \
+  /usr/include/c++/16.1.1/bits/predefined_ops.h \
+  /usr/include/c++/16.1.1/bits/ptr_traits.h \
+  /usr/include/c++/16.1.1/bits/range_access.h \
+  /usr/include/c++/16.1.1/bits/refwrap.h \
+  /usr/include/c++/16.1.1/bits/requires_hosted.h \
+  /usr/include/c++/16.1.1/bits/shared_ptr.h \
+  /usr/include/c++/16.1.1/bits/shared_ptr_atomic.h \
+  /usr/include/c++/16.1.1/bits/shared_ptr_base.h \
+  /usr/include/c++/16.1.1/bits/specfun.h \
+  /usr/include/c++/16.1.1/bits/std_abs.h \
+  /usr/include/c++/16.1.1/bits/std_function.h \
+  /usr/include/c++/16.1.1/bits/stdexcept_except.h \
+  /usr/include/c++/16.1.1/bits/stdexcept_throw.h \
+  /usr/include/c++/16.1.1/bits/stdexcept_throwfwd.h \
+  /usr/include/c++/16.1.1/bits/stl_algo.h \
+  /usr/include/c++/16.1.1/bits/stl_algobase.h \
+  /usr/include/c++/16.1.1/bits/stl_bvector.h \
+  /usr/include/c++/16.1.1/bits/stl_construct.h \
+  /usr/include/c++/16.1.1/bits/stl_function.h \
+  /usr/include/c++/16.1.1/bits/stl_heap.h \
+  /usr/include/c++/16.1.1/bits/stl_iterator.h \
+  /usr/include/c++/16.1.1/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/16.1.1/bits/stl_iterator_base_types.h \
+  /usr/include/c++/16.1.1/bits/stl_list.h \
+  /usr/include/c++/16.1.1/bits/stl_map.h \
+  /usr/include/c++/16.1.1/bits/stl_multimap.h \
+  /usr/include/c++/16.1.1/bits/stl_multiset.h \
+  /usr/include/c++/16.1.1/bits/stl_numeric.h \
+  /usr/include/c++/16.1.1/bits/stl_pair.h \
+  /usr/include/c++/16.1.1/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/16.1.1/bits/stl_relops.h \
+  /usr/include/c++/16.1.1/bits/stl_set.h \
+  /usr/include/c++/16.1.1/bits/stl_tempbuf.h \
+  /usr/include/c++/16.1.1/bits/stl_tree.h \
+  /usr/include/c++/16.1.1/bits/stl_uninitialized.h \
+  /usr/include/c++/16.1.1/bits/stl_vector.h \
+  /usr/include/c++/16.1.1/bits/stream_iterator.h \
+  /usr/include/c++/16.1.1/bits/streambuf.tcc \
+  /usr/include/c++/16.1.1/bits/streambuf_iterator.h \
+  /usr/include/c++/16.1.1/bits/string_view.tcc \
+  /usr/include/c++/16.1.1/bits/stringfwd.h \
+  /usr/include/c++/16.1.1/bits/uniform_int_dist.h \
+  /usr/include/c++/16.1.1/bits/unique_ptr.h \
+  /usr/include/c++/16.1.1/bits/unordered_map.h \
+  /usr/include/c++/16.1.1/bits/unordered_set.h \
+  /usr/include/c++/16.1.1/bits/uses_allocator.h \
+  /usr/include/c++/16.1.1/bits/uses_allocator_args.h \
+  /usr/include/c++/16.1.1/bits/utility.h \
+  /usr/include/c++/16.1.1/bits/vector.tcc \
+  /usr/include/c++/16.1.1/bits/version.h \
+  /usr/include/c++/16.1.1/cassert \
+  /usr/include/c++/16.1.1/cctype \
+  /usr/include/c++/16.1.1/cerrno \
+  /usr/include/c++/16.1.1/chrono \
+  /usr/include/c++/16.1.1/climits \
+  /usr/include/c++/16.1.1/clocale \
+  /usr/include/c++/16.1.1/cmath \
+  /usr/include/c++/16.1.1/compare \
+  /usr/include/c++/16.1.1/concepts \
+  /usr/include/c++/16.1.1/cstddef \
+  /usr/include/c++/16.1.1/cstdint \
+  /usr/include/c++/16.1.1/cstdio \
+  /usr/include/c++/16.1.1/cstdlib \
+  /usr/include/c++/16.1.1/cstring \
+  /usr/include/c++/16.1.1/ctime \
+  /usr/include/c++/16.1.1/cwchar \
+  /usr/include/c++/16.1.1/debug/assertions.h \
+  /usr/include/c++/16.1.1/debug/debug.h \
+  /usr/include/c++/16.1.1/exception \
+  /usr/include/c++/16.1.1/ext/aligned_buffer.h \
+  /usr/include/c++/16.1.1/ext/alloc_traits.h \
+  /usr/include/c++/16.1.1/ext/atomicity.h \
+  /usr/include/c++/16.1.1/ext/concurrence.h \
+  /usr/include/c++/16.1.1/ext/numeric_traits.h \
+  /usr/include/c++/16.1.1/ext/string_conversions.h \
+  /usr/include/c++/16.1.1/ext/type_traits.h \
+  /usr/include/c++/16.1.1/functional \
+  /usr/include/c++/16.1.1/initializer_list \
+  /usr/include/c++/16.1.1/iosfwd \
+  /usr/include/c++/16.1.1/iterator \
+  /usr/include/c++/16.1.1/limits \
+  /usr/include/c++/16.1.1/list \
+  /usr/include/c++/16.1.1/map \
+  /usr/include/c++/16.1.1/memory \
+  /usr/include/c++/16.1.1/new \
+  /usr/include/c++/16.1.1/numeric \
+  /usr/include/c++/16.1.1/optional \
+  /usr/include/c++/16.1.1/pstl/execution_defs.h \
+  /usr/include/c++/16.1.1/pstl/glue_numeric_defs.h \
+  /usr/include/c++/16.1.1/pstl/pstl_config.h \
+  /usr/include/c++/16.1.1/ratio \
+  /usr/include/c++/16.1.1/set \
+  /usr/include/c++/16.1.1/stdexcept \
+  /usr/include/c++/16.1.1/streambuf \
+  /usr/include/c++/16.1.1/string \
+  /usr/include/c++/16.1.1/string_view \
+  /usr/include/c++/16.1.1/system_error \
+  /usr/include/c++/16.1.1/tr1/bessel_function.tcc \
+  /usr/include/c++/16.1.1/tr1/beta_function.tcc \
+  /usr/include/c++/16.1.1/tr1/ell_integral.tcc \
+  /usr/include/c++/16.1.1/tr1/exp_integral.tcc \
+  /usr/include/c++/16.1.1/tr1/gamma.tcc \
+  /usr/include/c++/16.1.1/tr1/hypergeometric.tcc \
+  /usr/include/c++/16.1.1/tr1/legendre_function.tcc \
+  /usr/include/c++/16.1.1/tr1/modified_bessel_func.tcc \
+  /usr/include/c++/16.1.1/tr1/poly_hermite.tcc \
+  /usr/include/c++/16.1.1/tr1/poly_laguerre.tcc \
+  /usr/include/c++/16.1.1/tr1/riemann_zeta.tcc \
+  /usr/include/c++/16.1.1/tr1/special_function_util.h \
+  /usr/include/c++/16.1.1/tuple \
+  /usr/include/c++/16.1.1/type_traits \
+  /usr/include/c++/16.1.1/typeinfo \
+  /usr/include/c++/16.1.1/unordered_map \
+  /usr/include/c++/16.1.1/unordered_set \
+  /usr/include/c++/16.1.1/utility \
+  /usr/include/c++/16.1.1/variant \
+  /usr/include/c++/16.1.1/vector \
+  /usr/include/c++/16.1.1/version \
+  /usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/atomic_word.h \
+  /usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/c++allocator.h \
+  /usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/c++config.h \
+  /usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/c++locale.h \
+  /usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/cpu_defines.h \
+  /usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/error_constants.h \
+  /usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/gthr-default.h \
+  /usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/gthr.h \
+  /usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/os_defines.h \
   /usr/include/ctype.h \
   /usr/include/endian.h \
   /usr/include/errno.h \
@@ -532,11 +537,13 @@ QSExtensions_autogen/timestamp: /home/etienne/.dotfiles/quickshell/extensions/Ai
   /usr/lib/cmake/Qt6/QtPublicPluginHelpers.cmake \
   /usr/lib/cmake/Qt6/QtPublicPluginHelpers_v2.cmake \
   /usr/lib/cmake/Qt6/QtPublicSbomAttributionHelpers.cmake \
+  /usr/lib/cmake/Qt6/QtPublicSbomBuildToolHelpers.cmake \
   /usr/lib/cmake/Qt6/QtPublicSbomCommonGenerationHelpers.cmake \
   /usr/lib/cmake/Qt6/QtPublicSbomCpeHelpers.cmake \
   /usr/lib/cmake/Qt6/QtPublicSbomCycloneDXHelpers.cmake \
   /usr/lib/cmake/Qt6/QtPublicSbomDepHelpers.cmake \
   /usr/lib/cmake/Qt6/QtPublicSbomDocumentNamespaceHelpers.cmake \
+  /usr/lib/cmake/Qt6/QtPublicSbomExternalReferenceHelpers.cmake \
   /usr/lib/cmake/Qt6/QtPublicSbomFileHelpers.cmake \
   /usr/lib/cmake/Qt6/QtPublicSbomGenerationCycloneDXHelpers.cmake \
   /usr/lib/cmake/Qt6/QtPublicSbomGenerationHelpers.cmake \
@@ -546,6 +553,7 @@ QSExtensions_autogen/timestamp: /home/etienne/.dotfiles/quickshell/extensions/Ai
   /usr/lib/cmake/Qt6/QtPublicSbomPurlHelpers.cmake \
   /usr/lib/cmake/Qt6/QtPublicSbomPythonHelpers.cmake \
   /usr/lib/cmake/Qt6/QtPublicSbomQtEntityHelpers.cmake \
+  /usr/lib/cmake/Qt6/QtPublicSbomRelationshipHelpers.cmake \
   /usr/lib/cmake/Qt6/QtPublicSbomSystemDepHelpers.cmake \
   /usr/lib/cmake/Qt6/QtPublicTargetHelpers.cmake \
   /usr/lib/cmake/Qt6/QtPublicTestHelpers.cmake \
@@ -1430,9 +1438,9 @@ QSExtensions_autogen/timestamp: /home/etienne/.dotfiles/quickshell/extensions/Ai
   /usr/lib/cmake/yaml-cpp/yaml-cpp-config.cmake \
   /usr/lib/cmake/yaml-cpp/yaml-cpp-targets-none.cmake \
   /usr/lib/cmake/yaml-cpp/yaml-cpp-targets.cmake \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdarg.h \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdbool.h \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stddef.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/include/stdarg.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/include/stdbool.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/include/stddef.h \
   /usr/share/cmake/Modules/CMakeCCompiler.cmake.in \
   /usr/share/cmake/Modules/CMakeCCompilerABI.c \
   /usr/share/cmake/Modules/CMakeCInformation.cmake \
@@ -1909,6 +1917,7 @@ CMakeFiles/QSExtensions.dir/AiPlugin.cpp.o: /home/etienne/.dotfiles/quickshell/e
   /usr/include/qt6/QtCore/QVariantList \
   /usr/include/qt6/QtCore/QVariantMap \
   /usr/include/qt6/QtCore/q17memory.h \
+  /usr/include/qt6/QtCore/q20bit.h \
   /usr/include/qt6/QtCore/q20functional.h \
   /usr/include/qt6/QtCore/q20iterator.h \
   /usr/include/qt6/QtCore/q20memory.h \
@@ -1971,6 +1980,7 @@ CMakeFiles/QSExtensions.dir/AiPlugin.cpp.o: /home/etienne/.dotfiles/quickshell/e
   /usr/include/qt6/QtCore/qiodevice.h \
   /usr/include/qt6/QtCore/qiodevicebase.h \
   /usr/include/qt6/QtCore/qiterable.h \
+  /usr/include/qt6/QtCore/qiterable_impl.h \
   /usr/include/qt6/QtCore/qiterator.h \
   /usr/include/qt6/QtCore/qjsonarray.h \
   /usr/include/qt6/QtCore/qjsondocument.h \
@@ -1986,6 +1996,7 @@ CMakeFiles/QSExtensions.dir/AiPlugin.cpp.o: /home/etienne/.dotfiles/quickshell/e
   /usr/include/qt6/QtCore/qmath.h \
   /usr/include/qt6/QtCore/qmetacontainer.h \
   /usr/include/qt6/QtCore/qmetaobject.h \
+  /usr/include/qt6/QtCore/qmetasequence.h \
   /usr/include/qt6/QtCore/qmetatype.h \
   /usr/include/qt6/QtCore/qminmax.h \
   /usr/include/qt6/QtCore/qnamespace.h \
@@ -2119,6 +2130,7 @@ CMakeFiles/QSExtensions.dir/AiPlugin.cpp.o: /home/etienne/.dotfiles/quickshell/e
   /usr/include/yaml-cpp/emittermanip.h \
   /usr/include/yaml-cpp/emitterstyle.h \
   /usr/include/yaml-cpp/exceptions.h \
+  /usr/include/yaml-cpp/fptostring.h \
   /usr/include/yaml-cpp/mark.h \
   /usr/include/yaml-cpp/node/convert.h \
   /usr/include/yaml-cpp/node/detail/impl.h \
@@ -2443,6 +2455,7 @@ CMakeFiles/QSExtensions.dir/PamAuth.cpp.o: /home/etienne/.dotfiles/quickshell/ex
   /usr/include/qt6/QtCore/QObject \
   /usr/include/qt6/QtCore/QString \
   /usr/include/qt6/QtCore/q17memory.h \
+  /usr/include/qt6/QtCore/q20bit.h \
   /usr/include/qt6/QtCore/q20functional.h \
   /usr/include/qt6/QtCore/q20iterator.h \
   /usr/include/qt6/QtCore/q20memory.h \
@@ -2494,6 +2507,7 @@ CMakeFiles/QSExtensions.dir/PamAuth.cpp.o: /home/etienne/.dotfiles/quickshell/ex
   /usr/include/qt6/QtCore/qhashfunctions.h \
   /usr/include/qt6/QtCore/qiodevicebase.h \
   /usr/include/qt6/QtCore/qiterable.h \
+  /usr/include/qt6/QtCore/qiterable_impl.h \
   /usr/include/qt6/QtCore/qiterator.h \
   /usr/include/qt6/QtCore/qlatin1stringview.h \
   /usr/include/qt6/QtCore/qlist.h \
@@ -2504,6 +2518,7 @@ CMakeFiles/QSExtensions.dir/PamAuth.cpp.o: /home/etienne/.dotfiles/quickshell/ex
   /usr/include/qt6/QtCore/qmath.h \
   /usr/include/qt6/QtCore/qmetacontainer.h \
   /usr/include/qt6/QtCore/qmetaobject.h \
+  /usr/include/qt6/QtCore/qmetasequence.h \
   /usr/include/qt6/QtCore/qmetatype.h \
   /usr/include/qt6/QtCore/qminmax.h \
   /usr/include/qt6/QtCore/qnamespace.h \
@@ -2921,6 +2936,7 @@ CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o: QSExten
   /usr/include/qt6/QtCore/QVariantMap \
   /usr/include/qt6/QtCore/q17memory.h \
   /usr/include/qt6/QtCore/q20algorithm.h \
+  /usr/include/qt6/QtCore/q20bit.h \
   /usr/include/qt6/QtCore/q20functional.h \
   /usr/include/qt6/QtCore/q20iterator.h \
   /usr/include/qt6/QtCore/q20memory.h \
@@ -2975,6 +2991,7 @@ CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o: QSExten
   /usr/include/qt6/QtCore/qiodevice.h \
   /usr/include/qt6/QtCore/qiodevicebase.h \
   /usr/include/qt6/QtCore/qiterable.h \
+  /usr/include/qt6/QtCore/qiterable_impl.h \
   /usr/include/qt6/QtCore/qiterator.h \
   /usr/include/qt6/QtCore/qlatin1stringview.h \
   /usr/include/qt6/QtCore/qlist.h \
@@ -2985,6 +3002,7 @@ CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o: QSExten
   /usr/include/qt6/QtCore/qmath.h \
   /usr/include/qt6/QtCore/qmetacontainer.h \
   /usr/include/qt6/QtCore/qmetaobject.h \
+  /usr/include/qt6/QtCore/qmetasequence.h \
   /usr/include/qt6/QtCore/qmetatype.h \
   /usr/include/qt6/QtCore/qminmax.h \
   /usr/include/qt6/QtCore/qnamespace.h \
@@ -3413,6 +3431,7 @@ CMakeFiles/QSExtensions.dir/WaylandPower.cpp.o: /home/etienne/.dotfiles/quickshe
   /usr/include/qt6/QtCore/QDebug \
   /usr/include/qt6/QtCore/QObject \
   /usr/include/qt6/QtCore/q17memory.h \
+  /usr/include/qt6/QtCore/q20bit.h \
   /usr/include/qt6/QtCore/q20functional.h \
   /usr/include/qt6/QtCore/q20iterator.h \
   /usr/include/qt6/QtCore/q20memory.h \
@@ -3464,6 +3483,7 @@ CMakeFiles/QSExtensions.dir/WaylandPower.cpp.o: /home/etienne/.dotfiles/quickshe
   /usr/include/qt6/QtCore/qhashfunctions.h \
   /usr/include/qt6/QtCore/qiodevicebase.h \
   /usr/include/qt6/QtCore/qiterable.h \
+  /usr/include/qt6/QtCore/qiterable_impl.h \
   /usr/include/qt6/QtCore/qiterator.h \
   /usr/include/qt6/QtCore/qlatin1stringview.h \
   /usr/include/qt6/QtCore/qlist.h \
@@ -3474,6 +3494,7 @@ CMakeFiles/QSExtensions.dir/WaylandPower.cpp.o: /home/etienne/.dotfiles/quickshe
   /usr/include/qt6/QtCore/qmath.h \
   /usr/include/qt6/QtCore/qmetacontainer.h \
   /usr/include/qt6/QtCore/qmetaobject.h \
+  /usr/include/qt6/QtCore/qmetasequence.h \
   /usr/include/qt6/QtCore/qmetatype.h \
   /usr/include/qt6/QtCore/qminmax.h \
   /usr/include/qt6/QtCore/qnamespace.h \
@@ -3891,6 +3912,7 @@ CMakeFiles/QSExtensions.dir/qsextensions_qmltyperegistrations.cpp.o: qsextension
   /usr/include/qt6/QtCore/QVariant \
   /usr/include/qt6/QtCore/QVariantMap \
   /usr/include/qt6/QtCore/q17memory.h \
+  /usr/include/qt6/QtCore/q20bit.h \
   /usr/include/qt6/QtCore/q20functional.h \
   /usr/include/qt6/QtCore/q20iterator.h \
   /usr/include/qt6/QtCore/q20memory.h \
@@ -3945,6 +3967,7 @@ CMakeFiles/QSExtensions.dir/qsextensions_qmltyperegistrations.cpp.o: qsextension
   /usr/include/qt6/QtCore/qiodevice.h \
   /usr/include/qt6/QtCore/qiodevicebase.h \
   /usr/include/qt6/QtCore/qiterable.h \
+  /usr/include/qt6/QtCore/qiterable_impl.h \
   /usr/include/qt6/QtCore/qiterator.h \
   /usr/include/qt6/QtCore/qlatin1stringview.h \
   /usr/include/qt6/QtCore/qlist.h \
@@ -3955,6 +3978,7 @@ CMakeFiles/QSExtensions.dir/qsextensions_qmltyperegistrations.cpp.o: qsextension
   /usr/include/qt6/QtCore/qmath.h \
   /usr/include/qt6/QtCore/qmetacontainer.h \
   /usr/include/qt6/QtCore/qmetaobject.h \
+  /usr/include/qt6/QtCore/qmetasequence.h \
   /usr/include/qt6/QtCore/qmetatype.h \
   /usr/include/qt6/QtCore/qminmax.h \
   /usr/include/qt6/QtCore/qnamespace.h \
@@ -4129,6 +4153,7 @@ CMakeFiles/QSExtensions.dir/wlr-output-power-management-unstable-v1-protocol.c.o
   /usr/include/bits/types/__sigset_t.h \
   /usr/include/bits/types/clock_t.h \
   /usr/include/bits/types/clockid_t.h \
+  /usr/include/bits/types/once_flag.h \
   /usr/include/bits/types/sigset_t.h \
   /usr/include/bits/types/struct_timespec.h \
   /usr/include/bits/types/struct_timeval.h \
@@ -4167,24 +4192,24 @@ libQSExtensions.so: /usr/lib/crti.o \
   /usr/lib/libm.so \
   /usr/lib/libpam.so \
   /usr/lib/libstdc++.so \
-  /usr/lib/libyaml-cpp.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/libgcc.a \
   /usr/lib/ld-linux-x86-64.so.2 \
   /usr/lib/libGLX.so \
   /usr/lib/libOpenGL.so \
-  /usr/lib/libQt6Core.so.6.10.1 \
-  /usr/lib/libQt6Gui.so.6.10.1 \
-  /usr/lib/libQt6Network.so.6.10.1 \
-  /usr/lib/libQt6OpenGL.so.6.10.1 \
-  /usr/lib/libQt6Qml.so.6.10.1 \
-  /usr/lib/libQt6Quick.so.6.10.1 \
+  /usr/lib/libQt6Core.so.6.11.0 \
+  /usr/lib/libQt6Gui.so.6.11.0 \
+  /usr/lib/libQt6Network.so.6.11.0 \
+  /usr/lib/libQt6OpenGL.so.6.11.0 \
+  /usr/lib/libQt6Qml.so.6.11.0 \
+  /usr/lib/libQt6Quick.so.6.11.0 \
   /usr/lib/libc.so.6 \
   /usr/lib/libc_nonshared.a \
   /usr/lib/libm.so.6 \
   /usr/lib/libmvec.so.1 \
   /usr/lib/libwayland-client.so \
+  /usr/lib/libyaml-cpp.so.0.9.0 \
   CMakeFiles/QSExtensions.dir/AiPlugin.cpp.o \
   CMakeFiles/QSExtensions.dir/PamAuth.cpp.o \
   CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o \
@@ -4196,17 +4221,19 @@ libQSExtensions.so: /usr/lib/crti.o \
 
 CMakeFiles/QSExtensions.dir/wlr-output-power-management-unstable-v1-protocol.c.o:
 
-CMakeFiles/QSExtensions.dir/build/.qt/rcc/qrc_qmake_extensions_build.cpp.o:
-
 CMakeFiles/QSExtensions.dir/WaylandPower.cpp.o:
 
 CMakeFiles/QSExtensions.dir/AiPlugin.cpp.o:
 
 /usr/lib/libmvec.so.1:
 
-/usr/lib/libQt6Qml.so.6.10.1:
+/usr/lib/libQt6Quick.so.6.11.0:
 
-/usr/lib/libQt6OpenGL.so.6.10.1:
+/usr/lib/libQt6Network.so.6.11.0:
+
+/usr/lib/libQt6Gui.so.6.11.0:
+
+/usr/lib/libQt6Core.so.6.11.0:
 
 /usr/lib/libGLX.so:
 
@@ -4222,6 +4249,8 @@ CMakeFiles/QSExtensions.dir/AiPlugin.cpp.o:
 
 /usr/lib/libc.so:
 
+/usr/include/bits/types/once_flag.h:
+
 qsextensions_qmltyperegistrations.cpp:
 
 .qt/rcc/qrc_qmake_extensions_build.cpp:
@@ -4236,6 +4265,8 @@ QSExtensions_autogen/EWIEGA46WW/moc_PamAuth.cpp:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdint.h:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdarg.h:
+
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/limits.h:
 
 /usr/include/yaml-cpp/traits.h:
@@ -4247,10 +4278,6 @@ QSExtensions_autogen/EWIEGA46WW/moc_PamAuth.cpp:
 /usr/include/yaml-cpp/noexcept.h:
 
 /usr/include/yaml-cpp/node/type.h:
-
-/usr/include/yaml-cpp/node/parse.h:
-
-/usr/include/yaml-cpp/node/node.h:
 
 /usr/include/yaml-cpp/node/detail/node_ref.h:
 
@@ -4292,33 +4319,79 @@ QSExtensions_autogen/EWIEGA46WW/moc_PamAuth.cpp:
 
 /usr/include/qt6/QtCore/QVariantList:
 
-/usr/include/qt6/QtCore/QJsonObject:
-
 /usr/include/qt6/QtCore/qcborcommon.h:
 
 /usr/include/qt6/QtCore/QJsonDocument:
 
 /usr/include/qt6/QtCore/QDebug:
 
-/usr/include/libintl.h:
-
 /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/time_members.h:
+
+/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/os_defines.h:
+
+/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/error_constants.h:
+
+/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/cpu_defines.h:
+
+/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++locale.h:
+
+/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++config.h:
+
+/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++allocator.h:
+
+/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/atomic_word.h:
+
+/usr/include/c++/15.2.1/vector:
+
+/usr/include/c++/15.2.1/variant:
 
 /usr/include/c++/15.2.1/valarray:
 
+/usr/include/c++/15.2.1/tuple:
+
+/usr/include/c++/15.2.1/tr1/special_function_util.h:
+
+/usr/include/c++/15.2.1/tr1/poly_laguerre.tcc:
+
+/usr/include/c++/15.2.1/tr1/poly_hermite.tcc:
+
+/usr/include/c++/15.2.1/tr1/gamma.tcc:
+
+/usr/include/c++/15.2.1/tr1/beta_function.tcc:
+
+/usr/include/c++/15.2.1/system_error:
+
 /usr/include/c++/15.2.1/stdlib.h:
+
+/usr/include/c++/15.2.1/stdexcept:
 
 /usr/include/c++/15.2.1/sstream:
 
-/usr/include/c++/15.2.1/pstl/glue_memory_defs.h:
+/usr/include/c++/15.2.1/set:
+
+/usr/include/c++/15.2.1/pstl/pstl_config.h:
+
+/usr/include/c++/15.2.1/pstl/glue_numeric_defs.h:
+
+/usr/include/c++/15.2.1/pstl/execution_defs.h:
 
 /usr/include/c++/15.2.1/ostream:
 
+/usr/include/c++/15.2.1/optional:
+
+/usr/include/c++/15.2.1/numeric:
+
+/usr/include/c++/15.2.1/new:
+
 /usr/include/c++/15.2.1/locale:
+
+/usr/include/c++/15.2.1/limits:
 
 /usr/include/c++/15.2.1/istream:
 
 /usr/include/c++/15.2.1/iostream:
+
+/usr/include/c++/15.2.1/iosfwd:
 
 /usr/include/yaml-cpp/parser.h:
 
@@ -4328,39 +4401,187 @@ QSExtensions_autogen/EWIEGA46WW/moc_PamAuth.cpp:
 
 /usr/include/c++/15.2.1/iomanip:
 
+/usr/include/c++/15.2.1/initializer_list:
+
 /usr/include/c++/15.2.1/filesystem:
+
+/usr/include/c++/15.2.1/ext/type_traits.h:
+
+/usr/include/qt6/QtCore/QDir:
+
+/usr/include/c++/15.2.1/ext/numeric_traits.h:
+
+/usr/include/c++/15.2.1/ext/aligned_buffer.h:
+
+/usr/include/c++/15.2.1/exception:
 
 CMakeFiles/QSExtensions.dir/PamAuth.cpp.o:
 
 /usr/include/c++/15.2.1/cwctype:
 
+/usr/include/c++/15.2.1/cstring:
+
+/usr/include/c++/15.2.1/cstddef:
+
+/usr/include/c++/15.2.1/concepts:
+
+/usr/include/c++/15.2.1/compare:
+
 /usr/include/c++/15.2.1/codecvt:
+
+/usr/include/c++/15.2.1/clocale:
+
+/usr/include/c++/15.2.1/chrono:
+
+/usr/include/c++/15.2.1/cerrno:
+
+/usr/include/c++/15.2.1/cassert:
+
+/usr/include/c++/15.2.1/bits/version.h:
+
+/usr/include/c++/15.2.1/bits/vector.tcc:
+
+/usr/include/c++/15.2.1/bits/utility.h:
+
+/usr/include/c++/15.2.1/bits/uses_allocator_args.h:
+
+/usr/include/c++/15.2.1/bits/unique_ptr.h:
+
+/usr/lib/libOpenGL.so:
+
+/usr/include/c++/15.2.1/tr1/ell_integral.tcc:
+
+/usr/include/c++/15.2.1/bits/uniform_int_dist.h:
+
+/usr/include/c++/15.2.1/bits/stringfwd.h:
+
+/usr/include/c++/15.2.1/bits/string_view.tcc:
+
+/usr/include/c++/15.2.1/bits/streambuf_iterator.h:
+
+/usr/include/c++/15.2.1/bits/streambuf.tcc:
+
+/usr/include/qt6/QtNetwork/QSslError:
+
+/usr/include/c++/15.2.1/bits/stl_relops.h:
+
+/usr/include/c++/15.2.1/bits/stl_pair.h:
+
+/usr/include/c++/15.2.1/string_view:
+
+/usr/include/c++/15.2.1/bits/stl_numeric.h:
+
+/usr/include/c++/15.2.1/bits/stl_multiset.h:
+
+/usr/include/c++/15.2.1/bits/stl_multimap.h:
+
+/usr/include/c++/15.2.1/bits/stl_map.h:
+
+/usr/include/c++/15.2.1/ratio:
+
+/usr/include/c++/15.2.1/bits/stl_iterator_base_types.h:
+
+/usr/include/c++/15.2.1/bits/stl_function.h:
+
+/usr/include/c++/15.2.1/bits/stl_algobase.h:
+
+/usr/include/c++/15.2.1/bits/stl_algo.h:
 
 /usr/include/c++/15.2.1/bits/sstream.tcc:
 
+/usr/include/c++/15.2.1/bits/shared_ptr_base.h:
+
+/usr/include/c++/15.2.1/bits/shared_ptr.h:
+
+/usr/include/c++/15.2.1/bits/requires_hosted.h:
+
+/usr/lib/libwayland-client.so:
+
+/usr/include/c++/15.2.1/bits/stl_iterator.h:
+
+/usr/include/c++/15.2.1/bits/refwrap.h:
+
+/usr/include/c++/15.2.1/bits/range_access.h:
+
+/usr/include/c++/15.2.1/bits/ptr_traits.h:
+
+/usr/include/c++/15.2.1/bits/postypes.h:
+
 /usr/include/c++/15.2.1/bits/ostream.tcc:
+
+/usr/include/c++/15.2.1/bits/nested_exception.h:
 
 /usr/include/c++/15.2.1/bits/monostate.h:
 
+/usr/include/c++/15.2.1/bits/memory_resource.h:
+
 /usr/include/c++/15.2.1/bits/mask_array.h:
 
+/usr/include/c++/15.2.1/bits/localefwd.h:
+
 /usr/include/c++/15.2.1/bits/locale_facets.h:
+
+/usr/include/c++/15.2.1/bits/locale_classes.tcc:
 
 /usr/include/bits/getopt_core.h:
 
 /usr/include/c++/15.2.1/bits/istream.tcc:
 
+/usr/include/c++/15.2.1/bits/invoke.h:
+
 /usr/include/c++/15.2.1/bits/indirect_array.h:
+
+/usr/include/c++/15.2.1/bits/hashtable_policy.h:
+
+/usr/include/c++/15.2.1/bits/hashtable.h:
+
+/usr/include/qt6/QtCore/qjsonobject.h:
+
+/usr/include/c++/15.2.1/bits/hash_bytes.h:
 
 /usr/include/c++/15.2.1/bits/gslice_array.h:
 
 /usr/include/c++/15.2.1/bits/gslice.h:
 
+/usr/include/c++/15.2.1/bits/functexcept.h:
+
 /usr/include/c++/15.2.1/bits/fs_path.h:
 
 /usr/include/c++/15.2.1/bits/fs_ops.h:
 
+/usr/include/c++/15.2.1/bits/erase_if.h:
+
+/usr/include/c++/15.2.1/bits/stl_heap.h:
+
+/usr/include/c++/15.2.1/bits/cxxabi_forced.h:
+
 /usr/include/c++/15.2.1/bits/codecvt.h:
+
+/usr/include/c++/15.2.1/bits/charconv.h:
+
+/usr/include/c++/15.2.1/cstdio:
+
+/usr/include/c++/15.2.1/bits/basic_string.h:
+
+/usr/include/c++/15.2.1/bits/atomic_lockfree_defines.h:
+
+/usr/include/c++/15.2.1/bits/allocator.h:
+
+/usr/include/c++/15.2.1/bits/allocated_ptr.h:
+
+/usr/include/c++/15.2.1/bits/alloc_traits.h:
+
+/usr/include/c++/15.2.1/bits/align.h:
+
+/usr/include/c++/15.2.1/bits/valarray_after.h:
+
+/usr/include/c++/15.2.1/bit:
+
+/usr/include/c++/15.2.1/backward/binders.h:
+
+/usr/include/c++/15.2.1/backward/auto_ptr.h:
+
+/usr/include/c++/15.2.1/atomic:
 
 /usr/include/bits/wctype-wchar.h:
 
@@ -4380,15 +4601,15 @@ CMakeFiles/QSExtensions.dir/PamAuth.cpp.o:
 
 /usr/share/cmake/Modules/Linker/GNU-CXX.cmake:
 
+/usr/include/c++/15.2.1/bits/stl_tree.h:
+
+/usr/share/cmake/Modules/Linker/GNU-C.cmake:
+
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/syslimits.h:
 
 /usr/share/cmake/Modules/Internal/FeatureTesting.cmake:
 
 /usr/share/cmake/Modules/Internal/CheckFlagCommonConfig.cmake:
-
-/usr/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:
-
-/usr/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake:
 
 /usr/share/cmake/Modules/FindVulkan.cmake:
 
@@ -4408,35 +4629,27 @@ CMakeFiles/QSExtensions.dir/PamAuth.cpp.o:
 
 /usr/share/cmake/Modules/Compiler/Watcom-DetermineCompiler.cmake:
 
-/usr/include/c++/15.2.1/bits/valarray_before.h:
-
-/usr/share/cmake/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake:
-
 /usr/share/cmake/Modules/Compiler/Tasking-DetermineCompiler.cmake:
 
 /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/ctype_inline.h:
 
 /usr/share/cmake/Modules/Compiler/TIClang-DetermineCompiler.cmake:
 
+/usr/include/c++/15.2.1/unordered_set:
+
+/usr/share/cmake/Modules/Compiler/TI-DetermineCompiler.cmake:
+
 /usr/share/cmake/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake:
 
 /usr/share/cmake/Modules/Compiler/SunPro-C-DetermineCompiler.cmake:
-
-/usr/share/cmake/Modules/Compiler/SCO-DetermineCompiler.cmake:
 
 /usr/share/cmake/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake:
 
 /usr/share/cmake/Modules/Compiler/LCC-C-DetermineCompiler.cmake:
 
-/usr/share/cmake/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake:
-
-/usr/share/cmake/Modules/Compiler/Intel-DetermineCompiler.cmake:
-
 /usr/share/cmake/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake:
 
 /usr/share/cmake/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake:
-
-/usr/share/cmake/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake:
 
 /usr/share/cmake/Modules/Compiler/IAR-DetermineCompiler.cmake:
 
@@ -4456,15 +4669,15 @@ CMakeFiles/QSExtensions.dir/PamAuth.cpp.o:
 
 /usr/share/cmake/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake:
 
-/usr/share/cmake/Modules/Compiler/Embarcadero-DetermineCompiler.cmake:
-
 /usr/share/cmake/Modules/Compiler/CrayClang-DetermineCompiler.cmake:
 
 /usr/share/cmake/Modules/Compiler/Compaq-C-DetermineCompiler.cmake:
 
-/usr/share/cmake/Modules/Compiler/Clang-DetermineCompilerInternal.cmake:
-
 /usr/share/cmake/Modules/Compiler/Clang-DetermineCompiler.cmake:
+
+/usr/include/c++/15.2.1/bits/ios_base.h:
+
+/usr/share/cmake/Modules/Compiler/Borland-DetermineCompiler.cmake:
 
 /usr/share/cmake/Modules/Compiler/AppleClang-DetermineCompiler.cmake:
 
@@ -4473,6 +4686,10 @@ CMakeFiles/QSExtensions.dir/PamAuth.cpp.o:
 /usr/share/cmake/Modules/CheckCXXCompilerFlag.cmake:
 
 /usr/share/cmake/Modules/CMakeTestCompilerCommon.cmake:
+
+/usr/include/c++/15.2.1/bits/chrono.h:
+
+/usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:
 
 /usr/share/cmake/Modules/CMakeTestCCompiler.cmake:
 
@@ -4488,17 +4705,23 @@ CMakeFiles/QSExtensions.dir/PamAuth.cpp.o:
 
 /usr/share/cmake/Modules/CMakeFindBinUtils.cmake:
 
-/usr/share/cmake/Modules/CMakeDetermineCompilerSupport.cmake:
-
 /usr/share/cmake/Modules/CMakeDetermineCompiler.cmake:
 
 /usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdarg.h:
+/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/include/stdbool.h:
 
 /usr/lib/cmake/yaml-cpp/yaml-cpp-targets.cmake:
 
 /usr/lib/cmake/yaml-cpp/yaml-cpp-targets-none.cmake:
+
+/usr/include/c++/15.2.1/bits/atomic_base.h:
+
+/usr/lib/cmake/yaml-cpp/yaml-cpp-config-version.cmake:
+
+/usr/include/c++/15.2.1/bits/stl_construct.h:
+
+/usr/lib/cmake/Qt6QuickTools/Qt6QuickToolsTargetsPrecheck.cmake:
 
 /usr/lib/cmake/Qt6QuickTools/Qt6QuickToolsTargets.cmake:
 
@@ -4510,7 +4733,11 @@ CMakeFiles/QSExtensions.dir/PamAuth.cpp.o:
 
 /usr/lib/cmake/Qt6QuickTools/Qt6QuickToolsAdditionalTargetInfo.cmake:
 
-/usr/lib/cmake/Qt6Quick/Qt6QuickTargetsPrecheck.cmake:
+/usr/include/bits/posix_opt.h:
+
+/usr/include/c++/15.2.1/bits/exception.h:
+
+/usr/lib/cmake/Qt6Quick/Qt6QuickVersionlessAliasTargets.cmake:
 
 /usr/lib/cmake/Qt6Quick/Qt6QuickTargets.cmake:
 
@@ -4518,17 +4745,11 @@ CMakeFiles/QSExtensions.dir/PamAuth.cpp.o:
 
 /usr/lib/cmake/Qt6Quick/Qt6QuickDependencies.cmake:
 
-/usr/lib/cmake/Qt6Quick/Qt6QuickConfigVersionImpl.cmake:
-
 /usr/lib/cmake/Qt6Quick/Qt6QuickAdditionalTargetInfo.cmake:
 
 /usr/lib/cmake/Qt6QmlWorkerScript/Qt6QmlWorkerScriptTargetsPrecheck.cmake:
 
-/usr/lib/cmake/Qt6QmlWorkerScript/Qt6QmlWorkerScriptTargets-relwithdebinfo.cmake:
-
 /usr/lib/cmake/Qt6QmlWorkerScript/Qt6QmlWorkerScriptConfigVersionImpl.cmake:
-
-/usr/lib/cmake/Qt6QmlWorkerScript/Qt6QmlWorkerScriptAdditionalTargetInfo.cmake:
 
 /usr/lib/cmake/Qt6QmlTools/Qt6QmlToolsTargetsPrecheck.cmake:
 
@@ -4537,6 +4758,10 @@ CMakeFiles/QSExtensions.dir/PamAuth.cpp.o:
 /usr/lib/cmake/Qt6QmlTools/Qt6QmlToolsTargets-relwithdebinfo.cmake:
 
 /usr/lib/cmake/Qt6QmlTools/Qt6QmlToolsDependencies.cmake:
+
+/usr/include/c++/15.2.1/bits/cxxabi_init_exception.h:
+
+/usr/lib/cmake/Qt6QmlTools/Qt6QmlToolsConfigVersionImpl.cmake:
 
 /usr/lib/cmake/Qt6QmlTools/Qt6QmlToolsConfigVersion.cmake:
 
@@ -4561,6 +4786,10 @@ CMakeFiles/QSExtensions.dir/PamAuth.cpp.o:
 /usr/lib/cmake/Qt6QmlMeta/Qt6QmlMetaConfigVersionImpl.cmake:
 
 /usr/lib/cmake/Qt6QmlMeta/Qt6QmlMetaConfigVersion.cmake:
+
+/usr/include/c++/15.2.1/bits/cpp_type_traits.h:
+
+/usr/lib/cmake/Qt6QmlMeta/Qt6QmlMetaConfig.cmake:
 
 /usr/lib/cmake/Qt6QmlIntegration/Qt6QmlIntegrationVersionlessAliasTargets.cmake:
 
@@ -4596,6 +4825,10 @@ CMakeFiles/QSExtensions.dir/PamAuth.cpp.o:
 
 /usr/lib/cmake/Qt6Qml/Qt6QmlConfig.cmake:
 
+/usr/include/c++/15.2.1/bits/exception_defines.h:
+
+/usr/lib/cmake/Qt6Qml/Qt6QTcpServerConnectionFactoryPluginTargets-relwithdebinfo.cmake:
+
 /usr/lib/cmake/Qt6QmlMeta/Qt6QmlMetaAdditionalTargetInfo.cmake:
 
 /usr/lib/cmake/Qt6Qml/Qt6QTcpServerConnectionFactoryPluginConfig.cmake:
@@ -4603,6 +4836,10 @@ CMakeFiles/QSExtensions.dir/PamAuth.cpp.o:
 /usr/lib/cmake/Qt6Qml/Qt6QmlMacros.cmake:
 
 /usr/lib/cmake/Qt6Qml/Qt6QTcpServerConnectionFactoryPluginAdditionalTargetInfo.cmake:
+
+/usr/include/c++/15.2.1/debug/debug.h:
+
+/usr/lib/cmake/Qt6Qml/Qt6QQuickProfilerAdapterFactoryPluginTargetsPrecheck.cmake:
 
 /usr/lib/cmake/Qt6Qml/Qt6QQuickProfilerAdapterFactoryPluginTargets-relwithdebinfo.cmake:
 
@@ -4620,13 +4857,7 @@ CMakeFiles/QSExtensions.dir/PamAuth.cpp.o:
 
 /usr/lib/cmake/Qt6Qml/Qt6QQuick3DProfilerAdapterFactoryPluginTargets-relwithdebinfo.cmake:
 
-/usr/lib/cmake/Qt6QmlTools/Qt6QmlToolsAdditionalTargetInfo.cmake:
-
-/usr/lib/cmake/Qt6Qml/Qt6QQuick3DProfilerAdapterFactoryPluginConfig.cmake:
-
 /usr/lib/cmake/Qt6Qml/Qt6QQuick3DProfilerAdapterFactoryPluginAdditionalTargetInfo.cmake:
-
-/usr/lib/cmake/Qt6Qml/Qt6QQmlProfilerServiceFactoryPluginTargetsPrecheck.cmake:
 
 /usr/lib/cmake/Qt6Qml/Qt6QQmlProfilerServiceFactoryPluginTargets-relwithdebinfo.cmake:
 
@@ -4635,8 +4866,6 @@ CMakeFiles/QSExtensions.dir/PamAuth.cpp.o:
 /usr/lib/cmake/Qt6Qml/Qt6QQmlProfilerServiceFactoryPluginAdditionalTargetInfo.cmake:
 
 /usr/lib/cmake/Qt6Qml/Qt6QQmlPreviewServiceFactoryPluginTargetsPrecheck.cmake:
-
-/usr/lib/cmake/Qt6Qml/Qt6QQmlPreviewServiceFactoryPluginTargets-relwithdebinfo.cmake:
 
 /usr/lib/cmake/Qt6Qml/Qt6QQmlPreviewServiceFactoryPluginConfig.cmake:
 
@@ -4670,13 +4899,9 @@ CMakeFiles/QSExtensions.dir/PamAuth.cpp.o:
 
 /usr/lib/cmake/Qt6Qml/Qt6QQmlDebugServerFactoryPluginTargets-relwithdebinfo.cmake:
 
-/usr/lib/libQt6Core.so.6.10.1:
-
 /usr/lib/cmake/Qt6Qml/Qt6QQmlDebugServerFactoryPluginConfig.cmake:
 
 /usr/lib/cmake/Qt6Qml/Qt6QQmlDebugServerFactoryPluginAdditionalTargetInfo.cmake:
-
-/usr/lib/cmake/Qt6Qml/Qt6QLocalClientConnectionFactoryPluginTargets.cmake:
 
 /usr/lib/cmake/Qt6Qml/Qt6QDebugMessageServiceFactoryPluginTargetsPrecheck.cmake:
 
@@ -4692,11 +4917,9 @@ CMakeFiles/QSExtensions.dir/PamAuth.cpp.o:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6workerscriptpluginTargets-relwithdebinfo.cmake:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6workerscriptpluginAdditionalTargetInfo.cmake:
+/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/include/stddef.h:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6sharedimagepluginTargetsPrecheck.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6sharedimagepluginTargets.cmake:
 
 /usr/share/cmake/Modules/Compiler/Renesas-DetermineCompiler.cmake:
 
@@ -4727,8 +4950,6 @@ CMakeFiles/QSExtensions.dir/PamAuth.cpp.o:
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6quicktoolingAdditionalTargetInfo.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6quickmultimediaTargetsPrecheck.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6quickmultimediaTargets.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6quickmultimediaTargets-relwithdebinfo.cmake:
 
@@ -4770,6 +4991,12 @@ CMakeFiles/QSExtensions.dir/PamAuth.cpp.o:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquicktimelineblendtreespluginTargetsPrecheck.cmake:
 
+/usr/include/qt6/QtCore/qdir.h:
+
+/usr/include/c++/15.2.1/array:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquicktimelineblendtreespluginTargets.cmake:
+
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquicktimelineblendtreespluginConfig.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquicktemplates2pluginTargetsPrecheck.cmake:
@@ -4780,11 +5007,13 @@ CMakeFiles/QSExtensions.dir/PamAuth.cpp.o:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickshapesdesignhelperspluginTargets-relwithdebinfo.cmake:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickshapesdesignhelperspluginConfig.cmake:
-
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickshapesdesignhelperspluginAdditionalTargetInfo.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickdialogspluginTargetsPrecheck.cmake:
+
+/usr/include/c++/15.2.1/bits/unordered_set.h:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickdialogspluginTargets.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickdialogspluginConfig.cmake:
 
@@ -4806,9 +5035,9 @@ CMakeFiles/QSExtensions.dir/PamAuth.cpp.o:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2universalstyleimplpluginTargetsPrecheck.cmake:
 
-/usr/share/cmake/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake:
+/usr/include/c++/15.2.1/bits/basic_string.tcc:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2universalstyleimplpluginTargets-relwithdebinfo.cmake:
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2universalstyleimplpluginTargets.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2universalstyleimplpluginConfig.cmake:
 
@@ -4830,11 +5059,17 @@ CMakeFiles/QSExtensions.dir/PamAuth.cpp.o:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2materialstyleimplpluginTargetsPrecheck.cmake:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2materialstyleimplpluginTargets.cmake:
-
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2materialstyleimplpluginConfig.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2materialstyleimplpluginAdditionalTargetInfo.cmake:
+
+/usr/include/c++/15.2.1/ext/concurrence.h:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2implpluginTargetsPrecheck.cmake:
+
+/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/gthr.h:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2implpluginTargets-relwithdebinfo.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2implpluginAdditionalTargetInfo.cmake:
 
@@ -4856,11 +5091,15 @@ CMakeFiles/QSExtensions.dir/PamAuth.cpp.o:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2imaginestyleimplpluginTargetsPrecheck.cmake:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2imaginestyleimplpluginAdditionalTargetInfo.cmake:
+/usr/include/c++/15.2.1/functional:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2fusionstylepluginTargets-relwithdebinfo.cmake:
 
 /usr/share/cmake/Modules/Compiler/zOS-C-DetermineCompiler.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2fusionstylepluginAdditionalTargetInfo.cmake:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/include/stdarg.h:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2fusionstyleimplpluginTargets-relwithdebinfo.cmake:
 
@@ -4878,6 +5117,10 @@ CMakeFiles/QSExtensions.dir/PamAuth.cpp.o:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2fluentwinui3styleimplpluginConfig.cmake:
 
+/usr/include/c++/15.2.1/bits/stl_set.h:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2basicstylepluginTargetsPrecheck.cmake:
+
 /usr/lib/cmake/Qt6QmlTools/Qt6QmlToolsVersionlessTargets.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2basicstylepluginTargets-relwithdebinfo.cmake:
@@ -4885,8 +5128,6 @@ CMakeFiles/QSExtensions.dir/PamAuth.cpp.o:
 /usr/include/qt6/QtCore/QFileInfo:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2basicstyleimplpluginTargets.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2basicstyleimplpluginTargets-relwithdebinfo.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3dparticles3dpluginTargets.cmake:
 
@@ -4910,13 +5151,15 @@ CMakeFiles/QSExtensions.dir/PamAuth.cpp.o:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3dhelperspluginTargets.cmake:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3dhelperspluginTargets-relwithdebinfo.cmake:
-
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3dhelperspluginAdditionalTargetInfo.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3dhelpersimplpluginTargetsPrecheck.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3dhelpersimplpluginTargets.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6quicktoolingTargets-relwithdebinfo.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3dhelpersimplpluginConfig.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2imaginestyleimplpluginConfig.cmake:
 
@@ -4928,39 +5171,55 @@ CMakeFiles/QSExtensions.dir/PamAuth.cpp.o:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3deffectpluginAdditionalTargetInfo.cmake:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2fusionstylepluginTargetsPrecheck.cmake:
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3dassetutilspluginTargetsPrecheck.cmake:
 
-/usr/lib/cmake/Qt6/QtPublicSbomLicenseHelpers.cmake:
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3dassetutilspluginTargets.cmake:
 
-/usr/include/qt6/QtCore/qxptype_traits.h:
+/usr/lib/cmake/Qt6Qml/Qt6QLocalClientConnectionFactoryPluginTargetsPrecheck.cmake:
 
-/usr/lib/cmake/Qt6/QtPublicSbomHelpers.cmake:
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3dassetutilspluginTargets-relwithdebinfo.cmake:
 
-/usr/include/c++/15.2.1/bits/locale_facets_nonio.h:
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick2pluginTargets-relwithdebinfo.cmake:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6LabsPlatformpluginAdditionalTargetInfo.cmake:
-
-/usr/lib/cmake/Qt6Gui/Qt6QVkKhrDisplayIntegrationPluginAdditionalTargetInfo.cmake:
-
-/usr/lib/cmake/Qt6/QtPublicSbomDocumentNamespaceHelpers.cmake:
-
-/usr/lib/cmake/Qt6/QtPublicPluginHelpers_v2.cmake:
+/usr/include/c++/16.1.1/ext/atomicity.h:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6effectspluginAdditionalTargetInfo.cmake:
 
-/usr/include/c++/15.2.1/bits/algorithmfwd.h:
+/usr/lib/cmake/Qt6Core/Qt6CoreConfigVersion.cmake:
 
-/usr/include/c++/15.2.1/bits/quoted_string.h:
+/usr/lib/cmake/Qt6/Qt6TargetsPrecheck.cmake:
 
-/usr/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:
+/usr/include/c++/15.2.1/ext/alloc_traits.h:
+
+/usr/lib/cmake/Qt6/QtPublicCMakeHelpers.cmake:
 
 /usr/lib/cmake/Qt6/QtPublicCMakeEarlyPolicyHelpers.cmake:
 
-/usr/include/bits/posix2_lim.h:
+/usr/include/c++/15.2.1/bits/new_allocator.h:
 
-/usr/lib/cmake/Qt6Gui/Qt6QLinuxFbIntegrationPluginTargets.cmake:
+/usr/lib/cmake/Qt6Gui/Qt6QVncIntegrationPluginTargetsPrecheck.cmake:
+
+/usr/lib/cmake/Qt6/QtInstallPaths.cmake:
+
+/usr/include/c++/16.1.1/bits/new_throw.h:
+
+/usr/include/bits/types/clockid_t.h:
 
 /usr/lib/cmake/Qt6/Qt6VersionlessAliasTargets.cmake:
+
+/usr/include/c++/15.2.1/bits/shared_ptr_atomic.h:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WaylandCompositorXdgShellpluginTargets-relwithdebinfo.cmake:
+
+/usr/lib/cmake/Qt6/Qt6ConfigVersionImpl.cmake:
+
+/usr/include/c++/15.2.1/bits/parse_numbers.h:
+
+/usr/include/bits/struct_rwlock.h:
+
+/usr/include/qt6/QtCore/qshareddata_impl.h:
+
+/usr/include/qt6/QtCore/qconfig.h:
 
 /usr/lib/cmake/Qt6/FindWrapAtomic.cmake:
 
@@ -4982,25 +5241,27 @@ CMakeFiles/QSExtensions.dir/PamAuth.cpp.o:
 
 /usr/lib/cmake/Qt6Network/Qt6NetworkConfig.cmake:
 
-/usr/include/wayland-client.h:
-
-/usr/include/wayland-client-core.h:
-
 /usr/include/qt6/QtCore/qlocale.h:
 
 /usr/include/sys/cdefs.h:
 
 /usr/include/stdlib.h:
 
+/usr/include/security/_pam_compat.h:
+
+/usr/include/qt6/QtNetwork/qtcpsocket.h:
+
 /usr/lib/cmake/Qt6/FindWrapVulkanHeaders.cmake:
 
 /usr/include/qt6/QtQmlIntegration/qqmlintegration.h:
 
-/usr/include/c++/15.2.1/bits/version.h:
+/usr/include/qt6/QtQml/qtqmlexports.h:
 
 /usr/include/string.h:
 
-/usr/include/c++/15.2.1/tr1/poly_hermite.tcc:
+/usr/include/c++/16.1.1/atomic:
+
+/usr/include/c++/16.1.1/cmath:
 
 /usr/lib/cmake/Qt6Gui/Qt6QGtk3ThemePluginTargets.cmake:
 
@@ -5014,29 +5275,25 @@ CMakeFiles/QSExtensions.dir/PamAuth.cpp.o:
 
 /usr/include/bits/types/sigset_t.h:
 
-/usr/lib/cmake/Qt6QmlModels/Qt6QmlModelsConfigVersionImpl.cmake:
-
-/usr/include/qt6/QtQml/qjsvalue.h:
+/usr/include/c++/16.1.1/bits/stream_iterator.h:
 
 /usr/include/qt6/QtQml/qjsmanagedvalue.h:
 
 /usr/lib/cmake/Qt6Gui/Qt6QLibInputPluginTargetsPrecheck.cmake:
 
+/usr/include/qt6/QtNetwork/qtnetworkglobal.h:
+
+/usr/include/c++/15.2.1/map:
+
+/usr/include/qt6/QtNetwork/qtnetwork-config.h:
+
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2fusionstyleimplpluginAdditionalTargetInfo.cmake:
 
 /usr/include/qt6/QtCore/qtenvironmentvariables.h:
 
-/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/atomic_word.h:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlwavefrontmeshpluginTargets.cmake:
-
-/usr/lib/cmake/Qt6Gui/Qt6QVncIntegrationPluginConfig.cmake:
-
 /usr/include/qt6/QtNetwork/qsslerror.h:
 
 /usr/lib/cmake/Qt6Gui/Qt6QWaylandIntegrationPluginConfig.cmake:
-
-/usr/include/qt6/QtNetwork/qsslconfiguration.h:
 
 /usr/share/cmake/Modules/Platform/Linux.cmake:
 
@@ -5044,19 +5301,15 @@ CMakeFiles/QSExtensions.dir/PamAuth.cpp.o:
 
 /usr/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginTargets.cmake:
 
-/usr/lib/cmake/Qt6Qml/Qt6QQuickEventReplayServiceFactoryPluginConfig.cmake:
-
-/usr/include/qt6/QtNetwork/qnetworkaccessmanager.h:
-
-/usr/lib/cmake/Qt6Qml/Qt6QQmlNativeDebugServiceFactoryPluginAdditionalTargetInfo.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3dparticles3dpluginAdditionalTargetInfo.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtgraphicaleffectspluginTargets.cmake:
-
 /usr/include/qt6/QtNetwork/qhttpheaders.h:
 
 /usr/include/qt6/QtNetwork/qabstractsocket.h:
+
+/usr/include/c++/16.1.1/bits/charconv.h:
+
+/usr/lib/cmake/Qt6Qml/Qt6QQmlProfilerServiceFactoryPluginTargetsPrecheck.cmake:
+
+/usr/include/c++/16.1.1/bits/unique_ptr.h:
 
 /usr/share/cmake/Modules/CMakeCXXCompiler.cmake.in:
 
@@ -5064,33 +5317,27 @@ CMakeFiles/QSExtensions.dir/PamAuth.cpp.o:
 
 /usr/include/qt6/QtCore/qvarlengtharray.h:
 
-/usr/share/cmake/Modules/Compiler/Borland-DetermineCompiler.cmake:
-
-/usr/include/c++/15.2.1/bits/ios_base.h:
-
 /usr/lib/cmake/Qt6Network/Qt6QTlsBackendCertOnlyPluginTargetsPrecheck.cmake:
 
 /usr/include/qt6/QtCore/QRegularExpression:
 
 /usr/include/qt6/QtCore/qtypes.h:
 
-/usr/include/qt6/QtCore/qtcore-config.h:
+/usr/include/qt6/QtCore/qcborvalue.h:
+
+/usr/include/c++/15.2.1/list:
+
+/usr/include/qt6/QtCore/qtconfiginclude.h:
 
 /usr/include/qt6/QtCore/qtversion.h:
 
-/usr/share/cmake/Modules/CMakeCCompilerABI.c:
-
-/usr/include/qt6/QtCore/qttypetraits.h:
-
 /usr/include/qt6/QtCore/qversiontagging.h:
-
-/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/os_defines.h:
 
 /usr/lib/cmake/Qt6Gui/Qt6QEvdevTouchScreenPluginTargets-relwithdebinfo.cmake:
 
 /usr/include/bits/libc-header-start.h:
 
-/usr/include/qt6/QtCore/qtypeinfo.h:
+/usr/include/c++/16.1.1/bits/stl_iterator_base_types.h:
 
 /usr/include/qt6/QtCore/qtpreprocessorsupport.h:
 
@@ -5098,21 +5345,11 @@ CMakeFiles/QSExtensions.dir/PamAuth.cpp.o:
 
 /usr/include/qt6/QtCore/qtnoop.h:
 
-/usr/include/qt6/QtCore/qtimezone.h:
-
-/usr/include/bits/stdio_lim.h:
+/usr/include/qt6/QtCore/qtmetamacros.h:
 
 QSExtensions_autogen/EWIEGA46WW/moc_WaylandPower.cpp:
 
 /usr/include/qt6/QtCore/qtformat_impl.h:
-
-/usr/include/qt6/QtNetwork/qhostaddress.h:
-
-/usr/lib/cmake/Qt6Core/Qt6CoreConfigureFileTemplate.in:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2fusionstyleimplpluginTargets.cmake:
-
-/usr/include/qt6/QtCore/qtextstream.h:
 
 /usr/include/qt6/QtCore/qtdeprecationmarkers.h:
 
@@ -5122,39 +5359,51 @@ QSExtensions_autogen/EWIEGA46WW/moc_WaylandPower.cpp:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WaylandCompositorXdgShellpluginTargets.cmake:
 
-/usr/include/qt6/QtCore/qsysinfo.h:
+/usr/include/qt6/QtCore/qtcore-config.h:
 
-/usr/include/qt6/QtCore/qstringtokenizer.h:
+/usr/include/c++/15.2.1/bits/slice_array.h:
+
+/usr/include/qt6/QtCore/qtconfigmacros.h:
+
+/usr/lib/cmake/Qt6Qml/Qt6QmlAdditionalTargetInfo.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlxmllistmodelpluginTargets-relwithdebinfo.cmake:
+
+/usr/include/wayland-version.h:
+
+/usr/include/qt6/QtCore/qsysinfo.h:
 
 /usr/include/assert.h:
 
 /usr/include/qt6/QtCore/qstringlist.h:
 
-/usr/include/qt6/QtCore/qstring.h:
+/usr/include/qt6/QtCore/qstringconverter_base.h:
 
-/usr/include/c++/15.2.1/bits/exception_ptr.h:
+/usr/include/c++/16.1.1/array:
+
+/usr/include/c++/15.2.1/bits/enable_special_members.h:
+
+/usr/include/qt6/QtCore/qspan.h:
 
 /usr/include/qt6/QtCore/qshareddata.h:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6labsanimationpluginAdditionalTargetInfo.cmake:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2fluentwinui3styleimplpluginAdditionalTargetInfo.cmake:
+/usr/include/linux/close_range.h:
 
-/usr/include/qt6/QtCore/qobjectdefs_impl.h:
+/usr/include/bits/uintn-identity.h:
+
+/usr/include/c++/16.1.1/bits/stl_vector.h:
+
+/usr/include/c++/15.2.1/bits/stream_iterator.h:
+
+/usr/include/c++/16.1.1/tr1/poly_hermite.tcc:
 
 /usr/include/qt6/QtCore/qobjectdefs.h:
-
-/usr/include/qt6/QtCore/qglobalstatic.h:
 
 /usr/include/limits.h:
 
 /usr/lib/cmake/Qt6Gui/Qt6QWaylandEglClientBufferPluginTargets-relwithdebinfo.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2fusionstyleimplpluginConfig.cmake:
-
-/usr/include/qt6/QtQml/QQmlEngine:
-
-/usr/include/qt6/QtCore/qtmetamacros.h:
 
 /usr/include/qt6/QtCore/qobject.h:
 
@@ -5172,12 +5421,6 @@ QSExtensions_autogen/EWIEGA46WW/moc_WaylandPower.cpp:
 
 /usr/include/bits/typesizes.h:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickdialogspluginTargets-relwithdebinfo.cmake:
-
-/usr/include/qt6/QtCore/qmath.h:
-
-/usr/include/wayland-version.h:
-
 /usr/include/qt6/QtCore/qjsondocument.h:
 
 /usr/include/stdio.h:
@@ -5190,37 +5433,37 @@ CMakeFiles/QSExtensions.dir/qsextensions_qmltyperegistrations.cpp.o:
 
 QSExtensions_autogen/EWIEGA46WW/moc_AiPlugin.cpp:
 
+/usr/include/c++/15.2.1/bits/memoryfwd.h:
+
 /usr/share/cmake/Modules/Compiler/MSVC-DetermineCompiler.cmake:
 
-/usr/include/c++/15.2.1/bits/memoryfwd.h:
+/usr/include/c++/16.1.1/bits/stl_bvector.h:
 
 /usr/lib/cmake/Qt6Gui/Qt6QEvdevTabletPluginTargets.cmake:
 
-/usr/include/qt6/QtQml/qtqmlglobal.h:
+/usr/include/security/pam_appl.h:
 
-/usr/include/qt6/QtCore/qiterator.h:
+/usr/include/qt6/QtCore/qiodevicebase.h:
 
-/usr/include/qt6/QtCore/qminmax.h:
+/usr/include/qt6/QtCore/qhashfunctions.h:
 
-/usr/include/qt6/QtCore/qiterable_impl.h:
+/usr/lib/cmake/Qt6Gui/Qt6QJp2PluginTargets.cmake:
+
+/usr/lib/cmake/Qt6Gui/Qt6QVncIntegrationPluginTargets-relwithdebinfo.cmake:
 
 /usr/include/qt6/QtCore/qhash.h:
 
-/usr/lib/cmake/Qt6/QtPublicSbomFileHelpers.cmake:
-
-/usr/include/qt6/QtCore/QJsonArray:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6modelspluginTargetsPrecheck.cmake:
-
 /usr/lib/cmake/Qt6/QtPublicSbomDepHelpers.cmake:
 
-/usr/include/yaml-cpp/node/iterator.h:
+/usr/lib/cmake/Qt6Qml/Qt6QLocalClientConnectionFactoryPluginTargets.cmake:
 
-/usr/include/bits/stdint-intn.h:
+/usr/include/c++/16.1.1/bits/stl_numeric.h:
+
+/usr/include/c++/15.2.1/bits/specfun.h:
+
+/usr/lib/cmake/Qt6Gui/Qt6GuiConfigVersionImpl.cmake:
 
 /usr/include/qt6/QtCore/qglobal.h:
-
-/usr/include/c++/15.2.1/tr1/gamma.tcc:
 
 /usr/include/qt6/QtCore/qforeach.h:
 
@@ -5240,24 +5483,6 @@ wlr-output-power-management-unstable-v1-protocol.c:
 
 /usr/include/qt6/QtCore/qswap.h:
 
-/usr/include/bits/posix_opt.h:
-
-/usr/lib/cmake/Qt6Quick/Qt6QuickVersionlessAliasTargets.cmake:
-
-/usr/include/c++/15.2.1/bits/exception.h:
-
-/usr/include/c++/15.2.1/pstl/execution_defs.h:
-
-/usr/include/qt6/QtNetwork/qnetworkrequest.h:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlpluginAdditionalTargetInfo.cmake:
-
-/usr/share/cmake/Modules/Compiler/ADSP-DetermineCompiler.cmake:
-
-/usr/lib/cmake/Qt6QuickTools/Qt6QuickToolsTargets-relwithdebinfo.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6particlespluginTargets-relwithdebinfo.cmake:
-
 /usr/include/qt6/QtCore/qcontainerinfo.h:
 
 /usr/lib/cmake/Qt6Quick/Qt6QuickConfig.cmake:
@@ -5266,31 +5491,17 @@ wlr-output-power-management-unstable-v1-protocol.c:
 
 /usr/include/qt6/QtCore/qcontainerfwd.h:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2imaginestyleimplpluginTargets-relwithdebinfo.cmake:
-
-/usr/include/wayland-client-protocol.h:
-
-/usr/lib/cmake/Qt6Network/Qt6QNetworkManagerNetworkInformationPluginTargetsPrecheck.cmake:
-
-/usr/include/qt6/QtCore/qutf8stringview.h:
-
-/usr/include/qt6/QtCore/qconstructormacros.h:
-
-/usr/lib/cmake/Qt6Gui/Qt6QEglFSIntegrationPluginTargets.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6sharedimagepluginTargets-relwithdebinfo.cmake:
-
-/usr/include/qt6/QtCore/qcompare.h:
-
-/usr/include/c++/15.2.1/bits/unique_ptr.h:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6TextToSpeechQmlTargetsPrecheck.cmake:
-
 /usr/include/qt6/QtCore/qchar.h:
 
-/usr/include/c++/15.2.1/bits/uses_allocator_args.h:
-
 /usr/include/qt6/QtCore/qstringview.h:
+
+/usr/include/c++/15.2.1/pstl/glue_memory_defs.h:
+
+/usr/include/c++/16.1.1/bits/parse_numbers.h:
+
+/usr/include/bits/pthreadtypes-arch.h:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6QmlNetworkpluginAdditionalTargetInfo.cmake:
 
 /usr/include/qt6/QtCore/qcalendar.h:
 
@@ -5302,6 +5513,10 @@ wlr-output-power-management-unstable-v1-protocol.c:
 
 /usr/lib/cmake/Qt6/Qt6Targets.cmake:
 
+/usr/include/bits/sched.h:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WebChannelQuickpluginAdditionalTargetInfo.cmake:
+
 /usr/include/qt6/QtCore/qbytearrayview.h:
 
 /usr/lib/cmake/Qt6Qml/Qt6QQmlInspectorServiceFactoryPluginConfig.cmake:
@@ -5310,21 +5525,13 @@ wlr-output-power-management-unstable-v1-protocol.c:
 
 /usr/include/qt6/QtCore/qbytearraylist.h:
 
-/usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake:
-
-/usr/include/qt6/QtCore/qbytearrayalgorithms.h:
-
-/usr/lib/cmake/Qt6Gui/Qt6QEvdevKeyboardPluginAdditionalTargetInfo.cmake:
-
-/usr/share/cmake/Modules/MacroAddFileDependencies.cmake:
-
-/usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsGbmIntegrationPluginTargets-relwithdebinfo.cmake:
-
-/usr/include/c++/15.2.1/bits/ostream_insert.h:
-
 /usr/include/qt6/QtQml/qqmlprivate.h:
 
 /usr/include/qt6/QtCore/qatomic_cxx11.h:
+
+/usr/include/c++/15.2.1/type_traits:
+
+/usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsTargetsPrecheck.cmake:
 
 /usr/include/qt6/QtCore/qassert.h:
 
@@ -5334,27 +5541,15 @@ wlr-output-power-management-unstable-v1-protocol.c:
 
 /usr/include/qt6/QtCore/qarraydatapointer.h:
 
-/usr/include/qt6/QtCore/qfloat16.h:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WaylandCompositorPresentationTimepluginAdditionalTargetInfo.cmake:
-
-/usr/include/qt6/QtCore/qarraydataops.h:
-
-/usr/include/qt6/QtCore/qarraydata.h:
-
-/usr/lib/cmake/Qt6GuiTools/Qt6GuiToolsAdditionalTargetInfo.cmake:
-
 /usr/include/qt6/QtCore/qalloc.h:
-
-/usr/lib/cmake/Qt6QmlMeta/Qt6QmlMetaConfig.cmake:
-
-/usr/include/c++/15.2.1/bits/cpp_type_traits.h:
-
-/usr/include/qt6/QtCore/qalgorithms.h:
 
 /usr/include/qt6/QtCore/q26numeric.h:
 
-/usr/include/c++/15.2.1/bits/streambuf_iterator.h:
+/usr/share/cmake/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2universalstyleimplpluginTargets-relwithdebinfo.cmake:
+
+/usr/include/c++/16.1.1/bits/nested_exception.h:
 
 /usr/lib/cmake/Qt6Gui/Qt6QTgaPluginTargetsPrecheck.cmake:
 
@@ -5366,19 +5561,9 @@ wlr-output-power-management-unstable-v1-protocol.c:
 
 /usr/include/qt6/QtCore/q20utility.h:
 
-/usr/include/qt6/QtCore/qyieldcpu.h:
-
-/usr/include/security/_pam_types.h:
-
-/usr/lib/cmake/Qt6/QtFeatureCommon.cmake:
-
-/usr/include/qt6/QtCore/q20memory.h:
-
 /usr/lib/cmake/Qt6CoreTools/Qt6CoreToolsVersionlessTargets.cmake:
 
 /usr/include/features.h:
-
-/usr/include/c++/15.2.1/chrono:
 
 /usr/share/cmake/Modules/Compiler/GNU-CXX.cmake:
 
@@ -5394,27 +5579,47 @@ wlr-output-power-management-unstable-v1-protocol.c:
 
 /usr/include/qt6/QtCore/QVariant:
 
-/usr/lib/cmake/Qt6/Qt6TargetsPrecheck.cmake:
-
-/usr/lib/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake:
-
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2basicstyleimplpluginConfig.cmake:
 
 /usr/include/qt6/QtCore/qfunctionpointer.h:
+
+/usr/include/c++/16.1.1/numeric:
 
 /usr/share/cmake/Modules/Compiler/XLClang-C-DetermineCompiler.cmake:
 
 /usr/include/qt6/QtCore/QString:
 
-/usr/include/qt6/QtCore/qprocessordetection.h:
+/usr/lib/cmake/Qt6Qml/Qt6QQmlPreviewServiceFactoryPluginTargets-relwithdebinfo.cmake:
 
-/usr/lib/cmake/Qt6Gui/Qt6QGtk3ThemePluginConfig.cmake:
+/usr/include/c++/16.1.1/tr1/beta_function.tcc:
 
-/usr/lib/cmake/Qt6Gui/Qt6QMinimalEglIntegrationPluginAdditionalTargetInfo.cmake:
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2basicstyleimplpluginTargetsPrecheck.cmake:
 
-/usr/include/qt6/QtCore/QMetaType:
+/usr/lib/cmake/Qt6/QtPublicSbomCommonGenerationHelpers.cmake:
 
-/usr/include/c++/15.2.1/utility:
+/usr/lib/cmake/Qt6Gui/Qt6QIbusPlatformInputContextPluginAdditionalTargetInfo.cmake:
+
+/usr/include/qt6/QtCore/qanystringview.h:
+
+/usr/include/qt6/QtCore/QMap:
+
+/usr/include/c++/15.2.1/ctime:
+
+/usr/include/qt6/QtCore/QList:
+
+/usr/include/c++/16.1.1/utility:
+
+/usr/include/pthread.h:
+
+/usr/include/qt6/QtNetwork/QNetworkReply:
+
+/usr/include/qt6/QtCore/qscopeguard.h:
+
+/usr/lib/cmake/Qt6QmlModels/Qt6QmlModelsTargets.cmake:
+
+/usr/include/qt6/QtQml/qjsengine.h:
+
+/usr/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginTargetsPrecheck.cmake:
 
 /usr/include/linux/stddef.h:
 
@@ -5426,17 +5631,15 @@ QSExtensions_autogen/mocs_compilation.cpp:
 
 /usr/include/linux/sched/types.h:
 
-/usr/include/linux/errno.h:
+/usr/include/c++/16.1.1/optional:
 
 /usr/include/qt6/QtCore/qatomic.h:
 
-/usr/include/c++/15.2.1/bits/slice_array.h:
+/usr/include/c++/15.2.1/tr1/exp_integral.tcc:
 
-/usr/include/qt6/QtCore/qtconfigmacros.h:
+/usr/lib/cmake/Qt6Gui/Qt6QWebpPluginTargets.cmake:
 
-/usr/lib/cmake/Qt6Qml/Qt6QmlAdditionalTargetInfo.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlxmllistmodelpluginTargets-relwithdebinfo.cmake:
+/usr/include/inttypes.h:
 
 /usr/lib/cmake/Qt6Qml/Qt6QmlModuleDirMappingTemplate.qrc.in:
 
@@ -5444,37 +5647,199 @@ QSExtensions_autogen/mocs_compilation.cpp:
 
 /usr/lib/cmake/Qt6/QtPublicAppleHelpers.cmake:
 
+/usr/include/c++/16.1.1/iterator:
+
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6workerscriptpluginTargets.cmake:
 
 /usr/include/qt6/QtCore/qtversionchecks.h:
 
 /usr/include/qt6/QtCore/q17memory.h:
 
-/usr/include/c++/15.2.1/bits/ptr_traits.h:
+/usr/share/cmake/Modules/Internal/CMakeInspectCXXLinker.cmake:
+
+/usr/include/errno.h:
+
+/usr/include/bits/mathcalls-helper-functions.h:
+
+/usr/lib/cmake/Qt6Quick/Qt6QuickConfigVersionImpl.cmake:
+
+/usr/include/c++/16.1.1/cctype:
+
+/usr/lib/cmake/Qt6Gui/Qt6QPdfPluginTargetsPrecheck.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6quickmultimediaTargets.cmake:
+
+/usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/gthr.h:
+
+/usr/include/c++/15.2.1/algorithm:
+
+/usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/error_constants.h:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2fusionstyleimplpluginTargets.cmake:
+
+/usr/include/qt6/QtCore/qtextstream.h:
+
+/usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/c++config.h:
+
+/usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/c++allocator.h:
+
+/usr/include/qt6/QtCore/q20memory.h:
+
+/usr/lib/cmake/Qt6/QtFeatureCommon.cmake:
+
+/usr/include/bits/posix2_lim.h:
+
+/usr/lib/cmake/Qt6Gui/Qt6QLinuxFbIntegrationPluginTargets.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2fusionstyleimplpluginConfig.cmake:
+
+/usr/include/qt6/QtQml/QQmlEngine:
+
+/usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/atomic_word.h:
+
+/usr/include/c++/16.1.1/vector:
+
+/usr/lib/libQt6Qml.so.6.11.0:
+
+/usr/lib/cmake/Qt6Gui/Qt6QICOPluginConfig.cmake:
+
+/usr/include/c++/15.2.1/bits/locale_facets.tcc:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6LabsStyleKitImplpluginConfig.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qwaylandcompositorpluginTargets.cmake:
+
+/usr/include/qt6/QtCore/qstringfwd.h:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick2pluginTargetsPrecheck.cmake:
+
+/usr/include/c++/16.1.1/unordered_map:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2implpluginTargets.cmake:
+
+/usr/include/qt6/QtCore/qttranslation.h:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6positioningquickpluginTargetsPrecheck.cmake:
+
+/usr/share/cmake/Modules/Compiler/Embarcadero-DetermineCompiler.cmake:
+
+/usr/include/c++/16.1.1/tr1/special_function_util.h:
+
+QSExtensionsplugin_extensions_buildPlugin_in.cpp:
+
+/usr/include/c++/16.1.1/tr1/poly_laguerre.tcc:
+
+/usr/lib/cmake/Qt6DBus/Qt6DBusConfigVersion.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6modelspluginTargets.cmake:
+
+/usr/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginTargets-relwithdebinfo.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlsettingspluginTargets-relwithdebinfo.cmake:
+
+/usr/include/strings.h:
+
+/usr/lib/cmake/Qt6/QtPublicAndroidHelpers.cmake:
+
+/usr/lib/cmake/Qt6Qml/Qt6QQmlProfilerServiceFactoryPluginTargets.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6workerscriptpluginConfig.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2implpluginConfig.cmake:
+
+/usr/include/qt6/QtCore/qtdeprecationdefinitions.h:
+
+/usr/include/c++/16.1.1/bits/exception_defines.h:
+
+/usr/lib/cmake/Qt6Gui/Qt6QXcbGlxIntegrationPluginAdditionalTargetInfo.cmake:
+
+/usr/lib/cmake/Qt6Gui/Qt6QXcbEglIntegrationPluginConfig.cmake:
+
+/usr/include/c++/16.1.1/bits/chrono.h:
 
 /usr/include/qt6/QtCore/qmetaobject.h:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2implpluginTargets-relwithdebinfo.cmake:
+/usr/include/qt6/QtCore/qyieldcpu.h:
 
-/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/gthr.h:
+/usr/include/security/_pam_types.h:
 
-/usr/lib/cmake/Qt6Gui/Qt6QGifPluginAdditionalTargetInfo.cmake:
+/usr/include/c++/16.1.1/bits/allocator.h:
 
-/usr/include/c++/15.2.1/ext/alloc_traits.h:
+/usr/include/qt6/QtCore/qtypeinfo.h:
 
-/usr/lib/cmake/Qt6/QtPublicCMakeHelpers.cmake:
+/usr/include/c++/16.1.1/backward/binders.h:
 
-/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/error_constants.h:
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquickvectorimagehelperspluginTargets.cmake:
 
-/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++locale.h:
+/usr/include/qt6/QtCore/qstring.h:
 
-/usr/include/qt6/QtCore/qiodevicebase.h:
+/usr/include/bits/xopen_lim.h:
 
-/usr/include/c++/15.2.1/set:
+/usr/include/qt6/QtCore/qminmax.h:
 
-/usr/share/cmake/Modules/Compiler/TI-DetermineCompiler.cmake:
+/usr/include/qt6/QtCore/qiterator.h:
 
-/usr/include/c++/15.2.1/unordered_set:
+/usr/include/yaml-cpp/binary.h:
+
+/usr/include/wayland-util.h:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WaylandTextureSharingTargetsPrecheck.cmake:
+
+/usr/include/bits/timesize.h:
+
+/usr/include/qt6/QtCore/qpointer.h:
+
+/usr/include/bits/types/wint_t.h:
+
+/usr/include/qt6/QtNetwork/QNetworkRequest:
+
+/usr/include/qt6/QtCore/qiterable.h:
+
+/usr/include/c++/16.1.1/bits/stl_set.h:
+
+/usr/include/bits/types/struct_timespec.h:
+
+/usr/include/c++/16.1.1/bits/basic_string.h:
+
+/usr/include/c++/16.1.1/bits/streambuf_iterator.h:
+
+/usr/include/qt6/QtCore/qglobalstatic.h:
+
+/usr/include/c++/16.1.1/bits/align.h:
+
+/usr/include/c++/16.1.1/cstring:
+
+/usr/include/c++/16.1.1/bits/requires_hosted.h:
+
+/usr/include/c++/16.1.1/tr1/exp_integral.tcc:
+
+/usr/lib/cmake/Qt6Gui/Qt6GuiConfigVersion.cmake:
+
+/usr/include/qt6/QtCore/qcompilerdetection.h:
+
+/usr/include/bits/waitflags.h:
+
+/usr/lib/cmake/Qt6QmlIntegration/Qt6QmlIntegrationConfigVersion.cmake:
+
+/usr/lib/cmake/Qt6Gui/Qt6DmaBufServerBufferPluginTargets-relwithdebinfo.cmake:
+
+/usr/include/c++/15.2.1/bits/stl_list.h:
+
+/usr/include/bits/types/struct_sched_param.h:
+
+/usr/include/qt6/QtCore/q20type_traits.h:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtgraphicaleffectsprivateTargets.cmake:
+
+/usr/include/qt6/QtCore/qversionnumber.h:
+
+/usr/include/c++/15.2.1/bits/unordered_map.h:
+
+/usr/include/qt6/QtCore/qtclasshelpermacros.h:
+
+/usr/include/c++/16.1.1/tr1/ell_integral.tcc:
+
+/usr/include/bits/types/mbstate_t.h:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6quickwindowTargets-relwithdebinfo.cmake:
 
@@ -5490,133 +5855,59 @@ QSExtensions_autogen/mocs_compilation.cpp:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6QuickControlsTestUtilsPrivatepluginTargets.cmake:
 
-/usr/include/c++/15.2.1/unordered_map:
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6workerscriptpluginAdditionalTargetInfo.cmake:
 
-/usr/include/qt6/QtCore/qcompare_impl.h:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WaylandCompositorXdgShellpluginTargetsPrecheck.cmake:
-
-/usr/lib/cmake/Qt6Gui/Qt6GuiConfigVersionImpl.cmake:
-
-/usr/include/c++/15.2.1/bits/specfun.h:
-
-/usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsTargetsPrecheck.cmake:
-
-/usr/include/c++/15.2.1/type_traits:
-
-/usr/lib/cmake/Qt6QmlTools/Qt6QmlToolsConfigVersionImpl.cmake:
-
-/usr/include/c++/15.2.1/bits/cxxabi_init_exception.h:
-
-QSExtensions_autogen/moc_predefs.h:
-
-/usr/include/qt6/QtCore/qjsonvalue.h:
-
-/usr/include/c++/15.2.1/memory:
-
-/usr/include/c++/15.2.1/bits/stream_iterator.h:
-
-/usr/include/c++/15.2.1/bits/allocated_ptr.h:
-
-/usr/include/bits/types/error_t.h:
-
-/usr/include/c++/15.2.1/bits/requires_hosted.h:
-
-/usr/include/bits/libm-simd-decl-stubs.h:
-
-/usr/lib/cmake/Qt6/QtInstallPaths.cmake:
-
-/usr/include/bits/types/clockid_t.h:
-
-/usr/include/c++/15.2.1/bits/alloc_traits.h:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2fluentwinui3stylepluginConfig.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6particlespluginTargetsPrecheck.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6positioningquickpluginTargets-relwithdebinfo.cmake:
-
-/usr/include/asm/bitsperlong.h:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3dassetutilspluginConfig.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6Quick3DXrpluginTargets.cmake:
-
-/usr/include/c++/15.2.1/algorithm:
-
-/usr/include/c++/15.2.1/bits/postypes.h:
-
-/usr/include/c++/15.2.1/stdexcept:
-
-/usr/include/qt6/QtQml/qtqmlexports.h:
-
-/usr/include/c++/15.2.1/cassert:
-
-/home/etienne/.dotfiles/quickshell/extensions/AiPlugin.h:
-
-/usr/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets-relwithdebinfo.cmake:
-
-/usr/include/stdc-predef.h:
-
-/usr/lib/cmake/Qt6Network/Qt6NetworkVersionlessAliasTargets.cmake:
-
-/usr/include/bits/types/struct_tm.h:
-
-/usr/include/c++/15.2.1/bits/allocator.h:
-
-/usr/include/bits/types/struct_timespec.h:
-
-/usr/include/qt6/QtCore/qcompilerdetection.h:
-
-/usr/include/bits/waitflags.h:
-
-/usr/lib/cmake/Qt6QmlIntegration/Qt6QmlIntegrationConfigVersion.cmake:
-
-/usr/lib/cmake/Qt6Gui/Qt6DmaBufServerBufferPluginTargets-relwithdebinfo.cmake:
-
-/usr/include/c++/15.2.1/bits/stl_pair.h:
-
-/usr/include/qt6/QtCore/qscopeguard.h:
-
-/usr/include/c++/15.2.1/bits/stl_iterator_base_funcs.h:
-
-/usr/include/qt6/QtNetwork/QNetworkReply:
-
-/usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:
-
-/usr/include/c++/15.2.1/bits/chrono.h:
-
-/usr/include/c++/15.2.1/bits/stl_function.h:
-
-/usr/include/sys/select.h:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WebChannelQuickpluginAdditionalTargetInfo.cmake:
-
-/usr/include/bits/sched.h:
-
-/usr/lib/cmake/Qt6/Qt6ConfigVersionImpl.cmake:
-
-/usr/include/qt6/QtCore/qconfig.h:
-
-/usr/include/qt6/QtCore/qshareddata_impl.h:
-
-/usr/include/bits/types/mbstate_t.h:
+/usr/include/c++/16.1.1/ext/concurrence.h:
 
 /usr/lib/cmake/Qt6/QtPublicSbomAttributionHelpers.cmake:
 
 /usr/include/bits/types/clock_t.h:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6quick3dspatialaudioTargetsPrecheck.cmake:
+/usr/include/c++/16.1.1/cwchar:
 
-/usr/include/bits/types/__locale_t.h:
+/usr/include/bits/types/__fpos_t.h:
 
-/usr/lib/cmake/Qt6Gui/Qt6QWaylandWlShellIntegrationPluginTargets-relwithdebinfo.cmake:
+/usr/include/bits/types/struct_tm.h:
 
-/usr/lib/cmake/Qt6Gui/Qt6QIbusPlatformInputContextPluginConfig.cmake:
+/usr/include/c++/15.2.1/unordered_map:
 
-/usr/include/bits/types/__fpos64_t.h:
+/usr/include/c++/16.1.1/bits/hash_bytes.h:
 
-/usr/lib/cmake/Qt6Gui/Qt6GuiConfigVersion.cmake:
+/usr/include/c++/16.1.1/bits/locale_classes.h:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlxmllistmodelpluginAdditionalTargetInfo.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlwavefrontmeshpluginTargets.cmake:
+
+/usr/lib/cmake/Qt6Gui/Qt6QVncIntegrationPluginConfig.cmake:
+
+/usr/lib/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake:
+
+/usr/include/c++/16.1.1/tr1/hypergeometric.tcc:
+
+/home/etienne/.dotfiles/quickshell/extensions/WaylandPower.cpp:
+
+/usr/include/c++/16.1.1/pstl/execution_defs.h:
+
+/usr/include/qt6/QtCore/qsystemdetection.h:
+
+/usr/lib/cmake/Qt6DBus/Qt6DBusMacros.cmake:
+
+/usr/include/c++/15.2.1/pstl/glue_algorithm_defs.h:
+
+/usr/include/asm/posix_types.h:
+
+/usr/lib/cmake/Qt6Gui/Qt6ShmServerBufferPluginConfig.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6LabsStyleKitpluginAdditionalTargetInfo.cmake:
+
+/usr/include/linux/posix_types.h:
+
+/usr/include/bits/types/FILE.h:
+
+/usr/include/c++/15.2.1/bits/node_handle.h:
+
+/usr/include/bits/flt-eval-method.h:
 
 /usr/share/cmake/Modules/Compiler/PGI-DetermineCompiler.cmake:
 
@@ -5628,6 +5919,10 @@ QSExtensions_autogen/moc_predefs.h:
 
 /usr/include/bits/errno.h:
 
+/usr/include/linux/errno.h:
+
+/usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsAdditionalTargetInfo.cmake:
+
 /usr/include/bits/time64.h:
 
 /usr/share/cmake/Modules/Platform/Linux-Initialize.cmake:
@@ -5638,129 +5933,125 @@ QSExtensions_autogen/moc_predefs.h:
 
 /usr/lib/cmake/Qt6Core/Qt6CoreTargets.cmake:
 
-/usr/share/cmake/Modules/Internal/CMakeInspectCXXLinker.cmake:
+/usr/include/qt6/QtCore/q23utility.h:
 
-/usr/include/errno.h:
+/usr/include/bits/struct_mutex.h:
 
-/usr/include/c++/15.2.1/tuple:
+/usr/lib/cmake/Qt6Gui/Qt6DmaBufServerBufferPluginTargetsPrecheck.cmake:
 
-/usr/include/qt6/QtCore/qstringalgorithms.h:
+/usr/include/qt6/QtQml/qjsnumbercoercion.h:
 
-/usr/include/bits/atomic_wide_counter.h:
+/home/etienne/.dotfiles/quickshell/extensions/AiPlugin.cpp:
 
-/usr/include/qt6/QtCore/qspan.h:
+/usr/lib/cmake/Qt6Network/Qt6NetworkConfigVersionImpl.cmake:
 
-/usr/include/c++/15.2.1/bits/enable_special_members.h:
+/usr/include/bits/stdio_lim.h:
+
+/usr/include/qt6/QtCore/qjsonvalue.h:
+
+/usr/include/c++/15.2.1/memory:
+
+/usr/include/c++/16.1.1/type_traits:
+
+/usr/include/qt6/QtCore/qtimezone.h:
+
+/usr/include/c++/16.1.1/bits/cpp_type_traits.h:
+
+/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:
+
+/usr/lib/cmake/Qt6/QtPublicSbomCpeHelpers.cmake:
+
+/usr/include/libintl.h:
+
+/usr/lib/cmake/Qt6/QtPublicSbomBuildToolHelpers.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3deffectpluginConfig.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlshapespluginTargets-relwithdebinfo.cmake:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3dassetutilspluginTargets.cmake:
+/usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake:
+
+/usr/include/qt6/QtCore/qbytearrayalgorithms.h:
+
+/usr/lib/cmake/Qt6Gui/Qt6QEvdevKeyboardPluginAdditionalTargetInfo.cmake:
+
+/usr/share/cmake/Modules/Compiler/Intel-DetermineCompiler.cmake:
+
+/usr/include/c++/16.1.1/bits/allocated_ptr.h:
 
 /usr/lib/cmake/Qt6Gui/Qt6QEglFSEmulatorIntegrationPluginTargets-relwithdebinfo.cmake:
 
-/usr/include/qt6/QtCore/QDir:
+CMakeFiles/4.3.3/CMakeCCompiler.cmake:
 
-/usr/include/c++/15.2.1/ext/numeric_traits.h:
+/usr/include/c++/16.1.1/bits/stdexcept_throwfwd.h:
 
-/usr/include/bits/xopen_lim.h:
+/usr/include/c++/16.1.1/bits/string_view.tcc:
+
+/usr/include/c++/16.1.1/variant:
+
+/usr/include/c++/16.1.1/backward/auto_ptr.h:
+
+/usr/include/c++/16.1.1/bits/erase_if.h:
+
+/usr/include/c++/16.1.1/unordered_set:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlxmllistmodelpluginTargets.cmake:
+
+/usr/include/qt6/QtNetwork/qhostaddress.h:
+
+/usr/lib/cmake/Qt6Core/Qt6CoreConfigureFileTemplate.in:
+
+/usr/include/c++/16.1.1/pstl/glue_numeric_defs.h:
+
+/usr/include/bits/timex.h:
+
+/usr/include/c++/16.1.1/algorithm:
+
+/usr/include/qt6/QtCore/qxptype_traits.h:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2fusionstylepluginTargetsPrecheck.cmake:
+
+/usr/lib/cmake/Qt6/QtPublicSbomLicenseHelpers.cmake:
 
 /usr/lib/cmake/Qt6Qml/Qt6QLocalClientConnectionFactoryPluginAdditionalTargetInfo.cmake:
 
 /usr/include/qt6/QtCore/qdatetime.h:
 
+/usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfig.cmake:
+
 /usr/include/asm-generic/int-ll64.h:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2basicstylepluginTargetsPrecheck.cmake:
-
-/usr/include/c++/15.2.1/bits/stl_set.h:
-
-/usr/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginConfig.cmake:
-
-/usr/include/wchar.h:
-
-/usr/lib/libQt6Gui.so.6.10.1:
-
-/usr/include/bits/wordsize.h:
-
-/usr/include/bits/posix1_lim.h:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickshapesdesignhelperspluginTargetsPrecheck.cmake:
 
 /usr/lib/cmake/Qt6/QtPublicFinalizerHelpers.cmake:
 
+/usr/include/asm/errno.h:
+
+/usr/lib/cmake/Qt6Gui/Qt6QTiffPluginAdditionalTargetInfo.cmake:
+
 /usr/share/cmake/Modules/GNUInstallDirs.cmake:
 
 /usr/include/asm/posix_types_64.h:
 
-/usr/include/c++/15.2.1/compare:
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3dhelperspluginTargets-relwithdebinfo.cmake:
 
-/usr/lib/cmake/Qt6Network/Qt6QNetworkManagerNetworkInformationPluginTargets-relwithdebinfo.cmake:
+/usr/include/c++/16.1.1/version:
 
 /usr/lib/cmake/Qt6Gui/Qt6QGtk3ThemePluginTargets-relwithdebinfo.cmake:
 
-/usr/lib/cmake/Qt6Qml/Qt6QQmlProfilerServiceFactoryPluginTargets.cmake:
+/usr/include/asm/bitsperlong.h:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6workerscriptpluginConfig.cmake:
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3dassetutilspluginConfig.cmake:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2implpluginConfig.cmake:
-
-/usr/include/qt6/QtCore/qtdeprecationdefinitions.h:
-
-/usr/lib/cmake/Qt6Qml/Qt6QQuickProfilerAdapterFactoryPluginTargetsPrecheck.cmake:
-
-/usr/include/c++/15.2.1/debug/debug.h:
-
-/usr/lib/cmake/Qt6/QtPublicTargetHelpers.cmake:
-
-/usr/include/c++/15.2.1/bits/align.h:
-
-/usr/include/bits/types/struct_FILE.h:
-
-/usr/share/cmake/Modules/CheckLibraryExists.cmake:
-
-/usr/include/asm/types.h:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2pluginConfig.cmake:
-
-/usr/lib/cmake/Qt6Core/Qt6CoreConfig.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6LabsPlatformpluginTargets-relwithdebinfo.cmake:
-
-/usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsGbmIntegrationPluginConfig.cmake:
-
-/usr/lib/cmake/Qt6Gui/Qt6QWaylandXdgShellIntegrationPluginConfig.cmake:
-
-/usr/include/c++/15.2.1/streambuf:
-
-/usr/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginConfig.cmake:
-
-/usr/lib/cmake/Qt6OpenGL/Qt6OpenGLTargetsPrecheck.cmake:
-
-/usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfig.cmake:
-
-CMakeFiles/4.3.1/CMakeSystem.cmake:
-
-/usr/lib/cmake/Qt6Gui/Qt6QTgaPluginAdditionalTargetInfo.cmake:
-
-/usr/include/c++/15.2.1/bits/basic_ios.h:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6QuickControlsTestUtilsPrivatepluginConfig.cmake:
-
-/usr/lib/cmake/Qt6Qml/Qt6QTcpServerConnectionFactoryPluginTargets.cmake:
-
-/usr/include/qt6/QtCore/qbytearray.h:
-
-/usr/include/c++/15.2.1/bits/functexcept.h:
-
-/home/etienne/.dotfiles/quickshell/extensions/WaylandPower.cpp:
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6Quick3DXrpluginTargets.cmake:
 
 /usr/include/asm-generic/errno.h:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlwavefrontmeshpluginTargetsPrecheck.cmake:
+/usr/lib/cmake/Qt6QmlWorkerScript/Qt6QmlWorkerScriptTargets-relwithdebinfo.cmake:
 
-/usr/include/sys/single_threaded.h:
+/usr/include/c++/16.1.1/bits/enable_special_members.h:
+
+/usr/include/c++/16.1.1/bits/list.tcc:
 
 /usr/lib/crtn.o:
 
@@ -5768,45 +6059,85 @@ CMakeFiles/4.3.1/CMakeSystem.cmake:
 
 /usr/include/asm-generic/types.h:
 
-/usr/include/c++/15.2.1/cstdio:
+/usr/share/cmake/Modules/CMakeDetermineCompilerSupport.cmake:
 
-/usr/include/c++/15.2.1/bits/basic_string.h:
+/usr/include/c++/16.1.1/cstdint:
 
-/usr/include/c++/15.2.1/exception:
+/usr/share/cmake/Modules/CheckLibraryExists.cmake:
 
-/usr/include/qt6/QtNetwork/qtnetwork-config.h:
+/usr/include/asm/types.h:
 
-/usr/include/c++/15.2.1/map:
+/usr/include/c++/15.2.1/string:
 
-/home/etienne/.dotfiles/quickshell/extensions/CMakeLists.txt:
+/usr/share/cmake/Modules/CMakeDetermineSystem.cmake:
 
-/usr/include/c++/15.2.1/new:
+/usr/include/c++/16.1.1/initializer_list:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2basicstyleimplpluginAdditionalTargetInfo.cmake:
+/usr/share/cmake/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake:
 
-/usr/lib/cmake/Qt6Gui/Qt6QMinimalEglIntegrationPluginTargetsPrecheck.cmake:
+/usr/include/c++/16.1.1/exception:
 
-/usr/include/qt6/QtCore/QFlags:
+/usr/include/c++/16.1.1/stdexcept:
 
-/usr/include/bits/locale.h:
+/usr/include/bits/types/struct_FILE.h:
 
-/usr/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake:
+/usr/include/c++/15.2.1/cstdint:
 
-/usr/lib/cmake/Qt6QmlIntegration/Qt6QmlIntegrationAdditionalTargetInfo.cmake:
+/usr/include/qt6/QtNetwork/QNetworkAccessManager:
 
-/home/etienne/.dotfiles/quickshell/extensions/PamAuth.cpp:
+/usr/lib/cmake/Qt6Qml/Qt6QTcpServerConnectionFactoryPluginTargets.cmake:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlpluginTargetsPrecheck.cmake:
+/usr/include/qt6/QtCore/qbytearray.h:
+
+/home/etienne/.dotfiles/quickshell/extensions/AiPlugin.h:
+
+/usr/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets-relwithdebinfo.cmake:
+
+/usr/include/qt6/QtCore/qstringtokenizer.h:
+
+/usr/lib/libQt6OpenGL.so.6.11.0:
+
+/usr/include/yaml-cpp/node/node.h:
+
+/usr/include/c++/16.1.1/bits/ios_base.h:
+
+/usr/share/cmake/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake:
+
+/usr/include/qt6/QtCore/qtaggedpointer.h:
+
+/usr/include/yaml-cpp/mark.h:
+
+/usr/include/c++/15.2.1/bits/std_abs.h:
+
+/usr/lib/cmake/Qt6Qml/Qt6QQmlDebuggerServiceFactoryPluginAdditionalTargetInfo.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlfolderlistmodelpluginAdditionalTargetInfo.cmake:
+
+/usr/include/qt6/QtCore/qiodevice.h:
+
+/usr/lib/cmake/Qt6Gui/Qt6QGtk3ThemePluginConfig.cmake:
+
+/usr/include/c++/15.2.1/utility:
+
+/usr/include/qt6/QtCore/QMetaType:
+
+/usr/lib/cmake/Qt6Gui/Qt6QMinimalEglIntegrationPluginAdditionalTargetInfo.cmake:
 
 /usr/share/cmake/Modules/Compiler/ARMCC-DetermineCompiler.cmake:
 
 /usr/include/sys/types.h:
 
-QSExtensionsplugin_extensions_buildPlugin_in.cpp:
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6LabsPlatformpluginTargets-relwithdebinfo.cmake:
 
-/usr/include/bits/types/time_t.h:
+/usr/include/c++/16.1.1/bits/ostream_insert.h:
 
-/usr/include/c++/15.2.1/bits/erase_if.h:
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6LabsPlatformpluginConfig.cmake:
+
+/home/etienne/.dotfiles/quickshell/extensions/CMakeLists.txt:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2basicstyleimplpluginAdditionalTargetInfo.cmake:
+
+/usr/lib/cmake/Qt6Gui/Qt6QMinimalEglIntegrationPluginTargetsPrecheck.cmake:
 
 /usr/include/c++/15.2.1/bits/concept_check.h:
 
@@ -5816,449 +6147,29 @@ QSExtensionsplugin_extensions_buildPlugin_in.cpp:
 
 /usr/lib/cmake/Qt6Gui/Qt6QMngPluginAdditionalTargetInfo.cmake:
 
-/usr/include/qt6/QtCore/qdir.h:
+/usr/include/c++/15.2.1/bits/stl_iterator_base_funcs.h:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquicktimelineblendtreespluginTargets.cmake:
+/usr/include/c++/16.1.1/bits/stl_uninitialized.h:
 
-/usr/include/c++/15.2.1/array:
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6LabsStyleKitpluginConfig.cmake:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2universalstylepluginConfig.cmake:
+/usr/include/c++/16.1.1/bits/shared_ptr.h:
 
-/usr/include/qt6/QtCore/qfunctionaltools_impl.h:
+/usr/lib/cmake/Qt6Quick/Qt6QuickConfigVersion.cmake:
 
-/usr/include/bits/long-double.h:
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6TextToSpeechQmlTargets.cmake:
 
-/usr/share/cmake/Modules/Linker/GNU.cmake:
+/usr/include/c++/16.1.1/bits/stl_multiset.h:
 
-/usr/lib/cmake/Qt6Gui/Qt6ShmServerBufferPluginTargetsPrecheck.cmake:
+/usr/lib/cmake/Qt6Gui/Qt6QGifPluginConfig.cmake:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6LabsPlatformpluginConfig.cmake:
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WaylandCompositorXdgShellpluginAdditionalTargetInfo.cmake:
 
-/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++config.h:
-
-/usr/lib/cmake/Qt6/Qt6Dependencies.cmake:
-
-/usr/include/bits/types/__sigset_t.h:
-
-/usr/include/strings.h:
-
-/usr/lib/cmake/Qt6/QtPublicAndroidHelpers.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6quicktoolingTargets-relwithdebinfo.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3dhelpersimplpluginConfig.cmake:
-
-CMakeFiles/4.3.1/CMakeCCompiler.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2universalstylepluginTargetsPrecheck.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6LabsSynchronizerpluginConfig.cmake:
-
-/usr/include/c++/15.2.1/tr1/poly_laguerre.tcc:
-
-/usr/include/c++/15.2.1/backward/auto_ptr.h:
-
-/usr/lib/cmake/Qt6/QtPublicSbomPythonHelpers.cmake:
-
-/usr/lib/cmake/Qt6Core/Qt6CoreAdditionalTargetInfo.cmake:
-
-/usr/include/bits/struct_rwlock.h:
-
-/usr/include/c++/15.2.1/bits/parse_numbers.h:
-
-/usr/lib/cmake/Qt6Network/Qt6QGlibNetworkInformationPluginAdditionalTargetInfo.cmake:
-
-/usr/include/bits/wchar.h:
-
-/usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake:
-
-/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/gthr-default.h:
-
-/usr/lib/cmake/Qt6Gui/Qt6QEvdevKeyboardPluginTargetsPrecheck.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2fusionstylepluginTargets.cmake:
-
-/usr/lib/cmake/Qt6DBus/Qt6DBusTargets.cmake:
-
-/usr/include/bits/types/struct___jmp_buf_tag.h:
-
-/usr/include/pwd.h:
-
-/usr/include/yaml-cpp/node/emit.h:
-
-/usr/include/bits/mathcalls.h:
-
-/usr/lib/cmake/Qt6Gui/Qt6QWaylandXdgShellIntegrationPluginTargetsPrecheck.cmake:
-
-/usr/include/qt6/QtCore/qsharedpointer_impl.h:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlfolderlistmodelpluginConfig.cmake:
-
-/usr/include/bits/flt-eval-method.h:
-
-/usr/include/c++/15.2.1/bits/node_handle.h:
-
-/usr/lib/cmake/Qt6Network/Qt6NetworkConfigVersionImpl.cmake:
-
-/usr/include/qt6/QtCore/qjsonarray.h:
-
-/usr/include/bits/math-vector.h:
-
-/usr/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake:
-
-/usr/include/bits/uio_lim.h:
-
-wlr-output-power-management-unstable-v1-client-protocol.h:
-
-/usr/include/bits/types/cookie_io_functions_t.h:
-
-/usr/include/qt6/QtQml/qqmldebug.h:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquicktemplates2pluginTargets.cmake:
-
-/usr/include/qt6/QtCore/qlatin1stringview.h:
-
-/usr/include/bits/types/__FILE.h:
-
-/usr/include/c++/15.2.1/bits/stl_algobase.h:
-
-/usr/include/bits/setjmp.h:
-
-/usr/lib/cmake/Qt6Gui/Qt6DrmEglServerBufferPluginAdditionalTargetInfo.cmake:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdbool.h:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6QmlNetworkpluginTargets-relwithdebinfo.cmake:
-
-/usr/include/bits/byteswap.h:
-
-/usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake:
-
-/usr/include/qt6/QtCore/qcomparehelpers.h:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WaylandCompositorIviapplicationpluginConfig.cmake:
-
-/usr/include/asm-generic/posix_types.h:
-
-/usr/include/c++/15.2.1/bits/stl_map.h:
-
-/usr/include/qt6/QtNetwork/qtcpsocket.h:
-
-/usr/include/security/_pam_compat.h:
-
-/usr/include/c++/15.2.1/pstl/glue_numeric_defs.h:
-
-/usr/include/c++/15.2.1/tr1/special_function_util.h:
-
-/usr/include/qt6/QtCore/qlist.h:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2pluginAdditionalTargetInfo.cmake:
-
-/usr/lib/cmake/Qt6Gui/Qt6QWaylandEglClientBufferPluginAdditionalTargetInfo.cmake:
-
-/usr/include/linux/close_range.h:
-
-/usr/include/bits/uintn-identity.h:
-
-/usr/lib/cmake/Qt6QmlModels/Qt6QmlModelsTargets.cmake:
-
-/usr/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginTargetsPrecheck.cmake:
-
-/usr/include/qt6/QtQml/qjsengine.h:
-
-/usr/include/c++/15.2.1/bits/valarray_after.h:
-
-/usr/include/c++/15.2.1/bit:
-
-CMakeFiles/4.3.1/CMakeCXXCompiler.cmake:
-
-/usr/lib/cmake/Qt6Gui/Qt6DmaBufServerBufferPluginTargets.cmake:
-
-/usr/lib/cmake/Qt6Gui/Qt6QEvdevTabletPluginTargets-relwithdebinfo.cmake:
-
-/usr/include/bits/endian.h:
-
-/usr/include/math.h:
-
-/usr/lib/libgcc_s.so:
-
-/usr/lib/cmake/Qt6QmlMeta/Qt6QmlMetaTargetsPrecheck.cmake:
-
-/usr/lib/cmake/Qt6Gui/Qt6QSvgIconPluginTargetsPrecheck.cmake:
-
-/usr/include/c++/15.2.1/bits/invoke.h:
-
-/usr/include/qt6/QtCore/qanystringview.h:
-
-/usr/include/c++/15.2.1/bits/ostream.h:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WaylandTextureSharingExtensionTargets-relwithdebinfo.cmake:
-
-/usr/include/c++/15.2.1/cerrno:
-
-/usr/include/qt6/QtCore/qsharedpointer.h:
+/usr/include/c++/16.1.1/bits/shared_ptr_atomic.h:
 
 /usr/share/cmake/Modules/Compiler/Fujitsu-DetermineCompiler.cmake:
 
 /usr/bin/cmake:
-
-/usr/include/c++/15.2.1/atomic:
-
-/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:
-
-/usr/lib/cmake/Qt6/QtPublicSbomCpeHelpers.cmake:
-
-/usr/lib/cmake/Qt6Gui/Qt6QLinuxFbIntegrationPluginAdditionalTargetInfo.cmake:
-
-/usr/lib/cmake/Qt6DBus/Qt6DBusConfig.cmake:
-
-/usr/include/bits/floatn.h:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquickvectorimagepluginTargets-relwithdebinfo.cmake:
-
-/usr/include/bits/fp-fast.h:
-
-/usr/share/cmake/Modules/CMakeParseLibraryArchitecture.cmake:
-
-/usr/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules/FindWayland.cmake:
-
-/usr/include/qt6/QtCore/qurl.h:
-
-/usr/lib/cmake/Qt6/QtPublicSbomGenerationHelpers.cmake:
-
-/usr/include/qt6/QtCore/qdatastream.h:
-
-/usr/include/qt6/QtNetwork/qsslsocket.h:
-
-/usr/include/bits/iscanonical.h:
-
-/usr/lib/cmake/Qt6/QtPublicTestHelpers.cmake:
-
-/usr/lib/libQt6Network.so.6.10.1:
-
-/usr/include/c++/15.2.1/bits/charconv.h:
-
-/usr/include/bits/mathcalls-helper-functions.h:
-
-/usr/lib/cmake/Qt6Gui/Qt6QPdfPluginTargetsPrecheck.cmake:
-
-/usr/lib/cmake/Qt6/FindWrapOpenGL.cmake:
-
-/usr/include/c++/15.2.1/climits:
-
-/home/etienne/.dotfiles/quickshell/extensions/PamAuth.h:
-
-/usr/lib/cmake/Qt6Gui/Qt6QEglFSEmulatorIntegrationPluginConfig.cmake:
-
-/usr/lib/cmake/Qt6Gui/Qt6QWaylandIntegrationPluginTargets.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6QuickTestpluginTargets-relwithdebinfo.cmake:
-
-/usr/include/gnu/stubs.h:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtgraphicaleffectspluginAdditionalTargetInfo.cmake:
-
-/usr/include/c++/15.2.1/pstl/pstl_config.h:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquickvectorimagehelperspluginAdditionalTargetInfo.cmake:
-
-/usr/include/qt6/QtCore/qstringconverter_base.h:
-
-/usr/lib/cmake/yaml-cpp/yaml-cpp-config-version.cmake:
-
-/usr/include/c++/15.2.1/bits/atomic_base.h:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WebChannelQuickpluginTargets.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6QmlNetworkpluginAdditionalTargetInfo.cmake:
-
-/usr/include/bits/pthreadtypes-arch.h:
-
-/usr/include/bits/types/wint_t.h:
-
-/usr/include/qt6/QtCore/qpointer.h:
-
-/usr/lib/cmake/Qt6Gui/Qt6QEvdevTabletPluginConfig.cmake:
-
-/usr/include/c++/15.2.1/tr1/beta_function.tcc:
-
-/usr/lib/cmake/Qt6Gui/Qt6QTiffPluginConfig.cmake:
-
-/usr/include/c++/15.2.1/bits/stl_multimap.h:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2basicstyleimplpluginTargetsPrecheck.cmake:
-
-/usr/lib/cmake/Qt6Gui/Qt6QIbusPlatformInputContextPluginAdditionalTargetInfo.cmake:
-
-/usr/lib/cmake/Qt6/QtPublicSbomCommonGenerationHelpers.cmake:
-
-/usr/include/bits/pthreadtypes.h:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6LabsPlatformpluginTargets.cmake:
-
-/usr/include/yaml-cpp/binary.h:
-
-/usr/include/wayland-util.h:
-
-/usr/include/bits/timesize.h:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WaylandTextureSharingTargetsPrecheck.cmake:
-
-/usr/include/c++/15.2.1/tr1/hypergeometric.tcc:
-
-/usr/include/bits/select.h:
-
-/usr/lib/cmake/Qt6Gui/Qt6QMngPluginTargetsPrecheck.cmake:
-
-/usr/lib/cmake/Qt6Gui/Qt6QTsLibPluginTargets-relwithdebinfo.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtwebenginequickdelegatespluginConfig.cmake:
-
-/usr/lib/cmake/Qt6/Qt6ConfigExtras.cmake:
-
-/usr/lib/cmake/Qt6Gui/Qt6QXcbEglIntegrationPluginAdditionalTargetInfo.cmake:
-
-/home/etienne/.dotfiles/quickshell/extensions/WaylandPower.h:
-
-/usr/include/c++/15.2.1/ext/type_traits.h:
-
-/usr/include/qt6/QtNetwork/qtnetworkglobal.h:
-
-/usr/include/qt6/QtCore/qcborvalue.h:
-
-/usr/include/qt6/QtCore/qtconfiginclude.h:
-
-/usr/include/c++/15.2.1/list:
-
-/usr/include/c++/15.2.1/vector:
-
-/usr/lib/cmake/Qt6Qml/Qt6QTcpServerConnectionFactoryPluginTargets-relwithdebinfo.cmake:
-
-/usr/include/c++/15.2.1/bits/exception_defines.h:
-
-/usr/include/qt6/QtCore/QTextStream:
-
-/usr/lib/cmake/Qt6Gui/Qt6QWaylandQtShellIntegrationPluginTargets.cmake:
-
-/usr/include/qt6/QtQml/qqmllist.h:
-
-/usr/include/qt6/QtCore/qdebug.h:
-
-/usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsEglDeviceIntegrationPluginConfig.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlwavefrontmeshpluginConfig.cmake:
-
-/usr/lib/cmake/Qt6Gui/Qt6QIbusPlatformInputContextPluginTargetsPrecheck.cmake:
-
-/usr/include/qt6/QtCore/qjsonobject.h:
-
-/usr/include/c++/15.2.1/bits/hash_bytes.h:
-
-/home/etienne/.dotfiles/quickshell/extensions/AiPlugin.cpp:
-
-/usr/include/qt6/QtQml/qjsnumbercoercion.h:
-
-/usr/include/c++/15.2.1/backward/binders.h:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2implpluginTargetsPrecheck.cmake:
-
-/usr/include/c++/15.2.1/ext/concurrence.h:
-
-/usr/include/qt6/QtCore/qhashfunctions.h:
-
-/usr/lib/cmake/Qt6Gui/Qt6QJp2PluginTargets.cmake:
-
-/usr/lib/cmake/Qt6Gui/Qt6QVncIntegrationPluginTargets-relwithdebinfo.cmake:
-
-/usr/include/c++/15.2.1/bits/hashtable.h:
-
-/usr/include/c++/15.2.1/bits/hashtable_policy.h:
-
-/usr/include/qt6/QtCore/qversionnumber.h:
-
-/usr/lib/cmake/Qt6Qml/Qt6QTcpServerConnectionFactoryPluginTargetsPrecheck.cmake:
-
-/usr/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginTargetsPrecheck.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlxmllistmodelpluginConfig.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2fusionstylepluginTargets-relwithdebinfo.cmake:
-
-/usr/include/c++/15.2.1/functional:
-
-/usr/lib/cmake/Qt6Gui/Qt6QWaylandWlShellIntegrationPluginConfig.cmake:
-
-/usr/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginAdditionalTargetInfo.cmake:
-
-/usr/include/alloca.h:
-
-/usr/include/c++/15.2.1/bits/localefwd.h:
-
-/usr/include/c++/15.2.1/bits/memory_resource.h:
-
-/usr/share/cmake/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake:
-
-/usr/include/qt6/QtCore/qtaggedpointer.h:
-
-/usr/include/yaml-cpp/mark.h:
-
-/usr/lib/cmake/Qt6Qml/Qt6QQmlDebuggerServiceFactoryPluginAdditionalTargetInfo.cmake:
-
-/usr/include/c++/15.2.1/bits/std_abs.h:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlfolderlistmodelpluginAdditionalTargetInfo.cmake:
-
-/usr/include/qt6/QtCore/qiodevice.h:
-
-/usr/include/c++/15.2.1/cstdlib:
-
-/usr/include/qt6/QtQml/qjsprimitivevalue.h:
-
-/usr/include/bits/types.h:
-
-/usr/lib/cmake/Qt6Gui/Qt6QMngPluginTargets.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6LabsSynchronizerpluginTargets.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquickvectorimagepluginConfig.cmake:
-
-/usr/lib/cmake/Qt6/Qt6Config.cmake:
-
-/usr/include/c++/15.2.1/bits/locale_facets.tcc:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6LabsStyleKitImplpluginConfig.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qwaylandcompositorpluginTargets.cmake:
-
-/usr/include/qt6/QtCore/qstringfwd.h:
-
-/usr/include/c++/15.2.1/bits/nested_exception.h:
-
-/usr/lib/libQt6Quick.so.6.10.1:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquicktimelineblendtreespluginTargets-relwithdebinfo.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WaylandCompositorIviapplicationpluginTargets-relwithdebinfo.cmake:
-
-/usr/include/c++/15.2.1/bits/stringfwd.h:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtqmlcorepluginConfig.cmake:
-
-/usr/lib/cmake/Qt6Gui/Qt6QVncIntegrationPluginTargetsPrecheck.cmake:
-
-/usr/include/c++/15.2.1/bits/new_allocator.h:
-
-/usr/lib/cmake/Qt6Gui/Qt6QEglFSIntegrationPluginAdditionalTargetInfo.cmake:
-
-/usr/lib/cmake/Qt6Gui/Qt6QTiffPluginAdditionalTargetInfo.cmake:
-
-/usr/include/asm/errno.h:
-
-/usr/include/c++/15.2.1/system_error:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2universalstyleimplpluginTargets.cmake:
-
-/usr/include/c++/15.2.1/bits/basic_string.tcc:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stddef.h:
 
@@ -6268,181 +6179,465 @@ CMakeFiles/4.3.1/CMakeCXXCompiler.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6QMinimalEglIntegrationPluginConfig.cmake:
 
-/usr/include/c++/15.2.1/bits/streambuf.tcc:
+/usr/include/c++/16.1.1/tuple:
 
-/usr/include/qt6/QtCore/q20type_traits.h:
+/usr/lib/cmake/Qt6/Qt6Dependencies.cmake:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtgraphicaleffectsprivateTargets.cmake:
+/usr/include/bits/types/__sigset_t.h:
 
-/usr/lib/cmake/Qt6Gui/Qt6DmaBufServerBufferPluginTargetsPrecheck.cmake:
+/usr/include/c++/16.1.1/bits/new_allocator.h:
 
-/usr/lib/cmake/Qt6QuickTools/Qt6QuickToolsTargetsPrecheck.cmake:
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6PdfQuickpluginAdditionalTargetInfo.cmake:
 
-/usr/include/c++/15.2.1/bits/stl_construct.h:
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6particlespluginTargets.cmake:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquicklayoutspluginTargets.cmake:
+/usr/share/cmake/Modules/Compiler/Clang-DetermineCompilerInternal.cmake:
 
-/usr/include/c++/15.2.1/limits:
+/usr/include/c++/16.1.1/tr1/bessel_function.tcc:
 
-/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++allocator.h:
+/usr/include/qt6/QtCore/qsharedpointer.h:
 
-/usr/lib/cmake/Qt6Gui/Qt6ShmServerBufferPluginAdditionalTargetInfo.cmake:
+/usr/lib/cmake/Qt6/QtPublicSbomPythonHelpers.cmake:
 
-/usr/include/c++/15.2.1/bits/range_access.h:
+/usr/lib/cmake/Qt6Core/Qt6CoreAdditionalTargetInfo.cmake:
+
+/usr/lib/cmake/Qt6Network/Qt6QGlibNetworkInformationPluginAdditionalTargetInfo.cmake:
+
+/usr/include/bits/wchar.h:
+
+/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/gthr-default.h:
+
+/usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake:
+
+/usr/lib/cmake/Qt6Gui/Qt6QEvdevKeyboardPluginTargetsPrecheck.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2fusionstylepluginTargets.cmake:
+
+/usr/lib/cmake/Qt6DBus/Qt6DBusTargets.cmake:
+
+/usr/include/bits/types/struct___jmp_buf_tag.h:
+
+/usr/include/c++/16.1.1/bits/localefwd.h:
+
+/usr/include/pwd.h:
+
+/usr/include/yaml-cpp/node/emit.h:
+
+/usr/include/bits/mathcalls.h:
+
+/usr/lib/cmake/Qt6Gui/Qt6QWaylandXdgShellIntegrationPluginTargetsPrecheck.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2materialstyleimplpluginTargets.cmake:
+
+/usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/c++locale.h:
+
+/usr/include/c++/16.1.1/ext/type_traits.h:
+
+/usr/include/c++/16.1.1/bits/atomic_base.h:
+
+/usr/include/bits/setjmp.h:
+
+/usr/lib/cmake/Qt6Gui/Qt6DrmEglServerBufferPluginAdditionalTargetInfo.cmake:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdbool.h:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6QmlNetworkpluginTargets-relwithdebinfo.cmake:
+
+/usr/include/c++/16.1.1/bits/postypes.h:
+
+/usr/include/bits/types/cookie_io_functions_t.h:
+
+/usr/include/c++/16.1.1/tr1/riemann_zeta.tcc:
+
+/usr/include/bits/byteswap.h:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2imaginestyleimplpluginAdditionalTargetInfo.cmake:
+
+/usr/include/c++/16.1.1/concepts:
+
+/usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake:
+
+/usr/include/qt6/QtCore/qcomparehelpers.h:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WaylandCompositorIviapplicationpluginConfig.cmake:
+
+/usr/include/c++/16.1.1/cassert:
+
+/usr/include/sys/select.h:
+
+/usr/include/bits/endian.h:
+
+/usr/include/qt6/QtCore/QObject:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6LabsStyleKitImplpluginTargets.cmake:
 
 /usr/lib/cmake/Qt6/Qt6ConfigVersion.cmake:
 
 /usr/include/qt6/QtNetwork/QSslPreSharedKeyAuthenticator:
 
-/usr/share/cmake/Modules/Compiler/NVHPC-DetermineCompiler.cmake:
-
 /usr/include/c++/15.2.1/bits/char_traits.h:
+
+/usr/share/cmake/Modules/Compiler/NVHPC-DetermineCompiler.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6QICNSPluginTargetsPrecheck.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6VulkanServerBufferPluginConfig.cmake:
 
-/usr/include/c++/15.2.1/bits/shared_ptr.h:
+/usr/include/bits/libm-simd-decl-stubs.h:
 
-/usr/include/c++/15.2.1/tr1/bessel_function.tcc:
+/usr/share/cmake/Modules/MacroAddFileDependencies.cmake:
 
-/usr/include/c++/15.2.1/bits/locale_classes.tcc:
+/usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsGbmIntegrationPluginTargets-relwithdebinfo.cmake:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WaylandCompositorXdgShellpluginTargets-relwithdebinfo.cmake:
+/usr/include/c++/16.1.1/bits/stl_construct.h:
 
-/usr/include/c++/15.2.1/bits/shared_ptr_atomic.h:
+/usr/include/c++/16.1.1/bits/version.h:
 
-/usr/lib/cmake/Qt6Gui/Qt6QWaylandAdwaitaDecorationPluginAdditionalTargetInfo.cmake:
+/usr/include/bits/floatn.h:
 
-/usr/include/qt6/QtCore/QMap:
+/usr/lib/cmake/Qt6Gui/Qt6QLinuxFbIntegrationPluginTargets-relwithdebinfo.cmake:
 
-/usr/lib/libwayland-client.so:
+/usr/include/wchar.h:
 
-/usr/include/c++/15.2.1/bits/refwrap.h:
+/usr/include/c++/15.2.1/debug/assertions.h:
 
-/usr/include/c++/15.2.1/bits/stl_iterator.h:
+/usr/include/c++/15.2.1/cwchar:
 
-/usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsGbmIntegrationPluginTargets.cmake:
+/usr/include/qt6/QtCore/qmetacontainer.h:
 
-/usr/include/security/pam_appl.h:
+/usr/include/sched.h:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6effectspluginConfig.cmake:
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquickvectorimagepluginTargets-relwithdebinfo.cmake:
 
-/usr/include/bits/types/struct_sched_param.h:
+/usr/include/bits/fp-fast.h:
 
-/usr/include/c++/15.2.1/bits/stl_list.h:
+/usr/lib/cmake/Qt6QmlModels/Qt6QmlModelsConfigVersionImpl.cmake:
+
+/usr/include/qt6/QtQml/qjsvalue.h:
+
+/usr/include/c++/16.1.1/bits/concept_check.h:
+
+/usr/include/qt6/QtCore/QFlags:
+
+/usr/include/bits/locale.h:
+
+/usr/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake:
+
+/usr/include/c++/16.1.1/bits/functional_hash.h:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6QuickTestpluginTargets-relwithdebinfo.cmake:
+
+/usr/include/gnu/stubs.h:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtgraphicaleffectspluginAdditionalTargetInfo.cmake:
+
+/usr/include/c++/15.2.1/tr1/legendre_function.tcc:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquick3dpluginConfig.cmake:
+
+/usr/include/bits/floatn-common.h:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquickvectorimagehelperspluginTargetsPrecheck.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlfolderlistmodelpluginConfig.cmake:
+
+/usr/include/qt6/QtCore/qsharedpointer_impl.h:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2universalstylepluginConfig.cmake:
+
+/usr/include/qt6/QtCore/qfunctionaltools_impl.h:
+
+/usr/include/c++/15.2.1/bits/exception_ptr.h:
+
+/usr/include/c++/16.1.1/bits/unordered_map.h:
+
+/usr/include/bits/long-double.h:
+
+/usr/share/cmake/Modules/Linker/GNU.cmake:
+
+/usr/lib/cmake/Qt6Gui/Qt6ShmServerBufferPluginTargetsPrecheck.cmake:
+
+/usr/include/qt6/QtCore/qdatastream.h:
+
+/usr/lib/cmake/Qt6Gui/Qt6QJp2PluginTargetsPrecheck.cmake:
+
+/usr/include/qt6/QtNetwork/qsslsocket.h:
+
+/usr/include/bits/iscanonical.h:
+
+/usr/lib/cmake/Qt6/QtPublicTestHelpers.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickdialogspluginTargets-relwithdebinfo.cmake:
+
+/usr/include/qt6/QtCore/qmath.h:
+
+/usr/include/c++/15.2.1/bits/valarray_before.h:
+
+/usr/share/cmake/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake:
+
+/usr/include/c++/16.1.1/bits/basic_string.tcc:
+
+/usr/include/qt6/QtNetwork/qsslconfiguration.h:
+
+/usr/include/c++/16.1.1/bits/stl_iterator_base_funcs.h:
+
+/usr/include/c++/16.1.1/bits/memory_resource.h:
+
+/usr/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake:
+
+/usr/include/bits/uio_lim.h:
+
+/usr/include/qt6/QtCore/qjsonarray.h:
+
+/usr/include/bits/math-vector.h:
+
+/usr/include/yaml-cpp/node/iterator.h:
+
+/usr/include/bits/stdint-intn.h:
+
+/usr/include/c++/16.1.1/bits/locale_classes.tcc:
+
+/usr/share/cmake/Modules/Compiler/SCO-DetermineCompiler.cmake:
+
+/usr/include/c++/16.1.1/bits/char_traits.h:
+
+/usr/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginTargets-relwithdebinfo.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquickvectorimagepluginTargetsPrecheck.cmake:
+
+/usr/include/yaml-cpp/dll.h:
+
+/usr/lib/cmake/Qt6Qml/Qt6QQmlNativeDebugServiceFactoryPluginTargets.cmake:
+
+/usr/include/bits/types/timer_t.h:
+
+/usr/include/bits/types/time_t.h:
+
+/usr/include/c++/16.1.1/bits/std_abs.h:
+
+/usr/include/c++/16.1.1/bits/stl_multimap.h:
+
+/usr/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:
+
+/usr/include/c++/16.1.1/string:
+
+/usr/include/yaml-cpp/node/detail/iterator.h:
+
+/usr/lib/cmake/Qt6Gui/Qt6QEglFSX11IntegrationPluginTargets.cmake:
+
+/usr/lib/cmake/Qt6Gui/Qt6QEvdevTabletPluginConfig.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6LabsPlatformpluginTargets.cmake:
+
+/usr/include/bits/pthreadtypes.h:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6sharedimagepluginTargets.cmake:
+
+CMakeFiles/4.3.3/CMakeSystem.cmake:
+
+/usr/include/c++/15.2.1/tr1/hypergeometric.tcc:
+
+/usr/include/bits/select.h:
+
+/usr/lib/cmake/Qt6Gui/Qt6QMngPluginTargetsPrecheck.cmake:
+
+/usr/include/c++/16.1.1/bits/algorithmfwd.h:
+
+/usr/lib/cmake/Qt6Gui/Qt6QTsLibPluginTargets-relwithdebinfo.cmake:
+
+/usr/include/c++/16.1.1/bits/cxxabi_init_exception.h:
+
+QSExtensions_autogen/moc_predefs.h:
+
+/usr/include/c++/16.1.1/bit:
+
+/usr/lib/cmake/Qt6Gui/Qt6QWaylandIntegrationPluginTargetsPrecheck.cmake:
+
+/usr/share/cmake/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake:
+
+/usr/include/c++/16.1.1/bits/refwrap.h:
+
+/usr/include/bits/atomic_wide_counter.h:
+
+/usr/include/qt6/QtCore/qstringalgorithms.h:
+
+/usr/include/bits/types/error_t.h:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtwebenginequickdelegatespluginConfig.cmake:
+
+/usr/lib/cmake/Qt6/Qt6ConfigExtras.cmake:
+
+/usr/lib/cmake/Qt6Gui/Qt6QXcbEglIntegrationPluginAdditionalTargetInfo.cmake:
+
+/home/etienne/.dotfiles/quickshell/extensions/WaylandPower.h:
+
+/usr/include/c++/16.1.1/bits/exception.h:
+
+/usr/share/cmake/Modules/CMakeCCompilerABI.c:
+
+/usr/include/qt6/QtCore/qttypetraits.h:
+
+/usr/lib/cmake/Qt6/QtPublicExternalProjectHelpers.cmake:
+
+/usr/include/qt6/QtCore/qbasicatomic.h:
+
+/usr/include/c++/16.1.1/bits/hashtable_policy.h:
+
+/usr/lib/cmake/Qt6Quick/Qt6QuickTargetsPrecheck.cmake:
+
+/usr/include/c++/16.1.1/bits/invoke.h:
+
+/usr/include/qt6/QtQml/qtqmlglobal.h:
+
+/usr/include/qt6/QtCore/qprocessordetection.h:
+
+/usr/include/c++/16.1.1/bits/cxxabi_forced.h:
 
 /usr/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginConfig.cmake:
 
-/usr/include/c++/15.2.1/clocale:
+/usr/lib/cmake/Qt6QmlWorkerScript/Qt6QmlWorkerScriptAdditionalTargetInfo.cmake:
 
-/usr/include/c++/15.2.1/bits/stl_multiset.h:
+/usr/include/c++/16.1.1/bits/move.h:
 
-/usr/include/qt6/QtQml/qqmlabstracturlinterceptor.h:
+/usr/lib/cmake/Qt6Gui/Qt6QLibInputPluginTargets-relwithdebinfo.cmake:
 
-/usr/lib/cmake/Qt6Gui/Qt6QEglFSIntegrationPluginTargetsPrecheck.cmake:
+/usr/include/c++/16.1.1/bits/node_handle.h:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6QuickTestpluginAdditionalTargetInfo.cmake:
+/usr/include/c++/16.1.1/bits/predefined_ops.h:
 
-/usr/include/qt6/QtCore/qcontainertools_impl.h:
+/usr/lib/cmake/Qt6QmlTools/Qt6QmlToolsConfig.cmake:
+
+/usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsEglDeviceIntegrationPluginTargetsPrecheck.cmake:
+
+/usr/include/c++/15.2.1/cstdlib:
+
+/usr/include/bits/types.h:
+
+/usr/include/qt6/QtQml/qjsprimitivevalue.h:
+
+/usr/include/qt6/QtNetwork/qnetworkrequest.h:
+
+/usr/include/c++/16.1.1/bits/shared_ptr_base.h:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlpluginAdditionalTargetInfo.cmake:
 
 /usr/include/c++/15.2.1/bits/stl_raw_storage_iter.h:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WaylandCompositorQtShellTargets.cmake:
+/usr/include/qt6/QtCore/qcontainertools_impl.h:
 
-/usr/share/cmake/Modules/Linker/GNU-C.cmake:
+/usr/include/bits/types/__fpos64_t.h:
 
-/usr/include/c++/15.2.1/bits/stl_tree.h:
+/usr/lib/cmake/Qt6Gui/Qt6QIbusPlatformInputContextPluginConfig.cmake:
 
-/usr/include/pthread.h:
+/usr/share/cmake/Modules/Compiler/ADSP-DetermineCompiler.cmake:
 
-/usr/include/c++/15.2.1/bits/stl_algo.h:
+/usr/lib/cmake/Qt6QuickTools/Qt6QuickToolsTargets-relwithdebinfo.cmake:
 
-/usr/lib/cmake/Qt6Gui/Qt6QComposePlatformInputContextPluginTargetsPrecheck.cmake:
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6particlespluginTargets-relwithdebinfo.cmake:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6TextToSpeechQmlTargets-relwithdebinfo.cmake:
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6positioningquickpluginConfig.cmake:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WaylandTextureSharingExtensionTargetsPrecheck.cmake:
+/usr/lib/cmake/Qt6/QtPublicPluginHelpers.cmake:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlwavefrontmeshpluginTargets-relwithdebinfo.cmake:
+/usr/include/c++/16.1.1/bits/std_function.h:
 
-/usr/include/c++/15.2.1/bits/string_view.tcc:
+/usr/include/c++/15.2.1/climits:
 
-/usr/include/bits/types/__fpos_t.h:
+/usr/lib/cmake/Qt6/FindWrapOpenGL.cmake:
 
-/usr/lib/libOpenGL.so:
+/usr/include/c++/15.2.1/bits/quoted_string.h:
 
-/usr/include/c++/15.2.1/tr1/ell_integral.tcc:
+/usr/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:
 
-/usr/include/c++/15.2.1/bits/uniform_int_dist.h:
+/usr/include/c++/16.1.1/bits/stdexcept_except.h:
 
-/usr/include/qt6/QtCore/qtclasshelpermacros.h:
+/usr/include/c++/16.1.1/tr1/gamma.tcc:
 
-/usr/include/c++/15.2.1/bits/unordered_map.h:
+/usr/include/math.h:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickdialogspluginTargets.cmake:
+/usr/lib/libgcc_s.so:
 
-/usr/include/c++/15.2.1/bits/unordered_set.h:
+/usr/lib/cmake/Qt6QmlMeta/Qt6QmlMetaTargetsPrecheck.cmake:
 
-/usr/lib/cmake/Qt6Gui/Qt6QXcbEglIntegrationPluginTargetsPrecheck.cmake:
+/usr/lib/cmake/Qt6Gui/Qt6QSvgIconPluginTargetsPrecheck.cmake:
 
-/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/cpu_defines.h:
+/usr/lib/cmake/Qt6Gui/Qt6QEvdevTouchScreenPluginTargets.cmake:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquickvectorimagehelperspluginTargets.cmake:
+/usr/lib/cmake/Qt6/QtPublicPluginHelpers_v2.cmake:
 
-/usr/include/qt6/QtCore/qiterable.h:
+/usr/lib/cmake/Qt6/QtPublicSbomDocumentNamespaceHelpers.cmake:
 
-/usr/include/qt6/QtNetwork/QNetworkRequest:
+/usr/lib/cmake/Qt6Gui/Qt6QWaylandWlShellIntegrationPluginConfig.cmake:
 
-/usr/include/qt6/QtNetwork/QSslError:
+/usr/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginAdditionalTargetInfo.cmake:
 
-/usr/include/c++/15.2.1/bits/stl_relops.h:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2fusionstylepluginConfig.cmake:
-
-/usr/lib/cmake/Qt6Gui/Qt6QVkKhrDisplayIntegrationPluginTargets-relwithdebinfo.cmake:
-
-/usr/include/bits/struct_mutex.h:
-
-/usr/include/qt6/QtCore/q23utility.h:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6LabsStyleKitImplpluginTargets.cmake:
-
-/usr/include/qt6/QtCore/QObject:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6LabsStyleKitpluginAdditionalTargetInfo.cmake:
-
-/usr/include/linux/posix_types.h:
-
-/usr/include/bits/types/FILE.h:
-
-/usr/include/c++/15.2.1/bits/utility.h:
-
-/usr/include/c++/15.2.1/bits/vector.tcc:
-
-/usr/lib/cmake/Qt6Network/Qt6QGlibNetworkInformationPluginTargets.cmake:
-
-/usr/include/stdint.h:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WaylandCompositorQtShellConfig.cmake:
+/usr/include/alloca.h:
 
 /usr/include/qt6/QtCore/qstringbuilder.h:
 
-/usr/include/c++/15.2.1/concepts:
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WaylandCompositorQtShellConfig.cmake:
 
-/usr/lib/cmake/Qt6Gui/Qt6QEvdevTabletPluginTargetsPrecheck.cmake:
+/usr/include/linux/limits.h:
 
-/usr/include/c++/15.2.1/cstddef:
+/usr/include/c++/16.1.1/bits/new_except.h:
+
+/usr/lib/cmake/Qt6Gui/Qt6QGifPluginTargets.cmake:
+
+/usr/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfig.cmake:
+
+/usr/include/qt6/QtNetwork/QSslConfiguration:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6QuickControlsTestUtilsPrivatepluginTargets-relwithdebinfo.cmake:
+
+/usr/lib/cmake/Qt6/QtPublicSbomHelpers.cmake:
+
+/usr/include/c++/15.2.1/bits/locale_facets_nonio.h:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6LabsPlatformpluginAdditionalTargetInfo.cmake:
+
+/usr/lib/cmake/Qt6QmlIntegration/Qt6QmlIntegrationAdditionalTargetInfo.cmake:
+
+/home/etienne/.dotfiles/quickshell/extensions/PamAuth.cpp:
+
+/usr/include/c++/16.1.1/bits/uses_allocator.h:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlpluginTargetsPrecheck.cmake:
+
+/usr/include/c++/15.2.1/tr1/bessel_function.tcc:
+
+/usr/include/c++/16.1.1/bits/stl_function.h:
+
+/usr/include/qt6/QtCore/qarraydataops.h:
+
+/usr/include/qt6/QtCore/qlist.h:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2pluginAdditionalTargetInfo.cmake:
+
+/usr/lib/cmake/Qt6Gui/Qt6QWaylandEglClientBufferPluginAdditionalTargetInfo.cmake:
+
+/usr/include/c++/16.1.1/cstdlib:
+
+/usr/include/wayland-client.h:
+
+/usr/include/c++/16.1.1/bits/stl_list.h:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6sharedimagepluginTargets-relwithdebinfo.cmake:
+
+/usr/include/qt6/QtCore/qcompare.h:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6TextToSpeechQmlTargetsPrecheck.cmake:
+
+/usr/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake:
+
+/usr/include/c++/16.1.1/streambuf:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2fluentwinui3stylepluginConfig.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6particlespluginTargetsPrecheck.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6positioningquickpluginTargets-relwithdebinfo.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6QEglFSEmulatorIntegrationPluginTargets.cmake:
-
-/usr/include/qt6/QtNetwork/QNetworkAccessManager:
-
-/usr/include/c++/15.2.1/cstdint:
-
-/usr/include/inttypes.h:
-
-/usr/include/c++/15.2.1/cstring:
 
 /usr/include/qt6/QtCore/QIODevice:
 
@@ -6452,117 +6647,253 @@ CMakeFiles/4.3.1/CMakeCXXCompiler.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WaylandCompositorWLShellpluginTargets-relwithdebinfo.cmake:
 
-/usr/include/bits/timex.h:
+/usr/include/c++/16.1.1/bits/functexcept.h:
 
-/usr/include/qt6/QtCore/QList:
+/usr/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginTargetsPrecheck.cmake:
 
-/usr/include/c++/15.2.1/ctime:
+/usr/include/qt6/QtCore/qgenericatomic.h:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WaylandCompositorPresentationTimepluginTargetsPrecheck.cmake:
+/usr/lib/cmake/Qt6Gui/Qt6QWaylandWlShellIntegrationPluginTargetsPrecheck.cmake:
 
-/usr/include/c++/15.2.1/ext/aligned_buffer.h:
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WaylandCompositorIviapplicationpluginAdditionalTargetInfo.cmake:
 
-/usr/lib/cmake/Qt6Gui/Qt6QEvdevMousePluginTargets-relwithdebinfo.cmake:
+/usr/include/c++/16.1.1/iosfwd:
 
-/usr/lib/cmake/Qt6/QtPublicPluginHelpers.cmake:
+/usr/include/yaml-cpp/node/parse.h:
 
-/usr/include/c++/15.2.1/bits/shared_ptr_base.h:
+/usr/include/c++/16.1.1/bits/stl_relops.h:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmllocalstoragepluginTargets.cmake:
+/usr/include/c++/16.1.1/bits/stl_tempbuf.h:
 
-/usr/include/c++/15.2.1/cwchar:
+/usr/include/qt6/QtQml/qqmllist.h:
 
-/usr/include/qt6/QtCore/qmetacontainer.h:
+/usr/include/qt6/QtCore/qdebug.h:
 
-/usr/include/sched.h:
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6QmlNetworkpluginConfig.cmake:
 
-/usr/include/c++/15.2.1/debug/assertions.h:
+/usr/include/c++/16.1.1/bits/stl_iterator.h:
 
-/usr/share/cmake/Modules/CMakeDetermineSystem.cmake:
+/usr/lib/cmake/Qt6Gui/Qt6QWaylandIviShellIntegrationPluginTargets.cmake:
 
-/usr/include/c++/15.2.1/string:
+/usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsEglDeviceIntegrationPluginConfig.cmake:
 
-/usr/lib/libc_nonshared.a:
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlwavefrontmeshpluginConfig.cmake:
 
-/usr/include/qt6/QtCore/qtyperevision.h:
+CMakeFiles/QSExtensions.dir/build/.qt/rcc/qrc_qmake_extensions_build.cpp.o:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtgraphicaleffectsprivateConfig.cmake:
+/usr/include/c++/16.1.1/bits/streambuf.tcc:
 
-/usr/include/qt6/QtCore/qset.h:
+/usr/lib/cmake/Qt6Network/Qt6QGlibNetworkInformationPluginTargets-relwithdebinfo.cmake:
 
-/usr/include/c++/15.2.1/bits/stl_heap.h:
+/usr/include/stdc-predef.h:
 
-/usr/include/c++/15.2.1/bits/cxxabi_forced.h:
+/usr/lib/cmake/Qt6Network/Qt6NetworkVersionlessAliasTargets.cmake:
 
-/usr/lib/cmake/Qt6Network/Qt6NetworkTargets.cmake:
+/usr/include/qt6/QtQml/qqmldebug.h:
 
-/usr/include/qt6/QtCore/qbasicatomic.h:
+/usr/include/c++/16.1.1/bits/uniform_int_dist.h:
 
-/usr/lib/cmake/Qt6/QtPublicExternalProjectHelpers.cmake:
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2pluginConfig.cmake:
 
-/usr/lib/cmake/Qt6Core/Qt6CoreConfigVersion.cmake:
+/usr/lib/cmake/Qt6Core/Qt6CoreConfig.cmake:
 
-/usr/include/c++/15.2.1/variant:
+/usr/include/c++/16.1.1/bits/stringfwd.h:
 
-/usr/include/c++/15.2.1/initializer_list:
-
-/usr/include/c++/15.2.1/bits/atomic_lockfree_defines.h:
-
-/usr/lib/libyaml-cpp.so:
-
-/usr/include/c++/15.2.1/iosfwd:
-
-/usr/include/c++/15.2.1/optional:
-
-/usr/share/cmake/Modules/CMakeCompilerIdDetection.cmake:
+/usr/include/c++/16.1.1/bits/vector.tcc:
 
 /usr/include/c++/15.2.1/typeinfo:
+
+/usr/share/cmake/Modules/CMakeCompilerIdDetection.cmake:
 
 /usr/include/asm-generic/errno-base.h:
 
 /usr/lib/cmake/Qt6Gui/Qt6QWbmpPluginConfig.cmake:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2basicstylepluginConfig.cmake:
+/usr/include/qt6/QtCore/QJsonObject:
 
-/usr/lib/cmake/Qt6Gui/Qt6QComposePlatformInputContextPluginTargets.cmake:
+/usr/include/c++/16.1.1/bits/uses_allocator_args.h:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6effectspluginTargets-relwithdebinfo.cmake:
+/usr/lib/cmake/Qt6Qml/Qt6QQuickEventReplayServiceFactoryPluginConfig.cmake:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick2pluginTargetsPrecheck.cmake:
+/usr/include/qt6/QtNetwork/qnetworkaccessmanager.h:
 
-/usr/include/c++/15.2.1/numeric:
+/usr/lib/cmake/Qt6Qml/Qt6QQmlNativeDebugServiceFactoryPluginAdditionalTargetInfo.cmake:
 
-/usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsAdditionalTargetInfo.cmake:
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3dparticles3dpluginAdditionalTargetInfo.cmake:
 
-/usr/lib/cmake/Qt6Gui/Qt6QWebpPluginTargets.cmake:
+/usr/include/c++/16.1.1/ext/numeric_traits.h:
 
-/usr/include/c++/15.2.1/tr1/exp_integral.tcc:
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtgraphicaleffectspluginTargets.cmake:
 
-/usr/share/cmake/Modules/CMakeCInformation.cmake:
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2imaginestyleimplpluginTargets-relwithdebinfo.cmake:
 
-/usr/include/bits/types/struct_itimerspec.h:
+/usr/include/wayland-client-protocol.h:
 
-/usr/lib/cmake/Qt6Gui/Qt6QWaylandFullScreenShellV1IntegrationPluginTargets.cmake:
+/usr/lib/cmake/Qt6Network/Qt6QNetworkManagerNetworkInformationPluginTargetsPrecheck.cmake:
 
-/usr/include/c++/15.2.1/bits/stl_iterator_base_types.h:
+/usr/include/qt6/QtCore/qutf8stringview.h:
 
-/usr/include/c++/15.2.1/ratio:
+/usr/include/qt6/QtCore/qconstructormacros.h:
 
-/usr/include/c++/15.2.1/bits/locale_classes.h:
+/usr/include/c++/16.1.1/map:
 
-/usr/include/linux/types.h:
+/usr/lib/cmake/Qt6Gui/Qt6QEglFSIntegrationPluginTargets.cmake:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WaylandCompositorQtShellTargets-relwithdebinfo.cmake:
+/usr/include/sys/single_threaded.h:
 
-/usr/include/c++/15.2.1/bits/stl_numeric.h:
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlwavefrontmeshpluginTargetsPrecheck.cmake:
 
-/usr/include/c++/15.2.1/string_view:
+/usr/lib/cmake/Qt6QmlTools/Qt6QmlToolsAdditionalTargetInfo.cmake:
 
-/usr/include/yaml-cpp/dll.h:
+/usr/lib/cmake/Qt6Qml/Qt6QQuick3DProfilerAdapterFactoryPluginConfig.cmake:
 
-/usr/lib/cmake/Qt6Qml/Qt6QQmlNativeDebugServiceFactoryPluginTargets.cmake:
+/usr/include/c++/16.1.1/bits/ptr_traits.h:
 
-/usr/include/bits/types/timer_t.h:
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6quick3dspatialaudioTargetsPrecheck.cmake:
+
+/usr/include/bits/types/__locale_t.h:
+
+/usr/include/c++/16.1.1/cerrno:
+
+/usr/lib/cmake/Qt6Gui/Qt6ShmServerBufferPluginTargets-relwithdebinfo.cmake:
+
+/usr/include/qt6/QtCore/qalgorithms.h:
+
+/usr/include/c++/16.1.1/chrono:
+
+/usr/include/bits/posix1_lim.h:
+
+/usr/include/bits/wordsize.h:
+
+/usr/include/c++/16.1.1/climits:
+
+/usr/lib/cmake/Qt6/QtPublicSbomExternalReferenceHelpers.cmake:
+
+/usr/lib/cmake/Qt6Gui/Qt6QTiffPluginTargets-relwithdebinfo.cmake:
+
+/usr/include/c++/16.1.1/compare:
+
+/usr/include/c++/16.1.1/cstdio:
+
+/usr/include/c++/15.2.1/bits/algorithmfwd.h:
+
+/usr/include/c++/16.1.1/ctime:
+
+/usr/include/c++/16.1.1/bits/specfun.h:
+
+/usr/lib/cmake/Qt6Network/Qt6QTlsBackendCertOnlyPluginTargets-relwithdebinfo.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WaylandCompositorWLShellpluginAdditionalTargetInfo.cmake:
+
+/usr/include/c++/16.1.1/debug/assertions.h:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquicktemplates2pluginTargets.cmake:
+
+/usr/include/bits/types/__FILE.h:
+
+/usr/include/c++/16.1.1/memory:
+
+/usr/include/qt6/QtCore/qlatin1stringview.h:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WaylandCompositorPresentationTimepluginAdditionalTargetInfo.cmake:
+
+/usr/include/qt6/QtCore/qfloat16.h:
+
+wlr-output-power-management-unstable-v1-client-protocol.h:
+
+/usr/include/c++/16.1.1/debug/debug.h:
+
+/usr/include/asm-generic/posix_types.h:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickshapesdesignhelperspluginConfig.cmake:
+
+/usr/include/c++/16.1.1/tr1/modified_bessel_func.tcc:
+
+/usr/include/c++/16.1.1/ext/aligned_buffer.h:
+
+/usr/include/c++/15.2.1/bits/move.h:
+
+/usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersionImpl.cmake:
+
+/usr/include/c++/15.2.1/bits/stl_bvector.h:
+
+/usr/lib/cmake/Qt6CoreTools/Qt6CoreToolsDependencies.cmake:
+
+/usr/include/c++/16.1.1/bits/stdexcept_throw.h:
+
+/usr/lib/cmake/Qt6Gui/Qt6QSvgPluginTargetsPrecheck.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2fluentwinui3styleimplpluginAdditionalTargetInfo.cmake:
+
+/usr/include/qt6/QtCore/qobjectdefs_impl.h:
+
+/usr/include/c++/16.1.1/ext/alloc_traits.h:
+
+/usr/lib/cmake/Qt6Gui/Qt6QSvgIconPluginAdditionalTargetInfo.cmake:
+
+/usr/include/qt6/QtCore/qarraydata.h:
+
+/usr/lib/cmake/Qt6GuiTools/Qt6GuiToolsAdditionalTargetInfo.cmake:
+
+/usr/include/c++/16.1.1/functional:
+
+/usr/lib/cmake/Qt6Qml/Qt6QQmlNativeDebugServiceFactoryPluginTargets-relwithdebinfo.cmake:
+
+/usr/include/bits/endianness.h:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtgraphicaleffectsprivateAdditionalTargetInfo.cmake:
+
+/usr/include/qt6/QtCore/qcompare_impl.h:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WaylandCompositorXdgShellpluginTargetsPrecheck.cmake:
+
+/usr/include/c++/16.1.1/bits/stl_map.h:
+
+/usr/include/c++/16.1.1/bits/stl_tree.h:
+
+/usr/include/c++/16.1.1/limits:
+
+/usr/lib/cmake/Qt6Gui/Qt6QWaylandWlShellIntegrationPluginTargets-relwithdebinfo.cmake:
+
+/usr/include/c++/16.1.1/list:
+
+/usr/include/qt6/QtCore/qiterable_impl.h:
+
+/usr/include/wayland-client-core.h:
+
+/usr/include/c++/16.1.1/ratio:
+
+/usr/include/c++/15.2.1/bits/ostream_insert.h:
+
+/usr/include/c++/16.1.1/string_view:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2basicstyleimplpluginTargets-relwithdebinfo.cmake:
+
+/usr/include/c++/16.1.1/system_error:
+
+/usr/include/qt6/QtCore/qset.h:
+
+/usr/lib/cmake/Qt6/QtPublicSbomFileHelpers.cmake:
+
+/usr/include/qt6/QtCore/QJsonArray:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6modelspluginTargetsPrecheck.cmake:
+
+/usr/include/gnu/stubs-64.h:
+
+/usr/lib/cmake/Qt6Core/Qt6CoreConfigExtras.cmake:
+
+/usr/lib/cmake/Qt6/QtPublicSbomGenerationCycloneDXHelpers.cmake:
+
+/usr/lib/cmake/Qt6Gui/Qt6QVkKhrDisplayIntegrationPluginAdditionalTargetInfo.cmake:
+
+/usr/share/cmake/Modules/CMakeParseLibraryArchitecture.cmake:
+
+/usr/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules/FindWayland.cmake:
+
+/usr/include/qt6/QtCore/qurl.h:
+
+/usr/lib/cmake/Qt6/QtPublicSbomGenerationHelpers.cmake:
 
 /usr/lib/cmake/Qt6/QtPublicSbomOpsHelpers.cmake:
 
@@ -6572,17 +6903,27 @@ CMakeFiles/4.3.1/CMakeCXXCompiler.cmake:
 
 /usr/lib/cmake/Qt6/QtPublicSbomQtEntityHelpers.cmake:
 
+/usr/include/c++/15.2.1/bits/stl_tempbuf.h:
+
 /usr/include/qt6/QtQml/qqml.h:
 
 /usr/include/qt6/QtCore/qstringmatcher.h:
 
-/usr/include/c++/15.2.1/bits/stl_tempbuf.h:
-
 /usr/lib/cmake/Qt6Gui/Qt6GuiVersionlessAliasTargets.cmake:
+
+/usr/lib/cmake/Qt6/QtPublicSbomRelationshipHelpers.cmake:
 
 /usr/include/qt6/QtCore/qoverload.h:
 
 /usr/lib/cmake/Qt6/QtPublicSbomSystemDepHelpers.cmake:
+
+/usr/lib/cmake/Qt6/QtPublicTargetHelpers.cmake:
+
+/usr/include/c++/15.2.1/streambuf:
+
+/usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsGbmIntegrationPluginConfig.cmake:
+
+/usr/lib/cmake/Qt6Gui/Qt6QWaylandXdgShellIntegrationPluginConfig.cmake:
 
 /usr/lib/cmake/Qt6/QtPublicToolHelpers.cmake:
 
@@ -6599,12 +6940,6 @@ CMakeFiles/4.3.1/CMakeCXXCompiler.cmake:
 /usr/lib/cmake/Qt6/QtPublicWindowsHelpers.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6QVkKhrDisplayIntegrationPluginTargets.cmake:
-
-/usr/lib/cmake/Qt6/QtPublicSbomGenerationCycloneDXHelpers.cmake:
-
-/usr/include/gnu/stubs-64.h:
-
-/usr/lib/cmake/Qt6Core/Qt6CoreConfigExtras.cmake:
 
 /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp:
 
@@ -6626,6 +6961,10 @@ CMakeFiles/4.3.1/CMakeCXXCompiler.cmake:
 
 /usr/lib/cmake/Qt6CoreTools/Qt6CoreToolsAdditionalTargetInfo.cmake:
 
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlfolderlistmodelpluginTargets.cmake:
+
+/usr/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersion.cmake:
+
 /usr/include/qt6/QtCore/qmalloc.h:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtqmlcorepluginTargets.cmake:
@@ -6638,25 +6977,17 @@ CMakeFiles/4.3.1/CMakeCXXCompiler.cmake:
 
 /usr/lib/cmake/Qt6CoreTools/Qt6CoreToolsTargets.cmake:
 
-/usr/lib/cmake/Qt6DBus/Qt6DBusConfigVersion.cmake:
+/usr/lib/cmake/Qt6Gui/Qt6QWbmpPluginTargets.cmake:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6modelspluginTargets.cmake:
+/usr/lib/cmake/Qt6DBus/Qt6DBusAdditionalTargetInfo.cmake:
+
+/usr/include/c++/16.1.1/bits/stl_raw_storage_iter.h:
 
 /usr/lib/cmake/Qt6DBus/Qt6DBusConfigVersionImpl.cmake:
 
-/usr/include/qt6/QtCore/qsystemdetection.h:
-
-/usr/lib/cmake/Qt6DBus/Qt6DBusMacros.cmake:
-
-/usr/include/c++/15.2.1/pstl/glue_algorithm_defs.h:
-
-/usr/include/asm/posix_types.h:
-
-/usr/lib/cmake/Qt6Gui/Qt6ShmServerBufferPluginConfig.cmake:
+/usr/include/c++/15.2.1/bits/std_function.h:
 
 /usr/include/qt6/QtQml/qqmlerror.h:
-
-/usr/include/c++/15.2.1/bits/std_function.h:
 
 /usr/lib/cmake/Qt6DBus/Qt6DBusTargets-relwithdebinfo.cmake:
 
@@ -6675,16 +7006,6 @@ CMakeFiles/4.3.1/CMakeCXXCompiler.cmake:
 /usr/lib/cmake/Qt6DBus/Qt6DBusVersionlessAliasTargets.cmake:
 
 /usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersion.cmake:
-
-/usr/include/c++/15.2.1/bits/move.h:
-
-/usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersionImpl.cmake:
-
-/usr/include/c++/15.2.1/bits/stl_bvector.h:
-
-/usr/lib/cmake/Qt6CoreTools/Qt6CoreToolsDependencies.cmake:
-
-/usr/lib/cmake/Qt6Gui/Qt6QSvgPluginTargetsPrecheck.cmake:
 
 /usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsDependencies.cmake:
 
@@ -6716,11 +7037,17 @@ CMakeFiles/4.3.1/CMakeCXXCompiler.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6DmaBufServerBufferPluginConfig.cmake:
 
+/usr/lib/cmake/Qt6Gui/Qt6DmaBufServerBufferPluginTargets.cmake:
+
+/usr/lib/cmake/Qt6Gui/Qt6QEvdevTabletPluginTargets-relwithdebinfo.cmake:
+
 /usr/include/c++/15.2.1/ext/string_conversions.h:
 
 /usr/lib/cmake/Qt6Gui/Qt6DrmEglServerBufferPluginConfig.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtwebenginequickdelegatespluginTargets-relwithdebinfo.cmake:
+
+/usr/include/c++/16.1.1/bits/stl_pair.h:
 
 /usr/lib/cmake/Qt6Gui/Qt6DrmEglServerBufferPluginTargets.cmake:
 
@@ -6730,9 +7057,9 @@ CMakeFiles/4.3.1/CMakeCXXCompiler.cmake:
 
 /usr/include/c++/15.2.1/version:
 
-/usr/lib/cmake/Qt6Gui/Qt6QSvgIconPluginTargets.cmake:
-
 /usr/include/c++/15.2.1/cctype:
+
+/usr/lib/cmake/Qt6Gui/Qt6QSvgIconPluginTargets.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6GuiAdditionalTargetInfo.cmake:
 
@@ -6744,9 +7071,19 @@ CMakeFiles/4.3.1/CMakeCXXCompiler.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6GuiPlugins.cmake:
 
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquicktemplates2pluginAdditionalTargetInfo.cmake:
+
+/usr/lib/cmake/Qt6Gui/Qt6QWebpPluginTargetsPrecheck.cmake:
+
+/usr/lib/cmake/Qt6Gui/Qt6QEglFSEmulatorIntegrationPluginTargetsPrecheck.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6labsanimationpluginTargets.cmake:
+
 /usr/share/cmake/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6GuiTargets-relwithdebinfo.cmake:
+
+/usr/include/yaml-cpp/fptostring.h:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6effectspluginTargets.cmake:
 
@@ -6756,11 +7093,25 @@ CMakeFiles/4.3.1/CMakeCXXCompiler.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6GuiTargetsPrecheck.cmake:
 
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3dhelperspluginConfig.cmake:
+
+/usr/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginConfig.cmake:
+
+/usr/include/bits/types/__mbstate_t.h:
+
+/usr/lib/cmake/Qt6Gui/Qt6QComposePlatformInputContextPluginAdditionalTargetInfo.cmake:
+
 /usr/lib/cmake/Qt6Gui/Qt6QComposePlatformInputContextPluginConfig.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3dparticles3dpluginTargetsPrecheck.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6QComposePlatformInputContextPluginTargets-relwithdebinfo.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2basicstylepluginConfig.cmake:
+
+/usr/lib/cmake/Qt6Gui/Qt6QComposePlatformInputContextPluginTargets.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6effectspluginTargets-relwithdebinfo.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2imaginestylepluginTargetsPrecheck.cmake:
 
@@ -6768,13 +7119,13 @@ CMakeFiles/4.3.1/CMakeCXXCompiler.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6QEglFSEmulatorIntegrationPluginAdditionalTargetInfo.cmake:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquicktemplates2pluginAdditionalTargetInfo.cmake:
+/home/etienne/.dotfiles/quickshell/extensions/PamAuth.h:
 
-/usr/lib/cmake/Qt6Gui/Qt6QWebpPluginTargetsPrecheck.cmake:
+/usr/lib/cmake/Qt6Gui/Qt6QWaylandIntegrationPluginTargets.cmake:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6labsanimationpluginTargets.cmake:
+/usr/lib/cmake/Qt6Gui/Qt6QEglFSEmulatorIntegrationPluginConfig.cmake:
 
-/usr/lib/cmake/Qt6Gui/Qt6QEglFSEmulatorIntegrationPluginTargetsPrecheck.cmake:
+/usr/lib/cmake/Qt6Gui/Qt6QEglFSIntegrationPluginAdditionalTargetInfo.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6QEglFSIntegrationPluginConfig.cmake:
 
@@ -6782,11 +7133,27 @@ CMakeFiles/4.3.1/CMakeCXXCompiler.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6QWaylandBradientDecorationPluginTargets-relwithdebinfo.cmake:
 
-/usr/lib/cmake/Qt6QmlWorkerScript/Qt6QmlWorkerScriptConfigVersion.cmake:
+/usr/include/qt6/QtQml/qqmlabstracturlinterceptor.h:
+
+/usr/include/c++/16.1.1/bits/stl_algobase.h:
+
+/usr/lib/cmake/Qt6Gui/Qt6QEglFSIntegrationPluginTargetsPrecheck.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6QuickTestpluginAdditionalTargetInfo.cmake:
 
 /usr/include/c++/15.2.1/bits/list.tcc:
 
+/usr/lib/cmake/Qt6QmlWorkerScript/Qt6QmlWorkerScriptConfigVersion.cmake:
+
+/usr/include/c++/16.1.1/bits/alloc_traits.h:
+
 /usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsEglDeviceIntegrationPluginAdditionalTargetInfo.cmake:
+
+/usr/lib/cmake/Qt6Network/Qt6QConnManNetworkInformationPluginTargets-relwithdebinfo.cmake:
+
+/usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsEglDeviceIntegrationPluginTargets-relwithdebinfo.cmake:
+
+/usr/include/c++/16.1.1/tr1/legendre_function.tcc:
 
 /usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsEglDeviceIntegrationPluginTargets.cmake:
 
@@ -6796,13 +7163,7 @@ CMakeFiles/4.3.1/CMakeCXXCompiler.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6QXcbIntegrationPluginConfig.cmake:
 
-/usr/lib/cmake/Qt6QmlTools/Qt6QmlToolsConfig.cmake:
-
-/usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsEglDeviceIntegrationPluginTargetsPrecheck.cmake:
-
-/usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsEglDeviceIntegrationPluginTargets-relwithdebinfo.cmake:
-
-/usr/lib/cmake/Qt6Network/Qt6QConnManNetworkInformationPluginTargets-relwithdebinfo.cmake:
+/usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsGbmIntegrationPluginTargets.cmake:
 
 /usr/lib/cmake/Qt6Qml/Qt6QQmlNativeDebugConnectorFactoryPluginTargets-relwithdebinfo.cmake:
 
@@ -6816,17 +7177,17 @@ CMakeFiles/4.3.1/CMakeCXXCompiler.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6QTsLibPluginAdditionalTargetInfo.cmake:
 
-/usr/include/yaml-cpp/node/detail/iterator.h:
-
-/usr/lib/cmake/Qt6Gui/Qt6QEglFSX11IntegrationPluginTargets.cmake:
-
 CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o:
 
 /usr/lib/cmake/Qt6Gui/Qt6QEglFSX11IntegrationPluginTargetsPrecheck.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6QEvdevKeyboardPluginTargets.cmake:
 
+/usr/include/c++/16.1.1/bits/exception_ptr.h:
+
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WaylandCompositorIviapplicationpluginTargets.cmake:
+
+/usr/lib/cmake/Qt6Gui/Qt6QEvdevMousePluginTargets-relwithdebinfo.cmake:
 
 /usr/include/asm-generic/bitsperlong.h:
 
@@ -6834,11 +7195,11 @@ CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o:
 
 /usr/lib/cmake/Qt6Gui/Qt6QEvdevTabletPluginAdditionalTargetInfo.cmake:
 
+/usr/lib/cmake/Qt6Gui/Qt6QEvdevTabletPluginTargetsPrecheck.cmake:
+
 /usr/lib/cmake/Qt6Gui/Qt6QEvdevTouchScreenPluginAdditionalTargetInfo.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6QPdfPluginAdditionalTargetInfo.cmake:
-
-/usr/lib/cmake/Qt6Gui/Qt6QEvdevTouchScreenPluginTargets.cmake:
 
 /usr/include/qt6/QtCore/qbindingstorage.h:
 
@@ -6846,25 +7207,15 @@ CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o:
 
 /usr/lib/cmake/Qt6Gui/Qt6QEvdevTouchScreenPluginTargetsPrecheck.cmake:
 
-/usr/lib/cmake/Qt6Gui/Qt6QGifPluginConfig.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WaylandCompositorXdgShellpluginAdditionalTargetInfo.cmake:
-
-/usr/include/linux/limits.h:
-
-/usr/lib/cmake/Qt6Gui/Qt6QGifPluginTargets.cmake:
-
-/usr/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfig.cmake:
-
-/usr/include/qt6/QtNetwork/QSslConfiguration:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6QuickControlsTestUtilsPrivatepluginTargets-relwithdebinfo.cmake:
+/usr/lib/cmake/Qt6Gui/Qt6QGifPluginAdditionalTargetInfo.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6QGifPluginTargetsPrecheck.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6QWaylandFullScreenShellV1IntegrationPluginAdditionalTargetInfo.cmake:
 
 /usr/include/qt6/QtCore/qendian.h:
+
+/usr/include/c++/16.1.1/typeinfo:
 
 /usr/lib/cmake/Qt6Gui/Qt6QGtk3ThemePluginTargetsPrecheck.cmake:
 
@@ -6878,9 +7229,9 @@ CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o:
 
 /usr/lib/cmake/Qt6Gui/Qt6QICOPluginAdditionalTargetInfo.cmake:
 
-/usr/lib/cmake/Qt6Gui/Qt6QICOPluginConfig.cmake:
-
 /usr/lib/cmake/Qt6Gui/Qt6QICOPluginTargets-relwithdebinfo.cmake:
+
+/usr/include/c++/16.1.1/bits/range_access.h:
 
 /usr/lib/cmake/Qt6Gui/Qt6QICOPluginTargets.cmake:
 
@@ -6892,25 +7243,23 @@ CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6QuickTestpluginTargetsPrecheck.cmake:
 
+/usr/lib/cmake/Qt6Gui/Qt6QIbusPlatformInputContextPluginTargetsPrecheck.cmake:
+
+/usr/lib/cmake/Qt6Qml/Qt6QLocalClientConnectionFactoryPluginConfig.cmake:
+
+/usr/lib/cmake/Qt6Gui/Qt6QJpegPluginTargetsPrecheck.cmake:
+
+/usr/lib/cmake/Qt6Gui/Qt6QJp2PluginConfig.cmake:
+
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WaylandCompositorWLShellpluginTargets.cmake:
 
 /usr/lib/cmake/Qt6Network/Qt6QNetworkManagerNetworkInformationPluginAdditionalTargetInfo.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6QJp2PluginTargets-relwithdebinfo.cmake:
 
-/usr/lib/cmake/Qt6Gui/Qt6QJp2PluginTargetsPrecheck.cmake:
-
 /usr/lib/cmake/Qt6QmlWorkerScript/Qt6QmlWorkerScriptVersionlessAliasTargets.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6QJpegPluginAdditionalTargetInfo.cmake:
-
-/usr/include/yaml-cpp/node/ptr.h:
-
-/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:
-
-/usr/lib/cmake/Qt6Gui/Qt6QWaylandIntegrationPluginTargets-relwithdebinfo.cmake:
-
-/usr/lib/cmake/Qt6Gui/Qt6QJpegPluginConfig.cmake:
 
 /usr/include/qt6/QtNetwork/qnetworkreply.h:
 
@@ -6922,23 +7271,19 @@ CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o:
 
 /usr/lib/cmake/Qt6Gui/Qt6QJpegPluginTargets.cmake:
 
-/usr/lib/cmake/Qt6Qml/Qt6QLocalClientConnectionFactoryPluginConfig.cmake:
-
-/usr/lib/cmake/Qt6Gui/Qt6QJp2PluginConfig.cmake:
-
-/usr/lib/cmake/Qt6Gui/Qt6QJpegPluginTargetsPrecheck.cmake:
-
-/usr/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginTargets-relwithdebinfo.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquickvectorimagepluginTargetsPrecheck.cmake:
-
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlpluginTargets.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6QLibInputPluginAdditionalTargetInfo.cmake:
 
-/usr/lib/cmake/Qt6Gui/Qt6QLibInputPluginTargets-relwithdebinfo.cmake:
+/usr/lib/cmake/Qt6DBus/Qt6DBusConfig.cmake:
 
-/usr/lib/cmake/Qt6Gui/Qt6QLinuxFbIntegrationPluginTargets-relwithdebinfo.cmake:
+/usr/include/c++/16.1.1/bits/utility.h:
+
+/usr/lib/cmake/Qt6Gui/Qt6QLinuxFbIntegrationPluginAdditionalTargetInfo.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick2pluginConfig.cmake:
+
+/usr/lib/cmake/Qt6Gui/Qt6QLinuxFbIntegrationPluginConfig.cmake:
 
 /usr/include/qt6/QtCore/qmetasequence.h:
 
@@ -6956,17 +7301,13 @@ CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlsettingspluginAdditionalTargetInfo.cmake:
 
-/usr/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginTargetsPrecheck.cmake:
-
-/usr/include/qt6/QtCore/qgenericatomic.h:
-
-/usr/lib/cmake/Qt6Gui/Qt6QWaylandWlShellIntegrationPluginTargetsPrecheck.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WaylandCompositorIviapplicationpluginAdditionalTargetInfo.cmake:
-
 /usr/include/qt6/QtNetwork/qsslpresharedkeyauthenticator.h:
 
 /usr/lib/cmake/Qt6Gui/Qt6QMngPluginTargets-relwithdebinfo.cmake:
+
+/usr/lib/cmake/Qt6Gui/Qt6QMngPluginTargets.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6LabsSynchronizerpluginTargets.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2fluentwinui3stylepluginTargets-relwithdebinfo.cmake:
 
@@ -6990,25 +7331,41 @@ CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o:
 
 /usr/lib/cmake/Qt6Gui/Qt6QPdfPluginTargets.cmake:
 
-/usr/lib/cmake/Qt6Gui/Qt6QSvgIconPluginAdditionalTargetInfo.cmake:
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2universalstyleimplpluginAdditionalTargetInfo.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3dparticleeffectspluginTargets-relwithdebinfo.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick2pluginTargets.cmake:
+
+/usr/lib/cmake/Qt6Gui/Qt6QSvgIconPluginConfig.cmake:
 
 /usr/include/c++/15.2.1/tr1/riemann_zeta.tcc:
 
 /usr/lib/cmake/Qt6Gui/Qt6QSvgIconPluginTargets-relwithdebinfo.cmake:
 
-/usr/include/qt6/QtCore/qobject_impl.h:
-
 /usr/include/endian.h:
+
+/usr/include/qt6/QtCore/qobject_impl.h:
 
 /usr/lib/cmake/Qt6OpenGL/Qt6OpenGLAdditionalTargetInfo.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6QSvgPluginTargets-relwithdebinfo.cmake:
 
+/usr/include/c++/16.1.1/pstl/pstl_config.h:
+
 /usr/lib/cmake/Qt6Gui/Qt6QSvgPluginTargets.cmake:
+
+/usr/lib/cmake/Qt6Gui/Qt6QTgaPluginAdditionalTargetInfo.cmake:
+
+/usr/include/c++/15.2.1/bits/basic_ios.h:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6QuickControlsTestUtilsPrivatepluginConfig.cmake:
 
 /usr/include/c++/15.2.1/bits/valarray_array.tcc:
 
 /usr/share/cmake/Modules/CMakeParseImplicitIncludeInfo.cmake:
+
+/usr/include/c++/16.1.1/clocale:
 
 /usr/lib/cmake/Qt6Gui/Qt6QTgaPluginTargets-relwithdebinfo.cmake:
 
@@ -7020,7 +7377,9 @@ CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o:
 
 /usr/lib/cmake/Qt6Gui/Qt6VulkanServerBufferPluginTargetsPrecheck.cmake:
 
-/usr/lib/cmake/Qt6Gui/Qt6QTiffPluginTargets-relwithdebinfo.cmake:
+/usr/lib/cmake/Qt6Gui/Qt6QTiffPluginConfig.cmake:
+
+/usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/os_defines.h:
 
 /usr/lib/cmake/Qt6Gui/Qt6QTiffPluginTargets.cmake:
 
@@ -7036,9 +7395,9 @@ CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o:
 
 /usr/include/bits/environments.h:
 
-/usr/include/qt6/QtNetwork/qtnetworkexports.h:
-
 /usr/include/c++/15.2.1/bits/predefined_ops.h:
+
+/usr/include/qt6/QtNetwork/qtnetworkexports.h:
 
 /usr/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginAdditionalTargetInfo.cmake:
 
@@ -7046,13 +7405,25 @@ CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o:
 
 /usr/lib/cmake/Qt6OpenGL/Qt6OpenGLConfigVersion.cmake:
 
+/usr/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginConfig.cmake:
+
 /usr/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginTargets-relwithdebinfo.cmake:
+
+/usr/lib/cmake/Qt6Qml/Qt6QTcpServerConnectionFactoryPluginTargetsPrecheck.cmake:
+
+/usr/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginTargetsPrecheck.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlxmllistmodelpluginConfig.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6QVkKhrDisplayIntegrationPluginConfig.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6QWaylandFullScreenShellV1IntegrationPluginConfig.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6QWaylandWlShellIntegrationPluginAdditionalTargetInfo.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2fusionstylepluginConfig.cmake:
+
+/usr/lib/cmake/Qt6Gui/Qt6QVkKhrDisplayIntegrationPluginTargets-relwithdebinfo.cmake:
 
 /usr/share/cmake/Modules/CheckCXXSourceCompiles.cmake:
 
@@ -7063,6 +7434,8 @@ CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o:
 /usr/lib/cmake/Qt6Gui/Qt6QVncIntegrationPluginAdditionalTargetInfo.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6QVncIntegrationPluginTargets.cmake:
+
+/usr/lib/cmake/Qt6Gui/Qt6QWaylandAdwaitaDecorationPluginAdditionalTargetInfo.cmake:
 
 /usr/lib/cmake/Qt6Qml/Qt6QmlConfigExtras.cmake:
 
@@ -7090,9 +7463,9 @@ CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o:
 
 /usr/lib/cmake/Qt6Gui/Qt6QWaylandIntegrationPluginAdditionalTargetInfo.cmake:
 
-/usr/lib/cmake/Qt6Gui/Qt6QLibInputPluginTargets.cmake:
-
 /usr/lib/cmake/Qt6GuiTools/Qt6GuiToolsDependencies.cmake:
+
+/usr/lib/cmake/Qt6Gui/Qt6QLibInputPluginTargets.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6QWaylandAdwaitaDecorationPluginTargetsPrecheck.cmake:
 
@@ -7120,15 +7493,29 @@ CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o:
 
 /usr/lib/cmake/Qt6Gui/Qt6QWaylandFullScreenShellV1IntegrationPluginTargets-relwithdebinfo.cmake:
 
+/usr/share/cmake/Modules/CMakeCInformation.cmake:
+
+/usr/include/bits/types/struct_itimerspec.h:
+
+/usr/lib/cmake/Qt6Gui/Qt6QWaylandFullScreenShellV1IntegrationPluginTargets.cmake:
+
 /usr/include/qt6/QtCore/qtmochelpers.h:
 
 /usr/lib/cmake/Qt6Gui/Qt6QWaylandFullScreenShellV1IntegrationPluginTargetsPrecheck.cmake:
 
-/usr/lib/cmake/Qt6Gui/Qt6QWaylandIntegrationPluginTargetsPrecheck.cmake:
+/usr/include/yaml-cpp/node/ptr.h:
+
+/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:
+
+/usr/lib/cmake/Qt6Gui/Qt6QJpegPluginConfig.cmake:
+
+/usr/lib/cmake/Qt6Gui/Qt6QWaylandIntegrationPluginTargets-relwithdebinfo.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6QWaylandIviShellIntegrationPluginAdditionalTargetInfo.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6QWaylandIviShellIntegrationPluginConfig.cmake:
+
+/usr/include/c++/16.1.1/bits/stl_algo.h:
 
 /usr/lib/cmake/Qt6Gui/Qt6QWaylandIviShellIntegrationPluginTargets-relwithdebinfo.cmake:
 
@@ -7152,11 +7539,15 @@ CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o:
 
 /usr/lib/cmake/Qt6Gui/Qt6QWaylandQtShellIntegrationPluginTargets-relwithdebinfo.cmake:
 
+/usr/include/qt6/QtCore/QTextStream:
+
+/usr/lib/cmake/Qt6Gui/Qt6QWaylandQtShellIntegrationPluginTargets.cmake:
+
+/usr/include/c++/15.2.1/tr1/modified_bessel_func.tcc:
+
 /usr/lib/cmake/Qt6Qml/Qt6QQmlInspectorServiceFactoryPluginTargetsPrecheck.cmake:
 
 /usr/include/qt6/QtCore/qstringconverter.h:
-
-/usr/include/c++/15.2.1/tr1/modified_bessel_func.tcc:
 
 /usr/lib/cmake/Qt6Gui/Qt6QWaylandQtShellIntegrationPluginTargetsPrecheck.cmake:
 
@@ -7170,17 +7561,15 @@ CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o:
 
 /usr/lib/cmake/Qt6Gui/Qt6QWaylandXdgShellIntegrationPluginTargets.cmake:
 
+/usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/gthr-default.h:
+
 /usr/lib/cmake/Qt6Gui/Qt6QWbmpPluginTargets-relwithdebinfo.cmake:
-
-/usr/lib/cmake/Qt6DBus/Qt6DBusAdditionalTargetInfo.cmake:
-
-/usr/lib/cmake/Qt6Gui/Qt6QWbmpPluginTargets.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6QWbmpPluginTargetsPrecheck.cmake:
 
-/usr/include/qt6/QtQml/qqmlparserstatus.h:
-
 /usr/include/c++/15.2.1/iterator:
+
+/usr/include/qt6/QtQml/qqmlparserstatus.h:
 
 /usr/lib/cmake/Qt6Gui/Qt6QWebpPluginAdditionalTargetInfo.cmake:
 
@@ -7192,23 +7581,21 @@ CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o:
 
 /usr/lib/cmake/Qt6Gui/Qt6QWebpPluginTargets-relwithdebinfo.cmake:
 
-/usr/lib/cmake/Qt6Gui/Qt6QXcbEglIntegrationPluginConfig.cmake:
-
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WaylandTextureSharingConfig.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6QXcbEglIntegrationPluginTargets.cmake:
 
 /usr/lib/cmake/Qt6Network/Qt6NetworkTargets-relwithdebinfo.cmake:
 
-/usr/lib/cmake/Qt6Gui/Qt6QXcbGlxIntegrationPluginAdditionalTargetInfo.cmake:
+/usr/lib/cmake/Qt6Gui/Qt6QXcbEglIntegrationPluginTargetsPrecheck.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6QXcbGlxIntegrationPluginTargetsPrecheck.cmake:
-
-/usr/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginAdditionalTargetInfo.cmake:
 
 /usr/include/c++/15.2.1/bits/uses_allocator.h:
 
 /usr/lib/cmake/Qt6Gui/Qt6QGtk3ThemePluginAdditionalTargetInfo.cmake:
+
+/usr/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginAdditionalTargetInfo.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6labsanimationpluginTargetsPrecheck.cmake:
 
@@ -7234,7 +7621,7 @@ CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o:
 
 /usr/lib/cmake/Qt6Gui/Qt6QXdgDesktopPortalThemePluginTargetsPrecheck.cmake:
 
-/usr/lib/cmake/Qt6Gui/Qt6ShmServerBufferPluginTargets-relwithdebinfo.cmake:
+/usr/lib/cmake/Qt6Gui/Qt6ShmServerBufferPluginAdditionalTargetInfo.cmake:
 
 /usr/include/qt6/QtCore/qnamespace.h:
 
@@ -7258,9 +7645,15 @@ CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6quickwindowAdditionalTargetInfo.cmake:
 
+/usr/include/c++/16.1.1/bits/atomic_lockfree_defines.h:
+
+/usr/include/c++/16.1.1/bits/memoryfwd.h:
+
 /usr/lib/cmake/Qt6Network/Qt6NetworkConfigVersion.cmake:
 
 /usr/lib/cmake/Qt6Network/Qt6NetworkPlugins.cmake:
+
+/usr/lib/cmake/Qt6Network/Qt6NetworkTargets.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6quickwindowTargets.cmake:
 
@@ -7278,7 +7671,9 @@ CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o:
 
 /usr/lib/cmake/Qt6Network/Qt6QConnManNetworkInformationPluginTargets.cmake:
 
-/usr/lib/cmake/Qt6Network/Qt6QGlibNetworkInformationPluginTargets-relwithdebinfo.cmake:
+/usr/include/stdint.h:
+
+/usr/lib/cmake/Qt6Network/Qt6QGlibNetworkInformationPluginTargets.cmake:
 
 /usr/lib/cmake/Qt6Qml/Qt6QQmlNativeDebugConnectorFactoryPluginAdditionalTargetInfo.cmake:
 
@@ -7298,35 +7693,21 @@ CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6particlespluginAdditionalTargetInfo.cmake:
 
+/usr/lib/cmake/Qt6Network/Qt6QNetworkManagerNetworkInformationPluginTargets-relwithdebinfo.cmake:
+
 /usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsGbmIntegrationPluginAdditionalTargetInfo.cmake:
 
 /usr/lib/cmake/Qt6Network/Qt6QNetworkManagerNetworkInformationPluginTargets.cmake:
-
-/usr/lib/cmake/Qt6Network/Qt6QTlsBackendCertOnlyPluginTargets-relwithdebinfo.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WaylandCompositorWLShellpluginAdditionalTargetInfo.cmake:
 
 /usr/lib/cmake/Qt6Network/Qt6QTlsBackendCertOnlyPluginTargets.cmake:
 
 /usr/include/c++/15.2.1/bits/fs_fwd.h:
 
+CMakeFiles/4.3.3/CMakeCXXCompiler.cmake:
+
 /usr/lib/cmake/Qt6Core/Qt6CoreTargets-relwithdebinfo.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlxmllistmodelpluginTargetsPrecheck.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick2pluginTargets-relwithdebinfo.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3dhelperspluginConfig.cmake:
-
-/usr/include/bits/types/__mbstate_t.h:
-
-/usr/lib/cmake/Qt6Gui/Qt6QComposePlatformInputContextPluginAdditionalTargetInfo.cmake:
-
-/usr/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginConfig.cmake:
-
-/usr/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginTargets-relwithdebinfo.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlsettingspluginTargets-relwithdebinfo.cmake:
 
 /usr/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginTargets.cmake:
 
@@ -7362,15 +7743,19 @@ CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o:
 
 /usr/lib/cmake/Qt6OpenGL/Qt6OpenGLTargets.cmake:
 
+/usr/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginConfig.cmake:
+
+/usr/lib/cmake/Qt6OpenGL/Qt6OpenGLTargetsPrecheck.cmake:
+
 /usr/share/cmake/Modules/Compiler/ARMClang-DetermineCompiler.cmake:
 
 /usr/lib/cmake/Qt6OpenGL/Qt6OpenGLVersionlessAliasTargets.cmake:
 
-/usr/include/qt6/QtCore/qflags.h:
+/usr/include/c++/15.2.1/cmath:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3dassetutilspluginAdditionalTargetInfo.cmake:
 
-/usr/include/c++/15.2.1/cmath:
+/usr/include/qt6/QtCore/qflags.h:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6LabsPlatformpluginTargetsPrecheck.cmake:
 
@@ -7378,11 +7763,11 @@ CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6labsmodelspluginTargets-relwithdebinfo.cmake:
 
+/usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/cpu_defines.h:
+
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6LabsStyleKitImplpluginAdditionalTargetInfo.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6LabsStyleKitImplpluginTargetsPrecheck.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6LabsStyleKitpluginConfig.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6LabsStyleKitpluginTargets-relwithdebinfo.cmake:
 
@@ -7400,13 +7785,13 @@ CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6QuickTestpluginTargets.cmake:
 
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2universalstylepluginTargetsPrecheck.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6LabsSynchronizerpluginConfig.cmake:
+
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickdialogs2quickimplpluginConfig.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6LabsSynchronizerpluginTargets-relwithdebinfo.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6PdfQuickpluginAdditionalTargetInfo.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6particlespluginTargets.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6PdfQuickpluginConfig.cmake:
 
@@ -7416,13 +7801,13 @@ CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6PdfQuickpluginTargets.cmake:
 
+/usr/include/c++/16.1.1/bits/stl_heap.h:
+
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6PdfQuickpluginTargetsPrecheck.cmake:
 
-/usr/lib/cmake/Qt6Gui/Qt6QWaylandIviShellIntegrationPluginTargets.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6QmlNetworkpluginConfig.cmake:
-
 /usr/include/qt6/QtCore/q23type_traits.h:
+
+/usr/include/c++/16.1.1/new:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6QmlNetworkpluginTargetsPrecheck.cmake:
 
@@ -7430,21 +7815,31 @@ CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6Quick3DXrpluginTargets-relwithdebinfo.cmake:
 
-/usr/lib/cmake/Qt6GuiTools/Qt6GuiToolsVersionlessTargets.cmake:
-
 /usr/include/c++/15.2.1/bits/stl_uninitialized.h:
+
+/usr/lib/cmake/Qt6GuiTools/Qt6GuiToolsVersionlessTargets.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquick3dpluginTargets.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6Quick3DXrpluginTargetsPrecheck.cmake:
 
+/usr/lib/libyaml-cpp.so.0.9.0:
+
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6QuickControlsTestUtilsPrivatepluginAdditionalTargetInfo.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6TextToSpeechQmlConfig.cmake:
 
-/usr/lib/cmake/Qt6Quick/Qt6QuickConfigVersion.cmake:
+/usr/lib/cmake/Qt6Gui/Qt6QComposePlatformInputContextPluginTargetsPrecheck.cmake:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6TextToSpeechQmlTargets.cmake:
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6TextToSpeechQmlTargets-relwithdebinfo.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WaylandTextureSharingExtensionTargetsPrecheck.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlwavefrontmeshpluginTargets-relwithdebinfo.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquicktimelineblendtreespluginTargets-relwithdebinfo.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WaylandCompositorIviapplicationpluginTargets-relwithdebinfo.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WaylandCompositorPresentationTimepluginTargets-relwithdebinfo.cmake:
 
@@ -7452,7 +7847,17 @@ CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WaylandCompositorPresentationTimepluginTargets.cmake:
 
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WaylandCompositorPresentationTimepluginTargetsPrecheck.cmake:
+
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WaylandCompositorQtShellAdditionalTargetInfo.cmake:
+
+/usr/include/c++/15.2.1/bits/locale_classes.h:
+
+/usr/include/linux/types.h:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WaylandCompositorQtShellTargets-relwithdebinfo.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WaylandCompositorQtShellTargets.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WaylandCompositorQtShellTargetsPrecheck.cmake:
 
@@ -7472,7 +7877,13 @@ CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WaylandTextureSharingExtensionConfig.cmake:
 
+/usr/include/c++/15.2.1/bits/ostream.h:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WaylandTextureSharingExtensionTargets-relwithdebinfo.cmake:
+
 /usr/lib/cmake/Qt6CoreTools/Qt6CoreToolsTargetsPrecheck.cmake:
+
+/usr/include/c++/16.1.1/cstddef:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquick3dpluginAdditionalTargetInfo.cmake:
 
@@ -7486,6 +7897,8 @@ CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WaylandTextureSharingTargets.cmake:
 
+/usr/include/c++/16.1.1/bits/hashtable.h:
+
 /usr/lib/cmake/Qt6Network/Qt6QConnManNetworkInformationPluginTargetsPrecheck.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WebChannelQuickpluginConfig.cmake:
@@ -7494,7 +7907,13 @@ CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WebChannelQuickpluginTargets-relwithdebinfo.cmake:
 
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WebChannelQuickpluginTargets.cmake:
+
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6WebChannelQuickpluginTargetsPrecheck.cmake:
+
+/usr/include/c++/16.1.1/set:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6effectspluginConfig.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6effectspluginTargetsPrecheck.cmake:
 
@@ -7528,19 +7947,7 @@ CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6particlespluginConfig.cmake:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6positioningquickpluginConfig.cmake:
-
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6positioningquickpluginTargets.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2implpluginTargets.cmake:
-
-/usr/include/qt6/QtCore/qttranslation.h:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6positioningquickpluginTargetsPrecheck.cmake:
-
-/usr/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersion.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlfolderlistmodelpluginTargets.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlfolderlistmodelpluginTargetsPrecheck.cmake:
 
@@ -7549,6 +7956,8 @@ CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o:
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmllocalstoragepluginConfig.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmllocalstoragepluginTargets-relwithdebinfo.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmllocalstoragepluginTargets.cmake:
 
 /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/ctype_base.h:
 
@@ -7570,23 +7979,19 @@ CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlshapespluginTargetsPrecheck.cmake:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlxmllistmodelpluginAdditionalTargetInfo.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qmlxmllistmodelpluginTargets.cmake:
-
-/usr/include/c++/15.2.1/tr1/legendre_function.tcc:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquick3dpluginConfig.cmake:
-
-/usr/include/bits/floatn-common.h:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquickvectorimagehelperspluginTargetsPrecheck.cmake:
-
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquick3dpluginTargets-relwithdebinfo.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquicklayoutspluginAdditionalTargetInfo.cmake:
 
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquicklayoutspluginTargets.cmake:
+
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquicklayoutspluginTargetsPrecheck.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquickvectorimagehelperspluginAdditionalTargetInfo.cmake:
+
+/usr/lib/cmake/Qt6/Qt6Config.cmake:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qquickvectorimagepluginConfig.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6LabsStyleKitImplpluginTargets-relwithdebinfo.cmake:
 
@@ -7600,15 +8005,21 @@ CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtgraphicaleffectspluginTargetsPrecheck.cmake:
 
-/usr/lib/cmake/Qt6Qml/Qt6QQmlNativeDebugServiceFactoryPluginTargets-relwithdebinfo.cmake:
+/usr/lib/libc_nonshared.a:
 
-/usr/include/bits/endianness.h:
+/usr/include/qt6/QtCore/qtyperevision.h:
 
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtgraphicaleffectsprivateAdditionalTargetInfo.cmake:
+/usr/include/c++/16.1.1/bits/unordered_set.h:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtgraphicaleffectsprivateConfig.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtgraphicaleffectsprivateTargets-relwithdebinfo.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtqmlcorepluginAdditionalTargetInfo.cmake:
+
+/usr/include/c++/16.1.1/ext/string_conversions.h:
+
+/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtqmlcorepluginConfig.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6QTsLibPluginConfig.cmake:
 
@@ -7619,21 +8030,3 @@ CMakeFiles/QSExtensions.dir/QSExtensions_autogen/mocs_compilation.cpp.o:
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtqmlcorepluginTargets-relwithdebinfo.cmake:
 
 /usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick2pluginAdditionalTargetInfo.cmake:
-
-/usr/lib/cmake/Qt6Gui/Qt6QLinuxFbIntegrationPluginConfig.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick2pluginConfig.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquickcontrols2universalstyleimplpluginAdditionalTargetInfo.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3dparticleeffectspluginTargets-relwithdebinfo.cmake:
-
-/usr/lib/cmake/Qt6Gui/Qt6QSvgIconPluginConfig.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick2pluginTargets.cmake:
-
-/usr/lib/cmake/Qt6Qml/Qt6QLocalClientConnectionFactoryPluginTargetsPrecheck.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3dassetutilspluginTargets-relwithdebinfo.cmake:
-
-/usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtquick3dassetutilspluginTargetsPrecheck.cmake:

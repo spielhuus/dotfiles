@@ -119,9 +119,9 @@ libQSExtensionsplugin.so: CMakeFiles/QSExtensionsplugin.dir/QSExtensionsplugin_e
 libQSExtensionsplugin.so: CMakeFiles/QSExtensionsplugin.dir/build.make
 libQSExtensionsplugin.so: CMakeFiles/QSExtensionsplugin.dir/compiler_depend.ts
 libQSExtensionsplugin.so: libQSExtensions.so
-libQSExtensionsplugin.so: /usr/lib/libQt6Qml.so.6.11.0
-libQSExtensionsplugin.so: /usr/lib/libQt6Network.so.6.11.0
-libQSExtensionsplugin.so: /usr/lib/libQt6Core.so.6.11.0
+libQSExtensionsplugin.so: /usr/lib/libQt6Qml.so.6.11.1
+libQSExtensionsplugin.so: /usr/lib/libQt6Network.so.6.11.1
+libQSExtensionsplugin.so: /usr/lib/libQt6Core.so.6.11.1
 libQSExtensionsplugin.so: CMakeFiles/QSExtensionsplugin.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/etienne/.dotfiles/quickshell/extensions/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared module libQSExtensionsplugin.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/QSExtensionsplugin.dir/link.txt --verbose=$(VERBOSE)

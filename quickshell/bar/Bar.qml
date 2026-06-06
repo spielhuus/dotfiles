@@ -66,7 +66,9 @@ Scope {
           Layout.fillWidth: true
 
           //Blocks.Icon {}
-          Blocks.Workspaces {}
+          Blocks.Workspaces {
+            screenName: modelData.name
+          }
         }
 
         Blocks.ActiveWorkspace {
@@ -100,7 +102,8 @@ Scope {
           Blocks.Memory {}
           Blocks.Battery {
              visible: Battery.available 
-          }
+           }
+          Blocks.Bluetooth {} 
           Blocks.Temperature {}
           Blocks.KeyboardLayout {} 
           Blocks.Sound {}

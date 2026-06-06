@@ -1,60 +1,53 @@
 import QtQuick
-import QtQuick.Layouts
 import Quickshell
 import qs.config
 import qs.services.Compositor
 
-RowLayout {
-  Rectangle {
-    id: workspaceBar
-    Layout.preferredWidth: row.width + 10
-    Layout.preferredHeight: 30
-    color: "transparent"
+Row {
+  id: root
+  property string screenName: ""
 
-    Row {
-      id: row
-      anchors.centerIn: parent
-      spacing: 5
+  spacing: 5
 
-      Repeater {
-        id: wsRepeater
-        model: CompositorService.workspaces
+  Repeater {
+    id: wsRepeater
+    model: CompositorService.workspaces
 
-        Rectangle {
-          id: wsDelegate
-          required property int index
-          required property bool isFocused
-          required property int idx 
+    Rectangle {
+      id: wsDelegate
+      
+      // Safe data extraction using the model context
+      property string wsOutput: model.output !== undefined ? model.output : ""
+      property bool focused: model.isFocused !== undefined ? model.isFocused : false
+      property int workspaceId: model.idx !== undefined ? model.idx : index
+      
+      // Match the screen, or show if unassigned
+      visible: wsOutput === root.screenName || wsOutput === "" || wsOutput === "Unknown"
+      
+      width: 25
+      height: 30
+      radius: 4
 
-          property bool focused: wsDelegate.isFocused
-          property int workspaceId: wsDelegate.idx
-          width: 25
-          height: 30
-          radius: 4
+      color: mouseArea.containsMouse ? Config.theme.barHover : "transparent"
 
-          color: mouseArea.containsMouse ? Config.theme.barHover : "transparent"
+      Behavior on color {
+        ColorAnimation { duration: 150 }
+      }
 
-          Behavior on color {
-            ColorAnimation { duration: 150 }
-          }
+      Text {
+        anchors.centerIn: parent
+        text: parent.workspaceId.toString()
+        color: Config.theme.bar_text_color
+        font.pixelSize: Config.theme.bar_font_size
+        font.bold: parent.focused
+        font.family: Config.theme.fontFamily
+      }
 
-          Text {
-            anchors.centerIn: parent
-            visible: true 
-            text: workspaceId.toString()
-            color: Config.theme.bar_text_color
-            font.pixelSize: Config.theme.bar_font_size
-            font.bold: focused
-            font.family: Config.theme.fontFamily
-          }
-
-          MouseArea {
-            id: mouseArea
-            anchors.fill: parent
-            hoverEnabled: true
-            onClicked: CompositorService.switchToWorkspace(CompositorService.workspaces.get(index))
-          }
-        }
+      MouseArea {
+        id: mouseArea
+        anchors.fill: parent
+        hoverEnabled: true
+        onClicked: CompositorService.switchToWorkspace(CompositorService.workspaces.get(index))
       }
     }
   }
