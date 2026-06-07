@@ -103,10 +103,10 @@ Scope {
           Blocks.Battery {
              visible: Battery.available 
            }
-          Blocks.Bluetooth {} 
           Blocks.Temperature {}
           Blocks.KeyboardLayout {} 
           Blocks.Sound {}
+          Blocks.Bluetooth {} 
           Blocks.SystemTray {}
           Blocks.Time {}
         }

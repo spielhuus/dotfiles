@@ -94,5 +94,5 @@ BarBlock {
         }
     }
 
-    onClicked: menuWindow.visible = !menuWindow.visible
+    onClicked: () => { menuWindow.visible = !menuWindow.visible }
 }

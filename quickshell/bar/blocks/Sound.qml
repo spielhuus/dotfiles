@@ -1,5 +1,6 @@
 import QtQuick
 import QtQuick.Controls
+import QtQuick.Layouts
 import Quickshell
 import Quickshell.Services.Pipewire
 import Quickshell.Io
@@ -10,25 +11,38 @@ BarBlock {
     id: root
     property var sink: Pipewire.defaultAudioSink
 
+    // Defensive readouts to handle transitional or null/NaN values safely
+    readonly property real volume: {
+        if (sink && sink.audio && typeof sink.audio.volume === "number" && !isNaN(sink.audio.volume)) {
+            return sink.audio.volume;
+        }
+        return 0;
+    }
+    readonly property bool muted: {
+        if (sink && sink.audio && typeof sink.audio.muted === "boolean") {
+            return sink.audio.muted;
+        }
+        return false;
+    }
+
     PwObjectTracker { 
         objects: [Pipewire.defaultAudioSink]
         onObjectsChanged: {
             sink = Pipewire.defaultAudioSink
-            if (sink?.audio) {
-                sink.audio.volumeChanged.connect(updateVolume)
-            }
         }
     }
 
     content: BarText { 
-      symbolText: sink?.audio?.muted 
+      symbolText: root.muted 
         ? "󰖁" 
-        : `󰕾${Math.round(sink?.audio?.volume * 100)}%`
-      color: sink?.audio?.muted ? Config.theme.inactive : Config.theme.normal
+        : `󰕾 ${Math.round(root.volume * 100)}%`
+      color: root.muted ? Config.theme.inactive : Config.theme.normal
     }
 
     MouseArea {
         anchors.fill: parent
+        hoverEnabled: true
+        cursorShape: Qt.PointingHandCursor
         onClicked: toggleMenu()
         onWheel: function(event) {
             if (sink?.audio) {
@@ -45,117 +59,189 @@ BarBlock {
 
     PopupWindow {
         id: menuWindow
-        implicitWidth: 200
-        implicitHeight: 150
         visible: false
+        color: "transparent"
+        grabFocus: true
 
-        anchor {
-            window: root.QsWindow?.window
-            edges: Edges.Bottom
-            gravity: Edges.Top
-        }
+        anchor.window: root.QsWindow?.window ?? null
+        anchor.rect.x: root.QsWindow?.window ? (root.mapToGlobal(root.width / 2, 0).x - width / 2) : 0
+        anchor.rect.y: root.QsWindow?.window ? root.mapToGlobal(0, root.height).y : 0
 
-        MouseArea {
-            anchors.fill: parent
-            hoverEnabled: true
-            onExited: {
-                if (!containsMouse) {
-                    closeTimer.start()
+        implicitWidth: popupContent.implicitWidth
+        implicitHeight: popupContent.implicitHeight
+
+        Pane {
+            id: popupContent
+            implicitWidth: 320
+            
+            topPadding: 16
+            bottomPadding: 16
+            leftPadding: 20  
+            rightPadding: 20 
+
+            Connections {
+                target: popupContent.QsWindow ? popupContent.QsWindow.window : null
+                
+                function onActiveChanged() {
+                    if (target && !target.active && menuWindow.visible) {
+                        menuWindow.visible = false;
+                    }
                 }
             }
-            onEntered: closeTimer.stop()
 
-            Timer {
-                id: closeTimer
-                interval: 500
-                onTriggered: menuWindow.visible = false
+            background: Rectangle {
+                color: Config.theme.bg
+                radius: 10
+                border.color: Config.theme.border
+                border.width: 1
             }
 
-            Rectangle {
-                anchors.fill: parent
-                color: "#2c2c2c"
-                border.color: "#3c3c3c"
-                border.width: 1
-                radius: 4
+            ColumnLayout {
+                anchors.left: parent.left
+                anchors.right: parent.right
+                spacing: 12
 
-                Column {
-                    anchors.fill: parent
-                    anchors.margins: 10
-                    spacing: 10
+                RowLayout {
+                    Layout.fillWidth: true
+                    Label {
+                        text: "Volume"
+                        font.bold: true
+                        color: Config.theme.text
+                        font.family: Config.theme.fontFamily
+                        font.pixelSize: 14
+                    }
+                    Item { Layout.fillWidth: true }
+                    Label {
+                        text: root.muted ? "Muted" : `${Math.round(root.volume * 100)}%`
+                        color: Config.theme.subtext
+                        font.family: Config.theme.fontFamily
+                        font.pixelSize: 12
+                    }
+                }
 
-                    // Volume Slider
-                    Rectangle {
-                        width: parent.width
-                        height: 35
-                        color: "transparent"
+                RowLayout {
+                    Layout.fillWidth: true
+                    spacing: 12
 
-                        Slider {
-                            id: volumeSlider
-                            anchors.fill: parent
-                            from: 0
-                            to: 1
-                            value: sink?.audio?.volume || 0
-                            onValueChanged: {
-                                if (sink?.audio) {
-                                    sink.audio.volume = value
-                                }
-                            }
+                    Text {
+                        text: root.muted ? "󰖁" : "󰕾"
+                        font.family: Config.theme.fontSymbol
+                        font.pixelSize: 18
+                        color: root.muted ? Config.theme.inactive : Config.theme.iconColor
+                        Layout.alignment: Qt.AlignVCenter
+                    }
 
-                            background: Rectangle {
-                                x: volumeSlider.leftPadding
-                                y: volumeSlider.topPadding + volumeSlider.availableHeight / 2 - height / 2
-                                width: volumeSlider.availableWidth
-                                height: 4
-                                radius: 2
-                                color: "#3c3c3c"
-
-                                Rectangle {
-                                    width: volumeSlider.visualPosition * parent.width
-                                    height: parent.height
-                                    color: "#4a9eff"
-                                    radius: 2
-                                }
-                            }
-
-                            handle: Rectangle {
-                                x: volumeSlider.leftPadding + volumeSlider.visualPosition * (volumeSlider.availableWidth - width)
-                                y: volumeSlider.topPadding + volumeSlider.availableHeight / 2 - height / 2
-                                width: 16
-                                height: 16
-                                radius: 8
-                                color: volumeSlider.pressed ? "#4a9eff" : "#ffffff"
-                                border.color: "#3c3c3c"
+                    Slider {
+                        id: volumeSlider
+                        Layout.fillWidth: true
+                        Layout.preferredHeight: 32
+                        from: 0
+                        to: 1
+                        value: root.volume
+                        
+                        onMoved: {
+                            if (sink?.audio) {
+                                sink.audio.volume = value
                             }
                         }
+
+                        background: Rectangle {
+                            x: volumeSlider.leftPadding
+                            y: volumeSlider.topPadding + volumeSlider.availableHeight / 2 - height / 2
+                            width: volumeSlider.availableWidth
+                            height: 6
+                            radius: 3
+                            color: Config.theme.border
+
+                            Rectangle {
+                                width: volumeSlider.visualPosition * parent.width
+                                height: parent.height
+                                color: root.muted ? Config.theme.inactive : Config.theme.iconColor
+                                radius: 3
+                            }
+                        }
+
+                        handle: Rectangle {
+                            x: volumeSlider.leftPadding + volumeSlider.visualPosition * (volumeSlider.availableWidth - width)
+                            y: volumeSlider.topPadding + volumeSlider.availableHeight / 2 - height / 2
+                            width: 16
+                            height: 16
+                            radius: 8
+                            color: volumeSlider.pressed ? Config.theme.iconPressedColor : "#ffffff"
+                            border.color: Config.theme.border
+                            border.width: 1
+                        }
                     }
+                }
+
+                Rectangle {
+                    Layout.fillWidth: true
+                    height: 1
+                    color: Config.theme.border
+                }
+
+                ColumnLayout {
+                    Layout.fillWidth: true
+                    spacing: 4
 
                     Repeater {
                         model: [
-                            { text: sink?.audio?.muted ? "Unmute" : "Mute", action: () => sink?.audio && (sink.audio.muted = !sink.audio.muted) },
-                            { text: "Pavucontrol", action: () => { pavucontrol.running = true; menuWindow.visible = false } }
+                            { 
+                                text: root.muted ? "Unmute" : "Mute", 
+                                icon: root.muted ? "󰖁" : "󰝟", 
+                                action: () => sink?.audio && (sink.audio.muted = !sink.audio.muted) 
+                            },
+                            { 
+                                text: "Audio Mixer (Pavucontrol)", 
+                                icon: "󰓃", 
+                                action: () => { pavucontrol.running = true; menuWindow.visible = false } 
+                            }
                         ]
 
-                        Rectangle {
-                            width: parent.width
-                            height: 35
-                            color: mouseArea.containsMouse ? "#3c3c3c" : "transparent"
-                            radius: 4
+                        delegate: Item {
+                            Layout.fillWidth: true
+                            Layout.preferredHeight: 38
 
-                            Text {
+                            Rectangle {
                                 anchors.fill: parent
-                                anchors.leftMargin: 10
-                                text: modelData.text
-                                color: "white"
-                                font.pixelSize: 12
-                                verticalAlignment: Text.AlignVCenter
+                                color: itemMouseArea.containsMouse ? Config.theme.chatBgHover : "transparent"
+                                radius: 6
+
+                                Behavior on color {
+                                    ColorAnimation { duration: 100 }
+                                }
                             }
 
                             MouseArea {
-                                id: mouseArea
+                                id: itemMouseArea
                                 anchors.fill: parent
                                 hoverEnabled: true
+                                cursorShape: Qt.PointingHandCursor
                                 onClicked: {
                                     modelData.action()
+                                }
+                            }
+
+                            RowLayout {
+                                anchors.fill: parent
+                                anchors.leftMargin: 10
+                                anchors.rightMargin: 10
+                                spacing: 12
+
+                                Text {
+                                    text: modelData.icon
+                                    font.family: Config.theme.fontSymbol
+                                    font.pixelSize: 16
+                                    color: Config.theme.subtext
+                                    Layout.alignment: Qt.AlignVCenter
+                                }
+
+                                Label {
+                                    text: modelData.text
+                                    color: Config.theme.text
+                                    font.family: Config.theme.fontFamily
+                                    font.pixelSize: 13
+                                    Layout.fillWidth: true
                                 }
                             }
                         }
@@ -166,9 +252,6 @@ BarBlock {
     }
 
     function toggleMenu() {
-        if (root.QsWindow?.window?.contentItem) {
-            menuWindow.anchor.rect = root.QsWindow.window.contentItem.mapFromItem(root, 0, -menuWindow.height - 5, root.width, root.height)
-            menuWindow.visible = !menuWindow.visible
-        }
+        menuWindow.visible = !menuWindow.visible
     }
 }

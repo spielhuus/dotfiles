@@ -33,6 +33,12 @@ Singleton {
         property string fontFamily: "Verdana"
         property string fontSymbol: "Symbols Nerd Font Mono"
         property int fontSize: 16
+
+        property string bg: "#1e1e1e"
+        property string border: "#2d2d2d"
+        property string text: "#ffffff"
+        property string subtext: "#aaaaaa"
+
         // --- Chat Window Settings ---
         property int chatWidth: 1200
         property int chatHeight: 800

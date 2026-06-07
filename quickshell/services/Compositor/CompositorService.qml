@@ -45,10 +45,6 @@ Singleton {
         const currentDesktop = Quickshell.env("XDG_CURRENT_DESKTOP");
         const labwcPid = Quickshell.env("LABWC_PID");
 
-        console.log("[CompositorService] Environment check:", 
-                    "QUICKSHELL_COMPOSITOR =", forceCompositor, 
-                    "XDG_CURRENT_DESKTOP =", currentDesktop);
-
         if (forceCompositor === "mango" || (currentDesktop && currentDesktop.toLowerCase().includes("mango"))) {
             isHyprland = false;
             isNiri = false;
@@ -56,7 +52,6 @@ Singleton {
             isMango = true;
             isLabwc = false;
             backendLoader.sourceComponent = mangoComponent;
-            console.log("[CompositorService] Loading Mango WM Backend Service");
         } else if (labwcPid && labwcPid.length > 0) {
             isHyprland = false;
             isNiri = false;
@@ -64,7 +59,6 @@ Singleton {
             isMango = false;
             isLabwc = true;
             backendLoader.sourceComponent = labwcComponent;
-            console.log("[CompositorService] Detected LabWC with PID: " + labwcPid);
         } else if (niriSocket && niriSocket.length > 0) {
             isHyprland = false;
             isNiri = true;
@@ -72,7 +66,6 @@ Singleton {
             isMango = false;
             isLabwc = false;
             backendLoader.sourceComponent = niriComponent;
-            console.log("[CompositorService] Detected Niri");
         } else if (hyprlandSignature && hyprlandSignature.length > 0) {
             isHyprland = true;
             isNiri = false;
@@ -80,7 +73,6 @@ Singleton {
             isMango = false;
             isLabwc = false;
             backendLoader.sourceComponent = hyprlandComponent;
-            console.log("[CompositorService] Detected Hyprland");
         } else if (swaySock && swaySock.length > 0) {
             isHyprland = false;
             isNiri = false;
@@ -88,7 +80,6 @@ Singleton {
             isMango = false;
             isLabwc = false;
             backendLoader.sourceComponent = swayComponent;
-            console.log("[CompositorService] Detected Sway");
         } else {
             isHyprland = false;
             isNiri = true;
@@ -96,7 +87,6 @@ Singleton {
             isMango = false;
             isLabwc = false;
             backendLoader.sourceComponent = niriComponent;
-            console.log("[CompositorService] Fallback selection: Loaded Niri Service");
         }
     }
 
@@ -143,11 +133,9 @@ Singleton {
     }
 
     function syncWorkspaces() {
-        console.log("[CompositorService] syncWorkspaces() triggering. Backend workspaces count:", backend ? backend.workspaces.count : "No Backend");
         workspaces.clear();
         const ws = backend.workspaces;
         for (var i = 0; i < ws.count; i++) {
-            console.log("[CompositorService] Syncing workspace:", JSON.stringify(ws.get(i)));
             workspaces.append(ws.get(i));
         }
         workspaceChanged();
@@ -312,11 +300,9 @@ Singleton {
         id: backendLoader
 
         onLoaded: {
-            console.log("[CompositorService] Loader load completed. Backend target:", item);
             if (item) {
                 root.backend = item;
                 setupBackendConnections();
-                console.log("[CompositorService] Initializing loaded backend service...");
                 backend.initialize();
             }
         }

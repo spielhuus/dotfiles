@@ -185,12 +185,6 @@ FloatingWindow {
     implicitHeight: Config.theme.chatHeight
     title: "LLM Chat"
     Component.onCompleted: {
-        try {
-            window.x = (Screen.width - window.width) / 2;
-            window.y = (Screen.height - window.height) / 2;
-        } catch (e) {
-            console.log("Warning: Could not center window via QML");
-        }
         refreshFileList();
         refreshHistoryList();
     }

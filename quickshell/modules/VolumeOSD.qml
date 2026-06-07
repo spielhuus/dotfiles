@@ -9,6 +9,21 @@ Scope {
   id: root
 
   property var sink: Pipewire.defaultAudioSink
+  
+  // Defensive readouts to handle transitional or null/NaN values safely
+  readonly property real volume: {
+      if (sink && sink.audio && typeof sink.audio.volume === "number" && !isNaN(sink.audio.volume)) {
+          return sink.audio.volume;
+      }
+      return 0;
+  }
+  readonly property bool muted: {
+      if (sink && sink.audio && typeof sink.audio.muted === "boolean") {
+          return sink.audio.muted;
+      }
+      return false;
+  }
+
   Connections {
     target: sink ? sink.audio : null
     function onVolumeChanged() {
@@ -65,7 +80,6 @@ Scope {
         border.width: 1
         border.color: Config.theme.osdBorderColor
 
-        // Animate Opacity here
         opacity: root.showOsd ? 1.0 : 0.0
         Behavior on opacity { NumberAnimation { duration: 200 } }
 
@@ -77,11 +91,9 @@ Scope {
           // Icon
           Text {
             text: {
-              if (!root.sink || !root.sink.audio) return "\uf026"
-              const vol = root.sink.audio.volume
-              const muted = root.sink.audio.muted
+              if (root.muted) return ""
+              const vol = root.volume
 
-              if (muted) return ""
               if (vol >= 0.66) return "󰕾"
               if (vol >= 0.33) return "󰖀"
               if (vol > 0) return "󰕿"
@@ -105,9 +117,9 @@ Scope {
 
             Rectangle {
               height: parent.height
-              width: parent.width * (root.sink?.audio?.volume ?? 0)
+              width: parent.width * root.volume
 
-              color: (root.sink?.audio?.muted) ? "#555555" : Config.theme.iconColor
+              color: root.muted ? "#555555" : Config.theme.iconColor
               radius: 3
 
               Behavior on width { NumberAnimation { duration: 50 } }
@@ -115,7 +127,7 @@ Scope {
           }
 
           Text {
-            text: Math.round((root.sink?.audio?.volume ?? 0) * 100) + "%"
+            text: Math.round(root.volume * 100) + "%"
             color: "white"
             font.family: Config.theme.fontFamily
             font.pixelSize: 16

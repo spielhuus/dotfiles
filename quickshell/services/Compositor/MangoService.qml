@@ -72,7 +72,6 @@ Item {
         if (initialized)
             return;
 
-        console.log("[MangoService] Initializing MangoWM processes...");
         scaleQuery.running = true;
         initialTagsQuery.running = true;
         initialMonitorsQuery.running = true;
@@ -88,7 +87,6 @@ Item {
     }
 
     function switchToWorkspace(ws) {
-        console.log("[MangoService] Dispatching workspace switch to:", ws.idx);
         Quickshell.execDetached(["mmsg", "dispatch", "view," + ws.idx.toString()]);
     }
 
@@ -299,7 +297,6 @@ Item {
         }
 
       function rebuildWorkspaces() {
-          console.log("[MangoService] rebuildWorkspaces() invoked. Selected Monitor:", root.selectedMonitor);
           const workspaceList = [];
           for (const outputName in internal.tagStates) {
             if (internal.outputIndices[outputName] === undefined)
@@ -337,7 +334,6 @@ Item {
           for (let k = 0; k < workspaceList.length; k++) {
             root.workspaces.append(workspaceList[k]);
           }
-          console.log("[MangoService] rebuildWorkspaces() complete. Output models count:", root.workspaces.count);
           root.workspaceChanged();
         }}
 
@@ -346,7 +342,6 @@ Item {
         running: false
         command: ["mmsg", "watch", "all-tags"]
         onExited: (code) => { 
-            console.log("[MangoService] tagStream closed. Exit code:", code);
             if (code !== 0) restartTimer.start(); 
         }
         stdout: SplitParser {
@@ -359,7 +354,6 @@ Item {
         running: false
         command: ["mmsg", "watch", "all-monitors"]
         onExited: (code) => { 
-            console.log("[MangoService] monStream closed. Exit code:", code);
             if (code !== 0) restartTimer.start(); 
         }
         stdout: SplitParser {
@@ -372,7 +366,6 @@ Item {
         running: false
         command: ["mmsg", "watch", "keyboardlayout"]
         onExited: (code) => { 
-            console.log("[MangoService] kbStream closed. Exit code:", code);
             if (code !== 0) restartTimer.start(); 
         }
         stdout: SplitParser {
@@ -397,7 +390,6 @@ Item {
         command: ["mmsg", "get", "all-tags"]
         stdout: StdioCollector {
             onStreamFinished: {
-                console.log("[MangoService] initialTagsQuery text retrieved length:", text.length);
                 if (text.trim().length > 0) {
                     internal.processTagData(text);
                 }
@@ -410,7 +402,6 @@ Item {
         command: ["mmsg", "get", "all-monitors"]
         stdout: StdioCollector {
             onStreamFinished: {
-                console.log("[MangoService] initialMonitorsQuery text retrieved length:", text.length);
                 if (text.trim().length > 0) {
                     internal.processMonData(text);
                 }
