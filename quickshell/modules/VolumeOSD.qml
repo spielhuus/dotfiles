@@ -8,7 +8,30 @@ import qs.config
 Scope {
   id: root
 
-  property var sink: Pipewire.defaultAudioSink
+  property var sink: null
+
+  function updateSink() {
+      const currentSink = Pipewire.defaultAudioSink;
+      if (currentSink !== sink) {
+          sink = currentSink;
+      }
+  }
+
+  Component.onCompleted: {
+      updateSink();
+  }
+
+  Connections {
+      target: Pipewire
+      ignoreUnknownSignals: true
+      function onDefaultAudioSinkChanged() {
+          root.updateSink();
+      }
+  }
+
+  PwObjectTracker {
+      objects: root.sink ? [root.sink] : []
+  }
   
   // Defensive readouts to handle transitional or null/NaN values safely
   readonly property real volume: {
@@ -26,6 +49,7 @@ Scope {
 
   Connections {
     target: sink ? sink.audio : null
+    ignoreUnknownSignals: true
     function onVolumeChanged() {
       root.present()
     }

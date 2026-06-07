@@ -69,9 +69,65 @@ BarBlock {
       leftPadding: 20  
       rightPadding: 20 
 
+      // Explicitly set base font configurations for the container
+      font.family: Config.theme.fontFamily
+      font.pixelSize: 13
+
+      // --- Hoisted Connection State & Timers ---
+      // This prevents the timers from being destroyed when the ListView refreshes
+      property string connectingDeviceId: ""
+      property string failedDeviceId: ""
+
+      Timer {
+        id: sharedConnectionTimer
+        interval: 15000 
+        repeat: false
+        onTriggered: {
+          popupContent.failedDeviceId = popupContent.connectingDeviceId;
+          popupContent.connectingDeviceId = "";
+          sharedFailureTimer.restart();
+        }
+      }
+
+      Timer {
+        id: sharedFailureTimer
+        interval: 5000 
+        repeat: false
+        onTriggered: popupContent.failedDeviceId = ""
+      }
+
+      Timer {
+        id: sharedDelayTimer
+        interval: 500 
+        repeat: false
+        onTriggered: {
+          if (!adapter || !adapter.devices) return;
+          let found = false;
+          // Find the device again in case the list was recreated
+          for (let i = 0; i < adapter.devices.length; i++) {
+            let d = adapter.devices[i];
+            let dId = d.address || d.name || d.deviceName || "Unknown";
+            if (dId === popupContent.connectingDeviceId) {
+              d.connected = true;
+              sharedConnectionTimer.start();
+              found = true;
+              break;
+            }
+          }
+          // Failsafe if device vanished
+          if (!found) {
+            popupContent.failedDeviceId = popupContent.connectingDeviceId;
+            popupContent.connectingDeviceId = "";
+            sharedFailureTimer.restart();
+          }
+        }
+      }
+      // ------------------------------------------
+
       // Capture focus loss of the native window object
       Connections {
         target: popupContent.QsWindow ? popupContent.QsWindow.window : null
+        ignoreUnknownSignals: true
         
         function onActiveChanged() {
           if (target && !target.active && devicePopup.visible) {
@@ -96,6 +152,8 @@ BarBlock {
         RowLayout {
           Label {
             text: "Bluetooth"
+            font.family: Config.theme.fontFamily
+            font.pixelSize: 14
             font.bold: true
             color: Config.theme.text
           }
@@ -104,6 +162,7 @@ BarBlock {
           // Power toggle
           Text {
             text: isPowered ? "󰂱" : "󰂯"
+            font.family: Config.theme.fontSymbol
             font.pixelSize: 16
             color: Config.theme.text
             
@@ -116,8 +175,8 @@ BarBlock {
           }
         }
 
-        // Scan button
-        RowLayout {
+        // Scan button (changed to Item to support stacked overlays)
+        Item {
           id: scanButtonRow
           visible: isPowered
           Layout.fillWidth: true
@@ -185,6 +244,8 @@ BarBlock {
         // Connected devices list header
         Label {
           text: "Connected Devices"
+          font.family: Config.theme.fontFamily
+          font.pixelSize: 12
           font.bold: true
           color: Config.theme.text
           visible: connectedCount > 0
@@ -192,58 +253,39 @@ BarBlock {
 
         // Device list
         ListView {
+          id: deviceListView
           model: adapter?.devices ?? []
-          visible: count > 0
+          
+          // Displayed count logic prevents the ListView from collapsing to 0 height
+          // when the model briefly empties out during the backend reload
+          property int displayedCount: count > 0 ? count : (popupContent.connectingDeviceId !== "" ? 1 : 0)
+          
+          visible: displayedCount > 0
           Layout.fillWidth: true
-          implicitHeight: Math.min(count * 50, 200)
+          Layout.preferredHeight: Math.min(displayedCount * 50, 200)
           clip: true
 
           delegate: Item {
             id: delegateItem
-            width: parent.width
+            width: deviceListView.width
             height: 50
 
-            property bool isConnecting: false
-            property bool showFailed: false
-
-            Timer {
-              id: connectionTimer
-              interval: 15000 
-              repeat: false
-              onTriggered: {
-                if (delegateItem.isConnecting) {
-                  delegateItem.isConnecting = false;
-                  delegateItem.showFailed = true;
-                  failureTimer.restart();
-                }
-              }
-            }
-
-            Timer {
-              id: failureTimer
-              interval: 5000 
-              repeat: false
-              onTriggered: delegateItem.showFailed = false
-            }
-
-            // Delay timer to let the adapter safely stop scanning before connecting
-            Timer {
-              id: connectionDelayTimer
-              interval: 200
-              repeat: false
-              onTriggered: {
-                modelData.connected = true;
-                connectionTimer.start();
-              }
-            }
+            // Expose device reliably
+            readonly property var device: modelData
+            readonly property string devId: device ? (device.address || device.name || device.deviceName || "Unknown") : "Unknown"
+            
+            // Check global UI state instead of keeping it in the delegate
+            readonly property bool isConnecting: popupContent.connectingDeviceId === devId
+            readonly property bool showFailed: popupContent.failedDeviceId === devId
 
             Connections {
-              target: modelData
+              target: delegateItem.device
+              ignoreUnknownSignals: true
               
               function onConnectedChanged() {
-                if (delegateItem.isConnecting) {
-                  delegateItem.isConnecting = false;
-                  connectionTimer.stop();
+                if (delegateItem.isConnecting && delegateItem.device && delegateItem.device.connected) {
+                  popupContent.connectingDeviceId = "";
+                  sharedConnectionTimer.stop();
                 }
               }
             }
@@ -267,19 +309,21 @@ BarBlock {
               enabled: !delegateItem.isConnecting 
               cursorShape: delegateItem.isConnecting ? Qt.ArrowCursor : Qt.PointingHandCursor
               onClicked: {
-                if (modelData.connected) {
-                  modelData.connected = false;
+                if (!delegateItem.device) return;
+
+                if (delegateItem.device.connected) {
+                  delegateItem.device.connected = false;
                 } else {
-                  delegateItem.isConnecting = true;
-                  delegateItem.showFailed = false;
+                  popupContent.connectingDeviceId = delegateItem.devId;
+                  popupContent.failedDeviceId = "";
                   
                   // Check if scanning is active and stop it first
                   if (adapter && adapter.discovering) {
                     adapter.discovering = false;
-                    connectionDelayTimer.restart();
+                    sharedDelayTimer.restart();
                   } else {
-                    modelData.connected = true;
-                    connectionTimer.start();
+                    delegateItem.device.connected = true;
+                    sharedConnectionTimer.start();
                   }
                 }
               }
@@ -295,7 +339,7 @@ BarBlock {
               Image {
                 Layout.preferredWidth: 24
                 Layout.preferredHeight: 24
-                source: Quickshell.iconPath(modelData.icon || "bluetooth")
+                source: Quickshell.iconPath(delegateItem.device?.icon || "bluetooth")
                 fillMode: Image.PreserveAspectFit
                 opacity: delegateItem.isConnecting ? 0.5 : 1.0
               }
@@ -306,9 +350,11 @@ BarBlock {
                 spacing: 2
 
                 Label {
-                  text: modelData.name || modelData.deviceName || "Unknown"
+                  text: delegateItem.device ? (delegateItem.device.name || delegateItem.device.deviceName || "Unknown") : "Unknown"
+                  font.family: Config.theme.fontFamily
+                  font.pixelSize: 13
                   color: Config.theme.text
-                  font.weight: modelData.connected ? Font.Bold : Font.Normal
+                  font.weight: delegateItem.device?.connected ? Font.Bold : Font.Normal
                   elide: Text.ElideRight
                   Layout.fillWidth: true
                 }
@@ -316,12 +362,13 @@ BarBlock {
                 // Status subtext
                 Label {
                   Layout.fillWidth: true
-                  font.pointSize: 10
+                  font.family: Config.theme.fontFamily
+                  font.pixelSize: 10
                   
                   text: {
                     if (delegateItem.isConnecting) return "Connecting...";
                     if (delegateItem.showFailed) return "Connection failed";
-                    if (modelData.batteryAvailable) return " " + Math.round(modelData.battery * 100) + "%";
+                    if (delegateItem.device?.batteryAvailable) return " " + Math.round(delegateItem.device.battery * 100) + "%";
                     return "";
                   }
                   
@@ -331,18 +378,19 @@ BarBlock {
                     return Config.theme.subtext;
                   }
                   
-                  visible: delegateItem.isConnecting || delegateItem.showFailed || modelData.batteryAvailable
+                  visible: delegateItem.isConnecting || delegateItem.showFailed || (delegateItem.device && delegateItem.device.batteryAvailable)
                 }
               }
 
               // Connect/disconnect status icon
               Text {
                 id: statusIcon
-                text: delegateItem.isConnecting ? "" : (modelData.connected ? "󰌾" : "󰂲")
+                text: delegateItem.isConnecting ? "" : (delegateItem.device?.connected ? "󰌾" : "󰂲")
+                font.family: Config.theme.fontSymbol
                 font.pixelSize: 18
                 color: {
                   if (delegateItem.isConnecting) return "#4a9eff";
-                  if (modelData.connected) return Config.theme.ok;
+                  if (delegateItem.device?.connected) return Config.theme.ok;
                   return Config.theme.text;
                 }
                 Layout.alignment: Qt.AlignVCenter
@@ -371,8 +419,11 @@ BarBlock {
 
         // Empty state
         Label {
-          visible: isPowered && connectedCount === 0 && !(adapter?.discovering)
+          // Keep it hidden if we're actively attempting to connect
+          visible: isPowered && deviceListView.count === 0 && !(adapter?.discovering) && popupContent.connectingDeviceId === ""
           text: "No devices connected"
+          font.family: Config.theme.fontFamily
+          font.pixelSize: 13
           color: Config.theme.subtext
           
           horizontalAlignment: Text.AlignHCenter

@@ -9,7 +9,30 @@ import "../"
 
 BarBlock {
     id: root
-    property var sink: Pipewire.defaultAudioSink
+    property var sink: null
+
+    function updateSink() {
+        const currentSink = Pipewire.defaultAudioSink;
+        if (currentSink !== sink) {
+            sink = currentSink;
+        }
+    }
+
+    Component.onCompleted: {
+        updateSink();
+    }
+
+    Connections {
+        target: Pipewire
+        ignoreUnknownSignals: true
+        function onDefaultAudioSinkChanged() {
+            root.updateSink();
+        }
+    }
+
+    PwObjectTracker { 
+        objects: root.sink ? [root.sink] : []
+    }
 
     // Defensive readouts to handle transitional or null/NaN values safely
     readonly property real volume: {
@@ -23,13 +46,6 @@ BarBlock {
             return sink.audio.muted;
         }
         return false;
-    }
-
-    PwObjectTracker { 
-        objects: [Pipewire.defaultAudioSink]
-        onObjectsChanged: {
-            sink = Pipewire.defaultAudioSink
-        }
     }
 
     content: BarText { 
@@ -81,6 +97,7 @@ BarBlock {
 
             Connections {
                 target: popupContent.QsWindow ? popupContent.QsWindow.window : null
+                ignoreUnknownSignals: true // Suppresses warnings when target is temporarily null
                 
                 function onActiveChanged() {
                     if (target && !target.active && menuWindow.visible) {
@@ -95,7 +112,6 @@ BarBlock {
                 border.color: Config.theme.border
                 border.width: 1
             }
-
             ColumnLayout {
                 anchors.left: parent.left
                 anchors.right: parent.right

@@ -25,6 +25,7 @@ Singleton {
         property string osdBgColor: "#c1111111"
         property string osdBorderColor: "#66111111"
         property string iconColor: "#05D9E8"
+        property string iconPressedColor: "#ffD9E8"
         property string buttonBorderColor: "#aa000000"
         property string buttonBgColor: "#c1000000"
         property string barHover: "#aaaaaaaa"
