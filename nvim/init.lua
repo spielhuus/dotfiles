@@ -26,6 +26,8 @@ require("keymaps")
 
 vim.pack.add({
 	{ src = "https://github.com/nvim-treesitter/nvim-treesitter" },
+  { src = "https://github.com/saghen/blink.lib" },
+	{ src = "https://github.com/saghen/blink.cmp" },
 	{ src = "https://github.com/mason-org/mason.nvim" },
 	{ src = "https://github.com/folke/snacks.nvim" },
 	{ src = "https://github.com/mrcjkb/rustaceanvim" },
@@ -33,18 +35,20 @@ vim.pack.add({
   { src = "https://github.com/saecki/crates.nvim" },
 	{ src = "https://github.com/mbbill/undotree" },
 	{ src = "https://github.com/mfussenegger/nvim-dap" },
-	{ src = "https://github.com/ibhagwan/fzf-lua" },
+	-- { src = "https://github.com/ibhagwan/fzf-lua" },
 	{ src = "https://github.com/stevearc/conform.nvim" },
 	{ src = "https://github.com/igorlfs/nvim-dap-view" },
-	{ src = "https://github.com/saghen/blink.cmp" },
 	{ src = "https://github.com/rafamadriz/friendly-snippets" },
 	{ src = "https://github.com/L3MON4D3/LuaSnip" },
-	{ src = "https://github.com/brenton-leighton/multiple-cursors.nvim" },
+	-- { src = "https://github.com/brenton-leighton/multiple-cursors.nvim" },
   { src = "https://github.com/lewis6991/gitsigns.nvim" },
   { src = "https://github.com/neogitorg/neogit"},
   { src = "https://github.com/nvim-lua/plenary.nvim"},
-	{ src = "https://github.com/spielhuus/lungan" },
+	-- { src = "https://github.com/spielhuus/lungan-rs" },
+  -- { src = "https://github.com/t-troebst/perfanno.nvim" },
 })
+
+vim.opt.rtp:append("/home/etienne/github/lungan-rs")
 
 require("mason").setup()
 
@@ -56,31 +60,25 @@ vim.lsp.enable({
 	"bash_ls",
 	"html_ls",
 	"python_ls",
-	"cspell_ls",
+	-- "cspell_ls",
 	"ltex",
 })
 
-require("autocommands")
-require('vim._core.ui2').enable({
-  enable = true, -- Whether to enable or disable the UI.
-  msg = { -- Options related to the message module.
-    ---@type 'cmd'|'msg' Default message target, either in the
-    ---cmdline or in a separate ephemeral message window.
-    ---@type string|table<string, 'cmd'|'msg'|'pager'> Default message target
-    ---or table mapping |ui-messages| kinds and triggers to a target.
-    targets = 'cmd',
-    cmd = { -- Options related to messages in the cmdline window.
-      height = 0.5 -- Maximum height while expanded for messages beyond 'cmdheight'.
-    },
-    dialog = { -- Options related to dialog window.
-      height = 0.5, -- Maximum height.
-    },
-    msg = { -- Options related to msg window.
-      height = 0.5, -- Maximum height.
-      timeout = 4000, -- Time a message is visible in the message window.
-    },
-    pager = { -- Options related to message window.
-      height = 1, -- Maximum height.
-    },
-  },
+vim.api.nvim_create_autocmd("LspProgress", {
+    callback = function(ev)
+        local value = ev.data.params.value or {}
+        if not value.kind then return end
+
+        local status = value.kind == "end" and 0 or 1
+        local percent = value.percentage or 0
+
+        local osc_seq = string.format("\27]9;4;%d;%d\a", status, percent)
+
+        if os.getenv("TMUX") then
+            osc_seq = string.format("\27Ptmux;\27%s\27\\", osc_seq)
+        end
+
+        io.stdout:write(osc_seq)
+        io.stdout:flush()
+    end,
 })

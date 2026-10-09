@@ -1,38 +1,38 @@
-require("fzf-lua").setup({ "ivy" })
-
-local keymap = vim.keymap.set
-
-keymap("n", "<leader>sd", function() require("fzf-lua").diagnostics_document() end)
-keymap("n", "<leader>sD", function() require("fzf-lua").diagnostics_workspace() end)
-keymap("n", "<leader>sg", function() require("fzf-lua").live_grep_native() end)
-keymap("n", "<leader>sh", function() require("fzf-lua").helptags() end)
-keymap("n", "<leader>sm", function() require("fzf-lua").manpages() end)
-keymap("n", "<leader>ss", function() require("fzf-lua").lsp_document_symbols() end)
-keymap("n", "<leader>sS", function() require("fzf-lua").lsp_workspace_symbols() end)
-keymap("n", "<leader>ff", function() require("fzf-lua").files() end)
-keymap("n", "gd", function() require("fzf-lua").lsp_definitions() end)
-keymap("n", "gr", function() require("fzf-lua").lsp_references() end)
-keymap("n", "gi", function() require("fzf-lua").lsp_implementations() end)
-keymap("n", "<leader>gc", function() require("fzf-lua").lsp_incoming_calls() end)
-keymap("n", "<leader>gC", function() require("fzf-lua").lsp_outgoing_calls() end)
-
-require('fzf-lua').diagnostics_workspace({
-  -- Diese 'actions' überschreiben oder ergänzen die Standard-Aktionen
-  actions = {
-    -- Wir definieren neue Tastenkürzel für innerhalb des Pickers
-    ["ctrl-e"] = function(_, opts)
-      print("ctrl-e")
-      opts.severity_only = "Error"
-      require('fzf-lua').diagnostics_workspace(opts)
-    end,
-    ["ctrl-w"] = function(_, opts)
-      opts.severity = "Warning"
-      require('fzf-lua').diagnostics_workspace(opts)
-    end,
-    -- Alles wieder anzeigen
-    ["ctrl-r"] = function(_, opts)
-      opts.severity = nil
-      require('fzf-lua').diagnostics_workspace(opts)
-    end,
-  }
-})
+-- require("fzf-lua").setup({ "ivy" })
+--
+-- local keymap = vim.keymap.set
+--
+-- keymap("n", "<leader>sd", function() require("fzf-lua").diagnostics_document() end)
+-- keymap("n", "<leader>sD", function() require("fzf-lua").diagnostics_workspace() end)
+-- keymap("n", "<leader>sg", function() require("fzf-lua").live_grep_native() end)
+-- keymap("n", "<leader>sh", function() require("fzf-lua").helptags() end)
+-- keymap("n", "<leader>sm", function() require("fzf-lua").manpages() end)
+-- keymap("n", "<leader>ss", function() require("fzf-lua").lsp_document_symbols() end)
+-- keymap("n", "<leader>sS", function() require("fzf-lua").lsp_workspace_symbols() end)
+-- keymap("n", "<leader>ff", function() require("fzf-lua").files() end)
+-- keymap("n", "gd", function() require("fzf-lua").lsp_definitions() end)
+-- keymap("n", "gr", function() require("fzf-lua").lsp_references() end)
+-- keymap("n", "gi", function() require("fzf-lua").lsp_implementations() end)
+-- keymap("n", "<leader>gc", function() require("fzf-lua").lsp_incoming_calls() end)
+-- keymap("n", "<leader>gC", function() require("fzf-lua").lsp_outgoing_calls() end)
+--
+-- require('fzf-lua').diagnostics_workspace({
+--   -- Diese 'actions' überschreiben oder ergänzen die Standard-Aktionen
+--   actions = {
+--     -- Wir definieren neue Tastenkürzel für innerhalb des Pickers
+--     ["ctrl-e"] = function(_, opts)
+--       print("ctrl-e")
+--       opts.severity_only = "Error"
+--       require('fzf-lua').diagnostics_workspace(opts)
+--     end,
+--     ["ctrl-w"] = function(_, opts)
+--       opts.severity = "Warning"
+--       require('fzf-lua').diagnostics_workspace(opts)
+--     end,
+--     -- Alles wieder anzeigen
+--     ["ctrl-r"] = function(_, opts)
+--       opts.severity = nil
+--       require('fzf-lua').diagnostics_workspace(opts)
+--     end,
+--   }
+-- })

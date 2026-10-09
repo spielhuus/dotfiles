@@ -11,8 +11,8 @@ keymap("n", "n", "nzz", default_opts)
 keymap("n", "N", "Nzz", default_opts)
 
 -- Switch buffers
-keymap("n", "<C-l>", "<cmd>bnext<CR>", default_opts)
-keymap("n", "<C-h>", "<cmd>bprev<CR>", default_opts)
+-- keymap("n", "<C-l>", "<cmd>bnext<CR>", default_opts)
+-- keymap("n", "<C-h>", "<cmd>bprev<CR>", default_opts)
 
 -- trigger autocomletion
 keymap('i', '<c-space>', function() vim.lsp.completion.get() end)

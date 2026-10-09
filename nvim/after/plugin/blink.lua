@@ -46,13 +46,13 @@ require("blink.cmp").setup({
 		ghost_text = { enabled = true },
 	},
 	sources = {
-		default = { "lsp", "path", "models", "snippets", "buffer" },
+		default = { "lsp", "path", "snippets", "buffer" },
 		providers = {
-			models = {
-				name = "Models",
-				module = "lungan.nvim.cmp.blink.frontmatter",
-				score_offset = 100,
-			},
+			-- models = {
+			-- 	name = "Models",
+			-- 	module = "lungan.nvim.cmp.blink.frontmatter",
+			-- 	score_offset = 100,
+			-- },
 		},
 	},
 })

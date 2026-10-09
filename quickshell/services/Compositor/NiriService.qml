@@ -117,6 +117,14 @@ Item {
 
     workspaceChanged();
   }
+  
+  function toggleKeyboardLayout() {
+    try {
+      Quickshell.execDetached(["niri", "msg", "action", "switch-layout", "next"]);
+    } catch (e) {
+      console.error("NiriService", "Failed to switch keyboard layout:", e);
+    }
+  }
 
   Socket {
     id: niriCommandSocket
