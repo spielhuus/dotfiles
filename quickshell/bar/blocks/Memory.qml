@@ -9,7 +9,7 @@ import "../"
 BarBlock {
   id: text
   content: BarText {
-    symbolText: ` ${Math.floor(memPerc)}%`
+    symbolText: `  ${Math.floor(memPerc)}%`
   }
 
   property string memPerc: {
